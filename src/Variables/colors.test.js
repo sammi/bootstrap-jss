@@ -12,7 +12,7 @@ import {
     green,
     teal,
     cyan
-} from './Variables'
+} from './colors'
 
 describe("Color variable names", () => {
 
