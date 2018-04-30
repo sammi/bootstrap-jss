@@ -4,14 +4,13 @@ import {
     sizes
 } from './Spacing'
 
-// Control the default styling of most Bootstrap elements by modifying these
-// variables. Mostly focused on spacing.
-// You can add more entries to the $spacers map, should you need more variation.
+//Control the default styling of most Bootstrap elements by modifying these variables. Mostly focused on spacing.
 describe('Spacing', () => {
     it('Quickly modify global styling by enabling or disabling optional features.', () => {
         
         expect(spacer).toEqual('1rem !default')
 
+        // You can add more entries to the $spacers map, should you need more variation.
         expect(spacers).toEqual({
             _0: 0,
             _1: spacer * .25,
@@ -21,6 +20,7 @@ describe('Spacing', () => {
             _5: spacer * 3
         })
 
+        // This variable affects the `.h-*` and `.w-*` classes.
         expect(sizes).toEqual({
             _25: '25%',
             _50: '50%',
