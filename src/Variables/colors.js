@@ -62,3 +62,13 @@ export const themeColors = {
     light:      light,
     dark:       dark
 }
+
+// Set a specific jump point for requesting color jumps
+export const themeColorInterval = '8% !default'
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+export const yiqContrastedThreshold = '150 !default'
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+export const yiqTextDark  = grays._900
+export const yiqTextLight = white

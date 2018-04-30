@@ -11,12 +11,28 @@ import {
     yellow,
     green,
     teal,
-    cyan
+    cyan,
+    gray,
+    grayDark,
+    colors,
+    primary,
+    secondary,
+    success,
+    info,
+    warning,
+    danger,
+    light,
+    dark,
+    themeColors,
+    themeColorInterval,
+    yiqContrastedThreshold,
+    yiqTextDark,
+    yiqTextLight
 } from './colors'
 
 describe("Color variable names", () => {
 
-    it("Base color values", () => {
+    it("Base color values has hard code RGB values", () => {
 
         expect(white).toEqual('#fff !default')
         expect(grays).toEqual({
@@ -41,6 +57,49 @@ describe("Color variable names", () => {
         expect(green).toEqual('#28a745 !default')
         expect(teal).toEqual('#20c997 !default')
         expect(cyan).toEqual('#17a2b8 !default')
+    })
+
+    it('Extended clors using pre defined base colors', () => {
+        expect(gray).toEqual(grays._600)
+        expect(grayDark).toEqual(grays._800)
+        expect(colors).toEqual({
+            blue:       blue,
+            indigo:     indigo,
+            purple:     purple,
+            pink:       pink,
+            red:        red,
+            orange:     orange,
+            yellow:     yellow,
+            green:      green,
+            teal:       teal,
+            cyan:       cyan,
+            white:      white,
+            gray:       gray,
+            grayDark:   grayDark
+        })
+        expect(primary).toEqual(blue)
+        expect(secondary).toEqual(grays._600)
+        expect(success).toEqual(green)
+        expect(info).toEqual(cyan)
+        expect(warning).toEqual(yellow)
+        expect(danger).toEqual(red)
+        expect(danger).toEqual(red)
+        expect(light).toEqual(grays._100)
+        expect(dark).toEqual(grays._800)
+        expect(themeColors).toEqual({
+            primary:    primary,
+            secondary:  secondary,
+            success:    success,
+            info:       info,
+            warning:    warning,
+            danger:     danger,
+            light:      light,
+            dark:       dark
+        })
+        expect(themeColorInterval).toEqual('8% !default')
+        expect(yiqContrastedThreshold).toEqual('150 !default')
+        expect(yiqTextDark).toEqual(grays._900)
+        expect(yiqTextLight).toEqual(white)
     })
 
 })
