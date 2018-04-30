@@ -1,2 +1,2 @@
 # BootstrapJSS
-Conver Bootstrap SCSS to JSS
+Convert Bootstrap SCSS to JSS
