@@ -1,0 +1,8 @@
+export const enableCaret = 'true !default'
+export const enableRounded = 'true !default'
+export const enableShadows = 'false !default'
+export const enableGradients = 'false !default'
+export const enableTransitions = 'true !default'
+export const enableHoverMediaQuery = 'false !default'
+export const enableGridClasses = 'true !default'
+export const enablePrintStyles = 'true !default'

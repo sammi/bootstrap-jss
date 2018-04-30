@@ -28,11 +28,11 @@ import {
     yiqContrastedThreshold,
     yiqTextDark,
     yiqTextLight
-} from './colors'
+} from './Colors'
 
-describe("Color variable names", () => {
+describe("Colors", () => {
 
-    it("Base color values has hard code RGB values", () => {
+    it("Base colors", () => {
 
         expect(white).toEqual('#fff !default')
         expect(grays).toEqual({
@@ -59,7 +59,7 @@ describe("Color variable names", () => {
         expect(cyan).toEqual('#17a2b8 !default')
     })
 
-    it('Extended clors using pre defined base colors', () => {
+    it('Extend colors', () => {
         expect(gray).toEqual(grays._600)
         expect(grayDark).toEqual(grays._800)
         expect(colors).toEqual({
