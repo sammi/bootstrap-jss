@@ -20,15 +20,15 @@ describe("Color variable names", () => {
 
         expect(white).toEqual('#fff !default')
         expect(grays).toEqual({
-            100: '#f8f9fa !default',
-            200: '#e9ecef !default',
-            300: '#dee2e6 !default',
-            400: '#ced4da !default',
-            500: '#adb5bd !default',
-            600: '#6c757d !default',
-            700: '#495057 !default',
-            800: '#343a40 !default',
-            900: '#212529 !default'
+            _100: '#f8f9fa !default',
+            _200: '#e9ecef !default',
+            _300: '#dee2e6 !default',
+            _400: '#ced4da !default',
+            _500: '#adb5bd !default',
+            _600: '#6c757d !default',
+            _700: '#495057 !default',
+            _800: '#343a40 !default',
+            _900: '#212529 !default'
         })
         expect(black).toEqual('#000 !default')
         expect(blue).toEqual('#007bff !default')
