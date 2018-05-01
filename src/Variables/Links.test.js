@@ -11,7 +11,7 @@ describe('Links', () => {
     it('Style anchor elements.', () => {
         expect(linkColor).toEqual(themeColors.primary)
         expect(linkDecoration).toEqual('none !default')
-        expect(linkHoverColor).toEqual(themeColors.primary)
+        expect(linkHoverColor).toEqual('#0069D9 !default')
         expect(linkHoverDecoration).toEqual('underline !default')
     })
 
