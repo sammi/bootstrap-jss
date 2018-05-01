@@ -15,6 +15,8 @@
   "dependencies": {
     "bootstrap": "^4.1.0",
     "color": "^3.0.0",
+    "color-rgba": "^2.0.0",
+    "hex-and-rgba": "^1.2.0",
     "jquery": "^3.3.1",
     "jss": "^9.8.1",
     "lodash": "^4.17.10",
@@ -22,7 +24,8 @@
     "popper.js": "^1.14.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-jss": "^8.4.0"
+    "react-jss": "^8.4.0",
+    "string-format": "^1.0.0"
   },
   "devDependencies": {
     "ajv": "^6.4.0",
