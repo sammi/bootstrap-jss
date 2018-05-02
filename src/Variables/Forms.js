@@ -3,11 +3,14 @@ import {rgba} from '../Functions/rgba'
 import {lighten} from '../Functions/lighten'
 import {size} from '../Functions/size'
 import format from 'string-format'
-import {bodyColor} from './Body'
+import {bodyColor, bodyBg} from './Body'
+
 
 import {
     componentActiveBg, 
-    componentActiveColor
+    componentActiveColor,
+    borderColor,
+    boxShadow
 } from './Components'
 
 import {
@@ -102,7 +105,7 @@ export const inputHeightLg =  format('calc({}{} + {}{}) !default',
     size(inputHeightBorder).value, size(inputHeightBorder).unit
 )
 
-// export const inputTransition = borderColor .15s easeIn - out, boxShadow .15s easeIn - out!default ;
+export const inputTransition = format('{} .15s easeIn - out, {} .15s easeIn - out!default', borderColor, boxShadow)
 
 export const formTextMarginTop = '.25rem !default'
 
@@ -125,20 +128,24 @@ export const customControlSpacerX = '1rem !default'
 export const customControlIndicatorSize = '1rem !default'
 export const customControlIndicatorBg = grays._300
 export const customControlIndicatorBgSize = '50% 50% !default'
-// export const customControlIndicatorBoxShadow: inset 0 .25rem .25rem rgba(black, .1)!default ;
+export const customControlIndicatorBoxShadow = format('inset 0 .25rem .25rem {} !default', rgba(black, .1))
 
 export const customControlIndicatorDisabledBg = grays._200
 export const customControlLabelDisabledColor = grays._600
 
 export const customControlIndicatorCheckedColor = componentActiveColor
 export const customControlIndicatorCheckedBg = componentActiveBg
-// export const customControlIndicatorCheckedDisabledBg: rgba(themeColor("primary"), .5)!default ;
+export const customControlIndicatorCheckedDisabledBg = format('{} !default', rgba(themeColors.primary, .5))
 export const customControlIndicatorCheckedBoxShadow = 'none !default'
 
-// export const customControlIndicatorFocusBoxShadow = 0 0 0 1px bodyBg, inputBtnFocusBoxShadow!default ;
+export const customControlIndicatorFocusBoxShadow = format(
+    '0 0 0 1px {}, {} !default',
+    bodyBg,
+    inputBtnFocusBoxShadow
+)
 
 export const customControlIndicatorActiveColor = componentActiveColor
-// export const customControlIndicatorActiveBg = lighten(componentActiveBg, 35 %)!default ;
+export const customControlIndicatorActiveBg = format('{} !default', lighten(componentActiveBg, '35%'))
 export const customControlIndicatorActiveBoxShadow = 'none !default'
 
 export const customCheckboxIndicatorBorderRadius = borderRadius
@@ -169,7 +176,11 @@ export const customSelectBorderColor = inputBorderColor
 export const customSelectBorderRadius = borderRadius
 
 export const customSelectFocusBorderColor = inputFocusBorderColor
-// export const customSelectFocusBoxShadow = inset 0 1px 2px rgba(black, .075), 0 0 5px rgba(customSelectFocusBorderColor, .5)!default ;
+export const customSelectFocusBoxShadow = format(
+    'inset 0 1px 2px {}, 0 0 5px {} !default',
+    rgba(black, .075),
+    rgba(customSelectFocusBorderColor, .5)
+)
 
 export const customSelectFontSizeSm = '75% !default'
 export const customSelectHeightSm = inputHeightSm
@@ -182,16 +193,16 @@ export const customRangeTrackHeight = '.5rem !default'
 export const customRangeTrackCursor = 'pointer !default'
 export const customRangeTrackBg = grays._300
 export const customRangeTrackBorderRadius = '1rem !default'
-// export const customRangeTrackBoxShadow = inset 0 .25rem .25rem rgba(black, .1)!default ;
+export const customRangeTrackBoxShadow = format('inset 0 .25rem .25rem {} !default', rgba(black, .1))
 
 export const customRangeThumbWidth = '1rem !default'
 export const customRangeThumbHeight = customRangeThumbWidth
 export const customRangeThumbBg = componentActiveBg
 export const customRangeThumbBorder = '0 !default'
 export const customRangeThumbBorderRadius = '1rem !default'
-// export const customRangeThumbBoxShadow = 0 .1rem .25rem rgba(black, .1)!default ;
-// export const customRangeThumbFocusBoxShadow: 0 0 0 1px bodyBg, inputBtnFocusBoxShadow!default ;
-// export const customRangeThumbActiveBg = lighten(componentActiveBg, 35 %)!default ;
+export const customRangeThumbBoxShadow = format('0 .1rem .25rem {} !default', rgba(black, .1))
+export const customRangeThumbFocusBoxShadow = format('0 0 0 1px {}, {} !default', bodyBg, inputBtnFocusBoxShadow)
+export const customRangeThumbActiveBg = format('{} !default', lighten(componentActiveBg, '35%'))
 
 export const customFileHeight = inputHeight
 export const customFileFocusBorderColor = inputFocusBorderColor
