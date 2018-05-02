@@ -43,5 +43,5 @@ export const size = (rawSize) => {
             return
         }
     })
-    return {unit, value}
+    return {value, unit}
 }
