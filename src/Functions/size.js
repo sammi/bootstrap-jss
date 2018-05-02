@@ -1,14 +1,47 @@
 import _ from 'lodash'
 import format from 'string-format'
 
-export const size = (rawSize) => {
+const unitSet = new Set([
+    'px',
+    'cm',
+    'mm',
+    '%',
+    'ch',
+    'in',
+    'em',
+    'rem',
+    'pt',
+    'pc',
+    'ex',
+    'vw',
+    'vh',
+    'vmin',
+    'vmax',
+    'deg',
+    'turn',
+    'rad',
+    'grad',
+    's',
+    'ms',
+    'Hz',
+    'kHz',
+    'dppx',
+    'dpcm',
+    'dpi'
+])
 
+export const size = (rawSize) => {
+    
     const sizeString = _.replace(rawSize, '!default', '').trim()
 
-    const remString = _.replace(sizeString, 'rem', '')
-
-    return {
-        value: parseFloat(remString),
-        unit: 'rem'
-    }
+    let unit  = 'rem'
+    let value = 0
+    unitSet.forEach( unitName => {
+        if(sizeString.indexOf(unitName) != -1) {
+            unit = unitName
+            value = parseFloat(_.replace(sizeString, unitName, ''))
+            return
+        }
+    })
+    return {unit, value}
 }
