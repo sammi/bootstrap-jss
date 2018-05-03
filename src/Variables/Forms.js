@@ -1,17 +1,16 @@
-import {white, grays, black, themeColors} from './Colors'
+import _ from 'lodash'
 import {rgba} from '../Functions/rgba'
 import {lighten} from '../Functions/lighten'
 import {size} from '../Functions/size'
 import format from 'string-format'
+import Color from 'color'
+
+
+import {white, grays, black, themeColors} from './Colors'
 import {bodyColor, bodyBg} from './Body'
-
-
-import {
-    componentActiveBg, 
-    componentActiveColor,
-    borderColor,
-    boxShadow
-} from './Components'
+import {componentActiveBg, componentActiveColor, borderColor, boxShadow} from './Components'
+import {fontSizeBase, smallFontSize, fontSizeSm, fontSizeLg} from './Fonts'
+import {borderRadius, borderRadiusLg, borderRadiusSm} from './Buttons'
 
 import {
     inputBtnPaddingY, 
@@ -27,15 +26,6 @@ import {
     inputBtnFocusWidth,
     inputBtnFocusBoxShadow
 } from './InputButtons'
-
-import {
-    fontSizeBase, 
-    smallFontSize, 
-    fontSizeSm,
-    fontSizeLg
-} from './Fonts'
-
-import {borderRadius, borderRadiusLg, borderRadiusSm} from './Buttons'
  
 export const labelMarginBottom = '.5rem !default'
 
@@ -88,7 +78,6 @@ export const inputHeightInnerSm = format('{}{} !default',
     size(fontSizeSm).value * size(inputBtnLineHeightSm).value + size(inputBtnPaddingYSm).value * 2, 
     size(fontSizeSm).unit
 )
-
 
 export const inputHeightSm = format('calc({} + {}) !default',
     size(inputHeightInnerSm).value, size(inputHeightInnerSm).unit, 
@@ -149,15 +138,35 @@ export const customControlIndicatorActiveBg = format('{} !default', lighten(comp
 export const customControlIndicatorActiveBoxShadow = 'none !default'
 
 export const customCheckboxIndicatorBorderRadius = borderRadius
-// export const customCheckboxIndicatorIconChecked = strReplace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{customControlIndicatorCheckedColor}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23")!default ;
+
+export const customCheckboxIndicatorIconChecked = format(
+    '{} !default', 
+    format(
+        "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='{}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E",
+        _.replace(customControlIndicatorCheckedColor, '!default', '').trim()
+    )
+)
 
 export const customCheckboxIndicatorIndeterminateBg = componentActiveBg
 export const customCheckboxIndicatorIndeterminateColor = customControlIndicatorCheckedColor
-// export const customCheckboxIndicatorIconIndeterminate = strReplace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{customCheckboxIndicatorIndeterminateColor}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23")!default ;
+export const customCheckboxIndicatorIconIndeterminate = format(
+    '{} !default', 
+    format(
+        "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='{}' d='M0 2h4'/%3E%3C/svg%3E",
+        _.replace(customCheckboxIndicatorIndeterminateColor, '!default', '').trim()
+    )
+)
+
 export const customCheckboxIndicatorIndeterminateBoxShadow  = 'none !default'
 
 export const customRadioIndicatorBorderRadius = '50% !default'
-// export const customRadioIndicatorIconChecked = strReplace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{customControlIndicatorCheckedColor}'/%3E%3C/svg%3E"), "#", "%23")!default ;
+export const customRadioIndicatorIconChecked = format(
+    '{} !default', 
+    format(
+        "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='{}' /%3E%3C/svg%3E",
+        _.replace(customControlIndicatorCheckedColor, '!default', '').trim()
+    )
+)
 
 export const customSelectPaddingY = '.375rem !default'
 export const customSelectPaddingX = '.75rem !default'
@@ -170,7 +179,15 @@ export const customSelectBg = inputBg
 export const customSelectDisabledBg = grays._200
 export const customSelectBgSize = '8px 10px !default' // In pixels because image dimensions
 export const customSelectIndicatorColor = grays._800
-// export const customSelectIndicator = strReplace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{customSelectIndicatorColor}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23")!default ;
+
+export const customSelectIndicator = format(
+    '{} !default', 
+    format(
+        "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='{}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E",
+        _.replace(customSelectIndicatorColor, '!default', '').trim()
+    )
+)
+
 export const customSelectBorderWidth = inputBtnBorderWidth
 export const customSelectBorderColor = inputBorderColor
 export const customSelectBorderRadius = borderRadius
