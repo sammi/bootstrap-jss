@@ -8,7 +8,7 @@ import {
 describe('Figures', () => {
 
     it('Figures', () => {
-        expect(figureCaptionFontSize).toEqual('90% !default')
+        expect(figureCaptionFontSize).toEqual('90%')
         expect(figureCaptionColor).toEqual(grays._600)
     })
 

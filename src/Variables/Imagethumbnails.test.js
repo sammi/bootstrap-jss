@@ -16,12 +16,12 @@ import {
 describe('Imagethumbnails', () => {
 
     it('Imagethumbnails', () => {
-        expect(thumbnailPadding).toEqual('.25rem !default')
+        expect(thumbnailPadding).toEqual('.25rem')
         expect(thumbnailBg).toEqual(bodyBg)
         expect(thumbnailBorderWidth).toEqual(borderWidth)
         expect(thumbnailBorderColor).toEqual(grays._300)
         expect(thumbnailBorderRadius).toEqual(borderRadius)
-        expect(thumbnailBoxShadow).toEqual(format('0 1px 2px {} !default', rgba(black, .075)))
+        expect(thumbnailBoxShadow).toEqual(format('0 1px 2px {}', rgba(black, .075)))
     })
 
 })

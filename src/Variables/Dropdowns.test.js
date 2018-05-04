@@ -28,19 +28,19 @@ import {
 describe('Dropdowns', () => {
 
     it('Dropdown menu container and contents.', () => {
-        expect(dropdownMinWidth).toEqual('10rem !default')
-        expect(dropdownPaddingY).toEqual('.5rem !default')
-        expect(dropdownSpacer).toEqual('.125rem !default')
+        expect(dropdownMinWidth).toEqual('10rem')
+        expect(dropdownPaddingY).toEqual('.5rem')
+        expect(dropdownSpacer).toEqual('.125rem')
         expect(dropdownBg).toEqual(white)
-        expect(dropdownBorderColor).toEqual(format('{} !default', rgba(black, .15)))
+        expect(dropdownBorderColor).toEqual(format('{}', rgba(black, .15)))
         expect(dropdownBorderRadius).toEqual(borderRadius)
         expect(dropdownBorderWidth).toEqual(borderWidth)
         expect(dropdownDividerBg).toEqual(grays._200)
-        expect(dropdownBoxShadow).toEqual(format('0 .5rem 1rem {} !default',rgba(black, .175)))
+        expect(dropdownBoxShadow).toEqual(format('0 .5rem 1rem {}',rgba(black, .175)))
 
         
         expect(dropdownLinkColor).toEqual(grays._900)
-        expect(dropdownLinkHoverColor).toEqual(format('{} !default', darken(grays._900, '5%')))
+        expect(dropdownLinkHoverColor).toEqual(format('{}', darken(grays._900, '5%')))
         expect(dropdownLinkHoverBg).toEqual(grays._100)
         
         expect(dropdownLinkActiveColor).toEqual(componentActiveColor)
@@ -48,8 +48,8 @@ describe('Dropdowns', () => {
         
         expect(dropdownLinkDisabledColor).toEqual(grays._600)
         
-        expect(dropdownItemPaddingY).toEqual('.25rem !default')
-        expect(dropdownItemPaddingX).toEqual('1.5rem !default')
+        expect(dropdownItemPaddingY).toEqual('.25rem')
+        expect(dropdownItemPaddingX).toEqual('1.5rem')
         
         expect(dropdownHeaderColor).toEqual(grays._600)
         

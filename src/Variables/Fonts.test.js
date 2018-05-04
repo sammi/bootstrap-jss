@@ -57,76 +57,76 @@ import {
 describe('Fonts', () => {
 
     it('Font Family', () => {
-        expect(fontFamilySansSerif).toEqual('-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default')
-        expect(fontFamilyMonospace).toEqual('SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default')
+        expect(fontFamilySansSerif).toEqual('-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"')
+        expect(fontFamilyMonospace).toEqual('SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace')
         expect(fontFamilyBase).toEqual(fontFamilySansSerif)
     })
 
     it('Font Size', () => {
-        expect(fontSizeBase).toEqual('1rem !default')
-        expect(fontSizeLg).toEqual('1.25rem !default')
-        expect(fontSizeSm).toEqual('0.875rem !default')
+        expect(fontSizeBase).toEqual('1rem')
+        expect(fontSizeLg).toEqual('1.25rem')
+        expect(fontSizeSm).toEqual('0.875rem')
     })
 
     it('Font Weight', () => {
-        expect(fontWeightLight).toEqual('300 !default')
-        expect(fontWeightNormal).toEqual('400 !default')
-        expect(fontWeightBold).toEqual('700 !default')
+        expect(fontWeightLight).toEqual('300')
+        expect(fontWeightNormal).toEqual('400')
+        expect(fontWeightBold).toEqual('700')
         expect(fontWeightBase).toEqual(fontWeightNormal)
-        expect(lineHeightBase).toEqual('1.5 !default')
+        expect(lineHeightBase).toEqual('1.5')
     })
 
     it('Font Headers', () => {
-        expect(h1FontSize).toEqual('2.5rem !default')
-        expect(h2FontSize).toEqual('2rem !default')
-        expect(h3FontSize).toEqual('1.75rem !default')
-        expect(h4FontSize).toEqual('1.5rem !default')
-        expect(h5FontSize).toEqual('1.25rem !default')
+        expect(h1FontSize).toEqual('2.5rem')
+        expect(h2FontSize).toEqual('2rem')
+        expect(h3FontSize).toEqual('1.75rem')
+        expect(h4FontSize).toEqual('1.5rem')
+        expect(h5FontSize).toEqual('1.25rem')
         expect(h6FontSize).toEqual(fontSizeBase)
 
         expect(headingsMarginBottom).toEqual(fontSizeBase)
-        expect(headingsFontFamily).toEqual('inherit !default')
-        expect(headingsFontWeight).toEqual('500 !default')
-        expect(headingsLineHeight).toEqual('1.2 !default')
-        expect(headingsColor).toEqual('inherit !default')
+        expect(headingsFontFamily).toEqual('inherit')
+        expect(headingsFontWeight).toEqual('500')
+        expect(headingsLineHeight).toEqual('1.2')
+        expect(headingsColor).toEqual('inherit')
     })
 
     it('Display', () => {
-        expect(display1Size).toEqual('6rem !default')
-        expect(display2Size).toEqual('5.5rem !default')
-        expect(display3Size).toEqual('4.5rem !default')
-        expect(display4Size).toEqual('3.5rem !default')
+        expect(display1Size).toEqual('6rem')
+        expect(display2Size).toEqual('5.5rem')
+        expect(display3Size).toEqual('4.5rem')
+        expect(display4Size).toEqual('3.5rem')
 
-        expect(display1Weight).toEqual('300 !default')
-        expect(display2Weight).toEqual('300 !default')
-        expect(display3Weight).toEqual('300 !default')
-        expect(display4Weight).toEqual('300 !default')
+        expect(display1Weight).toEqual('300')
+        expect(display2Weight).toEqual('300')
+        expect(display3Weight).toEqual('300')
+        expect(display4Weight).toEqual('300')
         expect(displayLineHeight).toEqual(headingsLineHeight)
     })
 
     it('Lead', () => {
-        expect(leadFontSize).toEqual('1.25rem !default')
-        expect(leadFontWeight).toEqual('300 !default')
+        expect(leadFontSize).toEqual('1.25rem')
+        expect(leadFontWeight).toEqual('300')
     })
 
     it('Small Font', () => {
-        expect(smallFontSize).toEqual('80% !default')
+        expect(smallFontSize).toEqual('80%')
     })
 
     it('Misc', () => {
         expect(textMuted).toEqual(grays._600)
         expect(blockquoteSmallColor).toEqual(grays._600)
-        expect(blockquoteFontSize).toEqual('1.25rem !default')
-        expect(hrBorderColor).toEqual(format('{} !default', rgba(black, .1)))
+        expect(blockquoteFontSize).toEqual('1.25rem')
+        expect(hrBorderColor).toEqual(format('{}', rgba(black, .1)))
         expect(hrBorderWidth).toEqual(borderWidth)
-        expect(markPadding).toEqual('.2em !default')
+        expect(markPadding).toEqual('.2em')
         expect(dtFontWeight).toEqual(fontWeightBold)
 
 
-        expect(kbdBoxShadow).toEqual(format('inset 0 -.1rem 0 {} !default', rgba(black, .25)))
+        expect(kbdBoxShadow).toEqual(format('inset 0 -.1rem 0 {}', rgba(black, .25)))
         expect(nestedKbdFontWeight).toEqual(fontWeightBold)
-        expect(listInlinePadding).toEqual('.5rem !default')
-        expect(markBg).toEqual('#fcf8e3 !default')
+        expect(listInlinePadding).toEqual('.5rem')
+        expect(markBg).toEqual('#fcf8e3')
         expect(hrMarginY).toEqual(spacer)
 
     })

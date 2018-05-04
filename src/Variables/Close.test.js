@@ -13,12 +13,12 @@ import {
 describe('Close', () => {
     it('Close', () => {
         expect(closeFontSize).toEqual(format(
-            '{}{} !default',
+            '{}{}',
             size(fontSizeBase).value * 1.5,
             size(fontSizeBase).unit
         ))
         expect(closeFontWeight).toEqual(fontWeightBold)
         expect(closeColor).toEqual(black)
-        expect(closeTextShadow).toEqual(format('0 1px 0 {} !default', white))
+        expect(closeTextShadow).toEqual(format('0 1px 0 {}', white))
     })
 })

@@ -13,12 +13,12 @@ import {
 
 describe('Badges', () => {
     it('Badges', () => {
-        expect(badgeFontSize).toEqual('75% !default')
+        expect(badgeFontSize).toEqual('75%')
         expect(badgeFontWeight).toEqual(fontWeightBold)
-        expect(badgePaddingY).toEqual('.25em !default')
-        expect(badgePaddingX).toEqual('.4em !default')
+        expect(badgePaddingY).toEqual('.25em')
+        expect(badgePaddingX).toEqual('.4em')
         expect(badgeBorderRadius).toEqual(borderRadius)
-        expect(badgePillPaddingX).toEqual('.6em !default')
-        expect(badgePillBorderRadius).toEqual('10rem !default')
+        expect(badgePillPaddingX).toEqual('.6em')
+        expect(badgePillBorderRadius).toEqual('10rem')
     })
 })

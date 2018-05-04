@@ -13,5 +13,5 @@ export const containerMaxWidths = {
     xl: '1140px'
 }
 
-export const gridColumns = '12 !default'
-export const gridGutterWidth = '30px !default'
+export const gridColumns = '12'
+export const gridGutterWidth = '30px'

@@ -61,15 +61,15 @@ describe('Buttons', () => {
         expect(btnBorderWidth).toEqual(inputBtnBorderWidth)
 
         expect(btnFontWeight).toEqual(fontWeightNormal)
-        expect(btnBoxShadowfontWeightNormal).toEqual(format('inset 0 1px 0 {}, 0 1px 1px {} !default', rgba(white, .15), rgba(black, .075)))
+        expect(btnBoxShadowfontWeightNormal).toEqual(format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, .15), rgba(black, .075)))
         expect(btnFocusWidth).toEqual(inputBtnFocusWidth)
         expect(btnFocusBoxShadow).toEqual(inputBtnFocusBoxShadow)
-        expect(btnDisabledOpacity).toEqual('.65 !default')
-        expect(btnActiveBoxShadow).toEqual(format('inset 0 3px 5px {} !default', rgba(black, .125)))
+        expect(btnDisabledOpacity).toEqual('.65')
+        expect(btnActiveBoxShadow).toEqual(format('inset 0 3px 5px {}', rgba(black, .125)))
 
         expect(btnLinkDisabledColor).toEqual(grays._600);
 
-        expect(btnBlockSpacingY).toEqual('.5rem !default')
+        expect(btnBlockSpacingY).toEqual('.5rem')
 
         // Allows for customizing button radius independently from global border radius
         expect(btnBorderRadius).toEqual(borderRadius)
@@ -77,7 +77,7 @@ describe('Buttons', () => {
         expect(btnBorderRadiusSm).toEqual(borderRadiusSm)
 
         expect(btnTransition).toEqual(
-            'color .15s ease-inOut, background-color .15s ease-inOut, border-color .15s ease-inOut, box-shadow .15s ease-inOut !default'
+            'color .15s ease-inOut, background-color .15s ease-inOut, border-color .15s ease-inOut, box-shadow .15s ease-inOut'
         )
 
     })

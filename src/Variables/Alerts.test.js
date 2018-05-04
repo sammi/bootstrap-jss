@@ -15,15 +15,15 @@ import {
 
 describe('Define alert colors, border radius, and padding.', () => {
     it('Alerts', () => {
-        expect(alertPaddingY).toEqual('.75rem !default')
-        expect(alertPaddingX).toEqual('1.25rem !default')
-        expect(alertMarginBottom).toEqual('1rem !default')
+        expect(alertPaddingY).toEqual('.75rem')
+        expect(alertPaddingX).toEqual('1.25rem')
+        expect(alertMarginBottom).toEqual('1rem')
         expect(alertBorderRadius).toEqual(borderRadius)
         expect(alertLinkFontWeight).toEqual(fontWeightBold)
         expect(alertBorderWidth).toEqual(borderWidth)
 
-        expect(alertBgLevel).toEqual('-10 !default')
-        expect(alertBorderLevel).toEqual('-9 !default')
-        expect(alertColorLevel).toEqual('6 !default')
+        expect(alertBgLevel).toEqual('-10')
+        expect(alertBorderLevel).toEqual('-9')
+        expect(alertColorLevel).toEqual('6')
     })
 })

@@ -29,12 +29,12 @@ import {
 describe('Tables', () => {
     it('Customizes the `.table` component with basic values, each used across all table variations.', () => {
 
-        expect(tableCellPadding).toEqual('.75rem !default')
-        expect(tableCellPaddingSm).toEqual('.3rem !default')
+        expect(tableCellPadding).toEqual('.75rem')
+        expect(tableCellPaddingSm).toEqual('.3rem')
 
-        expect(tableBg).toEqual('transparent !default')
-        expect(tableAccentBg).toEqual(format('{} !default', rgba(black, .05)))
-        expect(tableHoverBg).toEqual(format('{} !default', rgba(black, .075)))
+        expect(tableBg).toEqual('transparent')
+        expect(tableAccentBg).toEqual(format('{}', rgba(black, .05)))
+        expect(tableHoverBg).toEqual(format('{}', rgba(black, .075)))
         expect(tableActiveBg).toEqual(tableHoverBg)
 
 
@@ -45,12 +45,12 @@ describe('Tables', () => {
         expect(tableHeadColor).toEqual(grays._700)
 
         expect(tableDarkBg).toEqual(grays._900)
-        expect(tableDarkAccentBg).toEqual(format('{} !default', rgba(white, .05)))
-        expect(tableDarkHoverBg).toEqual(format('{} !default', rgba(white, .075)));
-        expect(tableDarkBorderColor).toEqual(format('{} !default', lighten(grays._900, '7.5%')))
+        expect(tableDarkAccentBg).toEqual(format('{}', rgba(white, .05)))
+        expect(tableDarkHoverBg).toEqual(format('{}', rgba(white, .075)));
+        expect(tableDarkBorderColor).toEqual(format('{}', lighten(grays._900, '7.5%')))
         expect(tableDarkColor).toEqual(bodyBg)
 
-        expect(tableStripedOrder).toEqual('odd !default')
+        expect(tableStripedOrder).toEqual('odd')
 
         expect(tableCaptionColor).toEqual(textMuted)
 

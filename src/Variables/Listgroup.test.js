@@ -26,12 +26,12 @@ import {
 describe('Listgroup', () => {
     it('Listgroup', () => {
         expect(listGroupBg).toEqual(white)
-        expect(listGroupBorderColor).toEqual(format('{} !default', rgba(black, .125)))
+        expect(listGroupBorderColor).toEqual(format('{}', rgba(black, .125)))
         expect(listGroupBorderWidth).toEqual(borderWidth)
         expect(listGroupBorderRadius).toEqual(borderRadius)
         
-        expect(listGroupItemPaddingY).toEqual('.75rem !default')
-        expect(listGroupItemPaddingX).toEqual('1.25rem !default')
+        expect(listGroupItemPaddingY).toEqual('.75rem')
+        expect(listGroupItemPaddingX).toEqual('1.25rem')
         
         expect(listGroupHoverBg).toEqual(grays._100)
         expect(listGroupActiveColor).toEqual(componentActiveColor)

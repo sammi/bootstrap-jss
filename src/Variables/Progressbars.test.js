@@ -19,14 +19,14 @@ import {
 
 describe('Progressbars', () => {
     it('Progressbars', () => {
-        expect(progressHeight).toEqual('1rem !default')
-        expect(progressFontSize).toEqual(format('{}{} !default', size(fontSizeBase).value * .75, size(fontSizeBase).unit))
+        expect(progressHeight).toEqual('1rem')
+        expect(progressFontSize).toEqual(format('{}{}', size(fontSizeBase).value * .75, size(fontSizeBase).unit))
         expect(progressBg).toEqual(grays._200)
         expect(progressBorderRadius).toEqual(borderRadius)
-        expect(progressBoxShadow).toEqual(format('inset 0 .1rem .1rem {} !default', rgba(black, .1)))
+        expect(progressBoxShadow).toEqual(format('inset 0 .1rem .1rem {}', rgba(black, .1)))
         expect(progressBarColor).toEqual(white)
         expect(progressBarBg).toEqual(themeColors.primary)
-        expect(progressBarAnimationTiming).toEqual('1s linear infinite !default')
-        expect(progressBarTransition).toEqual('width .6s ease !default')
+        expect(progressBarAnimationTiming).toEqual('1s linear infinite')
+        expect(progressBarTransition).toEqual('width .6s ease')
     })
 })

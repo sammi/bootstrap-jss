@@ -1,28 +1,28 @@
-export const white  = '#fff !default'
+export const white  = '#fff'
 export const grays = {
-    _100: '#f8f9fa !default',
-    _200: '#e9ecef !default',
-    _300: '#dee2e6 !default',
-    _400: '#ced4da !default',
-    _500: '#adb5bd !default',
-    _600: '#6c757d !default',
-    _700: '#495057 !default',
-    _800: '#343a40 !default',
-    _900: '#212529 !default'
+    _100: '#f8f9fa',
+    _200: '#e9ecef',
+    _300: '#dee2e6',
+    _400: '#ced4da',
+    _500: '#adb5bd',
+    _600: '#6c757d',
+    _700: '#495057',
+    _800: '#343a40',
+    _900: '#212529'
 }
 
-export const black  = '#000 !default'
+export const black  = '#000'
 
-export const blue   = '#007bff !default'
-export const indigo = '#6610f2 !default'
-export const purple = '#6f42c1 !default'
-export const pink   = '#e83e8c !default'
-export const red    = '#dc3545 !default'
-export const orange = '#fd7e14 !default'
-export const yellow = '#ffc107 !default'
-export const green  = '#28a745 !default'
-export const teal   = '#20c997 !default'
-export const cyan   = '#17a2b8 !default'
+export const blue   = '#007bff'
+export const indigo = '#6610f2'
+export const purple = '#6f42c1'
+export const pink   = '#e83e8c'
+export const red    = '#dc3545'
+export const orange = '#fd7e14'
+export const yellow = '#ffc107'
+export const green  = '#28a745'
+export const teal   = '#20c997'
+export const cyan   = '#17a2b8'
 
 export const gray   = grays._600
 export const grayDark = grays._800
@@ -64,10 +64,10 @@ export const themeColors = {
 }
 
 // Set a specific jump point for requesting color jumps
-export const themeColorInterval = '8% !default'
+export const themeColorInterval = '8%'
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-export const yiqContrastedThreshold = '150 !default'
+export const yiqContrastedThreshold = '150'
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 export const yiqTextDark  = grays._900

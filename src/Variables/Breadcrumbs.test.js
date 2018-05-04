@@ -15,16 +15,16 @@ import {
 
 describe('Breadcrumbs', () => {
     it('Breadcrumbs', () => {
-        expect(breadcrumbPaddingY).toEqual('.75rem !default')
-        expect(breadcrumbPaddingX).toEqual('1rem !default')
-        expect(breadcrumbItemPadding).toEqual('.5rem !default')
+        expect(breadcrumbPaddingY).toEqual('.75rem')
+        expect(breadcrumbPaddingX).toEqual('1rem')
+        expect(breadcrumbItemPadding).toEqual('.5rem')
         
-        expect(breadcrumbMarginBottom).toEqual('1rem !default')
+        expect(breadcrumbMarginBottom).toEqual('1rem')
         
         expect(breadcrumbBg).toEqual(grays._200)
         expect(breadcrumbDividerColor).toEqual(grays._600)
         expect(breadcrumbctiveColor).toEqual(grays._600)
-        expect(breadcrumbDivider).toEqual('quote("/") !default')
+        expect(breadcrumbDivider).toEqual('quote("/")')
         
         expect(breadcrumbBorderRadius).toEqual(borderRadius)
     })

@@ -34,20 +34,20 @@ export const btnLineHeightLg = inputBtnLineHeightLg
 export const btnBorderWidth = inputBtnBorderWidth
 
 export const btnFontWeight = fontWeightNormal
-export const btnBoxShadowfontWeightNormal = format('inset 0 1px 0 {}, 0 1px 1px {} !default', rgba(white, .15), rgba(black, .075))
+export const btnBoxShadowfontWeightNormal = format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, .15), rgba(black, .075))
 export const btnFocusWidth = inputBtnFocusWidth
 export const btnFocusBoxShadow = inputBtnFocusBoxShadow
-export const btnDisabledOpacity = '.65 !default'
-export const btnActiveBoxShadow = format('inset 0 3px 5px {} !default', rgba(black, .125))
+export const btnDisabledOpacity = '.65'
+export const btnActiveBoxShadow = format('inset 0 3px 5px {}', rgba(black, .125))
 
 export const btnLinkDisabledColor = grays._600;
 
-export const btnBlockSpacingY = '.5rem !default'
+export const btnBlockSpacingY = '.5rem'
 
 // Allows for customizing button radius independently from global border radius
 export const btnBorderRadius = borderRadius
 export const btnBorderRadiusLg = borderRadiusLg
 export const btnBorderRadiusSm = borderRadiusSm
 
-export const btnTransition = 'color .15s ease-inOut, background-color .15s ease-inOut, border-color .15s ease-inOut, box-shadow .15s ease-inOut !default'
+export const btnTransition = 'color .15s ease-inOut, background-color .15s ease-inOut, border-color .15s ease-inOut, box-shadow .15s ease-inOut'
 

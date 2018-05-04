@@ -1,1 +1,1 @@
-export const paragraphMarginBottom = '1rem !default'
+export const paragraphMarginBottom = '1rem'

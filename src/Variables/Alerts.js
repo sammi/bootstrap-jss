@@ -1,13 +1,13 @@
 import {borderRadius, borderWidth} from './Components'
 import {fontWeightBold} from './Fonts'
 
-export const alertPaddingY = '.75rem !default'
-export const alertPaddingX = '1.25rem !default'
-export const alertMarginBottom = '1rem !default'
+export const alertPaddingY = '.75rem'
+export const alertPaddingX = '1.25rem'
+export const alertMarginBottom = '1rem'
 export const alertBorderRadius = borderRadius
 export const alertLinkFontWeight = fontWeightBold
 export const alertBorderWidth = borderWidth
 
-export const alertBgLevel = '-10 !default'
-export const alertBorderLevel = '-9 !default'
-export const alertColorLevel = '6 !default'
+export const alertBgLevel = '-10'
+export const alertBorderLevel = '-9'
+export const alertColorLevel = '6'

@@ -24,27 +24,27 @@ import {
 
 describe('Cards', () => {
     it('Cards', () => {
-        expect(cardSpacerY).toEqual('.75rem !default')
-        expect(cardSpacerX).toEqual('1.25rem !default')
+        expect(cardSpacerY).toEqual('.75rem')
+        expect(cardSpacerX).toEqual('1.25rem')
         expect(cardBorderWidth).toEqual(borderWidth)
         expect(cardBorderRadius).toEqual(borderRadius)
-        expect(cardBorderColor).toEqual(format('{} !default', rgba(black, .125)))
-        expect(cardInnerBorderRadius).toEqual(format('{}{} !default',
+        expect(cardBorderColor).toEqual(format('{}', rgba(black, .125)))
+        expect(cardInnerBorderRadius).toEqual(format('{}{}',
             size(cardBorderRadius).value - size(cardBorderWidth).value,
             size(cardBorderRadius).unit
         ))
 
-        expect(cardCapBg).toEqual(format('{} !default', rgba(black, .03)))
+        expect(cardCapBg).toEqual(format('{}', rgba(black, .03)))
         expect(cardBg).toEqual(white)
 
-        expect(cardImgOverlayPadding).toEqual('1.25rem !default')
+        expect(cardImgOverlayPadding).toEqual('1.25rem')
 
-        expect(cardGroupMargin).toEqual(format('{}{} !default', size(gridGutterWidth).value / 2, size(gridGutterWidth).unit))
+        expect(cardGroupMargin).toEqual(format('{}{}', size(gridGutterWidth).value / 2, size(gridGutterWidth).unit))
 
         expect(cardDeckMargin).toEqual(cardGroupMargin)
 
-        expect(cardColumnsCount).toEqual('3 !default')
-        expect(cardColumnsGap).toEqual('1.25rem !default')
+        expect(cardColumnsCount).toEqual('3')
+        expect(cardColumnsGap).toEqual('1.25rem')
         expect(cardColumnsMargin).toEqual(cardSpacerY)
     })
 })

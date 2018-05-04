@@ -30,13 +30,13 @@ import {
 
 describe('Pagination', () => {
     it('Pagination', () => {
-        expect(paginationPaddingY).toEqual('.5rem !default')
-        expect(paginationPaddingX).toEqual('.75rem !default')
-        expect(paginationPaddingYSm).toEqual('.25rem !default')
-        expect(paginationPaddingXSm).toEqual('.5rem !default')
-        expect(paginationPaddingYLg).toEqual('.75rem !default')
-        expect(paginationPaddingXLg).toEqual('1.5rem !default')
-        expect(paginationLineHeight).toEqual('1.25 !default')
+        expect(paginationPaddingY).toEqual('.5rem')
+        expect(paginationPaddingX).toEqual('.75rem')
+        expect(paginationPaddingYSm).toEqual('.25rem')
+        expect(paginationPaddingXSm).toEqual('.5rem')
+        expect(paginationPaddingYLg).toEqual('.75rem')
+        expect(paginationPaddingXLg).toEqual('1.5rem')
+        expect(paginationLineHeight).toEqual('1.25')
 
         expect(paginationColor).toEqual(linkColor)
         expect(paginationBg).toEqual(white)
@@ -44,7 +44,7 @@ describe('Pagination', () => {
         expect(paginationBorderColor).toEqual(grays._300)
 
         expect(paginationFocusBoxShadow).toEqual(inputBtnFocusBoxShadow)
-        expect(paginationFocusOutline).toEqual('0 !default')
+        expect(paginationFocusOutline).toEqual('0')
 
         expect(paginationHoverColor).toEqual(linkHoverColor)
         expect(paginationHoverBg).toEqual(grays._200)

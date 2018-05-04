@@ -30,8 +30,8 @@ describe('Grid containers', () => {
 describe('Grid columns', () => {
 
     it('Set the number of columns and specify the width of the gutters.', () => {
-        expect(gridColumns).toEqual('12 !default')
-        expect(gridGutterWidth).toEqual('30px !default')
+        expect(gridColumns).toEqual('12')
+        expect(gridGutterWidth).toEqual('30px')
     })
 })
 

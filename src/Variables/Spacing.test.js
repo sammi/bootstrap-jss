@@ -8,7 +8,7 @@ import {
 describe('Spacing', () => {
     it('Quickly modify global styling by enabling or disabling optional features.', () => {
         
-        expect(spacer).toEqual('1rem !default')
+        expect(spacer).toEqual('1rem')
 
         // You can add more entries to the $spacers map, should you need more variation.
         expect(spacers).toEqual({

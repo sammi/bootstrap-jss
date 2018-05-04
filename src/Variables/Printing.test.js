@@ -7,7 +7,7 @@ import {
 
 describe('Printing', () => {
     it('Printing', () => {
-        expect(printPageSize).toEqual('a3 !default')
+        expect(printPageSize).toEqual('a3')
         expect(printBodyMinWidth).toEqual(gridBreakpoints.lg)
     })
 })

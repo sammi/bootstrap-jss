@@ -21,20 +21,20 @@ import {
 
 describe('Buttons + Forms', () => {
     it('Shared variables that are reassigned to `input-` and `btn-` specific variables.', () => {
-        expect(inputBtnPaddingY).toEqual('.375rem !default')
-        expect(inputBtnPaddingX).toEqual('.75rem !default')
+        expect(inputBtnPaddingY).toEqual('.375rem')
+        expect(inputBtnPaddingX).toEqual('.75rem')
         expect(inputBtnLineHeight).toEqual(lineHeightBase)
         
-        expect(inputBtnFocusWidth).toEqual('.2rem !default')
-        expect(inputBtnFocusColor).toEqual(format('{} !default', rgba(componentActiveBg, .25)))
-        expect(inputBtnFocusBoxShadow).toEqual(format('0 0 0 {} {} !default', inputBtnFocusWidth, inputBtnFocusColor))
+        expect(inputBtnFocusWidth).toEqual('.2rem')
+        expect(inputBtnFocusColor).toEqual(format('{}', rgba(componentActiveBg, .25)))
+        expect(inputBtnFocusBoxShadow).toEqual(format('0 0 0 {} {}', inputBtnFocusWidth, inputBtnFocusColor))
         
-        expect(inputBtnPaddingYSm).toEqual('.25rem !default')
-        expect(inputBtnPaddingXSm).toEqual('.5rem !default')
+        expect(inputBtnPaddingYSm).toEqual('.25rem')
+        expect(inputBtnPaddingXSm).toEqual('.5rem')
         expect(inputBtnLineHeightSm).toEqual(lineHeightSm)
         
-        expect(inputBtnPaddingYLg).toEqual('.5rem !default')
-        expect(inputBtnPaddingXLg).toEqual('1rem !default')
+        expect(inputBtnPaddingYLg).toEqual('.5rem')
+        expect(inputBtnPaddingXLg).toEqual('1rem')
         expect(inputBtnLineHeightLg).toEqual(lineHeightLg)
         
         expect(inputBtnBorderWidth).toEqual(borderWidth)

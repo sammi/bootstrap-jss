@@ -34,29 +34,29 @@ describe("Colors", () => {
 
     it("Base colors", () => {
 
-        expect(white).toEqual('#fff !default')
+        expect(white).toEqual('#fff')
         expect(grays).toEqual({
-            _100: '#f8f9fa !default',
-            _200: '#e9ecef !default',
-            _300: '#dee2e6 !default',
-            _400: '#ced4da !default',
-            _500: '#adb5bd !default',
-            _600: '#6c757d !default',
-            _700: '#495057 !default',
-            _800: '#343a40 !default',
-            _900: '#212529 !default'
+            _100: '#f8f9fa',
+            _200: '#e9ecef',
+            _300: '#dee2e6',
+            _400: '#ced4da',
+            _500: '#adb5bd',
+            _600: '#6c757d',
+            _700: '#495057',
+            _800: '#343a40',
+            _900: '#212529'
         })
-        expect(black).toEqual('#000 !default')
-        expect(blue).toEqual('#007bff !default')
-        expect(indigo).toEqual('#6610f2 !default')
-        expect(purple).toEqual('#6f42c1 !default')
-        expect(pink).toEqual('#e83e8c !default')
-        expect(red).toEqual('#dc3545 !default')
-        expect(orange).toEqual('#fd7e14 !default')
-        expect(yellow).toEqual('#ffc107 !default')
-        expect(green).toEqual('#28a745 !default')
-        expect(teal).toEqual('#20c997 !default')
-        expect(cyan).toEqual('#17a2b8 !default')
+        expect(black).toEqual('#000')
+        expect(blue).toEqual('#007bff')
+        expect(indigo).toEqual('#6610f2')
+        expect(purple).toEqual('#6f42c1')
+        expect(pink).toEqual('#e83e8c')
+        expect(red).toEqual('#dc3545')
+        expect(orange).toEqual('#fd7e14')
+        expect(yellow).toEqual('#ffc107')
+        expect(green).toEqual('#28a745')
+        expect(teal).toEqual('#20c997')
+        expect(cyan).toEqual('#17a2b8')
     })
 
     it('Extend colors', () => {
@@ -96,8 +96,8 @@ describe("Colors", () => {
             light:      light,
             dark:       dark
         })
-        expect(themeColorInterval).toEqual('8% !default')
-        expect(yiqContrastedThreshold).toEqual('150 !default')
+        expect(themeColorInterval).toEqual('8%')
+        expect(yiqContrastedThreshold).toEqual('150')
         expect(yiqTextDark).toEqual(grays._900)
         expect(yiqTextLight).toEqual(white)
     })

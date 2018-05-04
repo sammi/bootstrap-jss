@@ -1,5 +1,5 @@
 
-export const spacer = '1rem !default'
+export const spacer = '1rem'
 export const spacers = {
     _0: 0,
     _1: spacer * .25,
