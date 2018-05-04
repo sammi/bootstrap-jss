@@ -1,0 +1,31 @@
+import {grays} from './Colors'
+import {borderRadius} from './Components'
+
+import {
+    breadcrumbPaddingY,
+    breadcrumbPaddingX,
+    breadcrumbItemPadding,    
+    breadcrumbMarginBottom,    
+    breadcrumbBg,
+    breadcrumbDividerColor,
+    breadcrumbctiveColor,
+    breadcrumbDivider,    
+    breadcrumbBorderRadius
+} from './Breadcrumbs'
+
+describe('Breadcrumbs', () => {
+    it('Breadcrumbs', () => {
+        expect(breadcrumbPaddingY).toEqual('.75rem !default')
+        expect(breadcrumbPaddingX).toEqual('1rem !default')
+        expect(breadcrumbItemPadding).toEqual('.5rem !default')
+        
+        expect(breadcrumbMarginBottom).toEqual('1rem !default')
+        
+        expect(breadcrumbBg).toEqual(grays._200)
+        expect(breadcrumbDividerColor).toEqual(grays._600)
+        expect(breadcrumbctiveColor).toEqual(grays._600)
+        expect(breadcrumbDivider).toEqual('quote("/") !default')
+        
+        expect(breadcrumbBorderRadius).toEqual(borderRadius)
+    })
+})
