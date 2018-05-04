@@ -69,11 +69,11 @@ describe('Fonts', () => {
     })
 
     it('Font Weight', () => {
-        expect(fontWeightLight).toEqual('300')
-        expect(fontWeightNormal).toEqual('400')
-        expect(fontWeightBold).toEqual('700')
+        expect(fontWeightLight).toEqual(300)
+        expect(fontWeightNormal).toEqual(400)
+        expect(fontWeightBold).toEqual(700)
         expect(fontWeightBase).toEqual(fontWeightNormal)
-        expect(lineHeightBase).toEqual('1.5')
+        expect(lineHeightBase).toEqual(1.5)
     })
 
     it('Font Headers', () => {
@@ -86,8 +86,8 @@ describe('Fonts', () => {
 
         expect(headingsMarginBottom).toEqual(fontSizeBase)
         expect(headingsFontFamily).toEqual('inherit')
-        expect(headingsFontWeight).toEqual('500')
-        expect(headingsLineHeight).toEqual('1.2')
+        expect(headingsFontWeight).toEqual(500)
+        expect(headingsLineHeight).toEqual(1.2)
         expect(headingsColor).toEqual('inherit')
     })
 
@@ -97,16 +97,16 @@ describe('Fonts', () => {
         expect(display3Size).toEqual('4.5rem')
         expect(display4Size).toEqual('3.5rem')
 
-        expect(display1Weight).toEqual('300')
-        expect(display2Weight).toEqual('300')
-        expect(display3Weight).toEqual('300')
-        expect(display4Weight).toEqual('300')
+        expect(display1Weight).toEqual(300)
+        expect(display2Weight).toEqual(300)
+        expect(display3Weight).toEqual(300)
+        expect(display4Weight).toEqual(300)
         expect(displayLineHeight).toEqual(headingsLineHeight)
     })
 
     it('Lead', () => {
         expect(leadFontSize).toEqual('1.25rem')
-        expect(leadFontWeight).toEqual('300')
+        expect(leadFontWeight).toEqual(300)
     })
 
     it('Small Font', () => {

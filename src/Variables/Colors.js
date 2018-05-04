@@ -67,7 +67,7 @@ export const themeColors = {
 export const themeColorInterval = '8%'
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-export const yiqContrastedThreshold = '150'
+export const yiqContrastedThreshold = 150
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 export const yiqTextDark  = grays._900

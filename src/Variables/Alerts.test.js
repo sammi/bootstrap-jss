@@ -22,8 +22,8 @@ describe('Define alert colors, border radius, and padding.', () => {
         expect(alertLinkFontWeight).toEqual(fontWeightBold)
         expect(alertBorderWidth).toEqual(borderWidth)
 
-        expect(alertBgLevel).toEqual('-10')
-        expect(alertBorderLevel).toEqual('-9')
-        expect(alertColorLevel).toEqual('6')
+        expect(alertBgLevel).toEqual(-10)
+        expect(alertBorderLevel).toEqual(-9)
+        expect(alertColorLevel).toEqual(6)
     })
 })

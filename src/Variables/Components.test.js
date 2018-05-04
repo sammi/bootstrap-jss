@@ -25,8 +25,8 @@ describe('Components', () => {
 
     it('Define common padding and border radius sizes and more.', () => {
 
-        expect(lineHeightLg).toEqual('1.5')
-        expect(lineHeightSm).toEqual('1.5')
+        expect(lineHeightLg).toEqual(1.5)
+        expect(lineHeightSm).toEqual(1.5)
 
         expect(borderWidth).toEqual('1px')
         expect(borderColor).toEqual(grays._300)

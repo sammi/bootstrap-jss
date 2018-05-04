@@ -37,7 +37,7 @@ export const btnFontWeight = fontWeightNormal
 export const btnBoxShadowfontWeightNormal = format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, .15), rgba(black, .075))
 export const btnFocusWidth = inputBtnFocusWidth
 export const btnFocusBoxShadow = inputBtnFocusBoxShadow
-export const btnDisabledOpacity = '.65'
+export const btnDisabledOpacity = .65
 export const btnActiveBoxShadow = format('inset 0 3px 5px {}', rgba(black, .125))
 
 export const btnLinkDisabledColor = grays._600;

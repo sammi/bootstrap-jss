@@ -64,7 +64,7 @@ describe('Buttons', () => {
         expect(btnBoxShadowfontWeightNormal).toEqual(format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, .15), rgba(black, .075)))
         expect(btnFocusWidth).toEqual(inputBtnFocusWidth)
         expect(btnFocusBoxShadow).toEqual(inputBtnFocusBoxShadow)
-        expect(btnDisabledOpacity).toEqual('.65')
+        expect(btnDisabledOpacity).toEqual(.65)
         expect(btnActiveBoxShadow).toEqual(format('inset 0 3px 5px {}', rgba(black, .125)))
 
         expect(btnLinkDisabledColor).toEqual(grays._600);

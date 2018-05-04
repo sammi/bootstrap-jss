@@ -13,11 +13,11 @@ export const fontSizeBase = '1rem'
 export const fontSizeLg = format('{}{}', size(fontSizeBase).value * 1.25, size(fontSizeBase).unit)
 export const fontSizeSm = format('{}{}', size(fontSizeBase).value * .875, size(fontSizeBase).unit)
 
-export const fontWeightLight = '300'
-export const fontWeightNormal = '400'
-export const fontWeightBold = '700'
+export const fontWeightLight = 300
+export const fontWeightNormal = 400
+export const fontWeightBold = 700
 export const fontWeightBase = fontWeightNormal
-export const lineHeightBase = '1.5'
+export const lineHeightBase = 1.5
 
 export const h1FontSize = format('{}{}', size(fontSizeBase).value * 2.5, size(fontSizeBase).unit)
 export const h2FontSize = format('{}{}', size(fontSizeBase).value * 2, size(fontSizeBase).unit)
@@ -27,8 +27,8 @@ export const h5FontSize = format('{}{}', size(fontSizeBase).value * 1.25, size(f
 export const h6FontSize = fontSizeBase
 export const headingsMarginBottom = format('{}{}', size(spacer).value, size(spacer).unit)
 export const headingsFontFamily = 'inherit'
-export const headingsFontWeight = '500'
-export const headingsLineHeight = '1.2'
+export const headingsFontWeight = 500
+export const headingsLineHeight = 1.2
 export const headingsColor = 'inherit'
 
 export const display1Size = '6rem'
@@ -36,14 +36,14 @@ export const display2Size = '5.5rem'
 export const display3Size = '4.5rem'
 export const display4Size = '3.5rem'
 
-export const display1Weight = '300'
-export const display2Weight = '300'
-export const display3Weight = '300'
-export const display4Weight = '300'
+export const display1Weight = 300
+export const display2Weight = 300
+export const display3Weight = 300
+export const display4Weight = 300
 export const displayLineHeight = headingsLineHeight
 
 export const leadFontSize = format('{}{}', size(fontSizeBase).value * 1.25, size(fontSizeBase).unit)
-export const leadFontWeight = '300'
+export const leadFontWeight = 300
 
 export const smallFontSize = '80%'
 

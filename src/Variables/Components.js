@@ -2,8 +2,8 @@ import { grays, black, white, themeColors } from './Colors'
 import {rgba} from '../Functions/rgba'
 import format from 'string-format'
 
-export const lineHeightLg = '1.5'
-export const lineHeightSm = '1.5'
+export const lineHeightLg = 1.5
+export const lineHeightSm = 1.5
 
 export const borderWidth = '1px'
 export const borderColor = grays._300

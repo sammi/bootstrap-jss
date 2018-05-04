@@ -1,12 +1,14 @@
+import {size} from '../Functions/size'
+import format from 'string-format'
 
 export const spacer = '1rem'
 export const spacers = {
     _0: 0,
-    _1: spacer * .25,
-    _2: spacer * .5,
+    _1: format('{}{}', size(spacer).value * .25, size(spacer).unit),
+    _2: format('{}{}', size(spacer).value * .5, size(spacer).unit),
     _3: spacer,
-    _4: spacer * 1.5,
-    _5: spacer * 3
+    _4: format('{}{}', size(spacer).value * 1.5, size(spacer).unit),
+    _5: format('{}{}', size(spacer).value * 3, size(spacer).unit)
 }
 
 // This variable affects the `.h-*` and `.w-*` classes.

@@ -8,9 +8,9 @@ import Color from 'color'
 
 import {white, grays, black, themeColors} from './Colors'
 import {bodyColor, bodyBg} from './Body'
-import {componentActiveBg, componentActiveColor, borderColor, boxShadow} from './Components'
+import {componentActiveBg, componentActiveColor, borderColor, boxShadow, borderRadius, borderRadiusLg} from './Components'
 import {fontSizeBase, smallFontSize, fontSizeSm, fontSizeLg} from './Fonts'
-import {borderRadius, borderRadiusLg, borderRadiusSm} from './Buttons'
+import {borderRadiusSm} from './Buttons'
 
 import {
     inputBtnPaddingY, 
@@ -94,7 +94,7 @@ export const inputHeightLg =  format('calc({}{} + {}{})',
     size(inputHeightBorder).value, size(inputHeightBorder).unit
 )
 
-export const inputTransition = format('{} .15s easeIn - out, {} .15s easeIn - out!default', borderColor, boxShadow)
+export const inputTransition = format('{} .15s easeIn - out, {} .15s easeIn - out', borderColor, boxShadow)
 
 export const formTextMarginTop = '.25rem'
 
@@ -143,7 +143,7 @@ export const customCheckboxIndicatorIconChecked = format(
     '{}', 
     format(
         "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='{}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E",
-        _.replace(customControlIndicatorCheckedColor, '!default', '').trim()
+        _.replace(customControlIndicatorCheckedColor, '', '').trim()
     )
 )
 
@@ -153,7 +153,7 @@ export const customCheckboxIndicatorIconIndeterminate = format(
     '{}', 
     format(
         "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='{}' d='M0 2h4'/%3E%3C/svg%3E",
-        _.replace(customCheckboxIndicatorIndeterminateColor, '!default', '').trim()
+        _.replace(customCheckboxIndicatorIndeterminateColor, '', '').trim()
     )
 )
 
@@ -164,7 +164,7 @@ export const customRadioIndicatorIconChecked = format(
     '{}', 
     format(
         "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='{}' /%3E%3C/svg%3E",
-        _.replace(customControlIndicatorCheckedColor, '!default', '').trim()
+        _.replace(customControlIndicatorCheckedColor, '', '').trim()
     )
 )
 
@@ -184,7 +184,7 @@ export const customSelectIndicator = format(
     '{}', 
     format(
         "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='{}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E",
-        _.replace(customSelectIndicatorColor, '!default', '').trim()
+        _.replace(customSelectIndicatorColor, '', '').trim()
     )
 )
 

@@ -8,6 +8,6 @@ export const alertBorderRadius = borderRadius
 export const alertLinkFontWeight = fontWeightBold
 export const alertBorderWidth = borderWidth
 
-export const alertBgLevel = '-10'
-export const alertBorderLevel = '-9'
-export const alertColorLevel = '6'
+export const alertBgLevel = -10
+export const alertBorderLevel = -9
+export const alertColorLevel = 6

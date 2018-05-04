@@ -38,6 +38,9 @@ import Variables from './index'
 describe('Variables', () => {
 
     it('Variables', () => {
+
+        console.log(Variables)
+
         expect(Variables).toEqual({
             Colors,
             Options,

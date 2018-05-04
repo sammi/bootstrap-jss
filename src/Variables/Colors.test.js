@@ -97,7 +97,7 @@ describe("Colors", () => {
             dark:       dark
         })
         expect(themeColorInterval).toEqual('8%')
-        expect(yiqContrastedThreshold).toEqual('150')
+        expect(yiqContrastedThreshold).toEqual(150)
         expect(yiqTextDark).toEqual(grays._900)
         expect(yiqTextLight).toEqual(white)
     })
