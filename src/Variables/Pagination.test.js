@@ -1,7 +1,7 @@
 import {linkColor, linkHoverColor} from './Links'
 import {white, grays} from './Colors'
 import {borderWidth, componentActiveColor, componentActiveBg} from './Components'
-import {inputBtnFocusBoxShadow} from './Buttons'
+import {inputBtnFocusBoxShadow} from './InputButtons'
 
 import {
     paginationPaddingY,
@@ -44,7 +44,7 @@ describe('Pagination', () => {
         expect(paginationBorderColor).toEqual(grays._300)
 
         expect(paginationFocusBoxShadow).toEqual(inputBtnFocusBoxShadow)
-        expect(paginationFocusOutline).toEqual('0')
+        expect(paginationFocusOutline).toEqual(0)
 
         expect(paginationHoverColor).toEqual(linkHoverColor)
         expect(paginationHoverBg).toEqual(grays._200)

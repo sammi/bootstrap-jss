@@ -70,16 +70,22 @@ describe('Navbar', () => {
         expect(navbarDarkActiveColor).toEqual(white)
         expect(navbarDarkDisabledColor).toEqual(format('{}', rgba(white, .25)))
 
-        //strReplace(url("data).toEqual('image/svg+xml)charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http).toEqual('//www.w3.org/2000/svg'%3E%3Cpath stroke='#{navbarDarkColor}' stroke-width='2' strokeLinecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23")
-        expect(navbarDarkTogglerIconBg).toEqual('')
+        expect(navbarDarkTogglerIconBg).toEqual(format(
+            "data = 'image/svg+xml)charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http = '//www.w3.org/2000/svg'%3E%3Cpath stroke='{}' stroke-width='2' strokeLinecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E",
+            navbarDarkColor
+        ))
         expect(navbarDarkTogglerBorderColor).toEqual(format('{}', rgba(white, .1)))
 
         expect(navbarLightColor).toEqual(format('{}', rgba(white, .5)))
         expect(navbarLightHoverColor).toEqual(format('{}', rgba(black, .7)))
         expect(navbarLightActiveColor).toEqual(format('{}', rgba(black, .9)))
         expect(navbarLightDisabledColor).toEqual(format('{}', rgba(black, .3)))
-        //strReplace(url("data).toEqual('image/svg+xml)charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http).toEqual('//www.w3.org/2000/svg'%3E%3Cpath stroke='#{navbarLightColor}' stroke-width='2' strokeLinecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23")
-        expect(navbarLightTogglerIconBg).toEqual('')
+        
+        expect(navbarLightTogglerIconBg).toEqual(format(
+            "image/svg+xml)charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http).toEqual('//www.w3.org/2000/svg'%3E%3Cpath stroke='{}' stroke-width='2' strokeLinecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E",
+            navbarLightColor,
+        ))
+
         expect(navbarLightTogglerBorderColor).toEqual(format('{}', rgba(black, .1)))
 
     })

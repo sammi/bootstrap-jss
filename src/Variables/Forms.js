@@ -8,9 +8,8 @@ import Color from 'color'
 
 import {white, grays, black, themeColors} from './Colors'
 import {bodyColor, bodyBg} from './Body'
-import {componentActiveBg, componentActiveColor, borderColor, boxShadow, borderRadius, borderRadiusLg} from './Components'
+import {componentActiveBg, componentActiveColor, borderColor, boxShadow, borderRadius, borderRadiusLg, borderRadiusSm} from './Components'
 import {fontSizeBase, smallFontSize, fontSizeSm, fontSizeLg} from './Fonts'
-import {borderRadiusSm} from './Buttons'
 
 import {
     inputBtnPaddingY, 

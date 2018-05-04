@@ -35,11 +35,13 @@ import * as Printing from './Printing'
 
 import Variables from './index'
 
+import format from 'string-format'
+
 describe('Variables', () => {
 
     it('Variables', () => {
 
-        expect(Variables).toEqual({
+      expect(Variables).toEqual({
             Colors,
             Options,
             Spacing,
@@ -75,5 +77,19 @@ describe('Variables', () => {
             Code,
             Printing
         })
+
+        Object.keys(Variables).forEach( key => {
+            var variable = Variables[key]
+            if(variable) {
+                Object.keys(variable).forEach( k => {
+                    if(!variable[k] && variable[k] != 0) {
+                        fail(format('Undefined variable {}.{}', key, k))
+                    }
+                })
+            } else {
+                fail(format('Undefined variable {}', key))
+            }
+        } )
+
     })
 })

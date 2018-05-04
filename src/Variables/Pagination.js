@@ -1,8 +1,7 @@
 import {linkColor, linkHoverColor} from './Links'
 import {white, grays} from './Colors'
 import {borderWidth, componentActiveColor, componentActiveBg} from './Components'
-import {inputBtnFocusBoxShadow} from './Buttons'
-
+import {inputBtnFocusBoxShadow} from './InputButtons'
 
 export const paginationPaddingY = '.5rem'
 export const paginationPaddingX = '.75rem'
@@ -18,7 +17,7 @@ export const paginationBorderWidth = borderWidth
 export const paginationBorderColor = grays._300
 
 export const paginationFocusBoxShadow = inputBtnFocusBoxShadow
-export const paginationFocusOutline = '0'
+export const paginationFocusOutline = 0
 
 export const paginationHoverColor = linkHoverColor
 export const paginationHoverBg = grays._200
