@@ -7,7 +7,7 @@
     "url": "git+https://github.com/sammi/bootstrap-jss.git"
   },
   "author": "Sammi Song",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sammi/bootstrap-jss/issues"
   },
