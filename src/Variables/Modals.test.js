@@ -44,7 +44,7 @@ describe('Modals', () => {
         expect(modalContentBoxShadowSmUp).toEqual(format('0 .5rem 1rem {}', rgba(black, .5)))
 
         expect(modalBackdropBg).toEqual(black)
-        expect(modalBackdropOpacity).toEqual('.5')
+        expect(modalBackdropOpacity).toEqual(.5)
         expect(modalHeaderBorderColor).toEqual(grays._200)
         expect(modalFooterBorderColor).toEqual(modalHeaderBorderColor)
         expect(modalHeaderBorderWidth).toEqual(modalContentBorderWidth)

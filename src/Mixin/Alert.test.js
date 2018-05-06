@@ -9,7 +9,7 @@ describe('Alert', () => {
             "borderColor": "#000",
             "color": "#0F0",
             "extend": {
-                "background-color": "#fff"
+                "backgroundColor": "#fff"
             },
             "hr": {
                 "borderTopColor": "#000000"

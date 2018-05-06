@@ -19,7 +19,7 @@ export const modalContentBoxShadowXs = format('0 .25rem .5rem {}', rgba(black, .
 export const modalContentBoxShadowSmUp = format('0 .5rem 1rem {}', rgba(black, .5))
 
 export const modalBackdropBg = black
-export const modalBackdropOpacity = '.5'
+export const modalBackdropOpacity = .5
 export const modalHeaderBorderColor = grays._200
 export const modalFooterBorderColor = modalHeaderBorderColor
 export const modalHeaderBorderWidth = modalContentBorderWidth

@@ -24,7 +24,7 @@ describe('Tooltips', () => {
         expect(tooltipColor).toEqual(white)
         expect(tooltipBg).toEqual(black)
         expect(tooltipBorderRadius).toEqual(borderRadius)
-        expect(tooltipOpacity).toEqual('.9')
+        expect(tooltipOpacity).toEqual(.9)
         expect(tooltipPaddingY).toEqual('.25rem')
         expect(tooltipPaddingX).toEqual('.5rem')
         expect(tooltipMargin).toEqual('0')
