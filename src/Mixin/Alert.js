@@ -2,16 +2,17 @@ import {bodyBg} from '../Variables/Body'
 import format from 'string-format'
 import {darken} from '../Functions/darken'
 import {gradientBg} from './gradients'
+import {enableGradients} from '../Variables/Options'
 
-export const alertVariant = (background, border, color) => {
+export const alertVariant = (background, border, color, ifEnableGraidents=enableGradients) => {
     return {
         color: color,
-        extend: gradientBg(background),
-        'border-color': border,
+        extend: gradientBg(background, ifEnableGraidents),
+        borderColor: border,
         hr: {
-            'border-top-color': darken(border, '5%')
+            borderTopColor: darken(border, '5%')
         },
-        'alert-link': {
+        alertLink: {
             color: darken(color, '10%')
         }
     }
