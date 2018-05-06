@@ -1,4 +1,4 @@
-import {alertVariant} from './Alert'
+import {alertVariant} from './alert'
 describe('Alert', () => {
     it('Alert', () => {
 
