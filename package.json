@@ -1,17 +1,17 @@
 {
-  "name": "bootstrapjss",
+  "name": "bootstrap-jss",
   "version": "0.0.1",
-  "description": "Build JSS components for Bootstrap SCSS styles",
+  "description": "Build JSS components for Bootstrap by JSS",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sammi/BootstrapJSS.git"
+    "url": "git+https://github.com/sammi/bootstrap-jss.git"
   },
   "author": "Sammi Song",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sammi/BootstrapJSS/issues"
+    "url": "https://github.com/sammi/bootstrap-jss/issues"
   },
-  "homepage": "https://github.com/sammi/BootstrapJSS#readme",
+  "homepage": "https://github.com/sammi/bootstrap-jss#readme",
   "dependencies": {
     "bootstrap": "^4.1.0",
     "color": "^3.0.0",
