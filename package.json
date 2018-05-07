@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Build JSS components for Bootstrap by JSS",
   "repository": {
     "type": "git",

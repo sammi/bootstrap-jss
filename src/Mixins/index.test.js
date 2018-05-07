@@ -1,4 +1,4 @@
-import {alertVariant, backgroundVariant} from './variant'
+import {alertVariant, bgVariant, bgGradientVariant} from './variant'
 import {badgeVariant} from './badge'
 import {gradientBg} from './gradients'
 import {hover, hoverFocus, plainHoverFocus, hoverFocusActive} from './hover'
@@ -11,7 +11,8 @@ describe('Mixins', () => {
 
         expect(Mixins).toEqual({
             alertVariant, 
-            backgroundVariant,
+            bgVariant,
+            bgGradientVariant,
             badgeVariant,
             gradientBg,
             hover,
