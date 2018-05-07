@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Build JSS components for Bootstrap by JSS",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   "bugs": {
     "url": "https://github.com/sammi/bootstrap-jss/issues"
   },
+  "main": "index.js",
   "files": [
     "src"
   ],
