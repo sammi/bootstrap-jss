@@ -6,7 +6,7 @@ import {mix} from './mix'
 import {rgba} from './rgba'
 import {size} from './size'
 
-export default {
+export {
     colorYiq,
     darken,
     fadeIn,

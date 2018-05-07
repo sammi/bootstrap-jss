@@ -33,7 +33,7 @@ import * as Close from './Close'
 import * as Code from './Code'
 import * as Printing from './Printing'
 
-export default {
+export {
     Colors,
     Options,
     Spacing,

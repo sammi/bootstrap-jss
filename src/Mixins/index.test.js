@@ -3,7 +3,7 @@ import {badgeVariant} from './badge'
 import {gradientBg} from './gradients'
 import {hover, hoverFocus, plainHoverFocus, hoverFocusActive} from './hover'
 
-import Mixins from './index'
+import * as Mixins from './index'
 
 describe('Mixins', () => {
 

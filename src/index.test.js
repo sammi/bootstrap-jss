@@ -1,4 +1,4 @@
-import Bootstrap from './index'
+import * as Bootstrap from './index'
 
 describe('Bootstrap', () => {
     it('Bootstrap', () => {

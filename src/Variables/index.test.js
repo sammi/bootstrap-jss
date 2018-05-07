@@ -33,7 +33,7 @@ import * as Close from './Close'
 import * as Code from './Code'
 import * as Printing from './Printing'
 
-import Variables from './index'
+import * as Variables from './index'
 
 import format from 'string-format'
 

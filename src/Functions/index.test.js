@@ -6,7 +6,7 @@ import {mix} from './mix'
 import {rgba} from './rgba'
 import {size} from './size'
 
-import Functions from './index'
+import * as Functions from './index'
 
 describe('Functions', () => {
     it('Functions', () => {

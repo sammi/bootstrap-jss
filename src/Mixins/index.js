@@ -3,7 +3,7 @@ import {badgeVariant} from './badge'
 import {gradientBg} from './gradients'
 import {hover, hoverFocus, plainHoverFocus, hoverFocusActive} from './hover'
 
-export default {
+export {
     alertVariant, 
     bgVariant,
     bgGradientVariant,
