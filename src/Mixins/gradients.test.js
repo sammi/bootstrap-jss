@@ -1,4 +1,5 @@
-import {gradientBg, alertVariant} from './gradients'
+import {alertVariant} from './variant'
+import {gradientBg} from './gradients'
 describe('Gradients', () => {
     it('Gradients', () => {
         expect(gradientBg('#000')).toEqual({"backgroundColor":"#000"})
