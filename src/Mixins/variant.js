@@ -6,7 +6,7 @@ import {enableGradients} from '../Variables/Options'
 import {mix} from '../Functions/mix'
 import {hoverFocus} from './hover'
 
-export const alertVariant = (background, border, color, ifEnableGraidents=enableGradients) => {
+const alertVariant = (background, border, color, ifEnableGraidents=enableGradients) => {
     return {
         color: color,
         extend: gradientBg(background, ifEnableGraidents),
@@ -20,7 +20,7 @@ export const alertVariant = (background, border, color, ifEnableGraidents=enable
     }
 }
 
-export const bgVariant = (parent, color) => {
+const bgVariant = (parent, color) => {
     let style = {}
     style[parent] = {backgroundColor: format('{} !important', color)}
     style[format('a.{}, button.{}', parent, parent)] = {
@@ -31,7 +31,7 @@ export const bgVariant = (parent, color) => {
     return style
 }
 
-export const bgGradientVariant = (parent, color) => {
+const bgGradientVariant = (parent, color) => {
     let style = {}
     style[parent] = {backgroundColor: format(
         '{} {} {} repeat-x !important', 
@@ -40,4 +40,10 @@ export const bgGradientVariant = (parent, color) => {
         color
     )}
     return style
+}
+
+export {
+    alertVariant,
+    bgVariant,
+    bgGradientVariant
 }

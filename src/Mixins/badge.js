@@ -3,7 +3,7 @@ import {colorYiq} from '../Functions/colorYiq'
 import {darken} from '../Functions/darken'
 import {hoverFocus} from './hover'
 
-export const badgeVariant = (bg) => ({
+const badgeVariant = (bg) => ({
     color: colorYiq(bg),
     backgroundColor: bg,
     '&[href]': {
@@ -14,3 +14,7 @@ export const badgeVariant = (bg) => ({
         })
     }
 })
+
+export {
+    badgeVariant
+}
