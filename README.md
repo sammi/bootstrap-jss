@@ -1,9 +1,9 @@
-# BootstrapJSS
-Convert Bootstrap SCSS to JSS
+# bootstrap-jss
 
-## Quick Start
-```
-rm -rf node_modules
-npm i
-npm t
+> Build JSS components for Bootstrap by JSS
+
+## Install
+
+```bash
+npm install --save bootstrap-jss
 ```
