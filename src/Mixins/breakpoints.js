@@ -12,3 +12,12 @@ export const breakpointNext = (name, breakpoints) => {
     return !!sortBreakPointList[namePosition] ? sortBreakPointList[namePosition].name : false
 
 }
+
+export const breakpointMin = (name, breakpoints) => {
+    return !!breakpoints[name] ? breakpoints[name] : null
+}
+
+export const breakpointMax = (name, breakpoints) => {
+    const nextName = breakpointNext(name, breakpoints)
+    return !!nextName ? (!!breakpoints[nextName] ? breakpoints[nextName] : null) : null
+}
