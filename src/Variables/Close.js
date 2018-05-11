@@ -4,9 +4,9 @@ import {black, white} from './Colors'
 import {size} from '../Functions/size'
 
 export const closeFontSize = format(
-    '{}{}',
-    size(fontSizeBase).value * 1.5,
-    size(fontSizeBase).unit
+  '{}{}',
+  size(fontSizeBase).value * 1.5,
+  size(fontSizeBase).unit
 )
 export const closeFontWeight = fontWeightBold
 export const closeColor = black

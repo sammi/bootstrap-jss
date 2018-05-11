@@ -8,53 +8,53 @@ import { bodyColor } from './Body'
 import {fadeIn} from '../Functions/fadeIn'
 
 import {
-    popoverFontSize,
-    popoverBg,
-    popoverMaxWidth,
-    popoverBorderWidth,
-    popoverBorderColor,
-    popoverBorderRadius,
-    popoverBoxShadow,
+  popoverFontSize,
+  popoverBg,
+  popoverMaxWidth,
+  popoverBorderWidth,
+  popoverBorderColor,
+  popoverBorderRadius,
+  popoverBoxShadow,
 
-    popoverHeaderBg,
-    popoverHeaderColor,
-    popoverHeaderPaddingY,
-    popoverHeaderPaddingX,
+  popoverHeaderBg,
+  popoverHeaderColor,
+  popoverHeaderPaddingY,
+  popoverHeaderPaddingX,
 
-    popoverBodyColor,
-    popoverBodyPaddingY,
-    popoverBodyPaddingX,
+  popoverBodyColor,
+  popoverBodyPaddingY,
+  popoverBodyPaddingX,
 
-    popoverArrowWidth,
-    popoverArrowHeight,
-    popoverArrowColor,
+  popoverArrowWidth,
+  popoverArrowHeight,
+  popoverArrowColor,
 
-    popoverArrowOuterColor
+  popoverArrowOuterColor
 } from './Popovers'
 
 describe('Popovers', () => {
-    it('Popovers', () => {
-        expect(popoverFontSize).toEqual(fontSizeSm)
-        expect(popoverBg).toEqual(white)
-        expect(popoverMaxWidth).toEqual('276px')
-        expect(popoverBorderWidth).toEqual(borderWidth)
-        expect(popoverBorderColor).toEqual(format('{}', rgba(black, .2)))
-        expect(popoverBorderRadius).toEqual(borderRadiusLg)
-        expect(popoverBoxShadow).toEqual(format('0 .25rem .5rem {}', rgba(black, .2)))
+  it('Popovers', () => {
+    expect(popoverFontSize).toEqual(fontSizeSm)
+    expect(popoverBg).toEqual(white)
+    expect(popoverMaxWidth).toEqual('276px')
+    expect(popoverBorderWidth).toEqual(borderWidth)
+    expect(popoverBorderColor).toEqual(format('{}', rgba(black, 0.2)))
+    expect(popoverBorderRadius).toEqual(borderRadiusLg)
+    expect(popoverBoxShadow).toEqual(format('0 .25rem .5rem {}', rgba(black, 0.2)))
 
-        expect(popoverHeaderBg).toEqual(format('{}', darken(popoverBg, '3%')))
-        expect(popoverHeaderColor).toEqual(headingsColor)
-        expect(popoverHeaderPaddingY).toEqual('.5rem')
-        expect(popoverHeaderPaddingX).toEqual('.75rem')
+    expect(popoverHeaderBg).toEqual(format('{}', darken(popoverBg, '3%')))
+    expect(popoverHeaderColor).toEqual(headingsColor)
+    expect(popoverHeaderPaddingY).toEqual('.5rem')
+    expect(popoverHeaderPaddingX).toEqual('.75rem')
 
-        expect(popoverBodyColor).toEqual(bodyColor)
-        expect(popoverBodyPaddingY).toEqual(popoverHeaderPaddingY)
-        expect(popoverBodyPaddingX).toEqual(popoverHeaderPaddingX)
+    expect(popoverBodyColor).toEqual(bodyColor)
+    expect(popoverBodyPaddingY).toEqual(popoverHeaderPaddingY)
+    expect(popoverBodyPaddingX).toEqual(popoverHeaderPaddingX)
 
-        expect(popoverArrowWidth).toEqual('1rem')
-        expect(popoverArrowHeight).toEqual('.5rem')
-        expect(popoverArrowColor).toEqual(popoverBg)
+    expect(popoverArrowWidth).toEqual('1rem')
+    expect(popoverArrowHeight).toEqual('.5rem')
+    expect(popoverArrowColor).toEqual(popoverBg)
 
-        expect(popoverArrowOuterColor).toEqual(format('{}', fadeIn(popoverBorderColor, .05)))
-    })
+    expect(popoverArrowOuterColor).toEqual(format('{}', fadeIn(popoverBorderColor, 0.05)))
+  })
 })

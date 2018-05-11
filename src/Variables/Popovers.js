@@ -11,9 +11,9 @@ export const popoverFontSize = fontSizeSm
 export const popoverBg = white
 export const popoverMaxWidth = '276px'
 export const popoverBorderWidth = borderWidth
-export const popoverBorderColor = format('{}', rgba(black, .2))
+export const popoverBorderColor = format('{}', rgba(black, 0.2))
 export const popoverBorderRadius = borderRadiusLg
-export const popoverBoxShadow = format('0 .25rem .5rem {}', rgba(black, .2))
+export const popoverBoxShadow = format('0 .25rem .5rem {}', rgba(black, 0.2))
 
 export const popoverHeaderBg = format('{}', darken(popoverBg, '3%'))
 export const popoverHeaderColor = headingsColor
@@ -28,4 +28,4 @@ export const popoverArrowWidth = '1rem'
 export const popoverArrowHeight = '.5rem'
 export const popoverArrowColor = popoverBg
 
-export const popoverArrowOuterColor = format('{}', fadeIn(popoverBorderColor, .05))
+export const popoverArrowOuterColor = format('{}', fadeIn(popoverBorderColor, 0.05))

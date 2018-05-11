@@ -4,13 +4,13 @@ import {gradientBg} from './gradients'
 import {hover, hoverFocus, plainHoverFocus, hoverFocusActive} from './hover'
 
 export {
-    alertVariant, 
-    bgVariant,
-    bgGradientVariant,
-    badgeVariant,
-    gradientBg,
-    hover,
-    hoverFocus,
-    plainHoverFocus,
-    hoverFocusActive
+  alertVariant,
+  bgVariant,
+  bgGradientVariant,
+  badgeVariant,
+  gradientBg,
+  hover,
+  hoverFocus,
+  plainHoverFocus,
+  hoverFocusActive
 }

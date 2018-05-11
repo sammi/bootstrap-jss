@@ -38,58 +38,51 @@ import * as Variables from './index'
 import format from 'string-format'
 
 describe('Variables', () => {
-
-    it('Variables', () => {
-
-      expect(Variables).toEqual({
-            Colors,
-            Options,
-            Spacing,
-            Body,
-            Links,
-            Paragraphs,
-            Grid,
-            Components,
-            Fonts,
-            Tables,
-            InputButtons,
-            Buttons,
-            Forms,
-            Dropdowns,
-            Zindex,
-            Navs,
-            Navbar,
-            Pagination,
-            Jumbotron,
-            Cards,
-            Tooltips,
-            Popovers,
-            Badges,
-            Modals,
-            Alerts,
-            Progressbars,
-            Listgroup,
-            Imagethumbnails,
-            Figures,
-            Breadcrumbs,
-            Carousel,
-            Close,
-            Code,
-            Printing
-        })
-
-        Object.keys(Variables).forEach( key => {
-            var variable = Variables[key]
-            if(variable) {
-                Object.keys(variable).forEach( k => {
-                    if(!variable[k] && variable[k] != 0) {
-                        fail(format('Undefined variable {}.{}', key, k))
-                    }
-                })
-            } else {
-                fail(format('Undefined variable {}', key))
-            }
-        } )
-
+  it('Variables', () => {
+    expect(Variables).toEqual({
+      Colors,
+      Options,
+      Spacing,
+      Body,
+      Links,
+      Paragraphs,
+      Grid,
+      Components,
+      Fonts,
+      Tables,
+      InputButtons,
+      Buttons,
+      Forms,
+      Dropdowns,
+      Zindex,
+      Navs,
+      Navbar,
+      Pagination,
+      Jumbotron,
+      Cards,
+      Tooltips,
+      Popovers,
+      Badges,
+      Modals,
+      Alerts,
+      Progressbars,
+      Listgroup,
+      Imagethumbnails,
+      Figures,
+      Breadcrumbs,
+      Carousel,
+      Close,
+      Code,
+      Printing
     })
+
+    Object.keys(Variables).forEach(key => {
+      var variable = Variables[key]
+      Object.keys(variable).forEach(k => {
+        if (variable === undefined || variable[k] === undefined) {
+          fail(format('Undefined {}.{} = {}', key, k, variable[k]))
+        }
+      })
+    })
+  })
 })

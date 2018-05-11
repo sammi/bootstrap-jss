@@ -9,17 +9,15 @@ import {size} from './size'
 import * as Functions from './index'
 
 describe('Functions', () => {
-    it('Functions', () => {
-
-        expect(Functions).toEqual({
-            colorYiq,
-            darken,
-            fadeIn,
-            lighten,
-            mix,
-            rgba,
-            size
-        })
-        
+  it('Functions', () => {
+    expect(Functions).toEqual({
+      colorYiq,
+      darken,
+      fadeIn,
+      lighten,
+      mix,
+      rgba,
+      size
     })
+  })
 })

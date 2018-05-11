@@ -7,11 +7,11 @@ import {rgba} from './rgba'
 import {size} from './size'
 
 export {
-    colorYiq,
-    darken,
-    fadeIn,
-    lighten,
-    mix,
-    rgba,
-    size,
+  colorYiq,
+  darken,
+  fadeIn,
+  lighten,
+  mix,
+  rgba,
+  size
 }
