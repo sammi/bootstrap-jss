@@ -54,7 +54,25 @@ export const mediaBreakpointsBetween = (lower, upper, breakpoints, contentStyle)
     return mediaQuery
   } else if (maxWidth === null) {
     return mediaBreakpointUp(lower, breakpoints, contentStyle)
-  } else {
+  } else if (minWidth === null) {
     return mediaBreakpointDown(upper, breakpoints, contentStyle)
+  } else {
+    return contentStyle
+  }
+}
+
+export const mediaBreakpointsOnly = (name, breakpoints, contentStyle) => {
+  const minWidth = breakpointMin(name, breakpoints)
+  const maxWidth = breakpointMax(name, breakpoints)
+  let mediaQuery = {}
+  if (minWidth !== null && maxWidth !== null) {
+    mediaQuery[format('@media (min-width: {}) and (max-width: {})', minWidth, maxWidth)] = contentStyle
+    return mediaQuery
+  } else if (maxWidth === null) {
+    return mediaBreakpointUp(name, breakpoints, contentStyle)
+  } else if (minWidth === null) {
+    return mediaBreakpointDown(name, breakpoints, contentStyle)
+  } else {
+    return contentStyle
   }
 }

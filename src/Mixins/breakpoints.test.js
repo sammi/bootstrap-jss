@@ -7,7 +7,8 @@ import {
   breakpointInfix,
   mediaBreakpointUp,
   mediaBreakpointDown,
-  mediaBreakpointsBetween
+  mediaBreakpointsBetween,
+  mediaBreakpointsOnly
 } from './breakpoints'
 
 describe('Breakpoint viewport sizes and media queries.', () => {
@@ -99,5 +100,36 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     mediaQuery = {}
     mediaQuery[format('@media (min-width: {}) and (max-width: {})', '576px', '1200px')] = contentStyles
     expect(mediaBreakpointsBetween('sm', 'lg', breakpoints, contentStyles)).toEqual(mediaQuery)
+
+    mediaQuery = {}
+    mediaQuery[format('@media (min-width: {}) and (max-width: {})', '576px', '768px')] = contentStyles
+    expect(mediaBreakpointsBetween('sm', 'sm', breakpoints, contentStyles)).toEqual(mediaQuery)
+
+    mediaQuery = {}
+    mediaQuery[format('@media (min-width: {})', '576px')] = contentStyles
+    expect(mediaBreakpointsBetween('sm', 'xl', breakpoints, contentStyles)).toEqual(mediaQuery)
+
+    expect(mediaBreakpointsBetween('xs', 'xl', breakpoints, contentStyles)).toEqual(contentStyles)
+  })
+
+  it('mediaBreakpointsOnly', () => {
+    const breakpoints = {xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px'}
+    const contentStyles = {color: 'red'}
+
+    let mediaQuery = {}
+    mediaQuery[format('@media (max-width: {})', '576px')] = contentStyles
+    expect(mediaBreakpointsOnly('xs', breakpoints, contentStyles)).toEqual(mediaQuery)
+
+    mediaQuery = {}
+    mediaQuery[format('@media (min-width: {}) and (max-width: {})', '576px', '768px')] = contentStyles
+    expect(mediaBreakpointsOnly('sm', breakpoints, contentStyles)).toEqual(mediaQuery)
+
+    mediaQuery = {}
+    mediaQuery[format('@media (min-width: {})', '1200px')] = contentStyles
+    expect(mediaBreakpointsOnly('xl', breakpoints, contentStyles)).toEqual(mediaQuery)
+
+    mediaQuery = {}
+    mediaQuery[format('@media (min-width: {}) and (max-width: {})', '992px', '1200px')] = contentStyles
+    expect(mediaBreakpointsOnly('lg', breakpoints, contentStyles)).toEqual(mediaQuery)
   })
 })
