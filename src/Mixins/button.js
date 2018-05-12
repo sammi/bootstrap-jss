@@ -68,3 +68,40 @@ export const buttonVariant = (
     }
   }
 }
+
+export const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, activeBorderColor, mybtnFocusWidth, myEnableShadows) => {
+  colorHover = colorHover || colorYiq(color)
+  ativeBackgroundColor = ativeBackgroundColor || color
+  activeBorderColor = activeBorderColor || color
+  mybtnFocusWidth = mybtnFocusWidth || btnFocusWidth
+  myEnableShadows = myEnableShadows || enableShadows
+
+  return {
+    color: color,
+    backgroundColor: 'transparent',
+    backgroundImage: 'none',
+    borderColor: color,
+    '&:hover': {
+      color: colorHover,
+      backgroundColor: ativeBackgroundColor,
+      borderColor: activeBorderColor
+    },
+    '&:focus, &.focus': {
+      boxShadow: format('0 0 0 {} {}', mybtnFocusWidth, rgba(color, 0.5))
+    },
+    '&.disabled, &:disabled': {
+      color: color,
+      backgroundColor: 'tranparent'
+    },
+    '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+      color: colorYiq(ativeBackgroundColor),
+      backgroundColor: ativeBackgroundColor,
+      borderColor: activeBorderColor,
+      '&:focus': {
+        boxShadow: myEnableShadows
+          ? format('{}, 0 0 0 {} {}', btnActiveBoxShadow, mybtnFocusWidth, rgba(color, 0.5))
+          : format('0 0 0 {} {}', mybtnFocusWidth, rgba(color, 0.5))
+      }
+    }
+  }
+}

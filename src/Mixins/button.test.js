@@ -10,9 +10,13 @@ import { hover } from './hover'
 import format from 'string-format'
 import {enableShadows} from '../Variables/Options'
 
-import { buttonVariant } from './button'
+import { buttonVariant, buttonOutlineVariant } from './button'
 
-describe('Button Variants', () => {
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+describe('buttonVariants', () => {
   it('buttonVariant', () => {
     const backgroundColor = '#abc'
     const borderColor = '#def'
@@ -155,6 +159,76 @@ describe('Button Variants', () => {
       },
       '&:focus': {
         boxShadow: format('0 0 0 {} {}', btnFocusWidth, rgba(borderColor, 0.5))
+      }
+    })
+  })
+
+  it('buttonOutlineVariant', () => {
+    const color = '#abc'
+    const colorHover = colorYiq(color)
+    const ativeBackgroundColor = color
+    const activeBorderColor = color
+    const mybtnFocusWidth = btnFocusWidth
+
+    expect(buttonOutlineVariant(color)).toEqual({
+      color: color,
+      backgroundColor: 'transparent',
+      backgroundImage: 'none',
+      borderColor: color,
+      '&:hover': {
+        color: colorHover,
+        backgroundColor: ativeBackgroundColor,
+        borderColor: activeBorderColor
+      },
+      '&:focus, &.focus': {
+        boxShadow: format('0 0 0 {} {}', mybtnFocusWidth, rgba(color, 0.5))
+      },
+      '&.disabled, &:disabled': {
+        color: color,
+        backgroundColor: 'tranparent'
+      },
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+        color: colorYiq(ativeBackgroundColor),
+        backgroundColor: ativeBackgroundColor,
+        borderColor: activeBorderColor,
+        '&:focus': {
+          boxShadow: format('0 0 0 {} {}', mybtnFocusWidth, rgba(color, 0.5))
+        }
+      }
+    })
+  })
+
+  it('buttonOutlineVariant, enableShadows = true', () => {
+    const color = '#abc'
+    const colorHover = colorYiq(color)
+    const ativeBackgroundColor = color
+    const activeBorderColor = color
+    const myBtnFocusWidth = btnFocusWidth
+
+    expect(buttonOutlineVariant(color, colorHover, ativeBackgroundColor, activeBorderColor, myBtnFocusWidth, true)).toEqual({
+      color: color,
+      backgroundColor: 'transparent',
+      backgroundImage: 'none',
+      borderColor: color,
+      '&:hover': {
+        color: colorHover,
+        backgroundColor: ativeBackgroundColor,
+        borderColor: activeBorderColor
+      },
+      '&:focus, &.focus': {
+        boxShadow: format('0 0 0 {} {}', myBtnFocusWidth, rgba(color, 0.5))
+      },
+      '&.disabled, &:disabled': {
+        color: color,
+        backgroundColor: 'tranparent'
+      },
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+        color: colorYiq(ativeBackgroundColor),
+        backgroundColor: ativeBackgroundColor,
+        borderColor: activeBorderColor,
+        '&:focus': {
+          boxShadow: format('{}, 0 0 0 {} {}', btnActiveBoxShadow, myBtnFocusWidth, rgba(color, 0.5))
+        }
       }
     })
   })
