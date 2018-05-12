@@ -1,6 +1,6 @@
 bootstrap-jss
 =============
-> Build JSS components for Bootstrap by JSS
+Build JSS components for Bootstrap by JSS
 
 # Install Visusl Studio Code Extensions
 
