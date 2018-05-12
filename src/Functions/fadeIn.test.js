@@ -1,5 +1,4 @@
 import {fadeIn} from './fadeIn'
-import _ from 'lodash'
 
 describe('fadeIn', () => {
   it('fadeIn', () => {
