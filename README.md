@@ -1,33 +1,27 @@
-# bootstrap-jss
-
+bootstrap-jss
+=============
 > Build JSS components for Bootstrap by JSS
 
-## Install
+# Install Visusl Studio Code Extensions:
 
-```bash
-npm install --save bootstrap-jss
-```
+* Jest
+* ESLint
+* Babel ES6/ES7
+* Jest Snippets
+* EditorConfig for VS Code
+* Code Outline
 
-## Visusl Studio Code Extensions:
+# Test Driven Development
 
-Jest
-ESLint
-Babel ES6/ES7
-Jest Snippets
-EditorConfig for VS Code
-Code Outline
-
-## Test and Debug
-
-Test:
-
+## Start the test watcher
 ```node
 rm -rf node_modules
 yarn install
 yarn test:watch
 ```
+## Change and save the code, make sure all tests are passing
 
-Debug:
+## When test failed, you could use debugger to fix the issue
 
-When there is a test fail, you could click "Debug" for this test, and step into the source code to debug.
+Click "Debug" above each Jest Unit test, step into the source code.
 
