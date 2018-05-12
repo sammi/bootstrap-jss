@@ -7,6 +7,7 @@
     "react"
   ],
   "plugins": [
-    "external-helpers"
+    "transform-es2015-modules-commonjs",
+    "dynamic-import-node"
   ]
 }
