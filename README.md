@@ -8,13 +8,26 @@
 npm install --save bootstrap-jss
 ```
 
-## Vidusl Studio Code Extensions:
+## Visusl Studio Code Extensions:
 
-Code Outline
-Node Debug
-Babel ES6/ES7
 Jest
-Jest Snippets
 ESLint
+Babel ES6/ES7
+Jest Snippets
 EditorConfig for VS Code
+Code Outline
+
+## Test and Debug
+
+Test:
+
+```node
+rm -rf node_modules
+yarn install
+yarn test:watch
+```
+
+Debug:
+
+When there is a test fail, you could click "Debug" for this test, and step into the source code to debug.
 
