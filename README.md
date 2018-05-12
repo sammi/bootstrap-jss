@@ -13,15 +13,13 @@ bootstrap-jss
 
 # Test Driven Development
 
-## Start the test watcher
+1. Start the test watcher
 ```node
 rm -rf node_modules
 yarn install
 yarn test:watch
 ```
-## Change and save the code, make sure all tests are passing
+2. Change and save code, make sure all tests are passing
 
-## When test failed, you could use debugger to fix the issue
-
-Click "Debug" above each Jest Unit test, step into the source code.
+3. When test failed, click "Debug" above each Jest Unit test, step into the source code.
 
