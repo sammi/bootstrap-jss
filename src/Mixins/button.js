@@ -56,6 +56,6 @@ export const buttonVariant = (
   '&:focus': {
     boxShadow: enableShadows
       ? format('{}, 0 0 0 {} {}', myBtnActiveBoxShadow, myBtnFocusWidth, rgba(borderColor, 0.5))
-      : format('0 0 0 {} {}', myBtnActiveBoxShadow, myBtnFocusWidth, rgba(borderColor, 0.5))
+      : format('0 0 0 {} {}', myBtnFocusWidth, rgba(borderColor, 0.5))
   }
 })

@@ -61,7 +61,7 @@ describe('Button Variants', () => {
         borderColor: activeBorderColor
       },
       '&:focus': {
-        boxShadow: format('{}, 0 0 0 {} {}', btnActiveBoxShadow, btnFocusWidth, rgba(borderColor, 0.5))
+        boxShadow: format('{}, 0 0 0 {} {}', myBtnActiveBoxShadow, myBtnFocusWidth, rgba(borderColor, 0.5))
       }
     })
   })
@@ -94,14 +94,14 @@ describe('Button Variants', () => {
       color: colorYiq(backgroundColor),
       ...gradientBg(backgroundColor),
       borderColor: borderColor,
-      ...boxShadow(btnBoxShadow),
+      ...boxShadow(myBtnBoxShadow),
       ...hover({
         color: colorYiq(hoverBackgroundColor),
         ...gradientBg(hoverBackgroundColor),
         borderColor: hoverBorderColor
       }),
       '&:focus, &.focus': {
-        boxShadow: format('0 0 0 {} {}', btnFocusWidth, rgba(borderColor, 0.5))
+        boxShadow: format('0 0 0 {} {}', myBtnFocusWidth, rgba(borderColor, 0.5))
       },
       '&.disabled, &:disabled': {
         color: colorYiq(backgroundColor),
