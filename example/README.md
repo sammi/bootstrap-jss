@@ -1,6 +1,6 @@
 # Bootstrap JSS Example
 
-Demo standard bootstrap components by using JSS, rather than SCSS
+Demo standard bootstrap components by using JSS
 
 ## Quick Start
 
