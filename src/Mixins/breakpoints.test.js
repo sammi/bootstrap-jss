@@ -1,4 +1,15 @@
-import {breakpointNext, breakpointMin, breakpointMax} from './breakpoints'
+import format from 'string-format'
+
+import {
+  breakpointNext,
+  breakpointMin,
+  breakpointMax,
+  breakpointInfix,
+  mediaBreakpointUp,
+  mediaBreakpointDown,
+  mediaBreakpointsBetween
+} from './breakpoints'
+
 describe('Breakpoint viewport sizes and media queries.', () => {
   it('breakpointNext', () => {
     expect(breakpointNext('sm',
@@ -48,5 +59,45 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     expect(breakpointMax('xl',
       {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
     )).toEqual(null)
+  })
+
+  it('breakpointInfix', () => {
+    expect(breakpointInfix('xs', {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'})).toEqual('')
+    expect(breakpointInfix('sm', {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'})).toEqual('-sm')
+    expect(breakpointInfix('xl', {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'})).toEqual('-xl')
+  })
+
+  it('mediaBreakpointUp', () => {
+    const breakpoints = {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
+    const contentStyles = {color: 'red'}
+    expect(mediaBreakpointUp('xs', breakpoints, contentStyles)).toEqual(contentStyles)
+
+    let mediaQuery = {}
+    mediaQuery[format('@media (min-width: {})', '576px')] = contentStyles
+
+    expect(mediaBreakpointUp('sm', breakpoints, contentStyles)).toEqual(mediaQuery)
+  })
+
+  it('mediaBreakpointDown', () => {
+    const breakpoints = {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
+    const contentStyles = {color: 'red'}
+    expect(mediaBreakpointDown('xl', breakpoints, contentStyles)).toEqual(contentStyles)
+
+    let mediaQuery = {}
+    mediaQuery[format('@media (max-width: {})', '768px')] = contentStyles
+    expect(mediaBreakpointDown('sm', breakpoints, contentStyles)).toEqual(mediaQuery)
+  })
+
+  it('mediaBreakpointsBetween', () => {
+    const breakpoints = {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
+    const contentStyles = {color: 'red'}
+
+    let mediaQuery = {}
+    mediaQuery[format('@media (max-width: {})', '768px')] = contentStyles
+    expect(mediaBreakpointsBetween('xs', 'sm', breakpoints, contentStyles)).toEqual(mediaQuery)
+
+    mediaQuery = {}
+    mediaQuery[format('@media (min-width: {}) and (max-width: {})', '576px', '1200px')] = contentStyles
+    expect(mediaBreakpointsBetween('sm', 'lg', breakpoints, contentStyles)).toEqual(mediaQuery)
   })
 })
