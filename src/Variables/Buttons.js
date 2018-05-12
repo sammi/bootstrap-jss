@@ -34,7 +34,7 @@ export const btnLineHeightLg = inputBtnLineHeightLg
 export const btnBorderWidth = inputBtnBorderWidth
 
 export const btnFontWeight = fontWeightNormal
-export const btnBoxShadowfontWeightNormal = format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, 0.15), rgba(black, 0.075))
+export const btnBoxShadow = format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, 0.15), rgba(black, 0.075))
 export const btnFocusWidth = inputBtnFocusWidth
 export const btnFocusBoxShadow = inputBtnFocusBoxShadow
 export const btnDisabledOpacity = 0.65

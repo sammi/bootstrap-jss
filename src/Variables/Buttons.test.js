@@ -31,7 +31,7 @@ import {
   btnLineHeightLg,
   btnBorderWidth,
   btnFontWeight,
-  btnBoxShadowfontWeightNormal,
+  btnBoxShadow,
   btnFocusWidth,
   btnFocusBoxShadow,
   btnDisabledOpacity,
@@ -61,7 +61,7 @@ describe('Buttons', () => {
     expect(btnBorderWidth).toEqual(inputBtnBorderWidth)
 
     expect(btnFontWeight).toEqual(fontWeightNormal)
-    expect(btnBoxShadowfontWeightNormal).toEqual(format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, 0.15), rgba(black, 0.075)))
+    expect(btnBoxShadow).toEqual(format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, 0.15), rgba(black, 0.075)))
     expect(btnFocusWidth).toEqual(inputBtnFocusWidth)
     expect(btnFocusBoxShadow).toEqual(inputBtnFocusBoxShadow)
     expect(btnDisabledOpacity).toEqual(0.65)
@@ -69,7 +69,7 @@ describe('Buttons', () => {
 
     expect(btnLinkDisabledColor).toEqual(grays._600)
 
-        expect(btnBlockSpacingY).toEqual('.5rem')
+    expect(btnBlockSpacingY).toEqual('.5rem')
 
     // Allows for customizing button radius independently from global border radius
     expect(btnBorderRadius).toEqual(borderRadius)
