@@ -22,4 +22,3 @@ yarn test:watch
 2. Change and save code, make sure all tests are passing
 
 3. When test failed, click "Debug" above each Jest Unit test, step into the source code.
-
