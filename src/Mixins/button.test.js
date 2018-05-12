@@ -1,17 +1,57 @@
-import {darken} from '../Functions/darken'
-import {rgba} from '../Functions/rgba'
-import {colorYiq} from '../Functions/colorYiq'
-import {gradientBg} from './gradients'
-import {boxShadow} from './boxShadow'
+import { darken } from '../Functions/darken'
+import { rgba } from '../Functions/rgba'
+import { colorYiq } from '../Functions/colorYiq'
+import { gradientBg } from './gradients'
+import { boxShadow } from './boxShadow'
 
-import {btnBoxShadow, btnFocusWidth, btnActiveBoxShadow} from '../Variables/Buttons'
+import { btnBoxShadow, btnFocusWidth, btnActiveBoxShadow } from '../Variables/Buttons'
 
-import {hover} from './hover'
+import { hover } from './hover'
 import format from 'string-format'
+import {enableShadows} from '../Variables/Options'
 
-import {buttonVariant} from './button'
+import { buttonVariant } from './button'
 
 describe('Button Variants', () => {
+  it('buttonVariant', () => {
+    const backgroundColor = '#abc'
+    const borderColor = '#def'
+    const hoverBackgroundColor = darken(backgroundColor, '7.5%')
+    const hoverBorderColor = darken(borderColor, '10%')
+    const activeBackgroundColor = darken(backgroundColor, '10%')
+    const activeBorderColor = darken(borderColor, '12.5%')
+    expect(buttonVariant(
+      backgroundColor,
+      borderColor)
+    ).toEqual({
+      color: colorYiq(backgroundColor),
+      ...gradientBg(backgroundColor),
+      borderColor: borderColor,
+      ...boxShadow(enableShadows, btnBoxShadow),
+      ...hover({
+        color: colorYiq(hoverBackgroundColor),
+        ...gradientBg(hoverBackgroundColor),
+        borderColor: hoverBorderColor
+      }),
+      '&:focus, &.focus': {
+        boxShadow: format('0 0 0 {} {}', btnFocusWidth, rgba(borderColor, 0.5))
+      },
+      '&.disabled, &:disabled': {
+        color: colorYiq(backgroundColor),
+        backgroundColor: backgroundColor,
+        borderColor: borderColor
+      },
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+        color: colorYiq(activeBackgroundColor),
+        backgroundColor: activeBackgroundColor,
+        borderColor: activeBorderColor
+      },
+      '&:focus': {
+        boxShadow: format('0 0 0 {} {}', btnFocusWidth, rgba(borderColor, 0.5))
+      }
+    })
+  })
+
   it('buttonVariant, enable shadows, enable gradients', () => {
     const backgroundColor = '#abc'
     const borderColor = '#def'
@@ -40,7 +80,7 @@ describe('Button Variants', () => {
       color: colorYiq(backgroundColor),
       ...gradientBg(backgroundColor),
       borderColor: borderColor,
-      ...boxShadow(btnBoxShadow),
+      ...boxShadow(enableShadows, btnBoxShadow),
       ...hover({
         color: colorYiq(hoverBackgroundColor),
         ...gradientBg(hoverBackgroundColor),
@@ -94,7 +134,7 @@ describe('Button Variants', () => {
       color: colorYiq(backgroundColor),
       ...gradientBg(backgroundColor),
       borderColor: borderColor,
-      ...boxShadow(myBtnBoxShadow),
+      ...boxShadow(enableShadows, myBtnBoxShadow),
       ...hover({
         color: colorYiq(hoverBackgroundColor),
         ...gradientBg(hoverBackgroundColor),
