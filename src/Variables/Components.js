@@ -11,9 +11,9 @@ export const borderRadius = '.25rem'
 export const borderRadiusLg = '.3rem'
 export const borderRadiusSm = '.2rem'
 
-export const boxShadowSm = format('0 .125rem .25rem {}', rgba(black, .075))
-export const boxShadow = format('0 .5rem 1rem {}', rgba(black, .15))
-export const boxShadowLg = format('0 1rem 3rem {}', rgba(black, .175))
+export const boxShadowSm = format('0 .125rem .25rem {}', rgba(black, 0.075))
+export const boxShadow = format('0 .5rem 1rem {}', rgba(black, 0.15))
+export const boxShadowLg = format('0 1rem 3rem {}', rgba(black, 0.175))
 
 export const componentActiveColor = white
 export const componentActiveBg = themeColors.primary
