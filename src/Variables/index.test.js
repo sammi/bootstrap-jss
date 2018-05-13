@@ -73,7 +73,8 @@ describe('Variables', () => {
       Carousel,
       Close,
       Code,
-      Printing
+      Printing,
+      checkExported: true
     })
 
     Object.keys(Variables).forEach(key => {

@@ -17,7 +17,8 @@ describe('Functions', () => {
       lighten,
       mix,
       rgba,
-      size
+      size,
+      checkExported: true
     })
   })
 })

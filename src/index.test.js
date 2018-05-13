@@ -5,5 +5,6 @@ describe('Bootstrap', () => {
     expect(Bootstrap.Functions !== undefined).toBe(true)
     expect(Bootstrap.Mixins !== undefined).toBe(true)
     expect(Bootstrap.Variables !== undefined).toBe(true)
+    expect(Bootstrap.checkExported).toBe(true)
   })
 })

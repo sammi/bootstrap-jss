@@ -33,6 +33,7 @@ import * as Close from './Close'
 import * as Code from './Code'
 import * as Printing from './Printing'
 
+const checkExported = true
 export {
   Colors,
   Options,
@@ -67,5 +68,6 @@ export {
   Carousel,
   Close,
   Code,
-  Printing
+  Printing,
+  checkExported
 }

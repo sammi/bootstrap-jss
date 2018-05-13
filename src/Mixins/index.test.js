@@ -16,7 +16,8 @@ describe('Mixins', () => {
       hover,
       hoverFocus,
       plainHoverFocus,
-      hoverFocusActive
+      hoverFocusActive,
+      checkExported: true
     })
   })
 })
