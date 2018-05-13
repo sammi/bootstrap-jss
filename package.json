@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Build JSS components for Bootstrap by JSS",
   "author": "Sammi Song",
   "license": "MIT",
