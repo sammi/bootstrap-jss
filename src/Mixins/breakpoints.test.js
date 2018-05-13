@@ -110,6 +110,8 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     expect(mediaBreakpointsBetween('sm', 'xl', breakpoints, contentStyles)).toEqual(mediaQuery)
 
     expect(mediaBreakpointsBetween('xs', 'xl', breakpoints, contentStyles)).toEqual(contentStyles)
+
+    expect(mediaBreakpointsBetween('xss', 'xll', breakpoints, contentStyles)).toEqual(contentStyles)
   })
 
   it('mediaBreakpointsOnly', () => {
@@ -131,5 +133,7 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     mediaQuery = {}
     mediaQuery[format('@media (min-width: {}) and (max-width: {})', '992px', '1200px')] = contentStyles
     expect(mediaBreakpointsOnly('lg', breakpoints, contentStyles)).toEqual(mediaQuery)
+
+    expect(mediaBreakpointsOnly('lgg', breakpoints, contentStyles)).toEqual(contentStyles)
   })
 })

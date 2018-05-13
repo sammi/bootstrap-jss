@@ -34,6 +34,20 @@ describe('variant', () => {
         'borderTopColor': '#000000'
       }
     })
+
+    expect(alertVariant('#fff', '#000', '#0F0')).toEqual({
+      'alertLink': {
+        'color': '#00E600'
+      },
+      'borderColor': '#000',
+      'color': '#0F0',
+      'extend': {
+        'backgroundColor': '#fff'
+      },
+      'hr': {
+        'borderTopColor': '#000000'
+      }
+    })
   })
 })
 

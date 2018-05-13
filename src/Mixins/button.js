@@ -107,7 +107,7 @@ export const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, ac
 }
 
 export const buttonSize = (paddingY, paddingX, fontSize, lineHeight, borderRadius, myEnableRounded) => {
-  myEnableRounded = myEnableRounded === undefined ? enableRounded : !!myEnableRounded
+  myEnableRounded = myEnableRounded === undefined ? enableRounded : myEnableRounded
   const myBorderRaduis = myEnableRounded ? borderRadius : 0
   return {
     padding: format('{} {}', paddingY, paddingX),

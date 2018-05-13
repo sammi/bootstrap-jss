@@ -261,4 +261,21 @@ describe('buttonVariants', () => {
       borderRadius: 0
     })
   })
+
+  it('buttonSize, default', () => {
+    const paddingY = '10px'
+    const paddingX = '20px'
+    const fontSize = '10px'
+    const lineHeight = 2
+    const borderRadius = '10px'
+
+    expect(buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius)).toEqual({
+      padding: format('{} {}', paddingY, paddingX),
+      fontSize: fontSize,
+      lineHeight: lineHeight,
+      borderRadius: borderRadius
+    })
+  })
+
+
 })

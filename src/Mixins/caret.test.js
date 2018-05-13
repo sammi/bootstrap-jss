@@ -106,6 +106,8 @@ describe('caret', () => {
       }
     })
 
+    expect(caret('wrong', true)).toEqual(undefined)
+
     expect(caret()).toEqual({
       '&:after': {
         display: 'inline-block',

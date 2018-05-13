@@ -37,7 +37,7 @@ const getCaret = (direction) => {
     return caretUp()
   } else if (direction === 'right') {
     return caretRight()
-  } else if (direction === 'left') {
+  } else {
     return {
       '&::after': {
         display: 'none'
@@ -56,7 +56,9 @@ const getCaret = (direction) => {
 }
 
 export const caret = (direction = 'down', myEnableCaret = enableCaret) => {
-  if (myEnableCaret) {
+  const directions = ['up', 'down', 'left', 'right']
+
+  if (directions.indexOf(direction) !== -1 && myEnableCaret) {
     return {
       '&:after': {
         display: 'inline-block',
