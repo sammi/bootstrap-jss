@@ -10,7 +10,7 @@ import { hover } from './hover'
 import format from 'string-format'
 import {enableShadows} from '../Variables/Options'
 
-import { buttonVariant, buttonOutlineVariant } from './button'
+import { buttonVariant, buttonOutlineVariant, buttonSize } from './button'
 
 // Button variants
 //
@@ -230,6 +230,35 @@ describe('buttonVariants', () => {
           boxShadow: format('{}, 0 0 0 {} {}', btnActiveBoxShadow, myBtnFocusWidth, rgba(color, 0.5))
         }
       }
+    })
+  })
+
+  it('buttonSize, enable rounded corner', () => {
+    const paddingY = '10px'
+    const paddingX = '20px'
+    const fontSize = '10px'
+    const lineHeight = 2
+    const borderRadius = '10px'
+    expect(buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius, true)).toEqual({
+      padding: format('{} {}', paddingY, paddingX),
+      fontSize: fontSize,
+      lineHeight: lineHeight,
+      borderRadius: borderRadius
+    })
+  })
+
+  it('buttonSize, disable rounded corner', () => {
+    const paddingY = '10px'
+    const paddingX = '20px'
+    const fontSize = '10px'
+    const lineHeight = 2
+    const borderRadius = '10px'
+
+    expect(buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius, false)).toEqual({
+      padding: format('{} {}', paddingY, paddingX),
+      fontSize: fontSize,
+      lineHeight: lineHeight,
+      borderRadius: 0
     })
   })
 })

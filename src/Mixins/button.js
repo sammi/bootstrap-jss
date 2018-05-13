@@ -8,7 +8,7 @@ import { rgba } from '../Functions/rgba'
 import { darken } from '../Functions/darken'
 
 import { btnBoxShadow, btnFocusWidth, btnActiveBoxShadow } from '../Variables/Buttons'
-import { enableShadows, enableGradients } from '../Variables/Options'
+import { enableShadows, enableGradients, enableRounded } from '../Variables/Options'
 
 export const buttonVariant = (
   backgroundColor,
@@ -103,5 +103,16 @@ export const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, ac
           : format('0 0 0 {} {}', mybtnFocusWidth, rgba(color, 0.5))
       }
     }
+  }
+}
+
+export const buttonSize = (paddingY, paddingX, fontSize, lineHeight, borderRadius, myEnableRounded) => {
+  myEnableRounded = !!myEnableRounded
+  const myBorderRaduis = myEnableRounded ? borderRadius : 0
+  return {
+    padding: format('{} {}', paddingY, paddingX),
+    fontSize: fontSize,
+    lineHeight: lineHeight,
+    borderRadius: myBorderRaduis
   }
 }
