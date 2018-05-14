@@ -11,5 +11,6 @@ describe('Request a theme color level', () => {
     const level = 1
 
     expect(themeColorLevel('primary', -1)).toEqual(mix(colorBase, color, level * ratio))
+    expect(themeColorLevel()).toEqual(mix(colorBase, color, level * ratio))
   })
 })
