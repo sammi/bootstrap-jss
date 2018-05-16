@@ -1,20 +1,14 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import * as Bootstrap from 'bootstrap-jss'
 
-import { Alert } from './components/Alert'
-import { close } from '../actions/alert'
+import { Alert } from '../components/Alert'
 
 const {alert, alertThemeColors} = Bootstrap.Classes.Alert
 
-export default connect(
-  state => ({}),
-  dispatch => ({
-    close: message => dispatch(close(message))
-  })
-)(
-  <div>
-    {
-      alertThemeColors().map( themeColor => <Alert alert themeColor>Hi Alert Message</Alert>)
-    }
-  </div>
-)
+const colors = Object.keys(alertThemeColors())
+
+export default () => <div>
+{
+  colors.map( (themeColor) => <Alert alert themeColor>Hi Alert Message</Alert>)
+}
+</div>
