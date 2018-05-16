@@ -18,11 +18,12 @@
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "mountebank": "^1.14.0",
-    "react-scripts": "^1.1.4"
+    "express": "^4.16.3",
+    "react-scripts": "^1.1.4",
+    "react-test-renderer": "^16.3.2"
   },
   "scripts": {
-    "server": "cd src && ../node_modules/mountebank/bin/mb --configfile ./imposters.ejs",
+    "server": "node ./server/main.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
