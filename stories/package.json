@@ -1,0 +1,24 @@
+{
+  "name": "stories",
+  "version": "1.0.0",
+  "description": "demo bootstrap-jss components",
+  "main": "index.js",
+  "author": "Sammi Song",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@storybook/react": "^3.4.4",
+    "babel-core": "^6.26.3",
+    "react-test-renderer": "^16.3.2"
+  },
+  "dependencies": {
+    "bootstrap-jss": "link:..",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "^1.1.4"
+  },
+  "scripts": {
+    "start": "start-storybook -p 9001 -c .storybook",
+    "test": "react-scripts test --env=jsdom --coverage"
+  }
+}
