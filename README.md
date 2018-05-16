@@ -2,6 +2,10 @@ bootstrap-jss
 =============
 Build JSS components for Bootstrap by JSS
 
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+[![jest](https://facebook.github.io/jest/img/jest-badge.svg)](https://github.com/facebook/jest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Install Visusl Studio Code Extensions
 
 * Jest
