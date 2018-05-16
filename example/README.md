@@ -2,11 +2,20 @@
 
 Demo standard bootstrap components by using JSS
 
-## Quick Start
+## Install dependencies
 
 ```
 cd example
 rm -rf node_modules
 yarn install
+```
+
+## Start API mock server
+```
+yarn run server
+```
+
+## Start Example Application
+```
 yarn start
 ```

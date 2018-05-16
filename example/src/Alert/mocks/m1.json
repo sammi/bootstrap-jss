@@ -12,12 +12,8 @@
   "predicates": [
     {
       "exists": {
-        "body": {
-          "username": true,
-          "password": true
-        },
         "method": "GET",
-        "path": "/alert/1"
+        "path": "/alert"
       }
     }
   ]
