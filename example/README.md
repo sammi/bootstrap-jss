@@ -12,7 +12,7 @@ yarn install
 
 ## Start API mock server
 ```
-yarn run server
+yarn server
 ```
 
 ## Start Example Application
