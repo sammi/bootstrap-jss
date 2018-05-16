@@ -1,0 +1,24 @@
+{
+  "responses": [
+    {
+      "is": {
+        "statusCode": 200,
+        "body": {
+          "Message": "Alert Message Updated"
+        }
+      }
+    }
+  ],
+  "predicates": [
+    {
+      "exists": {
+        "body": {
+          "username": true,
+          "password": true
+        },
+        "method": "PUT",
+        "path": "/alert/2"
+      }
+    }
+  ]
+}

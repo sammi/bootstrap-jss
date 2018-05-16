@@ -1,0 +1,24 @@
+{
+  "responses": [
+    {
+      "is": {
+        "statusCode": 200,
+        "body": {
+          "Message": "Alert Message"
+        }
+      }
+    }
+  ],
+  "predicates": [
+    {
+      "exists": {
+        "body": {
+          "username": true,
+          "password": true
+        },
+        "method": "GET",
+        "path": "/alert/1"
+      }
+    }
+  ]
+}

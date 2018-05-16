@@ -7,9 +7,12 @@
   "dependencies": {
     "bootstrap-jss": "link:..",
     "classnames": "^2.2.5",
+    "node-fetch": "^2.1.2",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "redux-saga": "^0.16.0"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
