@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@storybook/addon-storyshots": "^3.4.4",
     "@storybook/react": "^3.4.4",
     "babel-core": "^6.26.3",
     "react-test-renderer": "^16.3.2"

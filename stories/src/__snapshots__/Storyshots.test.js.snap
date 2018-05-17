@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button click me 1`] = `
+<button
+  onClick="click me"
+>
+  click me
+</button>
+`;
+
+exports[`Storyshots Button with text 1`] = `
+<button>
+  test button
+</button>
+`;
