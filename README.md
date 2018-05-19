@@ -14,6 +14,7 @@ Build JSS components for Bootstrap by JSS
 * Jest Snippets
 * EditorConfig for VS Code
 * Code Outline
+* Badges
 
 # Test Driven Development
 
