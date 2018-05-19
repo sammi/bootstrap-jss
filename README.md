@@ -2,6 +2,7 @@ bootstrap-jss
 =============
 Build JSS components for Bootstrap by JSS
 
+[![Build Status](https://travis-ci.org/sammi/bootstrap-jss.svg?branch=master)](https://travis-ci.org/sammi/bootstrap-jss)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
