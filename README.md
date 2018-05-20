@@ -2,7 +2,7 @@ bootstrap-jss
 =============
 Build JSS components for Bootstrap by JSS
 
-[![Build Status](https://travis-ci.org/sammi/bootstrap-jss.svg?branch=master)](https://travis-ci.org/sammi/bootstrap-jss)
+[![CircleCI](https://circleci.com/gh/sammi/bootstrap-jss.svg?style=svg)](https://circleci.com/gh/sammi/bootstrap-jss)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1135d152405baa4e466b/test_coverage)](https://codeclimate.com/github/sammi/bootstrap-jss/test_coverage)
 
 
