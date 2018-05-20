@@ -1,13 +1,17 @@
 language: node_js
 node_js:
-  - "8"
-  - node
-env:
-  - CMD=test
-script: yarn run $CMD
-
-jobs:
-  inlcude:
-      - stage: Produce Test Code Coverage
-        node_js: node
-        script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - yarn coverage
+after-script:
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token yarn coveralls
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: build
+  on:
+    branch: master

@@ -16,8 +16,10 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "scripts": {
-    "test": "cross-env CI=1 react-scripts test --env=jsdom --coverage",
+    "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
+    "coverage": "cross-env CI=1 react-scripts test --env=jsdom --coverage",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
