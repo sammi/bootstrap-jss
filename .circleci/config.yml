@@ -20,6 +20,4 @@ jobs:
             ./cc-test-reporter before-build
             yarn coverage
             ./cc-test-reporter after-build --id $CC_TEST_REPORTER_ID --exit-code $?
-          environment:
-            JEST_JUNIT_OUTPUT: "coverage/clover.xml"
 
