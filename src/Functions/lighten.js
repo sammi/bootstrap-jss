@@ -3,11 +3,9 @@ import _ from 'lodash'
 import percentValue from 'percent-value'
 
 export const lighten = (rawColor, percent) => {
-  const rgbColor = _.replace(rawColor, '!default', '').trim()
-
-  const ratio = percentValue(percent).from(1)
-
-  const lighternColor = Color(rgbColor).lighten(ratio)
-
-  return lighternColor.hex()
+  const rgbColor = Color(rawColor)
+  const percentage = percentValue(percent).from(100)
+  let hsl = rgbColor.hsl()
+  hsl.color[2] += percentage
+  return _.toLower(hsl.hex())
 }

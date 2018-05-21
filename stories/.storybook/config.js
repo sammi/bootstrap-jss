@@ -1,7 +1,7 @@
 import { configure } from '@storybook/react'
 
 function loadStories() {
-  require('../src/index.js')
+  require('../src/alert.js')
 }
 
 configure(loadStories, module)

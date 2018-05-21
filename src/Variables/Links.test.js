@@ -10,7 +10,7 @@ describe('Links', () => {
   it('Style anchor elements.', () => {
     expect(linkColor).toEqual(themeColors.primary)
     expect(linkDecoration).toEqual('none')
-    expect(linkHoverColor).toEqual('#0069D9')
+    expect(linkHoverColor).toEqual('#0056b3')
     expect(linkHoverDecoration).toEqual('underline')
   })
 })
