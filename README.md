@@ -19,7 +19,7 @@ Build JSS components for Bootstrap by JSS
 # Test Driven Development
 
 1. Start the test watcher
-```node
+```bash
 rm -rf node_modules
 yarn install
 yarn test:watch
@@ -27,3 +27,14 @@ yarn test:watch
 2. Change and save code, make sure all tests are passing
 
 3. When test failed, click "Debug" above each Jest Unit test, step into the source code.
+
+
+# Check the demo by StoryBook
+ ```bash
+ cd stories
+ rm -rf node_modules
+ yarn install
+ yarn start
+ ```
+
+Check out http://localhost:9001
