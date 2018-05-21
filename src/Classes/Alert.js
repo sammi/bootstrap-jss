@@ -49,7 +49,6 @@ export const alertThemeColors = () => {
       themeColorLevel(themeColorName, alertBorderLevel),
       themeColorLevel(themeColorName, alertColorLevel)
     )
-    console.log(themeColorName, alertColors['alert' + _.upperFirst(themeColorName)])
   })
   return alertColors
 }

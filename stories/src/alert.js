@@ -7,8 +7,15 @@ const {alert, alertHeading, alertThemeColors} = Bootstrap.Classes.Alert
 
 const themeColors = alertThemeColors()
 
-const Alert = injectSheet(themeColors)(
-  ( {classes, children} ) => (<div className={classes.alertPrimary}>{children}</div>)
+const styles = {
+  alert: {
+    ...alert,
+    ...themeColors.alertPrimary
+  }
+}
+
+const Alert = injectSheet(styles)(
+  ( {classes, children} ) => (<div className={classes.alert}>{children}</div>)
 )
 
 storiesOf('Alert', module)

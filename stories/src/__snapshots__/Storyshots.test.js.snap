@@ -2,7 +2,7 @@
 
 exports[`Storyshots Alert Alert primary 1`] = `
 <div
-  className="Component-alertPrimary-0-1-1"
+  className="Component-alert-0-1-1"
 >
   This is a primary alert — check it out!
 </div>
