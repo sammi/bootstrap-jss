@@ -6,177 +6,153 @@ exports[`Storyshots Alert Theme colors 1`] = `
     className="Component-alert-0-1-1"
   >
     <h1
-      className="Component-alertHeading-0-1-3"
-    >
-      Primary
-    </h1>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-    </p>
-    This is a 
-    primary
-     alert — check it out!
-     
-    <a
-      className="Component-alertLink-0-1-2"
-      href="#"
-    >
-      link match to the theme
-    </a>
-  </div>
-  <div
-    className="Component-alert-0-1-4"
-  >
-    <h1
       className="Component-alertHeading-0-1-6"
     >
-      Secondary
+      alertPrimary
     </h1>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-    </p>
     This is a 
-    secondary
-     alert — check it out!
-     
-    <a
-      className="Component-alertLink-0-1-5"
-      href="#"
-    >
-      link match to the theme
-    </a>
-  </div>
-  <div
-    className="Component-alert-0-1-7"
-  >
-    <h1
-      className="Component-alertHeading-0-1-9"
-    >
-      Success
-    </h1>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-    </p>
-    This is a 
-    success
-     alert — check it out!
+    primary
      
     <a
       className="Component-alertLink-0-1-8"
-      href="#"
+      href="/"
     >
-      link match to the theme
+      alert
     </a>
+     — check it out!
   </div>
   <div
     className="Component-alert-0-1-10"
   >
     <h1
-      className="Component-alertHeading-0-1-12"
-    >
-      Info
-    </h1>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-    </p>
-    This is a 
-    info
-     alert — check it out!
-     
-    <a
-      className="Component-alertLink-0-1-11"
-      href="#"
-    >
-      link match to the theme
-    </a>
-  </div>
-  <div
-    className="Component-alert-0-1-13"
-  >
-    <h1
       className="Component-alertHeading-0-1-15"
     >
-      Warning
+      alertSecondary
     </h1>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-    </p>
     This is a 
-    warning
-     alert — check it out!
-     
-    <a
-      className="Component-alertLink-0-1-14"
-      href="#"
-    >
-      link match to the theme
-    </a>
-  </div>
-  <div
-    className="Component-alert-0-1-16"
-  >
-    <h1
-      className="Component-alertHeading-0-1-18"
-    >
-      Danger
-    </h1>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-    </p>
-    This is a 
-    danger
-     alert — check it out!
+    secondary
      
     <a
       className="Component-alertLink-0-1-17"
-      href="#"
+      href="/"
     >
-      link match to the theme
+      alert
     </a>
+     — check it out!
   </div>
   <div
     className="Component-alert-0-1-19"
   >
     <h1
-      className="Component-alertHeading-0-1-21"
-    >
-      Light
-    </h1>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-    </p>
-    This is a 
-    light
-     alert — check it out!
-     
-    <a
-      className="Component-alertLink-0-1-20"
-      href="#"
-    >
-      link match to the theme
-    </a>
-  </div>
-  <div
-    className="Component-alert-0-1-22"
-  >
-    <h1
       className="Component-alertHeading-0-1-24"
     >
-      Dark
+      alertSuccess
     </h1>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-    </p>
     This is a 
-    dark
-     alert — check it out!
+    success
      
     <a
-      className="Component-alertLink-0-1-23"
-      href="#"
+      className="Component-alertLink-0-1-26"
+      href="/"
     >
-      link match to the theme
+      alert
     </a>
+     — check it out!
+  </div>
+  <div
+    className="Component-alert-0-1-28"
+  >
+    <h1
+      className="Component-alertHeading-0-1-33"
+    >
+      alertInfo
+    </h1>
+    This is a 
+    info
+     
+    <a
+      className="Component-alertLink-0-1-35"
+      href="/"
+    >
+      alert
+    </a>
+     — check it out!
+  </div>
+  <div
+    className="Component-alert-0-1-37"
+  >
+    <h1
+      className="Component-alertHeading-0-1-42"
+    >
+      alertWarning
+    </h1>
+    This is a 
+    warning
+     
+    <a
+      className="Component-alertLink-0-1-44"
+      href="/"
+    >
+      alert
+    </a>
+     — check it out!
+  </div>
+  <div
+    className="Component-alert-0-1-46"
+  >
+    <h1
+      className="Component-alertHeading-0-1-51"
+    >
+      alertDanger
+    </h1>
+    This is a 
+    danger
+     
+    <a
+      className="Component-alertLink-0-1-53"
+      href="/"
+    >
+      alert
+    </a>
+     — check it out!
+  </div>
+  <div
+    className="Component-alert-0-1-55"
+  >
+    <h1
+      className="Component-alertHeading-0-1-60"
+    >
+      alertLight
+    </h1>
+    This is a 
+    light
+     
+    <a
+      className="Component-alertLink-0-1-62"
+      href="/"
+    >
+      alert
+    </a>
+     — check it out!
+  </div>
+  <div
+    className="Component-alert-0-1-64"
+  >
+    <h1
+      className="Component-alertHeading-0-1-69"
+    >
+      alertDark
+    </h1>
+    This is a 
+    dark
+     
+    <a
+      className="Component-alertLink-0-1-71"
+      href="/"
+    >
+      alert
+    </a>
+     — check it out!
   </div>
 </div>
 `;
