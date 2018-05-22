@@ -1,10 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import * as Bootstrap from 'bootstrap-jss'
-import injectSheet, { jss, ThemeProvider } from 'react-jss'
+import injectSheet, { ThemeProvider } from 'react-jss'
 import _ from 'lodash'
 
-const { alert, alertHeading, alertLink, alertThemeColors } = Bootstrap.Classes.Alert
+const { alert, alertHeading, alertLink, alertDismissible, alertThemeColors } = Bootstrap.Classes.Alert
 
 const themeColors = alertThemeColors()
 
@@ -20,6 +20,11 @@ const styles = theme => ({
   alertHeading: {
     ...themeColors[theme.color],
     ...alertHeading
+  },
+  alertDismissible: {
+    ...alert,
+    ...themeColors[theme.color],
+    alertDismissible
   }
 })
 
@@ -31,12 +36,21 @@ const AlertLink = injectSheet(styles)(({ classes, children }) => (
   <a href='/' className={classes.alertLink}>{children}</a>
 ))
 
+const AlertDismissing = injectSheet(styles)(({ classes, children }) => (
+  <div className={classes.alertDismissible} role="alert">
+    {children}
+    <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+))
+
 const Alert = injectSheet(styles)(({ themeKey, children, classes }) => (
   <div className={classes.alert}>{children}</div>)
 )
 
 storiesOf('Alert', module)
-  .add('Theme colors', () => (
+  .add('Theme colors', () =>
     <div>
       {
         Object.keys(themeColors).map(themeColorName => (
@@ -49,4 +63,16 @@ storiesOf('Alert', module)
         ))
       }
     </div>
-  ))
+  )
+  .add('Dismissing', () =>
+    <div>
+      {
+        Object.keys(themeColors).map(themeColorName => (
+          <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
+            <AlertDismissing><strong>{themeColorName}</strong> You should check in on some of those fields below.
+        </AlertDismissing>
+          </ThemeProvider>
+        ))
+      }
+    </div>
+  )
