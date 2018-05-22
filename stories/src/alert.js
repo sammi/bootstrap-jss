@@ -5,6 +5,7 @@ import injectSheet, { ThemeProvider } from 'react-jss'
 import _ from 'lodash'
 
 const { alert, alertHeading, alertLink, alertDismissible, alertThemeColors } = Bootstrap.Classes.Alert
+const { close } = Bootstrap.Classes.Close
 
 const themeColors = alertThemeColors()
 
@@ -25,6 +26,9 @@ const styles = theme => ({
     ...alert,
     ...themeColors[theme.color],
     alertDismissible
+  },
+  close: {
+    ...close
   }
 })
 
@@ -39,7 +43,7 @@ const AlertLink = injectSheet(styles)(({ classes, children }) => (
 const AlertDismissing = injectSheet(styles)(({ classes, children }) => (
   <div className={classes.alertDismissible} role="alert">
     {children}
-    <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+    <button type="button" className={classes.close} data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
@@ -69,8 +73,9 @@ storiesOf('Alert', module)
       {
         Object.keys(themeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <AlertDismissing><strong>{themeColorName}</strong> You should check in on some of those fields below.
-        </AlertDismissing>
+            <AlertDismissing>
+              <strong>{themeColorName}</strong> You should check in on some of those fields below.
+            </AlertDismissing>
           </ThemeProvider>
         ))
       }
