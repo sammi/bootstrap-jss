@@ -23,14 +23,16 @@ const styles = theme => ({
   }
 })
 
-const Alert = injectSheet(styles)(({ classes, themeKey, children }) => (
-  <div className={classes.alert}>
-    <h1 className={classes.alertHeading}>{themeKey}</h1>
-    <p>Aww yeah, you successfully read this important alert message. This example text is going
-    to run a bit longer so that you can see how spacing within an alert works with this kind
-    of content.</p>
-    {children} <a href='#' className={classes.alertLink}>link match to the theme</a>
-  </div>)
+const AlertHeading = injectSheet(styles)(({ classes, children }) => (
+  <h1 className={classes.alertHeading}>{children}</h1>
+))
+
+const AlertLink = injectSheet(styles)(({ classes, children }) => (
+  <a href='/' className={classes.alertLink}>{children}</a>
+))
+
+const Alert = injectSheet(styles)(({ themeKey, children, classes }) => (
+  <div className={classes.alert}>{children}</div>)
 )
 
 storiesOf('Alert', module)
@@ -39,7 +41,10 @@ storiesOf('Alert', module)
       {
         Object.keys(themeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <Alert themeKey={_.replace(themeColorName, 'alert', '')}>This is a {_.toLower(_.replace(themeColorName, 'alert', ''))} alert — check it out!</Alert>
+            <Alert themeKey={_.replace(themeColorName, 'alert', '')}>
+              <AlertHeading>{themeColorName}</AlertHeading>
+              This is a {_.toLower(_.replace(themeColorName, 'alert', ''))} <AlertLink>alert</AlertLink> — check it out!
+            </Alert>
           </ThemeProvider>
         ))
       }
