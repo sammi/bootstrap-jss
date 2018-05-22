@@ -1,12 +1,185 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Alert Dismissing 1`] = `
+<div>
+  <div
+    className="Component-alertDismissible-0-1-124"
+    role="alert"
+  >
+    <strong>
+      alertPrimary
+    </strong>
+     You should check in on some of those fields below.
+    <button
+      aria-label="Close"
+      className="Component-close-0-1-125"
+      data-dismiss="alert"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <div
+    className="Component-alertDismissible-0-1-129"
+    role="alert"
+  >
+    <strong>
+      alertSecondary
+    </strong>
+     You should check in on some of those fields below.
+    <button
+      aria-label="Close"
+      className="Component-close-0-1-130"
+      data-dismiss="alert"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <div
+    className="Component-alertDismissible-0-1-134"
+    role="alert"
+  >
+    <strong>
+      alertSuccess
+    </strong>
+     You should check in on some of those fields below.
+    <button
+      aria-label="Close"
+      className="Component-close-0-1-135"
+      data-dismiss="alert"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <div
+    className="Component-alertDismissible-0-1-139"
+    role="alert"
+  >
+    <strong>
+      alertInfo
+    </strong>
+     You should check in on some of those fields below.
+    <button
+      aria-label="Close"
+      className="Component-close-0-1-140"
+      data-dismiss="alert"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <div
+    className="Component-alertDismissible-0-1-144"
+    role="alert"
+  >
+    <strong>
+      alertWarning
+    </strong>
+     You should check in on some of those fields below.
+    <button
+      aria-label="Close"
+      className="Component-close-0-1-145"
+      data-dismiss="alert"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <div
+    className="Component-alertDismissible-0-1-149"
+    role="alert"
+  >
+    <strong>
+      alertDanger
+    </strong>
+     You should check in on some of those fields below.
+    <button
+      aria-label="Close"
+      className="Component-close-0-1-150"
+      data-dismiss="alert"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <div
+    className="Component-alertDismissible-0-1-154"
+    role="alert"
+  >
+    <strong>
+      alertLight
+    </strong>
+     You should check in on some of those fields below.
+    <button
+      aria-label="Close"
+      className="Component-close-0-1-155"
+      data-dismiss="alert"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <div
+    className="Component-alertDismissible-0-1-159"
+    role="alert"
+  >
+    <strong>
+      alertDark
+    </strong>
+     You should check in on some of those fields below.
+    <button
+      aria-label="Close"
+      className="Component-close-0-1-160"
+      data-dismiss="alert"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Alert Theme colors 1`] = `
 <div>
   <div
     className="Component-alert-0-1-1"
   >
     <h1
-      className="Component-alertHeading-0-1-6"
+      className="Component-alertHeading-0-1-8"
     >
       alertPrimary
     </h1>
@@ -14,7 +187,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     primary
      
     <a
-      className="Component-alertLink-0-1-8"
+      className="Component-alertLink-0-1-12"
       href="/"
     >
       alert
@@ -22,10 +195,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-10"
+    className="Component-alert-0-1-16"
   >
     <h1
-      className="Component-alertHeading-0-1-15"
+      className="Component-alertHeading-0-1-23"
     >
       alertSecondary
     </h1>
@@ -33,7 +206,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     secondary
      
     <a
-      className="Component-alertLink-0-1-17"
+      className="Component-alertLink-0-1-27"
       href="/"
     >
       alert
@@ -41,10 +214,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-19"
+    className="Component-alert-0-1-31"
   >
     <h1
-      className="Component-alertHeading-0-1-24"
+      className="Component-alertHeading-0-1-38"
     >
       alertSuccess
     </h1>
@@ -52,45 +225,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     success
      
     <a
-      className="Component-alertLink-0-1-26"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
-  </div>
-  <div
-    className="Component-alert-0-1-28"
-  >
-    <h1
-      className="Component-alertHeading-0-1-33"
-    >
-      alertInfo
-    </h1>
-    This is a 
-    info
-     
-    <a
-      className="Component-alertLink-0-1-35"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
-  </div>
-  <div
-    className="Component-alert-0-1-37"
-  >
-    <h1
-      className="Component-alertHeading-0-1-42"
-    >
-      alertWarning
-    </h1>
-    This is a 
-    warning
-     
-    <a
-      className="Component-alertLink-0-1-44"
+      className="Component-alertLink-0-1-42"
       href="/"
     >
       alert
@@ -101,7 +236,45 @@ exports[`Storyshots Alert Theme colors 1`] = `
     className="Component-alert-0-1-46"
   >
     <h1
-      className="Component-alertHeading-0-1-51"
+      className="Component-alertHeading-0-1-53"
+    >
+      alertInfo
+    </h1>
+    This is a 
+    info
+     
+    <a
+      className="Component-alertLink-0-1-57"
+      href="/"
+    >
+      alert
+    </a>
+     — check it out!
+  </div>
+  <div
+    className="Component-alert-0-1-61"
+  >
+    <h1
+      className="Component-alertHeading-0-1-68"
+    >
+      alertWarning
+    </h1>
+    This is a 
+    warning
+     
+    <a
+      className="Component-alertLink-0-1-72"
+      href="/"
+    >
+      alert
+    </a>
+     — check it out!
+  </div>
+  <div
+    className="Component-alert-0-1-76"
+  >
+    <h1
+      className="Component-alertHeading-0-1-83"
     >
       alertDanger
     </h1>
@@ -109,7 +282,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     danger
      
     <a
-      className="Component-alertLink-0-1-53"
+      className="Component-alertLink-0-1-87"
       href="/"
     >
       alert
@@ -117,10 +290,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-55"
+    className="Component-alert-0-1-91"
   >
     <h1
-      className="Component-alertHeading-0-1-60"
+      className="Component-alertHeading-0-1-98"
     >
       alertLight
     </h1>
@@ -128,7 +301,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     light
      
     <a
-      className="Component-alertLink-0-1-62"
+      className="Component-alertLink-0-1-102"
       href="/"
     >
       alert
@@ -136,10 +309,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-64"
+    className="Component-alert-0-1-106"
   >
     <h1
-      className="Component-alertHeading-0-1-69"
+      className="Component-alertHeading-0-1-113"
     >
       alertDark
     </h1>
@@ -147,7 +320,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     dark
      
     <a
-      className="Component-alertLink-0-1-71"
+      className="Component-alertLink-0-1-117"
       href="/"
     >
       alert
