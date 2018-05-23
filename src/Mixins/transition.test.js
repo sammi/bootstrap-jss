@@ -13,7 +13,7 @@ describe('transition', () => {
   })
 
   it('transition with input transition', () => {
-    expect(transition(true, 'all', '1.2s', 'ease-in-out')).toEqual({
+    expect(transition(true, ['all', '1.2s', 'ease-in-out'])).toEqual({
       transition: ['all', '1.2s', 'ease-in-out'],
       '@media screen and (prefers-reduced-motion: reduce)': {
         transition: 'none'
@@ -22,7 +22,7 @@ describe('transition', () => {
   })
 
   it('disable transition', () => {
-    expect(transition(false, 'all', '1.2s', 'ease-in-out')).toEqual({
+    expect(transition(false, ['all', '1.2s', 'ease-in-out'])).toEqual({
       '@media screen and (prefers-reduced-motion: reduce)': {
         transition: 'none'
       }

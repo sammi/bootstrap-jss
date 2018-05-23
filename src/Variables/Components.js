@@ -20,6 +20,6 @@ export const componentActiveBg = themeColors.primary
 
 export const caretWidth = '.3em'
 
-export const transitionBase = 'all .2s ease-in-out'
-export const transitionFade = 'opacity .15s linear'
-export const transitionCollapse = 'height .35s ease'
+export const transitionBase = ['all', '0.2s', 'ease-in-out']
+export const transitionFade = ['opacity', '0.15s', 'linear']
+export const transitionCollapse = ['height', '0.35s', 'ease']

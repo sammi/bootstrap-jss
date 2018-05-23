@@ -1,7 +1,7 @@
 import { closeFontSize, closeFontWeight, closeColor, closeTextShadow } from '../Variables/Close'
 import {hoverFocus} from '../Mixins/hover'
 
-import { close } from './Close'
+import { close, buttonClose } from './Close'
 
 describe('Close classe', () => {
   it('close', () => {
@@ -21,6 +21,15 @@ describe('Close classe', () => {
       '&:not(:disabled):not(.disabled)': {
         cursor: 'pointer'
       }
+    })
+  })
+
+  it('buttonClose class', () => {
+    expect(buttonClose).toEqual({
+      padding: 0,
+      backgroundColor: 'transparent',
+      border: 0,
+      '-webkit-appearance': 'none'
     })
   })
 })

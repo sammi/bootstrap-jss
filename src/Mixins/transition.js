@@ -2,7 +2,7 @@ import _ from 'lodash'
 import {enableTransitions} from '../Variables/Options'
 import {transitionBase} from '../Variables/Components'
 
-export const transition = (ifEnableTransitions = enableTransitions, ...transition) => {
+export const transition = (ifEnableTransitions = enableTransitions, transition) => {
   let resultTransition
 
   if (ifEnableTransitions) {

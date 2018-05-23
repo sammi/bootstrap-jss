@@ -3,9 +3,12 @@ import { storiesOf } from '@storybook/react'
 import * as Bootstrap from 'bootstrap-jss'
 import injectSheet, { ThemeProvider } from 'react-jss'
 import _ from 'lodash'
+import classNames from 'classnames'
 
 const { alert, alertHeading, alertLink, alertDismissible, alertThemeColors } = Bootstrap.Classes.Alert
-const { close } = Bootstrap.Classes.Close
+const { close, buttonClose } = Bootstrap.Classes.Close
+
+const { fade } = Bootstrap.Classes.Transitions
 
 const themeColors = alertThemeColors()
 
@@ -25,10 +28,15 @@ const styles = theme => ({
   alertDismissible: {
     ...alert,
     ...themeColors[theme.color],
-    alertDismissible
+    ...alertDismissible,
+    ...fade,
   },
   close: {
-    ...close
+    ...alert,
+    ...themeColors[theme.color],
+    ...close,
+    ...buttonClose,
+    ...alertDismissible.close,
   }
 })
 
@@ -41,7 +49,7 @@ const AlertLink = injectSheet(styles)(({ classes, children }) => (
 ))
 
 const AlertDismissing = injectSheet(styles)(({ classes, children }) => (
-  <div className={classes.alertDismissible} role="alert">
+  <div className={classNames(classes.alertDismissible, 'show')} role="alert">
     {children}
     <button type="button" className={classes.close} data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>

@@ -41,8 +41,8 @@ describe('Components', () => {
 
     expect(caretWidth).toEqual('.3em')
 
-    expect(transitionBase).toEqual('all .2s ease-in-out')
-    expect(transitionFade).toEqual('opacity .15s linear')
-    expect(transitionCollapse).toEqual('height .35s ease')
+    expect(transitionBase).toEqual(['all', '0.2s', 'ease-in-out'])
+    expect(transitionFade).toEqual(['opacity', '0.15s', 'linear'])
+    expect(transitionCollapse).toEqual(['height', '0.35s', 'ease'])
   })
 })

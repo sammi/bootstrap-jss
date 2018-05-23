@@ -18,3 +18,10 @@ export const close = {
     cursor: 'pointer'
   }
 }
+
+export const buttonClose = {
+  padding: 0,
+  backgroundColor: 'transparent',
+  border: 0,
+  '-webkit-appearance': 'none'
+}
