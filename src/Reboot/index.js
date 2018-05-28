@@ -9,7 +9,7 @@ import { tableCellPadding, tableCaptionColor } from '../Variables/Tables'
 import { labelMarginBottom } from '../Variables/Forms'
 
 export const boxSizing = {
-  '*, *::before, *::after': {
+  '*,*::before,*::after': {
     boxSizing: 'border-box'
   }
 }
@@ -25,9 +25,17 @@ export const html = {
   }
 }
 
+// export const msViewPort = {
+//   '@at-root': {
+//     '@-ms-viewport': {
+//       width: 'device-width'
+//     }
+//   }
+// }
+
 export const msViewPort = {
-  '@at-root': {
-    '@-ms-viewport': {
+  'at-root': {
+    '-ms-viewport': {
       width: 'device-width'
     }
   }
@@ -79,7 +87,7 @@ export const paragraphMargin = {
 }
 
 export const abbreviations = {
-  'abbr[title], abbr[data-original-title]': {
+  'abbr[title],abbr[data-original-title]': {
     textDecoration: 'underline dotted',
     fallbacks: {
       textDecoration: 'underline'
@@ -100,7 +108,7 @@ export const list = {
     marginTop: 0,
     marginBottom: '1rem'
   },
-  'ol ol, ul ul, ol ul, ul ol': {
+  'ol ol,ul ul,ol ul,ul ol': {
     marginBottom: 0
   },
   dt: {
@@ -238,7 +246,7 @@ export const forms = {
   'button,select': {
     textTransform: 'none'
   },
-  'button, html [type="button"], [type="reset"], [type="submit"]': {
+  'button,html [type="button"],[type="reset"],[type="submit"]': {
     '-webkit-appearance': 'button'
   },
   'button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner': {
@@ -249,7 +257,7 @@ export const forms = {
     boxSizing: 'border-box',
     padding: 0
   },
-  'input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"]': {
+  'input[type="date"],input[type="time"],input[type="datetime-local"],input[type="month"]': {
     '-webkit-appearance': 'listbox'
   },
   textarea: {
@@ -309,34 +317,4 @@ export const hidden = {
   '[hidden]': {
     disable: 'none !important'
   }
-}
-
-export default {
-  ...boxSizing,
-  ...html,
-  ...msViewPort,
-  ...html5ForOldBrowsers,
-  ...body,
-  ...suppressFocusOutline,
-  ...hrContentGrouping,
-  ...headerMargin,
-  ...paragraphMargin,
-  ...abbreviations,
-  ...address,
-  ...list,
-  ...blockquote,
-  ...dfn,
-  ...strong,
-  ...small,
-  ...subSup,
-  ...links,
-  ...code,
-  ...figure,
-  ...image,
-  ...tables,
-  ...forms,
-  ...output,
-  ...summary,
-  ...template,
-  ...hidden
 }

@@ -7,7 +7,6 @@ import classNames from 'classnames'
 
 const { alert, alertHeading, alertLink, alertDismissible, alertThemeColors } = Bootstrap.Classes.Alert
 const { close, buttonClose } = Bootstrap.Classes.Close
-
 const { fade } = Bootstrap.Classes.Transitions
 
 const themeColors = alertThemeColors()
@@ -15,15 +14,15 @@ const themeColors = alertThemeColors()
 const styles = theme => ({
   alert: {
     ...alert,
-    ...themeColors[theme.color]
+    ...themeColors[theme.color],
   },
   alertLink: {
     ...themeColors[theme.color],
-    ...alertLink
+    ...alertLink,
   },
   alertHeading: {
     ...themeColors[theme.color],
-    ...alertHeading
+    ...alertHeading,
   },
   alertDismissible: {
     ...alert,
