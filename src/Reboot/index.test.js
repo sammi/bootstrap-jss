@@ -38,6 +38,8 @@ import {
   hidden
 } from './index'
 
+import * as reboot from './index'
+
 // Reboot
 //
 // Normalization of HTML elements, manually forked from Normalize.css to remove

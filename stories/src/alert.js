@@ -48,7 +48,7 @@ const AlertLink = injectSheet(styles)(({ classes, children }) => (
 ))
 
 const AlertDismissing = injectSheet(styles)(({ classes, show, onClose, children }) => (
-  <div className={classNames(classes.alertDismissible, show ? 'show' : null)} role="alert">
+  <div className={classNames(classes.alertDismissible, 'show')} role="alert">
     {children}
     <button type="button" className={classes.close} data-dismiss="alert" aria-label="Close" onClick={onClose}>
       <span aria-hidden="true">&times;</span>
@@ -80,7 +80,7 @@ storiesOf('Alert', module)
       {
         Object.keys(themeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <AlertDismissing show={true} onClose={ () => {window.alert('close')} }>
+            <AlertDismissing show={true} onClose={ () => {} }>
               <strong>{themeColorName}</strong> You should check in on some of those fields below.
             </AlertDismissing>
           </ThemeProvider>
