@@ -8,29 +8,35 @@ import classNames from 'classnames'
 const { alert, alertHeading, alertLink, alertDismissible, alertThemeColors } = Bootstrap.Classes.Alert
 const { close, buttonClose } = Bootstrap.Classes.Close
 const { fade } = Bootstrap.Classes.Transitions
+const Reboot = Bootstrap.Reboot
 
 const themeColors = alertThemeColors()
 
 const styles = theme => ({
   alert: {
+    ...Reboot,
     ...alert,
     ...themeColors[theme.color],
   },
   alertLink: {
+    ...Reboot,
     ...themeColors[theme.color],
     ...alertLink,
   },
   alertHeading: {
+    ...Reboot,
     ...themeColors[theme.color],
     ...alertHeading,
   },
   alertDismissible: {
+    ...Reboot,
     ...alert,
     ...themeColors[theme.color],
     ...alertDismissible,
     ...fade,
   },
   close: {
+    ...Reboot,
     ...alert,
     ...themeColors[theme.color],
     ...close,
