@@ -1,7 +1,7 @@
-import {bodyBg} from './Body'
-import {borderWidth, borderRadius} from './Components'
-import {grays, black} from './Colors'
-import {rgba} from '../Functions/rgba'
+import { bodyBg } from './Body'
+import { borderWidth, borderRadius } from './Components'
+import { grays, black } from './Colors'
+import { rgba } from '../Functions/rgba'
 import format from 'string-format'
 
 import {

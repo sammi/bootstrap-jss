@@ -1,5 +1,5 @@
-import {white, grays} from './Colors'
-import {bodyBg, bodyColor} from './Body'
+import { white, grays } from './Colors'
+import { bodyBg, bodyColor } from './Body'
 
 describe('Body', () => {
   it('Settings for the `<body>` element.', () => {

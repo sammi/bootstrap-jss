@@ -1,5 +1,5 @@
 import { grays, black, white, themeColors } from './Colors'
-import {rgba} from '../Functions/rgba'
+import { rgba } from '../Functions/rgba'
 import format from 'string-format'
 
 import {

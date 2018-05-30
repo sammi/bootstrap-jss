@@ -1,4 +1,4 @@
-import {themeColors} from './Colors'
+import { themeColors } from './Colors'
 import {
   linkColor,
   linkDecoration,

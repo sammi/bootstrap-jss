@@ -1,5 +1,5 @@
-import {grays} from './Colors'
-import {borderRadius} from './Components'
+import { grays } from './Colors'
+import { borderRadius } from './Components'
 
 export const breadcrumbPaddingY = '.75rem'
 export const breadcrumbPaddingX = '1rem'

@@ -1,10 +1,10 @@
 import format from 'string-format'
-import {rgba} from '../Functions/rgba'
-import {black, grays, white} from './Colors'
-import {borderWidth} from './Components'
-import {bodyBg} from './Body'
-import {textMuted} from './Fonts'
-import {lighten} from '../Functions/lighten'
+import { rgba } from '../Functions/rgba'
+import { black, grays, white } from './Colors'
+import { borderWidth } from './Components'
+import { bodyBg } from './Body'
+import { textMuted } from './Fonts'
+import { lighten } from '../Functions/lighten'
 
 import {
   tableCellPadding,

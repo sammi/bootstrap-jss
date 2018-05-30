@@ -1,7 +1,7 @@
 import format from 'string-format'
-import {fontWeightBold, fontSizeBase} from './Fonts'
-import {black, white} from './Colors'
-import {size} from '../Functions/size'
+import { fontWeightBold, fontSizeBase } from './Fonts'
+import { black, white } from './Colors'
+import { size } from '../Functions/size'
 
 import {
   closeFontSize,

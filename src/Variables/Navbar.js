@@ -1,11 +1,11 @@
-import {spacer} from './Spacing'
+import { spacer } from './Spacing'
 import format from 'string-format'
-import {size} from '../Functions/size'
-import {fontSizeLg, fontSizeBase, lineHeightBase} from './Fonts'
-import {white, black} from './Colors'
-import {navLinkPaddingY} from './Navs'
-import {btnBorderRadius} from './Buttons'
-import {rgba} from '../Functions/rgba'
+import { size } from '../Functions/size'
+import { fontSizeLg, fontSizeBase, lineHeightBase } from './Fonts'
+import { white, black } from './Colors'
+import { navLinkPaddingY } from './Navs'
+import { btnBorderRadius } from './Buttons'
+import { rgba } from '../Functions/rgba'
 
 export const navbarPaddingY = format('{}{}', size(spacer).value / 2, size(spacer).unit)
 export const navbarPaddingX = spacer

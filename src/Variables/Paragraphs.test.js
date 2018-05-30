@@ -1,4 +1,4 @@
-import {paragraphMarginBottom} from './Paragraphs'
+import { paragraphMarginBottom } from './Paragraphs'
 
 describe('Paragraphs', () => {
   it('Style p element.', () => {

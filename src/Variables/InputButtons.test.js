@@ -1,7 +1,7 @@
-import {lineHeightBase} from './Fonts'
+import { lineHeightBase } from './Fonts'
 import format from 'string-format'
-import {rgba} from '../Functions/rgba'
-import {componentActiveBg, borderWidth, lineHeightSm, lineHeightLg} from './Components'
+import { rgba } from '../Functions/rgba'
+import { componentActiveBg, borderWidth, lineHeightSm, lineHeightLg } from './Components'
 
 import {
   inputBtnPaddingY,

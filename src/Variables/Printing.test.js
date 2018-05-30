@@ -1,4 +1,4 @@
-import {gridBreakpoints} from './Grid'
+import { gridBreakpoints } from './Grid'
 
 import {
   printPageSize,

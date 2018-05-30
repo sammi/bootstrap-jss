@@ -1,4 +1,4 @@
-import {grays, pink, white} from './Colors'
+import { grays, pink, white } from './Colors'
 
 export const codeFontSize = '87.5%'
 export const codeColor = pink

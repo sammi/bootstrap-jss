@@ -1,9 +1,9 @@
-import { grays, white, black } from './Colors'
+import { white, black } from './Colors'
 import { rgba } from '../Functions/rgba'
 import { borderWidth, borderRadius } from './Components'
 import { gridGutterWidth } from './Grid'
 import format from 'string-format'
-import {size} from '../Functions/size'
+import { size } from '../Functions/size'
 
 export const cardSpacerY = '.75rem'
 export const cardSpacerX = '1.25rem'

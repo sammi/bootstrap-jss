@@ -3,7 +3,7 @@ import { rgba } from '../Functions/rgba'
 import { borderWidth, borderRadius } from './Components'
 import { gridGutterWidth } from './Grid'
 import format from 'string-format'
-import {size} from '../Functions/size'
+import { size } from '../Functions/size'
 
 import {
   cardSpacerY,

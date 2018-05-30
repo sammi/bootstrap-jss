@@ -1,4 +1,4 @@
-import {size} from '../Functions/size'
+import { size } from '../Functions/size'
 import format from 'string-format'
 
 export const spacer = '1rem'

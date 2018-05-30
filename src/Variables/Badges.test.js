@@ -1,5 +1,5 @@
-import {fontWeightBold} from './Fonts'
-import {borderRadius} from './Components'
+import { fontWeightBold } from './Fonts'
+import { borderRadius } from './Components'
 
 import {
   badgeFontSize,

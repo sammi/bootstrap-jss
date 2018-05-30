@@ -5,7 +5,7 @@ import format from 'string-format'
 import { rgba } from '../Functions/rgba'
 import { darken } from '../Functions/darken'
 import { bodyColor } from './Body'
-import {fadeIn} from '../Functions/fadeIn'
+import { fadeIn } from '../Functions/fadeIn'
 
 import {
   popoverFontSize,

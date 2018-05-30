@@ -1,7 +1,7 @@
-import {linkColor, linkHoverColor} from './Links'
-import {white, grays} from './Colors'
-import {borderWidth, componentActiveColor, componentActiveBg} from './Components'
-import {inputBtnFocusBoxShadow} from './InputButtons'
+import { linkColor, linkHoverColor } from './Links'
+import { white, grays } from './Colors'
+import { borderWidth, componentActiveColor, componentActiveBg } from './Components'
+import { inputBtnFocusBoxShadow } from './InputButtons'
 
 import {
   paginationPaddingY,

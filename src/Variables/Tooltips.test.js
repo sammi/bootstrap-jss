@@ -1,6 +1,6 @@
-import {fontSizeSm} from './Fonts'
-import {white, black} from './Colors'
-import {borderRadius} from './Components'
+import { fontSizeSm } from './Fonts'
+import { white, black } from './Colors'
+import { borderRadius } from './Components'
 
 import {
   tooltipFontSize,

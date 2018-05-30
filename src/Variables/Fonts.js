@@ -11,7 +11,7 @@ export const fontFamilyBase = fontFamilySansSerif
 
 export const fontSizeBase = '1rem'
 export const fontSizeLg = format('{}{}', size(fontSizeBase).value * 1.25, size(fontSizeBase).unit)
-export const fontSizeSm = format('{}{}', size(fontSizeBase).value * .875, size(fontSizeBase).unit)
+export const fontSizeSm = format('{}{}', size(fontSizeBase).value * 0.875, size(fontSizeBase).unit)
 
 export const fontWeightLight = 300
 export const fontWeightNormal = 400
@@ -52,14 +52,14 @@ export const textMuted = grays._600
 export const blockquoteSmallColor = grays._600
 export const blockquoteFontSize = format('{}{}', size(fontSizeBase).value * 1.25, size(fontSizeBase).unit)
 
-export const hrBorderColor = format('{}', rgba(black, .1))
+export const hrBorderColor = format('{}', rgba(black, 0.1))
 export const hrBorderWidth = borderWidth
 
 export const markPadding = '.2em'
 
 export const dtFontWeight = fontWeightBold
 
-export const kbdBoxShadow = format('inset 0 -.1rem 0 {}', rgba(black, .25))
+export const kbdBoxShadow = format('inset 0 -.1rem 0 {}', rgba(black, 0.25))
 export const nestedKbdFontWeight = fontWeightBold
 
 export const listInlinePadding = '.5rem'

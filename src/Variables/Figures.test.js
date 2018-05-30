@@ -1,4 +1,4 @@
-import {grays} from './Colors'
+import { grays } from './Colors'
 
 import {
   figureCaptionFontSize,

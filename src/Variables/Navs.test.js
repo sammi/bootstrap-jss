@@ -1,9 +1,9 @@
-import {grays} from './Colors'
-import {borderWidth, borderRadius, componentActiveColor, componentActiveBg} from './Components'
+import { grays } from './Colors'
+import { borderWidth, borderRadius, componentActiveColor, componentActiveBg } from './Components'
 import format from 'string-format'
-import {bodyBg} from './Body'
-import {spacer} from './Spacing'
-import {size} from '../Functions/size'
+import { bodyBg } from './Body'
+import { spacer } from './Spacing'
+import { size } from '../Functions/size'
 
 import {
   navLinkPaddingY,

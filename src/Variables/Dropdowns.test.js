@@ -1,8 +1,8 @@
-import {grays, white, black} from './Colors'
-import {rgba} from '../Functions/rgba'
-import {darken} from '../Functions/darken'
+import { grays, white, black } from './Colors'
+import { rgba } from '../Functions/rgba'
+import { darken } from '../Functions/darken'
 import format from 'string-format'
-import {borderRadius, borderWidth, componentActiveColor, componentActiveBg} from './Components'
+import { borderRadius, borderWidth, componentActiveColor, componentActiveBg } from './Components'
 
 import {
   dropdownMinWidth,

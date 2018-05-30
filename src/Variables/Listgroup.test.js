@@ -1,8 +1,8 @@
-import {grays, white, black} from './Colors'
-import {borderWidth, borderRadius, componentActiveColor, componentActiveBg} from './Components'
-import {rgba} from '../Functions/rgba'
+import { grays, white, black } from './Colors'
+import { borderWidth, borderRadius, componentActiveColor, componentActiveBg } from './Components'
+import { rgba } from '../Functions/rgba'
 import format from 'string-format'
-import {bodyColor} from './Body'
+import { bodyColor } from './Body'
 
 import {
   listGroupBg,

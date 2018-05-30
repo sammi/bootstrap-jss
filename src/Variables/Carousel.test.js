@@ -1,4 +1,4 @@
-import {white} from './Colors'
+import { white } from './Colors'
 import format from 'string-format'
 import _ from 'lodash'
 

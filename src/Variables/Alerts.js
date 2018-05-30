@@ -1,5 +1,5 @@
-import {borderRadius, borderWidth} from './Components'
-import {fontWeightBold} from './Fonts'
+import { borderRadius, borderWidth } from './Components'
+import { fontWeightBold } from './Fonts'
 
 export const alertPaddingY = '.75rem'
 export const alertPaddingX = '1.25rem'

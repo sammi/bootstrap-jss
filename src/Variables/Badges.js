@@ -1,5 +1,5 @@
-import {fontWeightBold} from './Fonts'
-import {borderRadius} from './Components'
+import { fontWeightBold } from './Fonts'
+import { borderRadius } from './Components'
 
 export const badgeFontSize = '75%'
 export const badgeFontWeight = fontWeightBold

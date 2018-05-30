@@ -1,5 +1,5 @@
-import {themeColors} from './Colors'
-import {darken} from '../Functions/darken'
+import { themeColors } from './Colors'
+import { darken } from '../Functions/darken'
 
 export const linkColor = themeColors.primary
 

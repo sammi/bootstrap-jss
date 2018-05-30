@@ -1,13 +1,13 @@
 import _ from 'lodash'
-import {rgba} from '../Functions/rgba'
-import {lighten} from '../Functions/lighten'
-import {size} from '../Functions/size'
+import { rgba } from '../Functions/rgba'
+import { lighten } from '../Functions/lighten'
+import { size } from '../Functions/size'
 import format from 'string-format'
 
-import {white, grays, black, themeColors} from './Colors'
-import {bodyColor, bodyBg} from './Body'
-import {componentActiveBg, componentActiveColor, borderColor, boxShadow, borderRadius, borderRadiusLg, borderRadiusSm} from './Components'
-import {fontSizeBase, smallFontSize, fontSizeSm, fontSizeLg} from './Fonts'
+import { white, grays, black, themeColors } from './Colors'
+import { bodyColor, bodyBg } from './Body'
+import { componentActiveBg, componentActiveColor, borderColor, boxShadow, borderRadius, borderRadiusLg, borderRadiusSm } from './Components'
+import { fontSizeBase, smallFontSize, fontSizeSm, fontSizeLg } from './Fonts'
 
 import {
   inputBtnPaddingY,

@@ -1,9 +1,9 @@
-import {fontSizeBase} from './Fonts'
-import {grays, white, black, themeColors} from './Colors'
-import {borderRadius} from './Components'
+import { fontSizeBase } from './Fonts'
+import { grays, white, black, themeColors } from './Colors'
+import { borderRadius } from './Components'
 import format from 'string-format'
-import {size} from '../Functions/size'
-import {rgba} from '../Functions/rgba'
+import { size } from '../Functions/size'
+import { rgba } from '../Functions/rgba'
 
 import {
   progressHeight,

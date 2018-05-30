@@ -1,8 +1,8 @@
-import {lineHeightBase} from './Fonts'
-import {borderWidth, borderRadiusLg} from './Components'
+import { lineHeightBase } from './Fonts'
+import { borderWidth, borderRadiusLg } from './Components'
 import format from 'string-format'
-import {rgba} from '../Functions/rgba'
-import {grays, black, white} from './Colors'
+import { rgba } from '../Functions/rgba'
+import { grays, black, white } from './Colors'
 
 import {
   modalInnerPadding,
