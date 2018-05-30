@@ -8,11 +8,12 @@ import { GroupingContent } from './reboot/GroupingContent'
 import { TabularData } from './reboot/TabularData'
 import { Forms } from './reboot/Forms'
 
-import * as Bootstrap from 'bootstrap-jss'
 import injectSheet, {jss} from 'react-jss'
+
+import * as Bootstrap from 'bootstrap-jss'
 import isolate from 'jss-isolate'
 
-jss.use(isolate({ reset: ['all', {...Bootstrap.Reboot} ] }))
+jss.use(isolate({ reset: {...Bootstrap.Reboot} }))
 
 storiesOf('Reboot', module)
   .add('Reboot elements', () => <div>
