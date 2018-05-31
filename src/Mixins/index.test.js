@@ -3,6 +3,7 @@ import { bgVariant, bgGradientVariant } from './backgroundVariant'
 import { badgeVariant } from './badge'
 import { gradientBg } from './gradients'
 import { hover, hoverFocus, plainHoverFocus, hoverFocusActive } from './hover'
+import {lists} from './lists'
 
 import * as Mixins from './index'
 
@@ -18,6 +19,7 @@ describe('Mixins', () => {
       hoverFocus,
       plainHoverFocus,
       hoverFocusActive,
+      lists,
       checkExported: true
     })
   })
