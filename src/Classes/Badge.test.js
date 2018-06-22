@@ -9,13 +9,25 @@ import {
 } from '../Variables/Badges'
 
 import {
+  themeColors
+} from '../Variables/Colors'
+
+import {
   borderRadius
 } from '../Mixins/borderRadius'
 
 import {
+  badgeVariant
+} from '../Mixins/badge'
+
+import format from 'string-format'
+import _ from 'lodash'
+
+import {
   badge,
   badgeInButton,
-  badgePill
+  badgePill,
+  badgeThemeColors
 } from './Badge'
 
 describe('Badge classes', () => {
@@ -53,14 +65,14 @@ describe('Badge classes', () => {
     })
   })
 
+  it('badgeThemeColors', () => {
+    const badgeColors = badgeThemeColors()
+    Object.keys(themeColors).forEach(themeColorName => {
+      expect(badgeColors[format('badge{}', _.upperFirst(themeColorName))]).toEqual(
+        badgeVariant(themeColors[themeColorName])
+      )
+    })
+  })
+
 })
 
-// Colors
-//
-// Contextual variations (linked badges get darker on :hover).
-
-//   @each $color, $value in $theme-colors {
-//     .badge-#{$color} {
-//       @include badge-variant($value);
-//     }
-//   }
