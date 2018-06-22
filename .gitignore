@@ -4,4 +4,4 @@ dist
 coverage
 .DS_Store
 mb*.pid
-mb*.log
+*.log
