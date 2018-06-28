@@ -5,25 +5,36 @@ import injectSheet, { ThemeProvider } from 'react-jss'
 
 const Reboot = Bootstrap.Reboot
 const { badge, badgeInButton, badgePill, badgeThemeColors } = Bootstrap.Classes.Badge
+const { btn, btnThemeColors, btnOutlineThemeColors } = Bootstrap.Classes.Button
 
-const themeColors = badgeThemeColors()
+
+const badgeColors = badgeThemeColors()
+const btnColors = btnThemeColors()
+const btnOutlineColors = btnOutlineThemeColors()
 
 const styles = theme => ({
   badge: {
     ...Reboot,
     ...badge,
-    ...themeColors[theme.color],
+    ...badgeColors[theme.color],
   },
   badgeInButton: {
     ...Reboot,
-    ...themeColors[theme.color],
+    ...badgeColors[theme.color],
     ...badgeInButton,
   },
   badgePill: {
     ...Reboot,
-    ...themeColors[theme.color],
+    ...badgeColors[theme.color],
     ...badge,
     ...badgePill,
+  },
+  btn: {
+    ...Reboot,
+    ...badgeColors[theme.color],
+    ...btnColors[theme.color],
+    ...btnOutlineColors[theme.color],
+    ...btn
   }
 })
 
@@ -41,7 +52,7 @@ const HeaderBadge = injectSheet(styles) (
 
 const ButtonBadge = injectSheet(styles) (
   ({classes, children}) =>
-  <button type="button">
+  <button type="button" className={classes.btn}>
     Notifications <span className={classes.badgeInButton}>{children}</span>
   </button>
 )
@@ -65,7 +76,7 @@ storiesOf('Badge', module)
   .add('Badge in header', () =>
     <div>
     {
-      Object.keys(themeColors).map(themeColorName => (
+      Object.keys(badgeColors).map(themeColorName => (
         <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
           <div>
             <HeaderBadge>123</HeaderBadge>
@@ -78,7 +89,7 @@ storiesOf('Badge', module)
   .add('Badge in button', () =>
     <div>
     {
-      Object.keys(themeColors).map(themeColorName => (
+      Object.keys(badgeColors).map(themeColorName => (
         <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
           <div>
             <ButtonBadge>4</ButtonBadge>
@@ -88,14 +99,38 @@ storiesOf('Badge', module)
     }
     </div>
   )
-  .add('Pill badges', () =>
+  .add('Span badges', () =>
     <div>
       {
-        Object.keys(themeColors).map(themeColorName => (
+        Object.keys(badgeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
             <div>
               <SpanBadge>{themeColorName}</SpanBadge>
+            </div>
+          </ThemeProvider>
+        ))
+      }
+    </div>
+  )
+  .add('Pill badges', () =>
+    <div>
+      {
+        Object.keys(badgeColors).map(themeColorName => (
+          <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
+            <div>
               <PillBadge>{themeColorName}</PillBadge>
+            </div>
+          </ThemeProvider>
+        ))
+      }
+    </div>
+  )
+  .add('Link badges', () =>
+    <div>
+      {
+        Object.keys(badgeColors).map(themeColorName => (
+          <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
+            <div>
               <LinkBadge>{themeColorName}</LinkBadge>
             </div>
           </ThemeProvider>
