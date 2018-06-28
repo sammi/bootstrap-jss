@@ -31,7 +31,6 @@ import {
 } from './Badge'
 
 describe('Badge classes', () => {
-
   it('badge', () => {
     expect(badge).toEqual({
       display: 'inline-block',
@@ -50,7 +49,6 @@ describe('Badge classes', () => {
   })
 
   it('quick fix for badges in buttons', () => {
-    //.btn .badge
     expect(badgeInButton).toEqual({
       position: 'relative',
       top: '-1px'
@@ -73,6 +71,4 @@ describe('Badge classes', () => {
       )
     })
   })
-
 })
-
