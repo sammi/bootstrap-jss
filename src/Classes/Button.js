@@ -1,9 +1,11 @@
-import { fontSizeBase } from '../Variables/Fonts'
+import { fontSizeBase, fontWeightNormal } from '../Variables/Fonts'
+import { linkColor, linkHoverColor, linkHoverDecoration, btnLinkDisabledColor } from '../Variables/Links'
 import { btnFontWeight, btnBorderWidth, btnPaddingY, btnPaddingX, btnLineHeight, btnBorderRadius, btnTransition, btnFocusBoxShadow, btnDisabledOpacity, btnActiveBoxShadow } from '../Variables/Buttons'
 import { buttonSize, buttonVariant, buttonOutlineVariant } from '../Mixins/button'
 import { transition } from '../Mixins/transition'
 import { hoverFocus } from '../Mixins/hover'
 import { boxShadow } from '../Mixins/boxShadow'
+import { hover } from '../Mixins/hover'
 import { enableShadows } from '../Variables/Options'
 import { themeColors } from '../Variables/Colors'
 import _ from 'lodash'
@@ -41,7 +43,26 @@ export const btn = {
   }
 }
 
-export const btnLink = {}
+export const btnLink = {
+  fontWeight: fontWeightNormal,
+  color: linkColor,
+  backgroundColor: 'transparent',
+  ...hover({
+    color: linkHoverColor,
+    textDecoration: linkHoverDecoration,
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+  }),
+  '&:focus, &.focus': {
+    textDecoration: linkHoverDecoration,
+    borderColor: 'transparent',
+    boxShadow: 'none'
+  },
+  '&:disabled,&.disabled': {
+    color: btnLinkDisabledColor,
+    pointerEvents: 'none'
+  }
+}
 
 export const btnLg = {}
 
