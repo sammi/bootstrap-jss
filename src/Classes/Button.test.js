@@ -1,6 +1,10 @@
 import { fontSizeBase, fontWeightNormal } from '../Variables/Fonts'
-import { linkColor, linkHoverColor, linkHoverDecoration, btnLinkDisabledColor } from '../Variables/Links'
-import { btnFontWeight, btnBorderWidth, btnPaddingY, btnPaddingX, btnLineHeight, btnBorderRadius, btnTransition, btnFocusBoxShadow, btnDisabledOpacity, btnActiveBoxShadow } from '../Variables/Buttons'
+import { linkColor, linkHoverColor, linkHoverDecoration } from '../Variables/Links'
+import {
+  btnFontWeight, btnBorderWidth, btnPaddingY, btnPaddingX, btnLineHeight,
+  btnBorderRadius, btnTransition, btnFocusBoxShadow, btnDisabledOpacity,
+  btnActiveBoxShadow, btnLinkDisabledColor
+} from '../Variables/Buttons'
 import { buttonSize, buttonVariant, buttonOutlineVariant } from '../Mixins/button'
 import { transition } from '../Mixins/transition'
 import { hoverFocus } from '../Mixins/hover'
