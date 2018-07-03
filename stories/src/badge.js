@@ -5,7 +5,7 @@ import injectSheet, { ThemeProvider } from 'react-jss'
 
 const Reboot = Bootstrap.Reboot
 const { badge, badgeInButton, badgePill, badgeThemeColors } = Bootstrap.Classes.Badge
-const { btn, btnThemeColors, btnOutlineThemeColors } = Bootstrap.Classes.Button
+const { btn, btnThemeColors, btnOutlineThemeColors, btnInsideLink } = Bootstrap.Classes.Button
 
 
 const badgeColors = badgeThemeColors()
@@ -35,6 +35,14 @@ const styles = theme => ({
     ...btnColors[theme.color],
     ...btnOutlineColors[theme.color],
     ...btn
+  },
+  btnInsideLink: {
+    ...Reboot,
+    ...badgeColors[theme.color],
+    ...btnColors[theme.color],
+    ...btnOutlineColors[theme.color],
+    ...btn,
+    ...btnInsideLink
   }
 })
 
@@ -69,7 +77,7 @@ const PillBadge = injectSheet(styles) (
 
 const LinkBadge = injectSheet(styles) (
   ({classes, children}) =>
-  <a href="#" className={classes.badge}>{children}</a>
+  <a href="#" className={classes.btnInsideLink}>{children}</a>
 )
 
 storiesOf('Badge', module)

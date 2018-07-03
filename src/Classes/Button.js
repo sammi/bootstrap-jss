@@ -47,6 +47,12 @@ export const btn = {
   }
 }
 
+export const btnInsideLink = {
+  'a.btn.disabled, fieldset:disabled a.btn': {
+    pointerEvents: 'none'
+  }
+}
+
 export const btnLink = {
   fontWeight: fontWeightNormal,
   color: linkColor,

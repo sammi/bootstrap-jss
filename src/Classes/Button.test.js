@@ -21,7 +21,8 @@ import {
   btnSm,
   btnBlock,
   btnThemeColors,
-  btnOutlineThemeColors
+  btnOutlineThemeColors,
+  btnInsideLink
 } from './Button'
 
 describe('Button classes', () => {
@@ -59,6 +60,16 @@ describe('Button classes', () => {
       }
     })
   })
+
+  //a.btn.disabled,
+  //fieldset:disabled a.btn
+  it('Button inside linke', () => {
+    expect(btnInsideLink).toEqual({
+      'a.btn.disabled, fieldset:disabled a.btn': {
+        pointerEvents: 'none'
+      }
+    });
+  });
 
   it('btnThemeColors', () => {
     const btnColors = btnThemeColors()
