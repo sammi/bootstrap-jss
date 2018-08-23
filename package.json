@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "Build JSS components for Bootstrap by JSS",
   "author": "Sammi Song",
   "license": "MIT",
@@ -38,8 +38,8 @@
     "percent-value": "^1.0.7",
     "popper.js": "^1.14.3",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-scripts": "^1.1.4",
     "string-format": "^1.0.0"
   },
