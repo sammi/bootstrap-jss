@@ -32,7 +32,7 @@
     "color-rgba": "^2.0.0",
     "hex-and-rgba": "^1.2.0",
     "jquery": "^3.3.1",
-    "jss": "^9.8.6",
+    "jss": "^9.8.7",
     "jss-isolate": "^5.1.0",
     "lodash": "^4.17.10",
     "percent-value": "^1.0.7",
