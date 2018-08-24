@@ -7,46 +7,17 @@ const Reboot = Bootstrap.Reboot
 const { badge, badgeInButton, badgePill, badgeThemeColors } = Bootstrap.Classes.Badge
 const { btn, btnThemeColors, btnOutlineThemeColors, btnInsideLink } = Bootstrap.Classes.Button
 
-
 const badgeColors = badgeThemeColors()
 const btnColors = btnThemeColors()
 const btnOutlineColors = btnOutlineThemeColors()
 
-const styles = theme => ({
+const HeaderBadge = injectSheet(theme => ({
   badge: {
     ...Reboot,
     ...badge,
     ...badgeColors[theme.color],
   },
-  badgeInButton: {
-    ...Reboot,
-    ...badgeColors[theme.color],
-    ...badgeInButton,
-  },
-  badgePill: {
-    ...Reboot,
-    ...badgeColors[theme.color],
-    ...badge,
-    ...badgePill,
-  },
-  btn: {
-    ...Reboot,
-    ...badgeColors[theme.color],
-    ...btnColors[theme.color],
-    ...btnOutlineColors[theme.color],
-    ...btn
-  },
-  btnInsideLink: {
-    ...Reboot,
-    ...badgeColors[theme.color],
-    ...btnColors[theme.color],
-    ...btnOutlineColors[theme.color],
-    ...btn,
-    ...btnInsideLink
-  }
-})
-
-const HeaderBadge = injectSheet(styles) (
+})) (
   ({classes, children}) =>
   <div>
     <h1>Example heading <span className={classes.badge}>{children}</span></h1>
@@ -58,24 +29,59 @@ const HeaderBadge = injectSheet(styles) (
   </div>
 )
 
-const ButtonBadge = injectSheet(styles) (
+const ButtonBadge = injectSheet( theme => ({
+  container: {
+    ...Reboot,
+    ...btn,
+    ...btnColors['btnPrimary'],
+    margin: '2px'
+  },
+  button: {
+    ...badgeInButton,
+    ...badgeColors[theme.color],
+  }
+})) (
   ({classes, children}) =>
-  <button type="button" className={classes.btn}>
-    Notifications <span className={classes.badgeInButton}>{children}</span>
+  <button type="button" className={classes.container}>
+    Notifications <span className={classes.button}>{children}</span>
   </button>
 )
 
-const SpanBadge = injectSheet(styles) (
+const SpanBadge = injectSheet( theme => ({
+  badge: {
+    ...Reboot,
+    ...badge,
+    ...badgeColors[theme.color],
+    margin: '2px',
+  },
+})) (
   ({classes, children}) =>
   <span className={classes.badge}>{children}</span>
 )
 
-const PillBadge = injectSheet(styles) (
+const PillBadge = injectSheet(theme => ({
+  badgePill: {
+    ...Reboot,
+    ...badge,
+    ...badgePill,
+    ...badgeColors[theme.color],
+    margin: '2px',
+  },
+})) (
   ({classes, children}) =>
   <span className={classes.badgePill}>{children}</span>
 )
 
-const LinkBadge = injectSheet(styles) (
+const LinkBadge = injectSheet(theme => ({
+  btnInsideLink: {
+    ...Reboot,
+    ...btn,
+    ...badgeColors[theme.color],
+    ...btnColors[theme.color],
+    ...btnOutlineColors[theme.color],
+    margin: '2px'
+  }
+})) (
   ({classes, children}) =>
   <a href="#" className={classes.btnInsideLink}>{children}</a>
 )
@@ -99,9 +105,7 @@ storiesOf('Badge', module)
     {
       Object.keys(badgeColors).map(themeColorName => (
         <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-          <div>
-            <ButtonBadge>4</ButtonBadge>
-          </div>
+          <ButtonBadge>4</ButtonBadge>
         </ThemeProvider>
       ))
     }
@@ -112,9 +116,7 @@ storiesOf('Badge', module)
       {
         Object.keys(badgeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <div>
               <SpanBadge>{themeColorName}</SpanBadge>
-            </div>
           </ThemeProvider>
         ))
       }
@@ -125,9 +127,7 @@ storiesOf('Badge', module)
       {
         Object.keys(badgeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <div>
-              <PillBadge>{themeColorName}</PillBadge>
-            </div>
+            <PillBadge>{themeColorName}</PillBadge>
           </ThemeProvider>
         ))
       }
@@ -138,9 +138,7 @@ storiesOf('Badge', module)
       {
         Object.keys(badgeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <div>
-              <LinkBadge>{themeColorName}</LinkBadge>
-            </div>
+            <LinkBadge>{themeColorName}</LinkBadge>
           </ThemeProvider>
         ))
       }
