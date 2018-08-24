@@ -3,7 +3,7 @@
 exports[`Storyshots Alert Dismissing 1`] = `
 <div>
   <div
-    className="Component-alertDismissible-0-1-125 show"
+    className="Component-alertDismissible-0-1-124 show"
     role="alert"
   >
     <strong>
@@ -12,7 +12,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
      You should check in on some of those fields below.
     <button
       aria-label="Close"
-      className="Component-close-0-1-126"
+      className="Component-close-0-1-125"
       data-dismiss="alert"
       onClick={[Function]}
       type="button"
@@ -25,7 +25,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-130 show"
+    className="Component-alertDismissible-0-1-129 show"
     role="alert"
   >
     <strong>
@@ -34,7 +34,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
      You should check in on some of those fields below.
     <button
       aria-label="Close"
-      className="Component-close-0-1-131"
+      className="Component-close-0-1-130"
       data-dismiss="alert"
       onClick={[Function]}
       type="button"
@@ -47,7 +47,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-135 show"
+    className="Component-alertDismissible-0-1-134 show"
     role="alert"
   >
     <strong>
@@ -56,7 +56,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
      You should check in on some of those fields below.
     <button
       aria-label="Close"
-      className="Component-close-0-1-136"
+      className="Component-close-0-1-135"
       data-dismiss="alert"
       onClick={[Function]}
       type="button"
@@ -69,7 +69,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-140 show"
+    className="Component-alertDismissible-0-1-139 show"
     role="alert"
   >
     <strong>
@@ -78,7 +78,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
      You should check in on some of those fields below.
     <button
       aria-label="Close"
-      className="Component-close-0-1-141"
+      className="Component-close-0-1-140"
       data-dismiss="alert"
       onClick={[Function]}
       type="button"
@@ -91,7 +91,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-145 show"
+    className="Component-alertDismissible-0-1-144 show"
     role="alert"
   >
     <strong>
@@ -100,7 +100,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
      You should check in on some of those fields below.
     <button
       aria-label="Close"
-      className="Component-close-0-1-146"
+      className="Component-close-0-1-145"
       data-dismiss="alert"
       onClick={[Function]}
       type="button"
@@ -113,7 +113,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-150 show"
+    className="Component-alertDismissible-0-1-149 show"
     role="alert"
   >
     <strong>
@@ -122,7 +122,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
      You should check in on some of those fields below.
     <button
       aria-label="Close"
-      className="Component-close-0-1-151"
+      className="Component-close-0-1-150"
       data-dismiss="alert"
       onClick={[Function]}
       type="button"
@@ -135,7 +135,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-155 show"
+    className="Component-alertDismissible-0-1-154 show"
     role="alert"
   >
     <strong>
@@ -144,7 +144,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
      You should check in on some of those fields below.
     <button
       aria-label="Close"
-      className="Component-close-0-1-156"
+      className="Component-close-0-1-155"
       data-dismiss="alert"
       onClick={[Function]}
       type="button"
@@ -157,7 +157,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-160 show"
+    className="Component-alertDismissible-0-1-159 show"
     role="alert"
   >
     <strong>
@@ -166,7 +166,7 @@ exports[`Storyshots Alert Dismissing 1`] = `
      You should check in on some of those fields below.
     <button
       aria-label="Close"
-      className="Component-close-0-1-161"
+      className="Component-close-0-1-160"
       data-dismiss="alert"
       onClick={[Function]}
       type="button"
@@ -187,7 +187,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     className="Component-alert-0-1-1"
   >
     <h1
-      className="Component-alertHeading-0-1-9"
+      className="Component-alertHeading-0-1-8"
     >
       alertPrimary
     </h1>
@@ -195,7 +195,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     primary
      
     <a
-      className="Component-alertLink-0-1-13"
+      className="Component-alertLink-0-1-12"
       href="/"
     >
       alert
@@ -203,10 +203,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-17"
+    className="Component-alert-0-1-16"
   >
     <h1
-      className="Component-alertHeading-0-1-24"
+      className="Component-alertHeading-0-1-23"
     >
       alertSecondary
     </h1>
@@ -214,7 +214,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     secondary
      
     <a
-      className="Component-alertLink-0-1-28"
+      className="Component-alertLink-0-1-27"
       href="/"
     >
       alert
@@ -222,10 +222,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-32"
+    className="Component-alert-0-1-31"
   >
     <h1
-      className="Component-alertHeading-0-1-39"
+      className="Component-alertHeading-0-1-38"
     >
       alertSuccess
     </h1>
@@ -233,7 +233,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     success
      
     <a
-      className="Component-alertLink-0-1-43"
+      className="Component-alertLink-0-1-42"
       href="/"
     >
       alert
@@ -241,10 +241,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-47"
+    className="Component-alert-0-1-46"
   >
     <h1
-      className="Component-alertHeading-0-1-54"
+      className="Component-alertHeading-0-1-53"
     >
       alertInfo
     </h1>
@@ -252,7 +252,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     info
      
     <a
-      className="Component-alertLink-0-1-58"
+      className="Component-alertLink-0-1-57"
       href="/"
     >
       alert
@@ -260,10 +260,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-62"
+    className="Component-alert-0-1-61"
   >
     <h1
-      className="Component-alertHeading-0-1-69"
+      className="Component-alertHeading-0-1-68"
     >
       alertWarning
     </h1>
@@ -271,7 +271,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     warning
      
     <a
-      className="Component-alertLink-0-1-73"
+      className="Component-alertLink-0-1-72"
       href="/"
     >
       alert
@@ -279,10 +279,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-77"
+    className="Component-alert-0-1-76"
   >
     <h1
-      className="Component-alertHeading-0-1-84"
+      className="Component-alertHeading-0-1-83"
     >
       alertDanger
     </h1>
@@ -290,7 +290,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     danger
      
     <a
-      className="Component-alertLink-0-1-88"
+      className="Component-alertLink-0-1-87"
       href="/"
     >
       alert
@@ -298,10 +298,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-92"
+    className="Component-alert-0-1-91"
   >
     <h1
-      className="Component-alertHeading-0-1-99"
+      className="Component-alertHeading-0-1-98"
     >
       alertLight
     </h1>
@@ -309,7 +309,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     light
      
     <a
-      className="Component-alertLink-0-1-103"
+      className="Component-alertLink-0-1-102"
       href="/"
     >
       alert
@@ -317,10 +317,10 @@ exports[`Storyshots Alert Theme colors 1`] = `
      — check it out!
   </div>
   <div
-    className="Component-alert-0-1-107"
+    className="Component-alert-0-1-106"
   >
     <h1
-      className="Component-alertHeading-0-1-114"
+      className="Component-alertHeading-0-1-113"
     >
       alertDark
     </h1>
@@ -328,7 +328,7 @@ exports[`Storyshots Alert Theme colors 1`] = `
     dark
      
     <a
-      className="Component-alertLink-0-1-118"
+      className="Component-alertLink-0-1-117"
       href="/"
     >
       alert
@@ -342,12 +342,12 @@ exports[`Storyshots Badge Badge in button 1`] = `
 <div>
   <div>
     <button
-      className="Component-btn-0-1-205"
+      className="Component-btn-0-1-204"
       type="button"
     >
       Notifications 
       <span
-        className="Component-badgeInButton-0-1-203"
+        className="Component-badgeInButton-0-1-202"
       >
         4
       </span>
@@ -355,12 +355,12 @@ exports[`Storyshots Badge Badge in button 1`] = `
   </div>
   <div>
     <button
-      className="Component-btn-0-1-210"
+      className="Component-btn-0-1-209"
       type="button"
     >
       Notifications 
       <span
-        className="Component-badgeInButton-0-1-208"
+        className="Component-badgeInButton-0-1-207"
       >
         4
       </span>
@@ -368,12 +368,12 @@ exports[`Storyshots Badge Badge in button 1`] = `
   </div>
   <div>
     <button
-      className="Component-btn-0-1-215"
+      className="Component-btn-0-1-214"
       type="button"
     >
       Notifications 
       <span
-        className="Component-badgeInButton-0-1-213"
+        className="Component-badgeInButton-0-1-212"
       >
         4
       </span>
@@ -381,12 +381,12 @@ exports[`Storyshots Badge Badge in button 1`] = `
   </div>
   <div>
     <button
-      className="Component-btn-0-1-220"
+      className="Component-btn-0-1-219"
       type="button"
     >
       Notifications 
       <span
-        className="Component-badgeInButton-0-1-218"
+        className="Component-badgeInButton-0-1-217"
       >
         4
       </span>
@@ -394,12 +394,12 @@ exports[`Storyshots Badge Badge in button 1`] = `
   </div>
   <div>
     <button
-      className="Component-btn-0-1-225"
+      className="Component-btn-0-1-224"
       type="button"
     >
       Notifications 
       <span
-        className="Component-badgeInButton-0-1-223"
+        className="Component-badgeInButton-0-1-222"
       >
         4
       </span>
@@ -407,12 +407,12 @@ exports[`Storyshots Badge Badge in button 1`] = `
   </div>
   <div>
     <button
-      className="Component-btn-0-1-230"
+      className="Component-btn-0-1-229"
       type="button"
     >
       Notifications 
       <span
-        className="Component-badgeInButton-0-1-228"
+        className="Component-badgeInButton-0-1-227"
       >
         4
       </span>
@@ -420,12 +420,12 @@ exports[`Storyshots Badge Badge in button 1`] = `
   </div>
   <div>
     <button
-      className="Component-btn-0-1-235"
+      className="Component-btn-0-1-234"
       type="button"
     >
       Notifications 
       <span
-        className="Component-badgeInButton-0-1-233"
+        className="Component-badgeInButton-0-1-232"
       >
         4
       </span>
@@ -433,12 +433,12 @@ exports[`Storyshots Badge Badge in button 1`] = `
   </div>
   <div>
     <button
-      className="Component-btn-0-1-240"
+      className="Component-btn-0-1-239"
       type="button"
     >
       Notifications 
       <span
-        className="Component-badgeInButton-0-1-238"
+        className="Component-badgeInButton-0-1-237"
       >
         4
       </span>
@@ -454,7 +454,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-162"
+          className="Component-badge-0-1-161"
         >
           123
         </span>
@@ -462,7 +462,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-162"
+          className="Component-badge-0-1-161"
         >
           123
         </span>
@@ -470,7 +470,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-162"
+          className="Component-badge-0-1-161"
         >
           123
         </span>
@@ -478,7 +478,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-162"
+          className="Component-badge-0-1-161"
         >
           123
         </span>
@@ -486,7 +486,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-162"
+          className="Component-badge-0-1-161"
         >
           123
         </span>
@@ -494,7 +494,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-162"
+          className="Component-badge-0-1-161"
         >
           123
         </span>
@@ -506,7 +506,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-167"
+          className="Component-badge-0-1-166"
         >
           123
         </span>
@@ -514,7 +514,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-167"
+          className="Component-badge-0-1-166"
         >
           123
         </span>
@@ -522,7 +522,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-167"
+          className="Component-badge-0-1-166"
         >
           123
         </span>
@@ -530,7 +530,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-167"
+          className="Component-badge-0-1-166"
         >
           123
         </span>
@@ -538,7 +538,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-167"
+          className="Component-badge-0-1-166"
         >
           123
         </span>
@@ -546,7 +546,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-167"
+          className="Component-badge-0-1-166"
         >
           123
         </span>
@@ -558,7 +558,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-172"
+          className="Component-badge-0-1-171"
         >
           123
         </span>
@@ -566,7 +566,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-172"
+          className="Component-badge-0-1-171"
         >
           123
         </span>
@@ -574,7 +574,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-172"
+          className="Component-badge-0-1-171"
         >
           123
         </span>
@@ -582,7 +582,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-172"
+          className="Component-badge-0-1-171"
         >
           123
         </span>
@@ -590,7 +590,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-172"
+          className="Component-badge-0-1-171"
         >
           123
         </span>
@@ -598,7 +598,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-172"
+          className="Component-badge-0-1-171"
         >
           123
         </span>
@@ -610,7 +610,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-177"
+          className="Component-badge-0-1-176"
         >
           123
         </span>
@@ -618,7 +618,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-177"
+          className="Component-badge-0-1-176"
         >
           123
         </span>
@@ -626,7 +626,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-177"
+          className="Component-badge-0-1-176"
         >
           123
         </span>
@@ -634,7 +634,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-177"
+          className="Component-badge-0-1-176"
         >
           123
         </span>
@@ -642,7 +642,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-177"
+          className="Component-badge-0-1-176"
         >
           123
         </span>
@@ -650,7 +650,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-177"
+          className="Component-badge-0-1-176"
         >
           123
         </span>
@@ -662,7 +662,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-182"
+          className="Component-badge-0-1-181"
         >
           123
         </span>
@@ -670,7 +670,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-182"
+          className="Component-badge-0-1-181"
         >
           123
         </span>
@@ -678,7 +678,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-182"
+          className="Component-badge-0-1-181"
         >
           123
         </span>
@@ -686,7 +686,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-182"
+          className="Component-badge-0-1-181"
         >
           123
         </span>
@@ -694,7 +694,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-182"
+          className="Component-badge-0-1-181"
         >
           123
         </span>
@@ -702,7 +702,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-182"
+          className="Component-badge-0-1-181"
         >
           123
         </span>
@@ -714,7 +714,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-187"
+          className="Component-badge-0-1-186"
         >
           123
         </span>
@@ -722,7 +722,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-187"
+          className="Component-badge-0-1-186"
         >
           123
         </span>
@@ -730,7 +730,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-187"
+          className="Component-badge-0-1-186"
         >
           123
         </span>
@@ -738,7 +738,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-187"
+          className="Component-badge-0-1-186"
         >
           123
         </span>
@@ -746,7 +746,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-187"
+          className="Component-badge-0-1-186"
         >
           123
         </span>
@@ -754,7 +754,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-187"
+          className="Component-badge-0-1-186"
         >
           123
         </span>
@@ -766,7 +766,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-192"
+          className="Component-badge-0-1-191"
         >
           123
         </span>
@@ -774,7 +774,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-192"
+          className="Component-badge-0-1-191"
         >
           123
         </span>
@@ -782,7 +782,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-192"
+          className="Component-badge-0-1-191"
         >
           123
         </span>
@@ -790,7 +790,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-192"
+          className="Component-badge-0-1-191"
         >
           123
         </span>
@@ -798,7 +798,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-192"
+          className="Component-badge-0-1-191"
         >
           123
         </span>
@@ -806,7 +806,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-192"
+          className="Component-badge-0-1-191"
         >
           123
         </span>
@@ -818,7 +818,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-197"
+          className="Component-badge-0-1-196"
         >
           123
         </span>
@@ -826,7 +826,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-197"
+          className="Component-badge-0-1-196"
         >
           123
         </span>
@@ -834,7 +834,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-197"
+          className="Component-badge-0-1-196"
         >
           123
         </span>
@@ -842,7 +842,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-197"
+          className="Component-badge-0-1-196"
         >
           123
         </span>
@@ -850,7 +850,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-197"
+          className="Component-badge-0-1-196"
         >
           123
         </span>
@@ -858,7 +858,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-197"
+          className="Component-badge-0-1-196"
         >
           123
         </span>
@@ -872,7 +872,7 @@ exports[`Storyshots Badge Link badges 1`] = `
 <div>
   <div>
     <a
-      className="Component-btnInsideLink-0-1-326"
+      className="Component-btnInsideLink-0-1-325"
       href="#"
     >
       badgePrimary
@@ -880,7 +880,7 @@ exports[`Storyshots Badge Link badges 1`] = `
   </div>
   <div>
     <a
-      className="Component-btnInsideLink-0-1-331"
+      className="Component-btnInsideLink-0-1-330"
       href="#"
     >
       badgeSecondary
@@ -888,7 +888,7 @@ exports[`Storyshots Badge Link badges 1`] = `
   </div>
   <div>
     <a
-      className="Component-btnInsideLink-0-1-336"
+      className="Component-btnInsideLink-0-1-335"
       href="#"
     >
       badgeSuccess
@@ -896,7 +896,7 @@ exports[`Storyshots Badge Link badges 1`] = `
   </div>
   <div>
     <a
-      className="Component-btnInsideLink-0-1-341"
+      className="Component-btnInsideLink-0-1-340"
       href="#"
     >
       badgeInfo
@@ -904,7 +904,7 @@ exports[`Storyshots Badge Link badges 1`] = `
   </div>
   <div>
     <a
-      className="Component-btnInsideLink-0-1-346"
+      className="Component-btnInsideLink-0-1-345"
       href="#"
     >
       badgeWarning
@@ -912,7 +912,7 @@ exports[`Storyshots Badge Link badges 1`] = `
   </div>
   <div>
     <a
-      className="Component-btnInsideLink-0-1-351"
+      className="Component-btnInsideLink-0-1-350"
       href="#"
     >
       badgeDanger
@@ -920,7 +920,7 @@ exports[`Storyshots Badge Link badges 1`] = `
   </div>
   <div>
     <a
-      className="Component-btnInsideLink-0-1-356"
+      className="Component-btnInsideLink-0-1-355"
       href="#"
     >
       badgeLight
@@ -928,7 +928,7 @@ exports[`Storyshots Badge Link badges 1`] = `
   </div>
   <div>
     <a
-      className="Component-btnInsideLink-0-1-361"
+      className="Component-btnInsideLink-0-1-360"
       href="#"
     >
       badgeDark
@@ -941,56 +941,56 @@ exports[`Storyshots Badge Pill badges 1`] = `
 <div>
   <div>
     <span
-      className="Component-badgePill-0-1-284"
+      className="Component-badgePill-0-1-283"
     >
       badgePrimary
     </span>
   </div>
   <div>
     <span
-      className="Component-badgePill-0-1-289"
+      className="Component-badgePill-0-1-288"
     >
       badgeSecondary
     </span>
   </div>
   <div>
     <span
-      className="Component-badgePill-0-1-294"
+      className="Component-badgePill-0-1-293"
     >
       badgeSuccess
     </span>
   </div>
   <div>
     <span
-      className="Component-badgePill-0-1-299"
+      className="Component-badgePill-0-1-298"
     >
       badgeInfo
     </span>
   </div>
   <div>
     <span
-      className="Component-badgePill-0-1-304"
+      className="Component-badgePill-0-1-303"
     >
       badgeWarning
     </span>
   </div>
   <div>
     <span
-      className="Component-badgePill-0-1-309"
+      className="Component-badgePill-0-1-308"
     >
       badgeDanger
     </span>
   </div>
   <div>
     <span
-      className="Component-badgePill-0-1-314"
+      className="Component-badgePill-0-1-313"
     >
       badgeLight
     </span>
   </div>
   <div>
     <span
-      className="Component-badgePill-0-1-319"
+      className="Component-badgePill-0-1-318"
     >
       badgeDark
     </span>
@@ -1002,56 +1002,56 @@ exports[`Storyshots Badge Span badges 1`] = `
 <div>
   <div>
     <span
-      className="Component-badge-0-1-242"
+      className="Component-badge-0-1-241"
     >
       badgePrimary
     </span>
   </div>
   <div>
     <span
-      className="Component-badge-0-1-247"
+      className="Component-badge-0-1-246"
     >
       badgeSecondary
     </span>
   </div>
   <div>
     <span
-      className="Component-badge-0-1-252"
+      className="Component-badge-0-1-251"
     >
       badgeSuccess
     </span>
   </div>
   <div>
     <span
-      className="Component-badge-0-1-257"
+      className="Component-badge-0-1-256"
     >
       badgeInfo
     </span>
   </div>
   <div>
     <span
-      className="Component-badge-0-1-262"
+      className="Component-badge-0-1-261"
     >
       badgeWarning
     </span>
   </div>
   <div>
     <span
-      className="Component-badge-0-1-267"
+      className="Component-badge-0-1-266"
     >
       badgeDanger
     </span>
   </div>
   <div>
     <span
-      className="Component-badge-0-1-272"
+      className="Component-badge-0-1-271"
     >
       badgeLight
     </span>
   </div>
   <div>
     <span
-      className="Component-badge-0-1-277"
+      className="Component-badge-0-1-276"
     >
       badgeDark
     </span>
