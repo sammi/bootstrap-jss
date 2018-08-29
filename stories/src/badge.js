@@ -49,7 +49,7 @@ const ButtonBadge = injectSheet( theme => ({
 
 const SpanBadge = injectSheet( theme => ({
   badge: {
-    ...(Reboot.button.btn),
+    ...Reboot,
     ...badge,
     ...badgeColors[theme.color],
     margin: '2px',
