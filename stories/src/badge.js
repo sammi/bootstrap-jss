@@ -31,7 +31,7 @@ const HeaderBadge = injectSheet(theme => ({
 
 const ButtonBadge = injectSheet( theme => ({
   container: {
-    ...Reboot,
+    ...Reboot.forms.button,
     ...btn,
     ...btnColors['btnPrimary'],
     margin: '2px'
@@ -49,7 +49,7 @@ const ButtonBadge = injectSheet( theme => ({
 
 const SpanBadge = injectSheet( theme => ({
   badge: {
-    ...Reboot,
+    ...(Reboot.button.btn),
     ...badge,
     ...badgeColors[theme.color],
     margin: '2px',
@@ -74,12 +74,12 @@ const PillBadge = injectSheet(theme => ({
 
 const LinkBadge = injectSheet(theme => ({
   btnInsideLink: {
-    ...Reboot,
+    ...Reboot.links.a,
     ...btn,
     ...badgeColors[theme.color],
     ...btnColors[theme.color],
     ...btnOutlineColors[theme.color],
-    margin: '2px'
+    margin: '2px',
   }
 })) (
   ({classes, children}) =>
