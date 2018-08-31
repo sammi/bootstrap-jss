@@ -3,6 +3,7 @@ import { bgVariant, bgGradientVariant } from './backgroundVariant'
 import {badgeVariant} from './badge'
 import {gradientBg} from './gradients'
 import {hover, hoverFocus, plainHoverFocus, hoverFocusActive} from './hover'
+import { imgFluid, imgRetina } from './image'
 import { lists } from './lists'
 
 const checkExported = true
@@ -17,6 +18,8 @@ export {
   hoverFocus,
   plainHoverFocus,
   hoverFocusActive,
+  imgFluid,
+  imgRetina,
   lists,
   checkExported
 }
