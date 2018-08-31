@@ -4,6 +4,7 @@ import {badgeVariant} from './badge'
 import {gradientBg} from './gradients'
 import {hover, hoverFocus, plainHoverFocus, hoverFocusActive} from './hover'
 import { imgFluid, imgRetina } from './image'
+import { resizable } from './resize'
 import { lists } from './lists'
 
 const checkExported = true
@@ -20,6 +21,7 @@ export {
   hoverFocusActive,
   imgFluid,
   imgRetina,
+  resizable,
   lists,
   checkExported
 }
