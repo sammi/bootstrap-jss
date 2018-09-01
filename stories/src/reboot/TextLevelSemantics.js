@@ -24,7 +24,7 @@ export const TextLevelSemantics = () => <div>
     The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br />
     The <em>em element</em> example<br />
     The <i>i element</i> example<br />
-    The img element <img src="https://lorempixel.com/16/16" alt="" /> example<br />
+    The img element <img src="./16_16.img" alt="" /> example<br />
     The <ins>ins element</ins> example<br />
     The <kbd>kbd element</kbd> example<br />
     The <mark>mark element</mark> example<br />
