@@ -1,6 +1,6 @@
 import { listGroupItemVariant } from './listGroup'
 import { darken } from '../Functions/darken'
-import { white } from '../Variables/colors'
+import { white } from '../Variables/Colors'
 import { hoverFocus } from './hover'
 
 describe('list groups', () => {
