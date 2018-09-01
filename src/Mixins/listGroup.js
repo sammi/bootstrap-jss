@@ -1,5 +1,5 @@
 import { darken } from '../Functions/darken'
-import { white } from '../Variables/colors'
+import { white } from '../Variables/Colors'
 import { hoverFocus } from './hover'
 
 export const listGroupItemVariant = (state, backgroundColor, color) => {
