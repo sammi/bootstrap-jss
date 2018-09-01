@@ -83,7 +83,7 @@ export const GroupingContent = () => <div>
   <h3>figure</h3>
 
   <figure>
-    <img src="https://lorempixel.com/400/200" alt="" />
+    <img src="./400_200.img" alt="" />
     <figcaption>Figcaption content</figcaption>
   </figure>
 </div>

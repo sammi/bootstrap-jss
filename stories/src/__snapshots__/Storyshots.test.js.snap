@@ -1287,14 +1287,14 @@ exports[`Storyshots Reboot Reboot elements 1`] = `
     </h3>
     <img
       alt=""
-      src="https://lorempixel.com/100/100"
+      src="./100_100.img"
     />
     <a
       href="#"
     >
       <img
         alt=""
-        src="https://lorempixel.com/100/100"
+        src="./100_100.img"
       />
     </a>
     <h3>
@@ -1485,7 +1485,7 @@ exports[`Storyshots Reboot Reboot elements 1`] = `
     <figure>
       <img
         alt=""
-        src="https://lorempixel.com/400/200"
+        src="./400_20.img"
       />
       <figcaption>
         Figcaption content
@@ -1900,7 +1900,7 @@ exports[`Storyshots Reboot Reboot elements 1`] = `
         <p>
           <input
             alt="Image (input)"
-            src="https://lorempixel.com/90/24"
+            src="./90_24.img"
             type="image"
           />
         </p>
@@ -2073,7 +2073,7 @@ exports[`Storyshots Reboot Reboot elements 1`] = `
         <div>
           <input
             alt="Image (input)"
-            src="https://lorempixel.com/90/24"
+            src="./90_24.img"
             type="image"
           />
         </div>

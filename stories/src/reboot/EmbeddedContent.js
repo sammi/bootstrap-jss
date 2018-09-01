@@ -10,8 +10,8 @@ export const EmbeddedContent = () => <div>
 
   <h3>img</h3>
 
-  <img src="https://lorempixel.com/100/100" alt="" />
-  <a href="#"><img src="https://lorempixel.com/100/100" alt="" /></a>
+  <img src="./100_100.img" alt="" />
+  <a href="#"><img src="./100_100.img" alt="" /></a>
 
   <h3>svg</h3>
 

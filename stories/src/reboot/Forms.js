@@ -45,7 +45,7 @@ export const Forms = () => <div>
 
     <fieldset>
       <legend>Clickable inputs and buttons</legend>
-      <p><input type="image" src="https://lorempixel.com/90/24" alt="Image (input)" /></p>
+      <p><input type="image" src="./90_24.img" alt="Image (input)" /></p>
       <p><input type="reset" defaultValue="Reset (input)" /></p>
       <p><input type="button" defaultValue="Button (input)" /></p>
       <p><input type="submit" defaultValue="Submit (input)" /></p>
@@ -81,7 +81,7 @@ export const Forms = () => <div>
       <div><select><option>Option 01</option><option>Option 02</option></select></div>
       <div><textarea cols="30" rows="5" defaultValue="Textarea text"></textarea></div>
 
-      <div><input type="image" src="https://lorempixel.com/90/24" alt="Image (input)" /></div>
+      <div><input type="image" src="./90_24.img" alt="Image (input)" /></div>
       <div><input type="reset" defaultValue="Reset (input)" /></div>
       <div><input type="button" defaultValue="Button (input)" /></div>
       <div><input type="submit" defaultValue="Submit (input)" /></div>
