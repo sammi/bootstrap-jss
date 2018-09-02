@@ -6,3 +6,4 @@ export const enableTransitions = true
 export const enableHoverMediaQuery = false
 export const enableGridClasses = true
 export const enablePrintStyles = true
+export const enableValidationIcons = true

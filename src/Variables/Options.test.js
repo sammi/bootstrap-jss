@@ -6,7 +6,8 @@ import {
   enableTransitions,
   enableHoverMediaQuery,
   enableGridClasses,
-  enablePrintStyles
+  enablePrintStyles,
+  enableValidationIcons
 } from './Options'
 
 describe('Options', () => {
@@ -20,5 +21,6 @@ describe('Options', () => {
     expect(enableHoverMediaQuery).toEqual(false)
     expect(enableGridClasses).toEqual(true)
     expect(enablePrintStyles).toEqual(true)
+    expect(enableValidationIcons).toEqual(true)
   })
 })
