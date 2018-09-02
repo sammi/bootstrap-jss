@@ -1,4 +1,4 @@
-import {clearfix} from './clearFix'
+import {clearfix} from './clearfix'
 
 describe('', () => {
     it('clearfix', () => {
