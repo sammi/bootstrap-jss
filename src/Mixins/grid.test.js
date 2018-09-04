@@ -6,7 +6,6 @@ import percentValue from 'percent-value'
 import { makeContainer, makeContainerMaxWidths, makeRow, makeColReady, makeCol, makeColOffset } from './grid'
 
 describe('Grid system, Generate semantic grid columns with these mixins.', () => {
-
   const gridGutterWidthSize = size(gridGutterWidth)
 
   it('make-container', () => {
