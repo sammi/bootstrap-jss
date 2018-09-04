@@ -1,97 +1,122 @@
-import { enableShadows, enableValidationIcons } from '../Variables/Options'
-import { lineHeightBase } from '../Variables/Fonts'
-import { colorYiq } from '../Functions/colorYiq'
+import { enableShadows } from '../Variables/Options'
 import { rgba } from '../Functions/rgba'
-import { borderRadius } from './borderRadius'
+import { white } from '../Variables/Colors'
+import { lighten } from '../Functions/lighten'
+import { gradientBg } from './gradients'
+import { bodyBg } from '../Variables/Body'
 
 import {
-    inputFocusColor,
-    inputFocusBg,
-    inputFocusBorderColor,
-    inputBoxShadow,
-    inputFocusBoxShadow,
-    formFeedbackMarginTop,
-    formFeedbackFontSize,
-    inputHeightInner,
-    textAreaFormControl,
-    customSelect,
-    formControlFile,
-    formCheckInput,
-    customControlInput,
-    customFileInput,
-    formFeedbackIconValid,
-    formFeedbackIconInvalid,
-    inputFocusWidth
+  inputFocusColor,
+  inputFocusBg,
+  inputFocusBorderColor,
+  inputBoxShadow,
+  inputFocusBoxShadow,
+  formFeedbackMarginTop,
+  formFeedbackFontSize,
+  inputFocusWidth
 } from '../Variables/Forms'
 
-import {
-    tooltipPaddingY,
-    tooltipPaddingX,
-    tooltipFontSize,
-    tooltipOpacity,
-    tooltipBorderRadius
-} from '../Variables/Tooltips'
-
-export const formControlFocus = () => ({
-    '&:focus': {
-        color: inputFocusColor,
-        backgroundColor: inputFocusBg,
-        borderColor: inputFocusBorderColor,
-        outline: 0,
-        boxShadow: enableShadows ? `${inputBoxShadow}, ${inputFocusBoxShadow}` : inputFocusBoxShadow
-    }
+export const formControlFocus = (isEnableShadows = enableShadows) => ({
+  '&:focus': {
+    color: inputFocusColor,
+    backgroundColor: inputFocusBg,
+    borderColor: inputFocusBorderColor,
+    outline: 0,
+    boxShadow: isEnableShadows ? `${inputBoxShadow}, ${inputFocusBoxShadow}` : inputFocusBoxShadow
+  }
 })
 
 export const formValidationState = (state, color) => {
-    const expectValue = {}
+  const expectValue = {}
 
-    expectValue[`.#{state}-feedback`] = {
-        display: 'none',
-        width: '100%',
-        marginTop: formFeedbackMarginTop,
-        fontSize: formFeedbackFontSize,
-        color: color
+  expectValue[`${state}Feedback`] = {
+    display: 'none',
+    width: '100%',
+    marginTop: formFeedbackMarginTop,
+    fontSize: formFeedbackFontSize,
+    color: color
+  }
+
+  expectValue[`${state}Tooltip`] = {
+    position: 'absolute',
+    top: '100%',
+    zIndex: 5,
+    display: 'none',
+    maxWidth: '100%',
+    padding: '0.5rem',
+    marginTop: '0.1rem',
+    fontSize: '0.875rem',
+    lineHeight: 1,
+    color: white,
+    backgroundColor: rgba(color, 0.8),
+    borderRadius: '0.2rem'
+  }
+
+  const formControlCustomSelectDisplay = {}
+  formControlCustomSelectDisplay[`~ .${state}Feedback, ~ .${state}Tooltip`] = { display: 'block' }
+
+  const formControlCustomSelect = {}
+  formControlCustomSelect[`wasValidated &:${state},&.is${state}`] = {
+    borderColor: color,
+    '&:focus': {
+      borderColor: color,
+      boxShadow: `0 0 0 ${inputFocusWidth} ${rgba(color, 0.25)}`
+    },
+    ...formControlCustomSelectDisplay
+  }
+  expectValue['formControl'] = formControlCustomSelect
+  expectValue['customSelect'] = formControlCustomSelect
+
+  const formControlFile = {}
+  formControlFile[`wasValidated &:${state},&.is${state}`] = { ...formControlCustomSelectDisplay }
+  expectValue['formControlFile'] = formControlFile
+
+  const formCheckInput = {}
+  formCheckInput[`wasValidated &:${state},&.is${state}`] = {
+    '~ formCheckLabel': {
+      color: color
+    },
+    ...formControlCustomSelectDisplay
+  }
+  expectValue['formCheckInput'] = formCheckInput
+
+  const customControlInput = {}
+  customControlInput[`wasValidated &:${state},&.is${state}`] = {
+    '~ customControlLabel': {
+      color: color
+    },
+    '&::before': {
+      backgroundColor: lighten(color, '25%')
+    },
+    ...formControlCustomSelectDisplay,
+    '&:checked': {
+      '~ customControlLabel::before': {
+        ...gradientBg(lighten(color, '10%'))
+      }
+    },
+    '&:focus': {
+      '~ customControlLabel::before': {
+        boxShadow: `0 0 0 1px ${bodyBg}, 0 0 0 ${inputFocusWidth} ${rgba(color, 0.25)}`
+      }
     }
+  }
+  expectValue['customControlInput'] = customControlInput
 
-    expectValue[`.#{state}-tooltip`] = {
-        position: 'absolute',
-        top: '100%',
-        zIndex: 5,
-        display: 'none',
-        maxWidth: '100%',
-        padding: `${tooltipPaddingY} ${tooltipPaddingX}`,
-        marginTop: '.1rem',
-        fontSize: tooltipFontSize,
-        lineHeight: lineHeightBase,
-        color: colorYiq(color),
-        backgroundColor: rgba(color, tooltipOpacity),
-        ...borderRadius(tooltipBorderRadius)
+  const cutomFileInput = {}
+  customControlInput[`wasValidated &:${state},&.is${state}`] = {
+    '~ customFileLable': {
+      borderColor: color,
+      '&::before': {
+        borderColor: 'inherit'
+      }
+    },
+    ...formControlCustomSelectDisplay,
+    '&:focus': {
+      '~ customFileLabel': {
+        boxShadow: `0 0 0 ${inputFocusWidth} ${rgba(color, 0.25)}`
+      }
     }
-
-    const enableValidationIconsStyle = enableValidationIcons ? {
-        paddingRight: inputHeightInner,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: `center right calc(#{${inputHeightInner / 4})`,
-        backgroundSize: `calc(${inputHeightInner / 2}) calc(${inputHeightInner / 2})`,
-        backgroundImage: state === "valid" ? formFeedbackIconValid : formFeedbackIconInvalid
-    } : {}
-
-
-    let stateFeedbackTooltip = {}
-    stateFeedbackTooltip[`~ ${state}-feedback, ~ ${state}-tooltip`] = { display: 'block' }
-
-    let formControlWasValidated = {}
-    formControlWasValidated[`was-validated &:${state}, &.is-${state}`] = {
-        borderColor: color,
-        ...enableValidationIcons,
-        '&:focus': {
-            borderColor: color,
-            boxShadow: `0 0 0 ${inputFocusWidth} ${rgba(color, .25)}`
-        },
-        ...stateFeedbackTooltip
-    }
-
-    expectValue['formControl'] = formControlWasValidated
-
-    return expectValue
+  }
+  expectValue['cutomFileInput'] = cutomFileInput
+  return expectValue
 }
