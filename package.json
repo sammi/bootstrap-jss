@@ -35,7 +35,6 @@
     "jss": "^9.8.7",
     "jss-isolate": "^5.1.0",
     "lodash": "^4.17.10",
-    "npm": "^6.4.1",
     "percent-value": "^1.0.7",
     "popper.js": "^1.14.3",
     "prop-types": "^15.6.2",
