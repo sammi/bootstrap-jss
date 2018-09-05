@@ -10,7 +10,7 @@ import { hover } from './hover'
 import format from 'string-format'
 import {enableShadows} from '../Variables/Options'
 
-import { buttonVariant, buttonOutlineVariant, buttonSize } from './button'
+import { buttonVariant, buttonOutlineVariant, buttonSize } from './buttons'
 
 // Button variants
 //

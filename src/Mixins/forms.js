@@ -16,7 +16,7 @@ import {
   inputFocusWidth
 } from '../Variables/Forms'
 
-export const formControlFocus = (isEnableShadows = enableShadows) => ({
+const formControlFocus = (isEnableShadows = enableShadows) => ({
   '&:focus': {
     color: inputFocusColor,
     backgroundColor: inputFocusBg,
@@ -26,7 +26,7 @@ export const formControlFocus = (isEnableShadows = enableShadows) => ({
   }
 })
 
-export const formValidationState = (state, color) => {
+const formValidationState = (state, color) => {
   const expectValue = {}
 
   expectValue[`${state}Feedback`] = {
@@ -119,4 +119,9 @@ export const formValidationState = (state, color) => {
   }
   expectValue['cutomFileInput'] = cutomFileInput
   return expectValue
+}
+
+export {
+  formControlFocus,
+  formValidationState
 }

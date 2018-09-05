@@ -10,7 +10,7 @@ import { darken } from '../Functions/darken'
 import { btnBoxShadow, btnFocusWidth, btnActiveBoxShadow } from '../Variables/Buttons'
 import { enableShadows, enableGradients, enableRounded } from '../Variables/Options'
 
-export const buttonVariant = (
+const buttonVariant = (
   backgroundColor,
   borderColor,
   hoverBackgroundColor,
@@ -69,7 +69,7 @@ export const buttonVariant = (
   }
 }
 
-export const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, activeBorderColor, mybtnFocusWidth, myEnableShadows) => {
+const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, activeBorderColor, mybtnFocusWidth, myEnableShadows) => {
   colorHover = colorHover || colorYiq(color)
   ativeBackgroundColor = ativeBackgroundColor || color
   activeBorderColor = activeBorderColor || color
@@ -106,7 +106,7 @@ export const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, ac
   }
 }
 
-export const buttonSize = (paddingY, paddingX, fontSize, lineHeight, borderRadius, myEnableRounded) => {
+const buttonSize = (paddingY, paddingX, fontSize, lineHeight, borderRadius, myEnableRounded) => {
   myEnableRounded = myEnableRounded === undefined ? enableRounded : myEnableRounded
   const myBorderRaduis = myEnableRounded ? borderRadius : 0
   return {
@@ -115,4 +115,10 @@ export const buttonSize = (paddingY, paddingX, fontSize, lineHeight, borderRadiu
     lineHeight: lineHeight,
     borderRadius: myBorderRaduis
   }
+}
+
+export {
+  buttonVariant,
+  buttonOutlineVariant,
+  buttonSize
 }

@@ -3,28 +3,28 @@ import { caretWidth } from '../Variables/Components'
 import { enableCaret } from '../Variables/Options'
 import {size} from '../Functions/size'
 
-export const caretDown = () => ({
+const caretDown = () => ({
   borderTop: format('{} solid', caretWidth),
   borderRight: format('{} solid transparent', caretWidth),
   borderBottom: 0,
   borderLeft: format('{} solid transparent', caretWidth)
 })
 
-export const caretUp = () => ({
+const caretUp = () => ({
   borderTop: 0,
   borderRight: format('{} solid transparent', caretWidth),
   borderBottom: format('{} solid', caretWidth),
   borderLeft: format('{} solid transparent', caretWidth)
 })
 
-export const caretRight = () => ({
+const caretRight = () => ({
   borderTop: format('{} solid transparent', caretWidth),
   borderRight: 0,
   borderBottom: format('{} solid transparent', caretWidth),
   borderLeft: format('{} solid', caretWidth)
 })
 
-export const caretLeft = () => ({
+const caretLeft = () => ({
   borderTop: format('{} solid transparent', caretWidth),
   borderRight: format('{} solid', caretWidth),
   borderBottom: format('{} solid transparent', caretWidth)
@@ -55,7 +55,7 @@ const getCaret = (direction) => {
   }
 }
 
-export const caret = (direction = 'down', myEnableCaret = enableCaret) => {
+const caret = (direction = 'down', myEnableCaret = enableCaret) => {
   const directions = ['up', 'down', 'left', 'right']
 
   if (directions.indexOf(direction) !== -1 && myEnableCaret) {
@@ -74,4 +74,12 @@ export const caret = (direction = 'down', myEnableCaret = enableCaret) => {
       }
     }
   }
+}
+
+export {
+  caretDown,
+  caretUp,
+  caretRight,
+  caretLeft,
+  caret
 }

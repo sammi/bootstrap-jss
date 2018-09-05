@@ -5,7 +5,7 @@ import {
   btnBorderRadius, btnTransition, btnFocusBoxShadow, btnDisabledOpacity,
   btnActiveBoxShadow, btnLinkDisabledColor
 } from '../Variables/Buttons'
-import { buttonSize, buttonVariant, buttonOutlineVariant } from '../Mixins/button'
+import { buttonSize, buttonVariant, buttonOutlineVariant } from '../Mixins/buttons'
 import { transition } from '../Mixins/transition'
 import { hoverFocus, hover } from '../Mixins/hover'
 import { boxShadow } from '../Mixins/boxShadow'
