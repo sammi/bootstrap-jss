@@ -2,7 +2,7 @@ import * as Alert from './Alert'
 import * as Close from './Close'
 import * as Transitions from './Transitions'
 import * as Badge from './Badge'
-import * as Button from './Button'
+import * as Buttons from './Buttons'
 import * as Images from './Images'
 import * as Code from './Code'
 
@@ -13,7 +13,7 @@ export {
   Close,
   Transitions,
   Badge,
-  Button,
+  Buttons,
   Images,
   Code,
   checkExported

@@ -22,7 +22,7 @@ import {
   btnThemeColors,
   btnOutlineThemeColors,
   btnInsideLink
-} from './Button'
+} from './Buttons'
 
 describe('Button classes', () => {
   it('btn', () => {
