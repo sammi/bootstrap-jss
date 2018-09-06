@@ -8,6 +8,7 @@ describe('Classes', () => {
     expect(Classes.Badge !== undefined).toBe(true)
     expect(Classes.Button !== undefined).toBe(true)
     expect(Classes.Images !== undefined).toBe(true)
+    expect(Classes.Code !== undefined).toBe(true)
     expect(Classes.checkExported).toBe(true)
   })
 })

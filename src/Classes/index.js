@@ -4,6 +4,7 @@ import * as Transitions from './Transitions'
 import * as Badge from './Badge'
 import * as Button from './Button'
 import * as Images from './Images'
+import * as Code from './Code'
 
 const checkExported = true
 
@@ -14,5 +15,6 @@ export {
   Badge,
   Button,
   Images,
+  Code,
   checkExported
 }
