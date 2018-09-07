@@ -5,6 +5,7 @@ import * as Badge from './Badge'
 import * as Buttons from './Buttons'
 import * as Images from './Images'
 import * as Code from './Code'
+import * as Grid from './Grid'
 
 const checkExported = true
 
@@ -16,5 +17,6 @@ export {
   Buttons,
   Images,
   Code,
+  Grid,
   checkExported
 }

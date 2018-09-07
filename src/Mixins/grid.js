@@ -15,10 +15,10 @@ export const makeContainer = {
 
 export const makeContainerMaxWidths = (maxWidths = containerMaxWidths, breakpoints = gridBreakpoints) => {
   let expectValue = {}
-  for (const [breakpint, containerMaxWidth] of Object.entries(maxWidths)) {
+  for (const [breakpoint, containerMaxWidth] of Object.entries(maxWidths)) {
     expectValue = {
       ...expectValue,
-      ...mediaBreakpointUp(breakpint, breakpoints, { maxWidth: containerMaxWidth })
+      ...mediaBreakpointUp(breakpoint, breakpoints, { maxWidth: containerMaxWidth })
     }
   }
   return expectValue
