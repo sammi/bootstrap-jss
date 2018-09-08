@@ -97,3 +97,4 @@ describe('Basic Bootstrap table', () => {
         expect(tableBackgrounds).toEqual(expectValue)
     })
 })
+
