@@ -1,8 +1,11 @@
 import { size } from '../Functions/size'
 import { spacer } from '../Variables/Spacing'
-import { tableBg, tableCellPadding, tableBorderWidth, tableBorderColor, tableCellPaddingSm, tableStripedOrder, tableAccentBg, tableHoverBg } from '../Variables/Tables'
+import { tableBg, tableCellPadding, tableBorderWidth, tableBorderColor, tableCellPaddingSm, tableStripedOrder, tableAccentBg, tableHoverBg, tableActiveBg } from '../Variables/Tables'
 import { bodyBg } from '../Variables/Body'
 import { hover } from '../Mixins/hover'
+import { themeColors } from '../Variables/Colors'
+import { tableRowVariant } from '../Mixins/tableRow';
+import { themeColorLevel } from '../Functions/themeColorLevel'
 
 const tableBorderWidthSize = size(tableBorderWidth)
 
@@ -64,11 +67,24 @@ const tableHover = {
     }
 }
 
+let expectValue = {}
+for (const [color] of Object.entries(themeColors)) {
+    expectValue = {
+        ...tableRowVariant(color, themeColorLevel(color, -9))
+    }
+}
+expectValue = {
+    ...expectValue,
+    ...tableRowVariant('active', tableActiveBg)
+}
+const tableBackgrounds = expectValue
+
 export {
     table,
     tableSm,
     tableBordered,
     tableBorderLess,
     tableStriped,
-    tableHover
+    tableHover,
+    tableBackgrounds
 }

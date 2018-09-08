@@ -23,7 +23,7 @@ describe('Tables', () => {
           }
 
         const expectValue = {}
-        expectValue[`.table-${state}`] = {
+        expectValue[`table-${state}`] = {
             '&, > th, > td': {
               backgroundColor: background
             },

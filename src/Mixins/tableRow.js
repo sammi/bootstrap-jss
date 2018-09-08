@@ -15,7 +15,7 @@ export const tableRowVariant = (state, background) => {
   }
 
   const expectValue = {}
-  expectValue[`.table-${state}`] = {
+  expectValue[`table-${state}`] = {
     '&, > th, > td': {
       backgroundColor: background
     },
