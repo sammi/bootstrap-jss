@@ -8,11 +8,11 @@ import {
   inputPaddingXSm, inputBorderRadiusSm,
   inputHeightSm, inputPaddingXLg, inputBorderRadiusLg, inputHeightLg,
   formGroupMarginBottom, formTextMarginTop, formCheckInputMarginY, formCheckInlineInputMarginX,
-  formCheckInputGutter, textMuted, formCheckInlineMarginX,
+  formCheckInputGutter, formCheckInlineMarginX,
   formFeedbackValidColor, formFeedbackInvalidColor, formCheckInputMarginX
 } from '../Variables/Forms'
 import { enableRounded } from '../Variables/Options'
-import { fontSizeBase, fontSizeLg, fontSizeSm } from '../Variables/Fonts'
+import { fontSizeBase, fontSizeLg, fontSizeSm, textMuted } from '../Variables/Fonts'
 import { boxShadow } from '../Mixins/boxShadow'
 import { transition } from '../Mixins/transition'
 import { borderRadius } from '../Mixins/borderRadius'
