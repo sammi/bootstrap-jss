@@ -6,6 +6,7 @@ import * as Buttons from './Buttons'
 import * as Images from './Images'
 import * as Code from './Code'
 import * as Grid from './Grid'
+import * as Table from './Table'
 
 const checkExported = true
 
@@ -18,5 +19,6 @@ export {
   Images,
   Code,
   Grid,
+  Table,
   checkExported
 }
