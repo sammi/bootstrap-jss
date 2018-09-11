@@ -1,9 +1,12 @@
-import { fontSizeBase, fontWeightNormal } from '../Variables/Fonts'
+import { fontSizeBase, fontWeightNormal, fontSizeLg, fontSizeSm } from '../Variables/Fonts'
 import { linkColor, linkHoverColor, linkHoverDecoration } from '../Variables/Links'
 import {
   btnFontWeight, btnBorderWidth, btnPaddingY, btnPaddingX, btnLineHeight,
   btnBorderRadius, btnTransition, btnFocusBoxShadow, btnDisabledOpacity,
-  btnActiveBoxShadow, btnLinkDisabledColor
+  btnActiveBoxShadow, btnLinkDisabledColor,
+  btnPaddingYLg, btnPaddingXLg, btnLineHeightLg, btnBorderRadiusLg,
+  btnPaddingYSm, btnPaddingXSm, btnLineHeightSm, btnBorderRadiusSm,
+  btnBlockSpacingY
 } from '../Variables/Buttons'
 import { buttonSize, buttonVariant, buttonOutlineVariant } from '../Mixins/buttons'
 import { transition } from '../Mixins/transition'
@@ -21,7 +24,8 @@ import {
   btnBlock,
   btnThemeColors,
   btnOutlineThemeColors,
-  btnInsideLink
+  btnInsideLink,
+  btnBlockOverrides
 } from './Buttons'
 
 describe('Button classes', () => {
@@ -60,20 +64,20 @@ describe('Button classes', () => {
     })
   })
 
-  //a.btn.disabled,
-  //fieldset:disabled a.btn
+  // a.btn.disabled,
+  // fieldset:disabled a.btn
   it('Button inside linke', () => {
     expect(btnInsideLink).toEqual({
       'a.btn.disabled, fieldset:disabled a.btn': {
         pointerEvents: 'none'
       }
-    });
-  });
+    })
+  })
 
   it('btnThemeColors', () => {
     const btnColors = btnThemeColors()
     Object.keys(themeColors).forEach(themeColorName => {
-      expect(btnColors['btn' +  _.upperFirst(themeColorName)]).toEqual(
+      expect(btnColors['btn' + _.upperFirst(themeColorName)]).toEqual(
         buttonVariant(themeColors[themeColorName])
       )
     })
@@ -82,7 +86,7 @@ describe('Button classes', () => {
   it('btnThemeColors', () => {
     const btnOutlineColors = btnOutlineThemeColors()
     Object.keys(themeColors).forEach(themeColorName => {
-      expect(btnOutlineColors['btnOutline' +  _.upperFirst(themeColorName)]).toEqual(
+      expect(btnOutlineColors['btnOutline' + _.upperFirst(themeColorName)]).toEqual(
         buttonOutlineVariant(themeColors[themeColorName])
       )
     })
@@ -97,7 +101,7 @@ describe('Button classes', () => {
         color: linkHoverColor,
         textDecoration: linkHoverDecoration,
         backgroundColor: 'transparent',
-        borderColor: 'transparent',
+        borderColor: 'transparent'
       }),
       '&:focus, &.focus': {
         textDecoration: linkHoverDecoration,
@@ -112,14 +116,34 @@ describe('Button classes', () => {
   })
 
   it('btnLg', () => {
-    expect(btnLg).toEqual({})
+    expect(btnLg).toEqual({
+      ...buttonSize(btnPaddingYLg, btnPaddingXLg, fontSizeLg, btnLineHeightLg, btnBorderRadiusLg)
+    })
   })
 
-  it('btnSm', () => {
-    expect(btnSm).toEqual({})
+  it('btnLg', () => {
+    expect(btnSm).toEqual({
+      ...buttonSize(btnPaddingYSm, btnPaddingXSm, fontSizeSm, btnLineHeightSm, btnBorderRadiusSm)
+    })
   })
 
   it('btnBlock', () => {
-    expect(btnBlock).toEqual({})
+    expect(btnBlock).toEqual({
+      display: 'block',
+      width: '100%',
+      '+ btnBlock': {
+        marginTop: btnBlockSpacingY
+      }
+    })
+  })
+
+  it('Specificity overrides', () => {
+    expect(btnBlockOverrides).toEqual({
+      'input[type="submit"],input[type="reset"],input[type="button"]': {
+        '&.btn-block': {
+          width: '100%'
+        }
+      }
+    })
   })
 })

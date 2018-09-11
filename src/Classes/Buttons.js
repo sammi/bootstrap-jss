@@ -1,9 +1,12 @@
-import { fontSizeBase, fontWeightNormal } from '../Variables/Fonts'
+import { fontSizeBase, fontWeightNormal, fontSizeLg, fontSizeSm } from '../Variables/Fonts'
 import { linkColor, linkHoverColor, linkHoverDecoration } from '../Variables/Links'
 import {
   btnFontWeight, btnBorderWidth, btnPaddingY, btnPaddingX, btnLineHeight,
   btnBorderRadius, btnTransition, btnFocusBoxShadow, btnDisabledOpacity,
-  btnActiveBoxShadow, btnLinkDisabledColor
+  btnActiveBoxShadow, btnLinkDisabledColor,
+  btnPaddingYLg, btnPaddingXLg, btnLineHeightLg, btnBorderRadiusLg,
+  btnPaddingYSm, btnPaddingXSm, btnLineHeightSm, btnBorderRadiusSm,
+  btnBlockSpacingY
 } from '../Variables/Buttons'
 import { buttonSize, buttonVariant, buttonOutlineVariant } from '../Mixins/buttons'
 import { transition } from '../Mixins/transition'
@@ -60,7 +63,7 @@ export const btnLink = {
     color: linkHoverColor,
     textDecoration: linkHoverDecoration,
     backgroundColor: 'transparent',
-    borderColor: 'transparent',
+    borderColor: 'transparent'
   }),
   '&:focus, &.focus': {
     textDecoration: linkHoverDecoration,
@@ -73,11 +76,29 @@ export const btnLink = {
   }
 }
 
-export const btnLg = {}
+export const btnLg = {
+  ...buttonSize(btnPaddingYLg, btnPaddingXLg, fontSizeLg, btnLineHeightLg, btnBorderRadiusLg)
+}
 
-export const btnSm = {}
+export const btnSm = {
+  ...buttonSize(btnPaddingYSm, btnPaddingXSm, fontSizeSm, btnLineHeightSm, btnBorderRadiusSm)
+}
 
-export const btnBlock = {}
+export const btnBlock = {
+  display: 'block',
+  width: '100%',
+  '+ btnBlock': {
+    marginTop: btnBlockSpacingY
+  }
+}
+
+export const btnBlockOverrides = {
+  'input[type="submit"],input[type="reset"],input[type="button"]': {
+    '&.btn-block': {
+      width: '100%'
+    }
+  }
+}
 
 export const btnThemeColors = () => {
   let btnColors = {}

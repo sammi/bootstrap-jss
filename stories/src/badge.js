@@ -5,7 +5,7 @@ import injectSheet, { ThemeProvider } from 'react-jss'
 
 const Reboot = Bootstrap.Reboot
 const { badge, badgeInButton, badgePill, badgeThemeColors } = Bootstrap.Classes.Badge
-const { btn, btnThemeColors, btnOutlineThemeColors, btnInsideLink } = Bootstrap.Classes.Button
+const { btn, btnThemeColors, btnOutlineThemeColors, btnInsideLink } = Bootstrap.Classes.Buttons
 
 const badgeColors = badgeThemeColors()
 const btnColors = btnThemeColors()
