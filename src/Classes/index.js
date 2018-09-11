@@ -8,6 +8,7 @@ import * as Code from './Code'
 import * as Grid from './Grid'
 import * as Table from './Table'
 import * as Form from './Form'
+import * as Dropdown from './Dropdown'
 
 const checkExported = true
 
@@ -22,5 +23,6 @@ export {
   Grid,
   Table,
   Form,
+  Dropdown,
   checkExported
 }

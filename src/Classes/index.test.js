@@ -12,6 +12,7 @@ describe('Classes', () => {
     expect(Classes.Grid !== undefined).toBe(true)
     expect(Classes.Table !== undefined).toBe(true)
     expect(Classes.Form !== undefined).toBe(true)
+    expect(Classes.Dropdown !== undefined).toBe(true)
     expect(Classes.checkExported).toBe(true)
   })
 })
