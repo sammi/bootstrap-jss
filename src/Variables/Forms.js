@@ -108,6 +108,8 @@ export const inputGroupAddonColor = inputColor
 export const inputGroupAddonBg = grays._200
 export const inputGroupAddonBorderColor = inputBorderColor
 
+export const customFormsTransition = 'background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out'
+
 export const customControlGutter = '1.5rem'
 export const customControlSpacerX = '1rem'
 
@@ -215,8 +217,10 @@ export const customRangeThumbBg = componentActiveBg
 export const customRangeThumbBorder = '0'
 export const customRangeThumbBorderRadius = '1rem'
 export const customRangeThumbBoxShadow = format('0 .1rem .25rem {}', rgba(black, 0.1))
-export const customRangeThumbFocusBoxShadow = format('0 0 0 1px {}, {}', bodyBg, inputBtnFocusBoxShadow)
-export const customRangeThumbActiveBg = format('{}', lighten(componentActiveBg, '35%'))
+export const customRangeThumbFocusBoxShadowWidth = inputBtnFocusWidth
+export const customRangeThumbFocusBoxShadow = `0 0 0 1px ${bodyBg}, ${inputBtnFocusBoxShadow}`
+export const customRangeThumbActiveBg = lighten(componentActiveBg, '35%')
+export const customRangeThumbDisabledBg = grays._500
 
 export const customFileHeight = inputHeight
 export const customFileFocusBorderColor = inputFocusBorderColor
