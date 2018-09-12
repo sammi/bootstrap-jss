@@ -9,6 +9,7 @@ import * as Grid from './Grid'
 import * as Table from './Table'
 import * as Form from './Form'
 import * as Dropdown from './Dropdown'
+import * as InputGroup from './InputGroup'
 
 const checkExported = true
 
@@ -24,5 +25,6 @@ export {
   Table,
   Form,
   Dropdown,
+  InputGroup,
   checkExported
 }
