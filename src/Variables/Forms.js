@@ -223,6 +223,7 @@ export const customRangeThumbActiveBg = lighten(componentActiveBg, '35%')
 export const customRangeThumbDisabledBg = grays._500
 
 export const customFileHeight = inputHeight
+export const customFileHeightInner = inputHeightInner
 export const customFileFocusBorderColor = inputFocusBorderColor
 export const customFileFocusBoxShadow = inputBtnFocusBoxShadow
 
