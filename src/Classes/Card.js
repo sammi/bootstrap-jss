@@ -77,6 +77,15 @@ const cardHeader = {
   }
 }
 
+const cardFooter = {
+  padding: `${cardSpacerY} ${cardSpacerX}`,
+  backgroundColor: cardCapBg,
+  borderdTop: `${cardBorderWidth} solid ${cardBorderColor}`,
+  '&:last-child': {
+    ...borderRadius(`0 0 ${cardInnerBorderRadius} ${cardInnerBorderRadius}`)
+  }
+}
+
 export {
   card,
   cardBody,
@@ -84,5 +93,6 @@ export {
   cardSubtitle,
   cardText,
   cardLink,
-  cardHeader
+  cardHeader,
+  cardFooter
 }

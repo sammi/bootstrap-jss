@@ -85,7 +85,14 @@ describe('card', () => {
     }
   })
 
-  expect(cardFooter).toEqual({})
+  expect(cardFooter).toEqual({
+    padding: `${cardSpacerY} ${cardSpacerX}`,
+    backgroundColor: cardCapBg,
+    borderdTop: `${cardBorderWidth} solid ${cardBorderColor}`,
+    '&:last-child': {
+      ...borderRadius(`0 0 ${cardInnerBorderRadius} ${cardInnerBorderRadius}`)
+    }
+  })
 
   expect(cardHeaderTabs).toEqual({})
 
