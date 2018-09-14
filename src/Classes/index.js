@@ -12,6 +12,7 @@ import * as Dropdown from './Dropdown'
 import * as InputGroup from './InputGroup'
 import * as CustomForms from './CustomForms'
 import * as Nav from './Nav'
+import * as Navbar from './Navbar'
 
 const checkExported = true
 
@@ -30,5 +31,6 @@ export {
   InputGroup,
   CustomForms,
   Nav,
+  Navbar,
   checkExported
 }
