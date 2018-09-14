@@ -14,6 +14,8 @@ describe('Classes', () => {
     expect(Classes.Form !== undefined).toBe(true)
     expect(Classes.Dropdown !== undefined).toBe(true)
     expect(Classes.InputGroup !== undefined).toBe(true)
+    expect(Classes.CustomForms !== undefined).toBe(true)
+    expect(Classes.Nav !== undefined).toBe(true)
     expect(Classes.checkExported).toBe(true)
   })
 })
