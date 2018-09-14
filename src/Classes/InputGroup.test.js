@@ -1,11 +1,11 @@
-import { 
-  inputBorderWidth, 
-  inputPaddingY, 
-  inputPaddingX, 
-  inputLineHeight, 
-  inputGroupAddonColor, 
-  inputGroupAddonBg, 
-  inputGroupAddonBorderColor, 
+import {
+  inputBorderWidth,
+  inputPaddingY,
+  inputPaddingX,
+  inputLineHeight,
+  inputGroupAddonColor,
+  inputGroupAddonBg,
+  inputGroupAddonBorderColor,
   inputBorderRadius,
   inputHeightLg,
   inputPaddingYLg,
@@ -18,14 +18,13 @@ import {
   inputLineHeightSm,
   inputBorderRadiusSm
 } from '../Variables/Forms'
-import { borderRightRadius, borderLeftRadius } from '../Mixins/borderRadius'
+import { borderRightRadius, borderLeftRadius, borderRadius } from '../Mixins/borderRadius'
 import { fontSizeBase, fontWeightNormal, fontSizeLg, fontSizeSm } from '../Variables/Fonts'
-import { borderRadius } from '../Mixins/borderRadius'
 
-import { 
-  inputGroup, 
-  inputGroupPrepend, 
-  inputGroupAppend, 
+import {
+  inputGroup,
+  inputGroupPrepend,
+  inputGroupAppend,
   inputGroupText,
   inputGroupSizing,
   inputGroupRadius
@@ -122,14 +121,14 @@ describe('input group', () => {
   })
 
   const inputGroupSizingValue = {}
-  const sizingLgKey = 'inputGroupLg > formControl, ' + 
-  'inputGroupLg > inputGroupPrepend > inputGroupText, ' + 
+  const sizingLgKey = 'inputGroupLg > formControl, ' +
+  'inputGroupLg > inputGroupPrepend > inputGroupText, ' +
   'inputGroupLg > inputGroupAppend  > inputGroupText, ' +
   'inputGroupLg > inputGroupPrepend > btn, ' +
   'inputGroupLg > inputGroupAppend  > btn'
 
-  const sizingSmKey = 'inputGroupSm > formControl, ' + 
-  'inputGroupSm > inputGroupPrepend > inputGroupText, ' + 
+  const sizingSmKey = 'inputGroupSm > formControl, ' +
+  'inputGroupSm > inputGroupPrepend > inputGroupText, ' +
   'inputGroupSm > inputGroupAppend  > inputGroupText, ' +
   'inputGroupSm > inputGroupPrepend > btn, ' +
   'inputGroupSm > inputGroupAppend  > btn'
@@ -155,7 +154,7 @@ describe('input group', () => {
   })
 
   const inputGroupRadiusValue = {}
-  const inputGroupRadiusValueLastChildKey = 
+  const inputGroupRadiusValueLastChildKey =
   'inputGroup > inputGroupPrepend > btn,' +
   'inputGroup > inputGroupPrepend > inputGroupText,' +
   'inputGroup > inputGroupAppend:not(:last-child) > btn,' +
@@ -165,7 +164,7 @@ describe('input group', () => {
   inputGroupRadiusValue[inputGroupRadiusValueLastChildKey] = {
     ...borderRightRadius(0)
   }
-  const inputGroupRadiusValueFirstChildKey = 
+  const inputGroupRadiusValueFirstChildKey =
   'inputGroup > inputGroupPrepend > btn,' +
   'inputGroup > inputGroupPrepend > inputGroupText,' +
   'inputGroup > inputGroupAppend:not(:first-child) > btn,' +

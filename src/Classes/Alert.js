@@ -26,9 +26,9 @@ export const alert = {
   ...borderRadius(alertBorderRadius)
 }
 
-export const alertHeading = {color: 'inherit'}
+export const alertHeading = { color: 'inherit' }
 
-export const alertLink = {fontWeight: alertLinkFontWeight}
+export const alertLink = { fontWeight: alertLinkFontWeight }
 
 export const alertDismissible = {
   paddingRight: format('{}{}', size(closeFontSize).value + size(alertPaddingX).value * 2, size(closeFontSize).unit),

@@ -1,5 +1,5 @@
 import { closeFontSize, closeFontWeight, closeColor, closeTextShadow } from '../Variables/Close'
-import {hoverFocus} from '../Mixins/hover'
+import { hoverFocus } from '../Mixins/hover'
 
 export const close = {
   float: 'right',
