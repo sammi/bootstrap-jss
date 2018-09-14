@@ -7,7 +7,7 @@ import {
   navbarTogglerBorderRadius, navbarNavLinkPaddingX,
   navbarLightActiveColor, navbarLightColor, navbarLightHoverColor, navbarLightDisabledColor,
   navbarLightTogglerBorderColor, navbarLightTogglerIconBg,
-  navbarDarkActiveColor, navbarDarkColor, navbarDarkHoverColor, navbarDarkDisabledColor, navbarDarkTogglerBborderColor,
+  navbarDarkActiveColor, navbarDarkColor, navbarDarkHoverColor, navbarDarkDisabledColor, navbarDarkTogglerBorderColor,
   navbarDarkTogglerIconBg
 } from '../Variables/Navbar'
 import { hoverFocus } from '../Mixins/hover'
@@ -199,7 +199,7 @@ const navbarDark = {
   },
   navbarToggler: {
     color: navbarDarkColor,
-    borderColor: navbarDarkTogglerBborderColor
+    borderColor: navbarDarkTogglerBorderColor
   },
   navbarTogglerIcon: {
     backgroundImage: navbarDarkTogglerIconBg
