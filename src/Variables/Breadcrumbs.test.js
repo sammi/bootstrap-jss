@@ -8,7 +8,7 @@ import {
   breadcrumbMarginBottom,
   breadcrumbBg,
   breadcrumbDividerColor,
-  breadcrumbctiveColor,
+  breadcrumbActiveColor,
   breadcrumbDivider,
   breadcrumbBorderRadius
 } from './Breadcrumbs'
@@ -23,7 +23,7 @@ describe('Breadcrumbs', () => {
 
     expect(breadcrumbBg).toEqual(grays._200)
     expect(breadcrumbDividerColor).toEqual(grays._600)
-    expect(breadcrumbctiveColor).toEqual(grays._600)
+    expect(breadcrumbActiveColor).toEqual(grays._600)
     expect(breadcrumbDivider).toEqual('quote("/")')
 
     expect(breadcrumbBorderRadius).toEqual(borderRadius)

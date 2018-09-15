@@ -9,7 +9,7 @@ export const breadcrumbMarginBottom = '1rem'
 
 export const breadcrumbBg = grays._200
 export const breadcrumbDividerColor = grays._600
-export const breadcrumbctiveColor = grays._600
+export const breadcrumbActiveColor = grays._600
 export const breadcrumbDivider = 'quote("/")'
 
 export const breadcrumbBorderRadius = borderRadius
