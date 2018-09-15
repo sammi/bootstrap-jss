@@ -17,6 +17,7 @@ import * as Card from './Card'
 import * as Breadcrumb from './Breadcrumb'
 import * as Jumbotron from './Jumbotron'
 import * as Progress from './Progress'
+import * as Media from './Media'
 
 const checkExported = true
 
@@ -40,5 +41,6 @@ export {
   Breadcrumb,
   Jumbotron,
   Progress,
+  Media,
   checkExported
 }
