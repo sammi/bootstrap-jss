@@ -18,6 +18,7 @@ describe('Classes', () => {
     expect(Classes.Nav !== undefined).toBe(true)
     expect(Classes.Navbar !== undefined).toBe(true)
     expect(Classes.Card !== undefined).toBe(true)
+    expect(Classes.Breadcrumb !== undefined).toBe(true)
     expect(Classes.checkExported).toBe(true)
   })
 })

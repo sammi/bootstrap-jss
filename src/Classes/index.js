@@ -14,6 +14,7 @@ import * as CustomForms from './CustomForms'
 import * as Nav from './Nav'
 import * as Navbar from './Navbar'
 import * as Card from './Card'
+import * as Breadcrumb from './Breadcrumb'
 
 const checkExported = true
 
@@ -34,5 +35,6 @@ export {
   Nav,
   Navbar,
   Card,
+  Breadcrumb,
   checkExported
 }
