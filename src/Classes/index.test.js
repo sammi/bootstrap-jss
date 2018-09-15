@@ -20,6 +20,7 @@ describe('Classes', () => {
     expect(Classes.Card !== undefined).toBe(true)
     expect(Classes.Breadcrumb !== undefined).toBe(true)
     expect(Classes.Jumbotron !== undefined).toBe(true)
+    expect(Classes.Progress !== undefined).toBe(true)
     expect(Classes.checkExported).toBe(true)
   })
 })

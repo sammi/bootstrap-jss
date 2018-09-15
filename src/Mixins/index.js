@@ -24,7 +24,9 @@ import { tableRowVariant } from './tableRow'
 import { bgVariant, bgGradientVariant } from './backgroundVariant'
 import { borderRadius, borderTopRadius, borderRightRadius, borderBottomRadius, borderLeftRadius } from './borderRadius'
 import { boxShadow } from './boxShadow'
-import { gradientBg } from './gradients'
+
+import { gradientBg, gradientX, gradientY, gradientDirectional, gradientXThreeColors, gradientYThreeColors, gradientRadial, gradientStriped } from './gradients'
+
 import { transition } from './transition'
 
 const checkExported = true
@@ -56,7 +58,9 @@ export {
   bgVariant, bgGradientVariant,
   borderRadius, borderTopRadius, borderRightRadius, borderBottomRadius, borderLeftRadius,
   boxShadow,
-  gradientBg,
+
+  gradientBg, gradientX, gradientY, gradientDirectional, gradientXThreeColors, gradientYThreeColors, gradientRadial, gradientStriped,
+
   transition,
   checkExported
 }

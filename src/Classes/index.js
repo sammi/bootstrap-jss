@@ -16,6 +16,7 @@ import * as Navbar from './Navbar'
 import * as Card from './Card'
 import * as Breadcrumb from './Breadcrumb'
 import * as Jumbotron from './Jumbotron'
+import * as Progress from './Progress'
 
 const checkExported = true
 
@@ -38,5 +39,6 @@ export {
   Card,
   Breadcrumb,
   Jumbotron,
+  Progress,
   checkExported
 }
