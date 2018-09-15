@@ -16,6 +16,8 @@ describe('Classes', () => {
     expect(Classes.InputGroup !== undefined).toBe(true)
     expect(Classes.CustomForms !== undefined).toBe(true)
     expect(Classes.Nav !== undefined).toBe(true)
+    expect(Classes.Navbar !== undefined).toBe(true)
+    expect(Classes.Card !== undefined).toBe(true)
     expect(Classes.checkExported).toBe(true)
   })
 })

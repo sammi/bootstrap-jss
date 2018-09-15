@@ -13,6 +13,7 @@ import * as InputGroup from './InputGroup'
 import * as CustomForms from './CustomForms'
 import * as Nav from './Nav'
 import * as Navbar from './Navbar'
+import * as Card from './Card'
 
 const checkExported = true
 
@@ -32,5 +33,6 @@ export {
   CustomForms,
   Nav,
   Navbar,
+  Card,
   checkExported
 }
