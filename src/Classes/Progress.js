@@ -1,5 +1,5 @@
 import { progressHeight, progressFontSize, progressBg,
-  progressBborderRadius, progressBoxShadow, progressBarColor,
+  progressBorderRadius, progressBoxShadow, progressBarColor,
   progressBarBg, progressBarTransition,
   progressBarAnimationTiming
 } from '../Variables/Progressbars'
@@ -25,7 +25,7 @@ const progress = {
   overflow: 'hidden',
   fontSize: progressFontSize,
   backgroundColor: progressBg,
-  ...borderRadius(progressBborderRadius),
+  ...borderRadius(progressBorderRadius),
   ...boxShadow(progressBoxShadow)
 }
 
