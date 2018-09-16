@@ -25,6 +25,7 @@ describe('Classes', () => {
     expect(Classes.ListGroup !== undefined).toBe(true)
     expect(Classes.Modal !== undefined).toBe(true)
     expect(Classes.Tooltip !== undefined).toBe(true)
+    expect(Classes.Popover !== undefined).toBe(true)
     expect(Classes.checkExported).toBe(true)
   })
 })

@@ -21,6 +21,7 @@ import * as Media from './Media'
 import * as ListGroup from './ListGroup'
 import * as Modal from './Modal'
 import * as Tooltip from './Tooltip'
+import * as Popover from './Popover'
 
 const checkExported = true
 
@@ -48,5 +49,6 @@ export {
   ListGroup,
   Modal,
   Tooltip,
+  Popover,
   checkExported
 }
