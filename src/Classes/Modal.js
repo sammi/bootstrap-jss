@@ -1,8 +1,8 @@
-import { zindexModal } from '../Variables/Zindex'
+import { zindexModal, zindexModalBackdrop } from '../Variables/Zindex'
 import {
   modalDialogMargin, modalTransition,
   modalContentBg, modalContentBorderWidth, modalContentBorderColor, modalContentBorderRadius,
-  modalContentBoxShadowXs, zindexModalBackdrop, modalBackdropBg, modalBackdropOpacity,
+  modalContentBoxShadowXs, modalBackdropBg, modalBackdropOpacity,
   modalHeaderPadding, modalHeaderBorderWidth, modalHeaderBorderColor
 } from '../Variables/Modals'
 import { transition } from '../Mixins/transition'
