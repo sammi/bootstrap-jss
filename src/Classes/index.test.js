@@ -22,6 +22,7 @@ describe('Classes', () => {
     expect(Classes.Jumbotron !== undefined).toBe(true)
     expect(Classes.Progress !== undefined).toBe(true)
     expect(Classes.Media !== undefined).toBe(true)
+    expect(Classes.ListGroup !== undefined).toBe(true)
     expect(Classes.checkExported).toBe(true)
   })
 })

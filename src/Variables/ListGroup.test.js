@@ -21,7 +21,7 @@ import {
   listGroupActionHoverColor,
   listGroupActionActiveColor,
   listGroupActionActiveBg
-} from './Listgroup'
+} from './ListGroup'
 
 describe('Listgroup', () => {
   it('Listgroup', () => {

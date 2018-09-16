@@ -18,6 +18,7 @@ import * as Breadcrumb from './Breadcrumb'
 import * as Jumbotron from './Jumbotron'
 import * as Progress from './Progress'
 import * as Media from './Media'
+import * as ListGroup from './ListGroup'
 
 const checkExported = true
 
@@ -42,5 +43,6 @@ export {
   Jumbotron,
   Progress,
   Media,
+  ListGroup,
   checkExported
 }

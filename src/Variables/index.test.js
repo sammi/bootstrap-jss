@@ -24,7 +24,7 @@ import * as Badges from './Badges'
 import * as Modals from './Modals'
 import * as Alerts from './Alerts'
 import * as Progressbars from './Progressbars'
-import * as Listgroup from './Listgroup'
+import * as ListGroup from './ListGroup'
 import * as Imagethumbnails from './Imagethumbnails'
 import * as Figures from './Figures'
 import * as Breadcrumbs from './Breadcrumbs'
@@ -66,7 +66,7 @@ describe('Variables', () => {
       Modals,
       Alerts,
       Progressbars,
-      Listgroup,
+      ListGroup,
       Imagethumbnails,
       Figures,
       Breadcrumbs,
