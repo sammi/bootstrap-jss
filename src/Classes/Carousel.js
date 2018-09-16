@@ -2,13 +2,23 @@ import {
   carouselTransition,
   carouselControlWidth,
   carouselControlColor,
-  carouselControlOpacity
+  carouselControlOpacity,
+  carouselControlIconWidth,
+  carouselControlPrevIconBg,
+  carouselControlNextIconBg,
+  carouselIndicatorWidth,
+  carouselIndicatorHeight,
+  carouselIndicatorSpacer,
+  carouselIndicatorActiveBg,
+  carouselCaptionColor,
+  carouselCaptionWidth
 } from '../Variables/Carousel'
-
+import { rgba } from '../Functions/rgba'
+import { size } from '../Functions/size'
 import { transition } from '../Mixins/transition'
 import { hoverFocus } from '../Mixins/hover'
 import { black } from '../Variables/Colors'
-import { enableGradients } from '../Variables/Options';
+import { enableGradients } from '../Variables/Options'
 
 const carousel = {
   position: 'relative'
@@ -146,6 +156,82 @@ const carouselControlNext = (isEnableGradients = enableGradients) => {
   }
 }
 
+const carouselControlPrevNextIcon = {
+  display: 'inline-block',
+  width: carouselControlIconWidth,
+  height: carouselControlIconWidth,
+  background: 'transparent no-repeat center center',
+  backgroundSize: '100% 100%'
+}
+
+const carouselControlPrevIcon = {
+  ...carouselControlPrevNextIcon,
+  backgroundImage: carouselControlPrevIconBg
+}
+
+const carouselControlNextIcon = {
+  ...carouselControlPrevNextIcon,
+  backgroundImage: carouselControlNextIconBg
+}
+
+const carouselIndicators = {
+  position: 'absolute',
+  right: 0,
+  bottom: '10px',
+  left: 0,
+  zIndex: 15,
+  display: 'flex',
+  justifyContent: 'center',
+  paddingLeft: 0,
+  marginRight: carouselControlWidth,
+  marginLeft: carouselControlWidth,
+  listStyle: 'none',
+  li: {
+    position: 'relative',
+    flex: '0 1 auto',
+    width: carouselIndicatorWidth,
+    height: carouselIndicatorHeight,
+    marginRight: carouselIndicatorSpacer,
+    marginLeft: carouselIndicatorSpacer,
+    textIndent: '-999px',
+    cursor: 'pointer',
+    backgroundColor: rgba(carouselIndicatorActiveBg, .5),
+    '&::before': {
+      position: 'absolute',
+      top: '-10px',
+      left: 0,
+      display: 'inline-block',
+      width: '100%',
+      height: '10px',
+      content: ''
+    },
+    '&::after': {
+      position: 'absolute',
+      bottom: '-10px',
+      left: 0,
+      display: 'inline-block',
+      width: '100%',
+      height: '10px',
+      content: ''
+    }
+  },
+  active: {
+    backgroundColor: carouselIndicatorActiveBg
+  }
+}
+
+const carouselCaption = {
+  position: 'absolute',
+  right: `${100 - size(carouselCaptionWidth).value / 2}${size(carouselCaptionWidth).unit}`,
+  bottom: '20px',
+  left: `${100 - size(carouselCaptionWidth).value / 2}${size(carouselCaptionWidth).unit}`,
+  zIndex: 10,
+  paddingTop: '20px',
+  paddingBottom: '20px',
+  color: carouselCaptionColor,
+  textAlign: 'center'
+}
+
 export {
   carousel,
   carouselInner,
@@ -156,5 +242,9 @@ export {
   carouselItemPrev,
   carouselFade,
   carouselControlPrev,
-  carouselControlNext
+  carouselControlNext,
+  carouselControlPrevIcon,
+  carouselControlNextIcon,
+  carouselIndicators,
+  carouselCaption
 }

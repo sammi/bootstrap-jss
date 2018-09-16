@@ -2,9 +2,19 @@ import {
   carouselTransition,
   carouselControlWidth,
   carouselControlColor,
-  carouselControlOpacity
+  carouselControlOpacity,
+  carouselControlIconWidth,
+  carouselControlPrevIconBg,
+  carouselControlNextIconBg,
+  carouselIndicatorWidth,
+  carouselIndicatorHeight,
+  carouselIndicatorSpacer,
+  carouselIndicatorActiveBg,
+  carouselCaptionColor,
+  carouselCaptionWidth
 } from '../Variables/Carousel'
-
+import { rgba } from '../Functions/rgba'
+import { size } from '../Functions/size'
 import { transition } from '../Mixins/transition'
 import { hoverFocus } from '../Mixins/hover'
 import { black } from '../Variables/Colors'
@@ -191,19 +201,87 @@ describe('carousel', () => {
     })
   })
 
+  const carouselControlPrevNextIcon = {
+    display: 'inline-block',
+    width: carouselControlIconWidth,
+    height: carouselControlIconWidth,
+    background: 'transparent no-repeat center center',
+    backgroundSize: '100% 100%'
+  }
+
   it('carousel-control-prev-icon', () => {
-    expect(carouselControlPrevIcon).toEqual()
+    expect(carouselControlPrevIcon).toEqual({
+      ...carouselControlPrevNextIcon,
+      backgroundImage: carouselControlPrevIconBg
+    })
   })
 
   it('carousel-control-next-icon', () => {
-    expect(carouselControlNextIcon).toEqual()
+    expect(carouselControlNextIcon).toEqual({
+      ...carouselControlPrevNextIcon,
+      backgroundImage: carouselControlNextIconBg
+    })
   })
 
   it('carousel-indicators', () => {
-    expect(carouselIndicators).toEqual()
+    expect(carouselIndicators).toEqual({
+      position: 'absolute',
+      right: 0,
+      bottom: '10px',
+      left: 0,
+      zIndex: 15,
+      display: 'flex',
+      justifyContent: 'center',
+      paddingLeft: 0,
+      marginRight: carouselControlWidth,
+      marginLeft: carouselControlWidth,
+      listStyle: 'none',
+      li: {
+        position: 'relative',
+        flex: '0 1 auto',
+        width: carouselIndicatorWidth,
+        height: carouselIndicatorHeight,
+        marginRight: carouselIndicatorSpacer,
+        marginLeft: carouselIndicatorSpacer,
+        textIndent: '-999px',
+        cursor: 'pointer',
+        backgroundColor: rgba(carouselIndicatorActiveBg, .5),
+        '&::before': {
+          position: 'absolute',
+          top: '-10px',
+          left: 0,
+          display: 'inline-block',
+          width: '100%',
+          height: '10px',
+          content: ''
+        },
+        '&::after': {
+          position: 'absolute',
+          bottom: '-10px',
+          left: 0,
+          display: 'inline-block',
+          width: '100%',
+          height: '10px',
+          content: ''
+        }
+      },
+      active: {
+        backgroundColor: carouselIndicatorActiveBg
+      }
+    })
   })
 
   it('carousel-caption', () => {
-    expect(carouselCaption).toEqual()
+    expect(carouselCaption).toEqual({
+      position: 'absolute',
+      right: `${100 - size(carouselCaptionWidth).value / 2}${size(carouselCaptionWidth).unit}`,
+      bottom: '20px',
+      left: `${100 - size(carouselCaptionWidth).value / 2}${size(carouselCaptionWidth).unit}`,
+      zIndex: 10,
+      paddingTop: '20px',
+      paddingBottom: '20px',
+      color: carouselCaptionColor,
+      textAlign: 'center'
+    })
   })
 })

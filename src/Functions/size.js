@@ -40,5 +40,5 @@ export const size = (rawSize) => {
       value = parseFloat(_.replace(sizeString, unitName, ''))
     }
   })
-  return {value, unit}
+  return { value, unit }
 }
