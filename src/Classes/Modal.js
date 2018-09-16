@@ -3,12 +3,16 @@ import {
   modalDialogMargin, modalTransition,
   modalContentBg, modalContentBorderWidth, modalContentBorderColor, modalContentBorderRadius,
   modalContentBoxShadowXs, modalBackdropBg, modalBackdropOpacity,
-  modalHeaderPadding, modalHeaderBorderWidth, modalHeaderBorderColor
+  modalHeaderPadding, modalHeaderBorderWidth, modalHeaderBorderColor,
+  modalTitleLineHeight, modalInnerPadding, modalFooterBorderWidth, modalFooterBorderColor,
+  modalMd, modalDialogMarginYSmUp, modalContentBoxShadowSmUp, modalSm, modalLg
 } from '../Variables/Modals'
 import { transition } from '../Mixins/transition'
 import { size } from '../Functions/size'
 import { borderRadius, borderTopRadius } from '../Mixins/borderRadius'
 import { boxShadow } from '../Mixins/boxShadow'
+import { mediaBreakpointUp } from '../Mixins/breakpoints'
+import { gridBreakpoints } from '../Variables/Grid'
 
 const modalOpen = {
   overflow: 'hidden'
@@ -93,6 +97,62 @@ const modalHeader = {
   }
 }
 
+const modalTitle = {
+  marginBottom: 0,
+  lineHeight: modalTitleLineHeight
+}
+
+const modalBody = {
+  position: 'relative',
+  flex: '1 1 auto',
+  padding: modalInnerPadding
+}
+
+const modalFooter = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-end',
+  padding: modalInnerPadding,
+  borderTop: `${modalFooterBorderWidth} solid ${modalFooterBorderColor}`,
+  '> :not(:first-child)': {
+    marginLeft: '.25rem'
+  },
+  '> :not(:last-child)': {
+    marginRight: '.25rem'
+  }
+}
+
+const modalScrollbarMeasure = {
+  position: 'absolute',
+  top: '-9999px',
+  width: '50px',
+  height: '50px',
+  overflow: 'scroll'
+}
+
+const modalResponsive = {
+  ...mediaBreakpointUp('sm', gridBreakpoints, {
+    modalDialog: {
+      maxWidth: modalMd,
+      margin: `${modalDialogMarginYSmUp} auto`
+    },
+    modalDialogCentered: {
+      minHeight: `calc(100% - ${size(modalDialogMarginYSmUp).value * 2}${size(modalDialogMarginYSmUp).unit})`
+    },
+    modalContent: {
+      ...boxShadow(modalContentBoxShadowSmUp)
+    },
+    modalSm: {
+      maxWidth: modalSm
+    }
+  }),
+  ...mediaBreakpointUp('lg', gridBreakpoints, {
+    modalLg: {
+      maxWidth: modalLg
+    }
+  })
+}
+
 export {
   modalOpen,
   modal,
@@ -100,5 +160,10 @@ export {
   modalDialogCentered,
   modalContent,
   modalBackdrop,
-  modalHeader
+  modalHeader,
+  modalTitle,
+  modalBody,
+  modalFooter,
+  modalScrollbarMeasure,
+  modalResponsive
 }
