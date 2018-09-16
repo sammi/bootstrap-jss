@@ -20,6 +20,7 @@ import * as Progress from './Progress'
 import * as Media from './Media'
 import * as ListGroup from './ListGroup'
 import * as Modal from './Modal'
+import * as Tooltip from './Tooltip'
 
 const checkExported = true
 
@@ -46,5 +47,6 @@ export {
   Media,
   ListGroup,
   Modal,
+  Tooltip,
   checkExported
 }
