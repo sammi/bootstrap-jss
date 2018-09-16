@@ -19,6 +19,7 @@ import * as Jumbotron from './Jumbotron'
 import * as Progress from './Progress'
 import * as Media from './Media'
 import * as ListGroup from './ListGroup'
+import * as Modal from './Modal'
 
 const checkExported = true
 
@@ -44,5 +45,6 @@ export {
   Progress,
   Media,
   ListGroup,
+  Modal,
   checkExported
 }
