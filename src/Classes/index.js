@@ -22,6 +22,7 @@ import * as ListGroup from './ListGroup'
 import * as Modal from './Modal'
 import * as Tooltip from './Tooltip'
 import * as Popover from './Popover'
+import * as Carousel from './Carousel'
 
 const checkExported = true
 
@@ -50,5 +51,6 @@ export {
   Modal,
   Tooltip,
   Popover,
+  Carousel,
   checkExported
 }
