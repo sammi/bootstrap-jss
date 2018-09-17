@@ -9,6 +9,7 @@ describe('Bootstrap', () => {
     expect(Bootstrap.Reboot !== undefined).toBe(true)
     expect(Bootstrap.Type !== undefined).toBe(true)
     expect(Bootstrap.Classes !== undefined).toBe(true)
+    expect(Bootstrap.Utilities !== undefined).toBe(true)
     expect(Bootstrap.checkExported).toBe(true)
   })
 })
