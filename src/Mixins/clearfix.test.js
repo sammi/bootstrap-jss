@@ -1,13 +1,13 @@
-import {clearfix} from './clearfix'
+import { clearfix } from './clearfix'
 
 describe('', () => {
-    it('clearfix', () => {
-        expect(clearfix).toEqual({
-            '&::after': {
-                display: 'block',
-                clear: 'both',
-                content: ""
-            }
-        })
+  it('clearfix', () => {
+    expect(clearfix).toEqual({
+      '&::after': {
+        display: 'block',
+        clear: 'both',
+        content: ''
+      }
     })
+  })
 })
