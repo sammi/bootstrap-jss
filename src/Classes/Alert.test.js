@@ -1,4 +1,3 @@
-import format from 'string-format'
 import { borderRadius } from '../Mixins/borderRadius'
 import { size } from '../Functions/size'
 import { closeFontSize } from '../Variables/Close'
@@ -24,9 +23,9 @@ describe('Alert classes', () => {
   it('alert', () => {
     expect(alert).toEqual({
       position: 'relative',
-      padding: format('{} {}', alertPaddingY, alertPaddingX),
+      padding: `${alertPaddingY} ${alertPaddingX}`,
       marginBottom: alertMarginBottom,
-      border: format('{} solid transparent', alertBorderWidth),
+      border: `${alertBorderWidth} solid transparent`,
       ...borderRadius(alertBorderRadius)
     })
   })
@@ -45,12 +44,12 @@ describe('Alert classes', () => {
 
   it('alertDismissible', () => {
     expect(alertDismissible).toEqual({
-      paddingRight: format('{}{}', size(closeFontSize).value + size(alertPaddingX).value * 2, size(closeFontSize).unit),
+      paddingRight: `${size(closeFontSize).value + size(alertPaddingX).value * 2}${size(closeFontSize).unit}`,
       close: {
         position: 'absolute',
         top: '0',
         right: '0',
-        padding: format('{} {}', alertPaddingY, alertPaddingX),
+        padding: `${alertPaddingY} ${alertPaddingX}`,
         color: 'inherit'
       }
     })
@@ -59,7 +58,7 @@ describe('Alert classes', () => {
   it('alert-theme-colors', () => {
     const alertColors = alertThemeColors()
     Object.keys(themeColors).forEach(themeColorName => {
-      expect(alertColors[format('alert{}', _.upperFirst(themeColorName))]).toEqual(
+      expect(alertColors[`alert${_.upperFirst(themeColorName)}`]).toEqual(
         alertVariant(
           themeColorLevel(themeColorName, alertBgLevel),
           themeColorLevel(themeColorName, alertBorderLevel),

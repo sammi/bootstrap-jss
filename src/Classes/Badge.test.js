@@ -12,15 +12,10 @@ import {
   themeColors
 } from '../Variables/Colors'
 
-import {
-  borderRadius
-} from '../Mixins/borderRadius'
+import { borderRadius } from '../Mixins/borderRadius'
 
-import {
-  badgeVariant
-} from '../Mixins/badge'
+import { badgeVariant } from '../Mixins/badge'
 
-import format from 'string-format'
 import _ from 'lodash'
 
 import {
@@ -66,7 +61,7 @@ describe('Badge classes', () => {
   it('badgeThemeColors', () => {
     const badgeColors = badgeThemeColors()
     Object.keys(themeColors).forEach(themeColorName => {
-      expect(badgeColors[format('badge{}', _.upperFirst(themeColorName))]).toEqual(
+      expect(badgeColors[`badge${_.upperFirst(themeColorName)}`]).toEqual(
         badgeVariant(themeColors[themeColorName])
       )
     })
