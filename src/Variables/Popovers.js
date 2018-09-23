@@ -1,7 +1,6 @@
 import { fontSizeSm, headingsColor } from './Fonts'
 import { white, black } from './Colors'
 import { borderWidth, borderRadiusLg } from './Components'
-import format from 'string-format'
 import { rgba } from '../Functions/rgba'
 import { darken } from '../Functions/darken'
 import { bodyColor } from './Body'
@@ -11,11 +10,11 @@ export const popoverFontSize = fontSizeSm
 export const popoverBg = white
 export const popoverMaxWidth = '276px'
 export const popoverBorderWidth = borderWidth
-export const popoverBorderColor = format('{}', rgba(black, 0.2))
+export const popoverBorderColor = rgba(black, 0.2)
 export const popoverBorderRadius = borderRadiusLg
-export const popoverBoxShadow = format('0 .25rem .5rem {}', rgba(black, 0.2))
+export const popoverBoxShadow = `0 .25rem .5rem ${rgba(black, 0.2)}`
 
-export const popoverHeaderBg = format('{}', darken(popoverBg, '3%'))
+export const popoverHeaderBg = darken(popoverBg, '3%')
 export const popoverHeaderColor = headingsColor
 export const popoverHeaderPaddingY = '.5rem'
 export const popoverHeaderPaddingX = '.75rem'
@@ -28,4 +27,4 @@ export const popoverArrowWidth = '1rem'
 export const popoverArrowHeight = '.5rem'
 export const popoverArrowColor = popoverBg
 
-export const popoverArrowOuterColor = format('{}', fadeIn(popoverBorderColor, 0.05))
+export const popoverArrowOuterColor = fadeIn(popoverBorderColor, 0.05)

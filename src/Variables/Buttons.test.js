@@ -1,4 +1,3 @@
-import format from 'string-format'
 import { rgba } from '../Functions/rgba'
 import { black, white, grays } from './Colors'
 import { borderRadius, borderRadiusLg, borderRadiusSm } from './Components'
@@ -61,11 +60,11 @@ describe('Buttons', () => {
     expect(btnBorderWidth).toEqual(inputBtnBorderWidth)
 
     expect(btnFontWeight).toEqual(fontWeightNormal)
-    expect(btnBoxShadow).toEqual(format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, 0.15), rgba(black, 0.075)))
+    expect(btnBoxShadow).toEqual(`inset 0 1px 0 ${rgba(white, 0.15)}, 0 1px 1px ${rgba(black, 0.075)}`)
     expect(btnFocusWidth).toEqual(inputBtnFocusWidth)
     expect(btnFocusBoxShadow).toEqual(inputBtnFocusBoxShadow)
     expect(btnDisabledOpacity).toEqual(0.65)
-    expect(btnActiveBoxShadow).toEqual(format('inset 0 3px 5px {}', rgba(black, 0.125)))
+    expect(btnActiveBoxShadow).toEqual(`inset 0 3px 5px ${rgba(black, 0.125)}`)
 
     expect(btnLinkDisabledColor).toEqual(grays._600)
 

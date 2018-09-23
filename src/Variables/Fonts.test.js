@@ -1,6 +1,5 @@
 import { spacer } from './Spacing'
 import { grays, black } from './Colors'
-import format from 'string-format'
 import { rgba } from '../Functions/rgba'
 import { borderWidth } from './Components'
 
@@ -115,12 +114,12 @@ describe('Fonts', () => {
     expect(textMuted).toEqual(grays._600)
     expect(blockquoteSmallColor).toEqual(grays._600)
     expect(blockquoteFontSize).toEqual('1.25rem')
-    expect(hrBorderColor).toEqual(format('{}', rgba(black, 0.1)))
+    expect(hrBorderColor).toEqual(rgba(black, 0.1))
     expect(hrBorderWidth).toEqual(borderWidth)
     expect(markPadding).toEqual('.2em')
     expect(dtFontWeight).toEqual(fontWeightBold)
 
-    expect(kbdBoxShadow).toEqual(format('inset 0 -.1rem 0 {}', rgba(black, 0.25)))
+    expect(kbdBoxShadow).toEqual(`inset 0 -.1rem 0 ${rgba(black, 0.25)}`)
     expect(nestedKbdFontWeight).toEqual(fontWeightBold)
     expect(listInlinePadding).toEqual('.5rem')
     expect(markBg).toEqual('#fcf8e3')

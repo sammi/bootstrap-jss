@@ -1,4 +1,3 @@
-import format from 'string-format'
 import { fontWeightBold, fontSizeBase } from './Fonts'
 import { black, white } from './Colors'
 import { size } from '../Functions/size'
@@ -12,13 +11,9 @@ import {
 
 describe('Close', () => {
   it('Close', () => {
-    expect(closeFontSize).toEqual(format(
-      '{}{}',
-      size(fontSizeBase).value * 1.5,
-      size(fontSizeBase).unit
-    ))
+    expect(closeFontSize).toEqual(`${size(fontSizeBase).value * 1.5}${size(fontSizeBase).unit}`)
     expect(closeFontWeight).toEqual(fontWeightBold)
     expect(closeColor).toEqual(black)
-    expect(closeTextShadow).toEqual(format('0 1px 0 {}', white))
+    expect(closeTextShadow).toEqual(`0 1px 0 ${white}`)
   })
 })

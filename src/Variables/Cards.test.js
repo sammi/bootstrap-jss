@@ -2,7 +2,6 @@ import { white, black } from './Colors'
 import { rgba } from '../Functions/rgba'
 import { borderWidth, borderRadius } from './Components'
 import { gridGutterWidth } from './Grid'
-import format from 'string-format'
 import { size } from '../Functions/size'
 
 import {
@@ -28,18 +27,15 @@ describe('Cards', () => {
     expect(cardSpacerX).toEqual('1.25rem')
     expect(cardBorderWidth).toEqual(borderWidth)
     expect(cardBorderRadius).toEqual(borderRadius)
-    expect(cardBorderColor).toEqual(format('{}', rgba(black, 0.125)))
-    expect(cardInnerBorderRadius).toEqual(format('{}{}',
-      size(cardBorderRadius).value - size(cardBorderWidth).value,
-      size(cardBorderRadius).unit
-    ))
+    expect(cardBorderColor).toEqual(rgba(black, 0.125))
+    expect(cardInnerBorderRadius).toEqual(`${size(cardBorderRadius).value - size(cardBorderWidth).value}${size(cardBorderRadius).unit}`)
 
-    expect(cardCapBg).toEqual(format('{}', rgba(black, 0.03)))
+    expect(cardCapBg).toEqual(rgba(black, 0.03))
     expect(cardBg).toEqual(white)
 
     expect(cardImgOverlayPadding).toEqual('1.25rem')
 
-    expect(cardGroupMargin).toEqual(format('{}{}', size(gridGutterWidth).value / 2, size(gridGutterWidth).unit))
+    expect(cardGroupMargin).toEqual(`${size(gridGutterWidth).value / 2}${size(gridGutterWidth).unit}`)
 
     expect(cardDeckMargin).toEqual(cardGroupMargin)
 

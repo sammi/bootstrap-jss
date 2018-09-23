@@ -1,4 +1,3 @@
-import format from 'string-format'
 import { rgba } from '../Functions/rgba'
 import { black, grays, white } from './Colors'
 import { borderWidth } from './Components'
@@ -32,8 +31,8 @@ describe('Tables', () => {
     expect(tableCellPaddingSm).toEqual('.3rem')
 
     expect(tableBg).toEqual('transparent')
-    expect(tableAccentBg).toEqual(format('{}', rgba(black, 0.05)))
-    expect(tableHoverBg).toEqual(format('{}', rgba(black, 0.075)))
+    expect(tableAccentBg).toEqual(rgba(black, 0.05))
+    expect(tableHoverBg).toEqual(rgba(black, 0.075))
     expect(tableActiveBg).toEqual(tableHoverBg)
 
     expect(tableBorderWidth).toEqual(borderWidth)
@@ -43,9 +42,9 @@ describe('Tables', () => {
     expect(tableHeadColor).toEqual(grays._700)
 
     expect(tableDarkBg).toEqual(grays._900)
-    expect(tableDarkAccentBg).toEqual(format('{}', rgba(white, 0.05)))
-    expect(tableDarkHoverBg).toEqual(format('{}', rgba(white, 0.075)))
-    expect(tableDarkBorderColor).toEqual(format('{}', lighten(grays._900, '7.5%')))
+    expect(tableDarkAccentBg).toEqual(rgba(white, 0.05))
+    expect(tableDarkHoverBg).toEqual(rgba(white, 0.075))
+    expect(tableDarkBorderColor).toEqual(lighten(grays._900, '7.5%'))
     expect(tableDarkColor).toEqual(bodyBg)
 
     expect(tableStripedOrder).toEqual('odd')

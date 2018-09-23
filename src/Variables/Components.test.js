@@ -1,6 +1,5 @@
 import { grays, black, white, themeColors } from './Colors'
 import { rgba } from '../Functions/rgba'
-import format from 'string-format'
 
 import {
   lineHeightLg,
@@ -32,9 +31,9 @@ describe('Components', () => {
     expect(borderRadiusLg).toEqual('.3rem')
     expect(borderRadiusSm).toEqual('.2rem')
 
-    expect(boxShadowSm).toEqual(format('0 .125rem .25rem {}', rgba(black, 0.075)))
-    expect(boxShadow).toEqual(format('0 .5rem 1rem {}', rgba(black, 0.15)))
-    expect(boxShadowLg).toEqual(format('0 1rem 3rem {}', rgba(black, 0.175)))
+    expect(boxShadowSm).toEqual(`0 .125rem .25rem ${rgba(black, 0.075)}`)
+    expect(boxShadow).toEqual(`0 .5rem 1rem ${rgba(black, 0.15)}`)
+    expect(boxShadowLg).toEqual(`0 1rem 3rem ${rgba(black, 0.175)}`)
 
     expect(componentActiveColor).toEqual(white)
     expect(componentActiveBg).toEqual(themeColors.primary)

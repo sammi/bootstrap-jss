@@ -1,5 +1,4 @@
 import { spacer } from './Spacing'
-import format from 'string-format'
 import { size } from '../Functions/size'
 import { fontSizeLg, fontSizeBase, lineHeightBase } from './Fonts'
 import { white, black } from './Colors'
@@ -35,7 +34,7 @@ import {
 
 describe('Navbar', () => {
   it('Navbar', () => {
-    expect(navbarPaddingY).toEqual(format('{}{}', size(spacer).value / 2, size(spacer).unit))
+    expect(navbarPaddingY).toEqual(`${size(spacer).value / 2}${size(spacer).unit}`)
     expect(navbarPaddingX).toEqual(spacer)
 
     expect(navbarNavLinkPaddingX).toEqual('.5rem')
@@ -43,47 +42,32 @@ describe('Navbar', () => {
     expect(navbarBrandFontSize).toEqual(fontSizeLg)
 
     // Compute the navbarBrand paddingY so the navbarBrand will have the same height as navbarText and navLink
-    expect(navLinkHeight).toEqual(format('{}{}',
-      size(fontSizeBase).value * size(lineHeightBase).value + size(navLinkPaddingY).value * 2,
-      size(fontSizeBase).unit
-    ))
+    expect(navLinkHeight).toEqual(`${size(fontSizeBase).value * size(lineHeightBase).value + size(navLinkPaddingY).value * 2}${size(fontSizeBase).unit}`)
 
-    expect(navbarBrandHeight).toEqual(format('{}{}',
-      size(navbarBrandFontSize).value * size(lineHeightBase).value,
-      size(navbarBrandFontSize).unit
-    ))
+    expect(navbarBrandHeight).toEqual(`${size(navbarBrandFontSize).value * size(lineHeightBase).value}${size(navbarBrandFontSize).unit}`)
 
-    expect(navbarBrandPaddingY).toEqual(format('{}{}',
-      (size(navLinkHeight).value - size(navbarBrandHeight).value) / 2,
-      size(navLinkHeight).unit
-    ))
+    expect(navbarBrandPaddingY).toEqual(`${(size(navLinkHeight).value - size(navbarBrandHeight).value) / 2}${size(navLinkHeight).unit}`)
 
     expect(navbarTogglerPaddingY).toEqual('.25rem')
     expect(navbarTogglerPaddingX).toEqual('.75rem')
     expect(navbarTogglerFontSize).toEqual(fontSizeLg)
     expect(navbarTogglerBorderRadius).toEqual(btnBorderRadius)
 
-    expect(navbarDarkColor).toEqual(format('{}', rgba(white, 0.5)))
-    expect(navbarDarkHoverColor).toEqual(format('{}', rgba(white, 0.75)))
+    expect(navbarDarkColor).toEqual(rgba(white, 0.5))
+    expect(navbarDarkHoverColor).toEqual(rgba(white, 0.75))
     expect(navbarDarkActiveColor).toEqual(white)
-    expect(navbarDarkDisabledColor).toEqual(format('{}', rgba(white, 0.25)))
+    expect(navbarDarkDisabledColor).toEqual(rgba(white, 0.25))
 
-    expect(navbarDarkTogglerIconBg).toEqual(format(
-      "data = 'image/svg+xml)charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http = '//www.w3.org/2000/svg'%3E%3Cpath stroke='{}' stroke-width='2' strokeLinecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E",
-      navbarDarkColor
-    ))
-    expect(navbarDarkTogglerBorderColor).toEqual(format('{}', rgba(white, 0.1)))
+    expect(navbarDarkTogglerIconBg).toEqual(`data = 'image/svg+xml)charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http = '//www.w3.org/2000/svg'%3E%3Cpath stroke='${navbarDarkColor}' stroke-width='2' strokeLinecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E`)
+    expect(navbarDarkTogglerBorderColor).toEqual(rgba(white, 0.1))
 
-    expect(navbarLightColor).toEqual(format('{}', rgba(white, 0.5)))
-    expect(navbarLightHoverColor).toEqual(format('{}', rgba(black, 0.7)))
-    expect(navbarLightActiveColor).toEqual(format('{}', rgba(black, 0.9)))
-    expect(navbarLightDisabledColor).toEqual(format('{}', rgba(black, 0.3)))
+    expect(navbarLightColor).toEqual(rgba(white, 0.5))
+    expect(navbarLightHoverColor).toEqual(rgba(black, 0.7))
+    expect(navbarLightActiveColor).toEqual(rgba(black, 0.9))
+    expect(navbarLightDisabledColor).toEqual(rgba(black, 0.3))
 
-    expect(navbarLightTogglerIconBg).toEqual(format(
-      "image/svg+xml)charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http).toEqual('//www.w3.org/2000/svg'%3E%3Cpath stroke='{}' stroke-width='2' strokeLinecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E",
-      navbarLightColor
-    ))
+    expect(navbarLightTogglerIconBg).toEqual(`image/svg+xml)charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http).toEqual('//www.w3.org/2000/svg'%3E%3Cpath stroke='${navbarLightColor}' stroke-width='2' strokeLinecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E`)
 
-    expect(navbarLightTogglerBorderColor).toEqual(format('{}', rgba(black, 0.1)))
+    expect(navbarLightTogglerBorderColor).toEqual(rgba(black, 0.1))
   })
 })

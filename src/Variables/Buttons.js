@@ -1,4 +1,3 @@
-import format from 'string-format'
 import { rgba } from '../Functions/rgba'
 import { black, white, grays } from './Colors'
 import { borderRadius, borderRadiusLg, borderRadiusSm } from './Components'
@@ -34,11 +33,11 @@ export const btnLineHeightLg = inputBtnLineHeightLg
 export const btnBorderWidth = inputBtnBorderWidth
 
 export const btnFontWeight = fontWeightNormal
-export const btnBoxShadow = format('inset 0 1px 0 {}, 0 1px 1px {}', rgba(white, 0.15), rgba(black, 0.075))
+export const btnBoxShadow = `inset 0 1px 0 ${rgba(white, 0.15)}, 0 1px 1px ${rgba(black, 0.075)}`
 export const btnFocusWidth = inputBtnFocusWidth
 export const btnFocusBoxShadow = inputBtnFocusBoxShadow
 export const btnDisabledOpacity = 0.65
-export const btnActiveBoxShadow = format('inset 0 3px 5px {}', rgba(black, 0.125))
+export const btnActiveBoxShadow = `inset 0 3px 5px ${rgba(black, 0.125)}`
 
 export const btnLinkDisabledColor = grays._600
 
