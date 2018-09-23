@@ -1,36 +1,35 @@
-import format from 'string-format'
-import {caretWidth} from '../Variables/Components'
-import {size} from '../Functions/size'
+import { caretWidth } from '../Variables/Components'
+import { size } from '../Functions/size'
 
-import {caretDown, caretUp, caretRight, caretLeft, caret} from './caret'
+import { caretDown, caretUp, caretRight, caretLeft, caret } from './caret'
 
 describe('caret', () => {
   it('caret', () => {
     expect(caretDown()).toEqual({
-      borderTop: format('{} solid', caretWidth),
-      borderRight: format('{} solid transparent', caretWidth),
+      borderTop: `${caretWidth} solid`,
+      borderRight: `${caretWidth} solid transparent`,
       borderBottom: 0,
-      borderLeft: format('{} solid transparent', caretWidth)
+      borderLeft: `${caretWidth} solid transparent`
     })
 
     expect(caretUp()).toEqual({
       borderTop: 0,
-      borderRight: format('{} solid transparent', caretWidth),
-      borderBottom: format('{} solid', caretWidth),
-      borderLeft: format('{} solid transparent', caretWidth)
+      borderRight: `${caretWidth} solid transparent`,
+      borderBottom: `${caretWidth} solid`,
+      borderLeft: `${caretWidth} solid transparent`
     })
 
     expect(caretRight()).toEqual({
-      borderTop: format('{} solid transparent', caretWidth),
+      borderTop: `${caretWidth} solid transparent`,
       borderRight: 0,
-      borderBottom: format('{} solid transparent', caretWidth),
-      borderLeft: format('{} solid', caretWidth)
+      borderBottom: `${caretWidth} solid transparent`,
+      borderLeft: `${caretWidth} solid`,
     })
 
     expect(caretLeft()).toEqual({
-      borderTop: format('{} solid transparent', caretWidth),
-      borderRight: format('{} solid', caretWidth),
-      borderBottom: format('{} solid transparent', caretWidth)
+      borderTop: `${caretWidth} solid transparent`,
+      borderRight: `${caretWidth} solid`,
+      borderBottom: `${caretWidth} solid transparent`
     })
 
     expect(caret('down', false)).toEqual(undefined)
@@ -40,8 +39,8 @@ describe('caret', () => {
         display: 'inline-block',
         width: 0,
         height: 0,
-        marginLeft: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
-        verticalAligh: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
+        marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...caretDown(),
         '&:empty::after': {
@@ -55,8 +54,8 @@ describe('caret', () => {
         display: 'inline-block',
         width: 0,
         height: 0,
-        marginLeft: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
-        verticalAligh: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
+        marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...caretUp(),
         '&:empty::after': {
@@ -70,8 +69,8 @@ describe('caret', () => {
         display: 'inline-block',
         width: 0,
         height: 0,
-        marginLeft: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
-        verticalAligh: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
+        marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...caretRight(),
         '&:empty::after': {
@@ -85,8 +84,8 @@ describe('caret', () => {
         display: 'inline-block',
         width: 0,
         height: 0,
-        marginLeft: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
-        verticalAligh: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
+        marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         '&::after': {
           display: 'none'
@@ -95,8 +94,8 @@ describe('caret', () => {
           display: 'inline-block',
           width: 0,
           height: 0,
-          marginRight: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
-          verticalAlign: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
+          marginRight: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+          verticalAlign: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
           content: '',
           ...caretLeft()
         },
@@ -113,8 +112,8 @@ describe('caret', () => {
         display: 'inline-block',
         width: 0,
         height: 0,
-        marginLeft: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
-        verticalAligh: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
+        marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...caretDown(),
         '&:empty::after': {

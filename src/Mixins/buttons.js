@@ -1,5 +1,3 @@
-import format from 'string-format'
-
 import { colorYiq } from '../Functions/colorYiq'
 import { gradientBg } from './gradients'
 import { hover } from './hover'
@@ -40,8 +38,8 @@ const buttonVariant = (
     }),
     '&:focus, &.focus': {
       boxShadow: myEnableShadows
-        ? format('{}, 0 0 0 {} {}', myBtnBoxShadow, myBtnFocusWidth, rgba(borderColor, 0.5))
-        : format('0 0 0 {} {}', myBtnFocusWidth, rgba(borderColor, 0.5))
+        ? `${myBtnBoxShadow}, 0 0 0 ${myBtnFocusWidth} ${rgba(borderColor, 0.5)}`
+        : `0 0 0 ${myBtnFocusWidth} ${rgba(borderColor, 0.5)}`
     },
     '&.disabled, &:disabled': {
       color: colorYiq(backgroundColor),
@@ -63,8 +61,8 @@ const buttonVariant = (
     },
     '&:focus': {
       boxShadow: myEnableShadows
-        ? format('{}, 0 0 0 {} {}', myBtnActiveBoxShadow, myBtnFocusWidth, rgba(borderColor, 0.5))
-        : format('0 0 0 {} {}', myBtnFocusWidth, rgba(borderColor, 0.5))
+        ? `${myBtnActiveBoxShadow}, 0 0 0 ${myBtnFocusWidth} ${rgba(borderColor, 0.5)}`
+        : `0 0 0 ${myBtnFocusWidth} ${rgba(borderColor, 0.5)}`
     }
   }
 }
@@ -87,7 +85,7 @@ const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, activeBor
       borderColor: activeBorderColor
     },
     '&:focus, &.focus': {
-      boxShadow: format('0 0 0 {} {}', mybtnFocusWidth, rgba(color, 0.5))
+      boxShadow: `0 0 0 ${mybtnFocusWidth} ${rgba(color, 0.5)}`
     },
     '&.disabled, &:disabled': {
       color: color,
@@ -99,8 +97,8 @@ const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, activeBor
       borderColor: activeBorderColor,
       '&:focus': {
         boxShadow: myEnableShadows
-          ? format('{}, 0 0 0 {} {}', btnActiveBoxShadow, mybtnFocusWidth, rgba(color, 0.5))
-          : format('0 0 0 {} {}', mybtnFocusWidth, rgba(color, 0.5))
+          ? `${btnActiveBoxShadow}, 0 0 0 ${mybtnFocusWidth} ${rgba(color, 0.5)}`
+          : `0 0 0 ${mybtnFocusWidth} ${rgba(color, 0.5)}`
       }
     }
   }
@@ -110,7 +108,7 @@ const buttonSize = (paddingY, paddingX, fontSize, lineHeight, borderRadius, myEn
   myEnableRounded = myEnableRounded === undefined ? enableRounded : myEnableRounded
   const myBorderRaduis = myEnableRounded ? borderRadius : 0
   return {
-    padding: format('{} {}', paddingY, paddingX),
+    padding: `${paddingY} ${paddingX}`,
     fontSize: fontSize,
     lineHeight: lineHeight,
     borderRadius: myBorderRaduis

@@ -1,5 +1,4 @@
 import {size} from '../Functions/size'
-import format from 'string-format'
 
 const breakpointNext = (name, breakpoints) => {
   let breakPointList = []
@@ -29,7 +28,7 @@ const mediaBreakpointUp = (name, breakpoints, contentStyle) => {
     return contentStyle
   } else {
     let mediaQuery = {}
-    mediaQuery[format('@media (min-width: {})', minWidth)] = contentStyle
+    mediaQuery[`@media (min-width: ${minWidth})`] = contentStyle
     return mediaQuery
   }
 }
@@ -40,7 +39,7 @@ const mediaBreakpointDown = (name, breakpoints, contentStyle) => {
     return contentStyle
   } else {
     let mediaQuery = {}
-    mediaQuery[format('@media (max-width: {})', maxWidth)] = contentStyle
+    mediaQuery[`@media (max-width: ${maxWidth})`] = contentStyle
     return mediaQuery
   }
 }
@@ -50,7 +49,7 @@ const mediaBreakpointsBetween = (lower, upper, breakpoints, contentStyle) => {
   const maxWidth = breakpointMax(upper, breakpoints)
   let mediaQuery = {}
   if (minWidth !== null && maxWidth !== null) {
-    mediaQuery[format('@media (min-width: {}) and (max-width: {})', minWidth, maxWidth)] = contentStyle
+    mediaQuery[`@media (min-width: ${minWidth}) and (max-width: ${maxWidth})`] = contentStyle
     return mediaQuery
   } else if (maxWidth === null && minWidth !== null) {
     return mediaBreakpointUp(lower, breakpoints, contentStyle)
@@ -66,7 +65,7 @@ const mediaBreakpointsOnly = (name, breakpoints, contentStyle) => {
   const maxWidth = breakpointMax(name, breakpoints)
   let mediaQuery = {}
   if (minWidth !== null && maxWidth !== null) {
-    mediaQuery[format('@media (min-width: {}) and (max-width: {})', minWidth, maxWidth)] = contentStyle
+    mediaQuery[`@media (min-width: ${minWidth}) and (max-width: ${maxWidth})`] = contentStyle
     return mediaQuery
   } else if (maxWidth === null && minWidth !== null) {
     return mediaBreakpointUp(name, breakpoints, contentStyle)

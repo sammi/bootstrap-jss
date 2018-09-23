@@ -1,33 +1,32 @@
-import format from 'string-format'
 import { caretWidth } from '../Variables/Components'
 import { enableCaret } from '../Variables/Options'
-import {size} from '../Functions/size'
+import { size } from '../Functions/size'
 
 const caretDown = () => ({
-  borderTop: format('{} solid', caretWidth),
-  borderRight: format('{} solid transparent', caretWidth),
+  borderTop: `${caretWidth} solid`,
+  borderRight: `${caretWidth} solid transparent`,
   borderBottom: 0,
-  borderLeft: format('{} solid transparent', caretWidth)
+  borderLeft: `${caretWidth} solid transparent`
 })
 
 const caretUp = () => ({
   borderTop: 0,
-  borderRight: format('{} solid transparent', caretWidth),
-  borderBottom: format('{} solid', caretWidth),
-  borderLeft: format('{} solid transparent', caretWidth)
+  borderRight: `${caretWidth} solid transparent`,
+  borderBottom: `${caretWidth} solid`,
+  borderLeft: `${caretWidth} solid transparent`
 })
 
 const caretRight = () => ({
-  borderTop: format('{} solid transparent', caretWidth),
+  borderTop: `${caretWidth} solid transparent`,
   borderRight: 0,
-  borderBottom: format('{} solid transparent', caretWidth),
-  borderLeft: format('{} solid', caretWidth)
+  borderBottom: `${caretWidth} solid transparent`,
+  borderLeft: `${caretWidth} solid`
 })
 
 const caretLeft = () => ({
-  borderTop: format('{} solid transparent', caretWidth),
-  borderRight: format('{} solid', caretWidth),
-  borderBottom: format('{} solid transparent', caretWidth)
+  borderTop: `${caretWidth} solid transparent`,
+  borderRight: `${caretWidth} solid`,
+  borderBottom: `${caretWidth} solid transparent`
 })
 
 const getCaret = (direction) => {
@@ -46,8 +45,8 @@ const getCaret = (direction) => {
         display: 'inline-block',
         width: 0,
         height: 0,
-        marginRight: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
-        verticalAlign: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
+        marginRight: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAlign: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...caretLeft()
       }
@@ -64,8 +63,8 @@ const caret = (direction = 'down', myEnableCaret = enableCaret) => {
         display: 'inline-block',
         width: 0,
         height: 0,
-        marginLeft: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
-        verticalAligh: format('{}{}', size(caretWidth).value * 0.85, size(caretWidth).unit),
+        marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...getCaret(direction),
         '&:empty::after': {

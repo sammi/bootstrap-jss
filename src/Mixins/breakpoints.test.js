@@ -1,5 +1,3 @@
-import format from 'string-format'
-
 import {
   breakpointNext,
   breakpointMin,
@@ -74,7 +72,7 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     expect(mediaBreakpointUp('xs', breakpoints, contentStyles)).toEqual(contentStyles)
 
     let mediaQuery = {}
-    mediaQuery[format('@media (min-width: {})', '576px')] = contentStyles
+    mediaQuery['@media (min-width: 576px)'] = contentStyles
 
     expect(mediaBreakpointUp('sm', breakpoints, contentStyles)).toEqual(mediaQuery)
   })
@@ -85,7 +83,7 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     expect(mediaBreakpointDown('xl', breakpoints, contentStyles)).toEqual(contentStyles)
 
     let mediaQuery = {}
-    mediaQuery[format('@media (max-width: {})', '768px')] = contentStyles
+    mediaQuery['@media (max-width: 768px)'] = contentStyles
     expect(mediaBreakpointDown('sm', breakpoints, contentStyles)).toEqual(mediaQuery)
   })
 
@@ -94,19 +92,19 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     const contentStyles = {color: 'red'}
 
     let mediaQuery = {}
-    mediaQuery[format('@media (max-width: {})', '768px')] = contentStyles
+    mediaQuery['@media (max-width: 768px)'] = contentStyles
     expect(mediaBreakpointsBetween('xs', 'sm', breakpoints, contentStyles)).toEqual(mediaQuery)
 
     mediaQuery = {}
-    mediaQuery[format('@media (min-width: {}) and (max-width: {})', '576px', '1200px')] = contentStyles
+    mediaQuery['@media (min-width: 576px) and (max-width: 1200px)'] = contentStyles
     expect(mediaBreakpointsBetween('sm', 'lg', breakpoints, contentStyles)).toEqual(mediaQuery)
 
     mediaQuery = {}
-    mediaQuery[format('@media (min-width: {}) and (max-width: {})', '576px', '768px')] = contentStyles
+    mediaQuery['@media (min-width: 576px) and (max-width: 768px)'] = contentStyles
     expect(mediaBreakpointsBetween('sm', 'sm', breakpoints, contentStyles)).toEqual(mediaQuery)
 
     mediaQuery = {}
-    mediaQuery[format('@media (min-width: {})', '576px')] = contentStyles
+    mediaQuery['@media (min-width: 576px)'] = contentStyles
     expect(mediaBreakpointsBetween('sm', 'xl', breakpoints, contentStyles)).toEqual(mediaQuery)
 
     expect(mediaBreakpointsBetween('xs', 'xl', breakpoints, contentStyles)).toEqual(contentStyles)
@@ -119,19 +117,19 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     const contentStyles = {color: 'red'}
 
     let mediaQuery = {}
-    mediaQuery[format('@media (max-width: {})', '576px')] = contentStyles
+    mediaQuery['@media (max-width: 576px)'] = contentStyles
     expect(mediaBreakpointsOnly('xs', breakpoints, contentStyles)).toEqual(mediaQuery)
 
     mediaQuery = {}
-    mediaQuery[format('@media (min-width: {}) and (max-width: {})', '576px', '768px')] = contentStyles
+    mediaQuery['@media (min-width: 576px) and (max-width: 768px)'] = contentStyles
     expect(mediaBreakpointsOnly('sm', breakpoints, contentStyles)).toEqual(mediaQuery)
 
     mediaQuery = {}
-    mediaQuery[format('@media (min-width: {})', '1200px')] = contentStyles
+    mediaQuery['@media (min-width: 1200px)'] = contentStyles
     expect(mediaBreakpointsOnly('xl', breakpoints, contentStyles)).toEqual(mediaQuery)
 
     mediaQuery = {}
-    mediaQuery[format('@media (min-width: {}) and (max-width: {})', '992px', '1200px')] = contentStyles
+    mediaQuery['@media (min-width: 992px) and (max-width: 1200px)'] = contentStyles
     expect(mediaBreakpointsOnly('lg', breakpoints, contentStyles)).toEqual(mediaQuery)
 
     expect(mediaBreakpointsOnly('lgg', breakpoints, contentStyles)).toEqual(contentStyles)

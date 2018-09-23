@@ -7,7 +7,6 @@ import { boxShadow } from './boxShadow'
 import { btnBoxShadow, btnFocusWidth, btnActiveBoxShadow } from '../Variables/Buttons'
 
 import { hover } from './hover'
-import format from 'string-format'
 import {enableShadows} from '../Variables/Options'
 
 import { buttonVariant, buttonOutlineVariant, buttonSize } from './buttons'
@@ -38,7 +37,7 @@ describe('buttonVariants', () => {
         borderColor: hoverBorderColor
       }),
       '&:focus, &.focus': {
-        boxShadow: format('0 0 0 {} {}', btnFocusWidth, rgba(borderColor, 0.5))
+        boxShadow: `0 0 0 ${btnFocusWidth} ${rgba(borderColor, 0.5)}`
       },
       '&.disabled, &:disabled': {
         color: colorYiq(backgroundColor),
@@ -51,7 +50,7 @@ describe('buttonVariants', () => {
         borderColor: activeBorderColor
       },
       '&:focus': {
-        boxShadow: format('0 0 0 {} {}', btnFocusWidth, rgba(borderColor, 0.5))
+        boxShadow: `0 0 0 ${btnFocusWidth} ${rgba(borderColor, 0.5)}`
       }
     })
   })
@@ -91,7 +90,7 @@ describe('buttonVariants', () => {
         borderColor: hoverBorderColor
       }),
       '&:focus, &.focus': {
-        boxShadow: format('{}, 0 0 0 {} {}', btnBoxShadow, btnFocusWidth, rgba(borderColor, 0.5))
+        boxShadow: `${btnBoxShadow}, 0 0 0 ${btnFocusWidth} ${rgba(borderColor, 0.5)}`
       },
       '&.disabled, &:disabled': {
         color: colorYiq(backgroundColor),
@@ -105,7 +104,7 @@ describe('buttonVariants', () => {
         borderColor: activeBorderColor
       },
       '&:focus': {
-        boxShadow: format('{}, 0 0 0 {} {}', myBtnActiveBoxShadow, myBtnFocusWidth, rgba(borderColor, 0.5))
+        boxShadow: `${myBtnActiveBoxShadow}, 0 0 0 ${myBtnFocusWidth} ${rgba(borderColor, 0.5)}`
       }
     })
   })
@@ -145,7 +144,7 @@ describe('buttonVariants', () => {
         borderColor: hoverBorderColor
       }),
       '&:focus, &.focus': {
-        boxShadow: format('0 0 0 {} {}', myBtnFocusWidth, rgba(borderColor, 0.5))
+        boxShadow: `0 0 0 ${myBtnFocusWidth} ${rgba(borderColor, 0.5)}`
       },
       '&.disabled, &:disabled': {
         color: colorYiq(backgroundColor),
@@ -158,7 +157,7 @@ describe('buttonVariants', () => {
         borderColor: activeBorderColor
       },
       '&:focus': {
-        boxShadow: format('0 0 0 {} {}', btnFocusWidth, rgba(borderColor, 0.5))
+        boxShadow: `0 0 0 ${btnFocusWidth} ${rgba(borderColor, 0.5)}`
       }
     })
   })
@@ -181,7 +180,7 @@ describe('buttonVariants', () => {
         borderColor: activeBorderColor
       },
       '&:focus, &.focus': {
-        boxShadow: format('0 0 0 {} {}', mybtnFocusWidth, rgba(color, 0.5))
+        boxShadow: `0 0 0 ${mybtnFocusWidth} ${rgba(color, 0.5)}`
       },
       '&.disabled, &:disabled': {
         color: color,
@@ -192,7 +191,7 @@ describe('buttonVariants', () => {
         backgroundColor: ativeBackgroundColor,
         borderColor: activeBorderColor,
         '&:focus': {
-          boxShadow: format('0 0 0 {} {}', mybtnFocusWidth, rgba(color, 0.5))
+          boxShadow: `0 0 0 ${mybtnFocusWidth} ${rgba(color, 0.5)}`
         }
       }
     })
@@ -216,7 +215,7 @@ describe('buttonVariants', () => {
         borderColor: activeBorderColor
       },
       '&:focus, &.focus': {
-        boxShadow: format('0 0 0 {} {}', myBtnFocusWidth, rgba(color, 0.5))
+        boxShadow: `0 0 0 ${myBtnFocusWidth} ${rgba(color, 0.5)}`
       },
       '&.disabled, &:disabled': {
         color: color,
@@ -227,7 +226,7 @@ describe('buttonVariants', () => {
         backgroundColor: ativeBackgroundColor,
         borderColor: activeBorderColor,
         '&:focus': {
-          boxShadow: format('{}, 0 0 0 {} {}', btnActiveBoxShadow, myBtnFocusWidth, rgba(color, 0.5))
+          boxShadow: `${btnActiveBoxShadow}, 0 0 0 ${myBtnFocusWidth} ${rgba(color, 0.5)}`
         }
       }
     })
@@ -240,7 +239,7 @@ describe('buttonVariants', () => {
     const lineHeight = 2
     const borderRadius = '10px'
     expect(buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius, true)).toEqual({
-      padding: format('{} {}', paddingY, paddingX),
+      padding: `${paddingY} ${paddingX}`, 
       fontSize: fontSize,
       lineHeight: lineHeight,
       borderRadius: borderRadius
@@ -255,7 +254,7 @@ describe('buttonVariants', () => {
     const borderRadius = '10px'
 
     expect(buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius, false)).toEqual({
-      padding: format('{} {}', paddingY, paddingX),
+      padding: `${paddingY} ${paddingX}`, 
       fontSize: fontSize,
       lineHeight: lineHeight,
       borderRadius: 0
@@ -270,7 +269,7 @@ describe('buttonVariants', () => {
     const borderRadius = '10px'
 
     expect(buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius)).toEqual({
-      padding: format('{} {}', paddingY, paddingX),
+      padding: `${paddingY} ${paddingX}`, 
       fontSize: fontSize,
       lineHeight: lineHeight,
       borderRadius: borderRadius
