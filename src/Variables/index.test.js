@@ -35,8 +35,6 @@ import * as Printing from './Printing'
 
 import * as Variables from './index'
 
-import format from 'string-format'
-
 describe('Variables', () => {
   it('Variables are defined', () => {
     expect(Variables).toEqual({
@@ -82,7 +80,7 @@ describe('Variables', () => {
       var variable = Variables[key]
       Object.keys(variable).forEach(k => {
         if (variable === undefined || variable[k] === undefined) {
-          done.fail(format('Undefined {}.{} = {}', key, k, variable[k]))
+          done.fail(`Undefined ${key}.${k} = ${variable[k]}`)
         }
       })
     })

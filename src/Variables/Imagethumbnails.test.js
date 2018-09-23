@@ -2,7 +2,6 @@ import { bodyBg } from './Body'
 import { borderWidth, borderRadius } from './Components'
 import { grays, black } from './Colors'
 import { rgba } from '../Functions/rgba'
-import format from 'string-format'
 
 import {
   thumbnailPadding,
@@ -20,6 +19,6 @@ describe('Imagethumbnails', () => {
     expect(thumbnailBorderWidth).toEqual(borderWidth)
     expect(thumbnailBorderColor).toEqual(grays._300)
     expect(thumbnailBorderRadius).toEqual(borderRadius)
-    expect(thumbnailBoxShadow).toEqual(format('0 1px 2px {}', rgba(black, 0.075)))
+    expect(thumbnailBoxShadow).toEqual(`0 1px 2px ${rgba(black, 0.075)}`)
   })
 })

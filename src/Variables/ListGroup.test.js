@@ -1,7 +1,6 @@
 import { grays, white, black } from './Colors'
 import { borderWidth, borderRadius, componentActiveColor, componentActiveBg } from './Components'
 import { rgba } from '../Functions/rgba'
-import format from 'string-format'
 import { bodyColor } from './Body'
 
 import {
@@ -26,7 +25,7 @@ import {
 describe('Listgroup', () => {
   it('Listgroup', () => {
     expect(listGroupBg).toEqual(white)
-    expect(listGroupBorderColor).toEqual(format('{}', rgba(black, 0.125)))
+    expect(listGroupBorderColor).toEqual(rgba(black, 0.125))
     expect(listGroupBorderWidth).toEqual(borderWidth)
     expect(listGroupBorderRadius).toEqual(borderRadius)
 

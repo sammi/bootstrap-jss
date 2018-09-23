@@ -1,6 +1,5 @@
 import { lineHeightBase } from './Fonts'
 import { borderWidth, borderRadiusLg } from './Components'
-import format from 'string-format'
 import { rgba } from '../Functions/rgba'
 import { grays, black, white } from './Colors'
 
@@ -37,11 +36,11 @@ describe('Modals', () => {
     expect(modalTitleLineHeight).toEqual(lineHeightBase)
 
     expect(modalContentBg).toEqual(white)
-    expect(modalContentBorderColor).toEqual(format('{}', rgba(black, 0.2)))
+    expect(modalContentBorderColor).toEqual(rgba(black, 0.2))
     expect(modalContentBorderWidth).toEqual(borderWidth)
     expect(modalContentBorderRadius).toEqual(borderRadiusLg)
-    expect(modalContentBoxShadowXs).toEqual(format('0 .25rem .5rem {}', rgba(black, 0.5)))
-    expect(modalContentBoxShadowSmUp).toEqual(format('0 .5rem 1rem {}', rgba(black, 0.5)))
+    expect(modalContentBoxShadowXs).toEqual(`0 .25rem .5rem ${rgba(black, 0.5)}`)
+    expect(modalContentBoxShadowSmUp).toEqual(`0 .5rem 1rem ${rgba(black, 0.5)}`)
 
     expect(modalBackdropBg).toEqual(black)
     expect(modalBackdropOpacity).toEqual(0.5)

@@ -1,11 +1,10 @@
 import { grays, white, black } from './Colors'
 import { borderWidth, borderRadius, componentActiveColor, componentActiveBg } from './Components'
 import { rgba } from '../Functions/rgba'
-import format from 'string-format'
 import { bodyColor } from './Body'
 
 export const listGroupBg = white
-export const listGroupBorderColor = format('{}', rgba(black, 0.125))
+export const listGroupBorderColor = rgba(black, 0.125)
 export const listGroupBorderWidth = borderWidth
 export const listGroupBorderRadius = borderRadius
 

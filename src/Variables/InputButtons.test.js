@@ -1,5 +1,4 @@
 import { lineHeightBase } from './Fonts'
-import format from 'string-format'
 import { rgba } from '../Functions/rgba'
 import { componentActiveBg, borderWidth, lineHeightSm, lineHeightLg } from './Components'
 
@@ -26,8 +25,8 @@ describe('Buttons + Forms', () => {
     expect(inputBtnLineHeight).toEqual(lineHeightBase)
 
     expect(inputBtnFocusWidth).toEqual('.2rem')
-    expect(inputBtnFocusColor).toEqual(format('{}', rgba(componentActiveBg, 0.25)))
-    expect(inputBtnFocusBoxShadow).toEqual(format('0 0 0 {} {}', inputBtnFocusWidth, inputBtnFocusColor))
+    expect(inputBtnFocusColor).toEqual(rgba(componentActiveBg, 0.25))
+    expect(inputBtnFocusBoxShadow).toEqual(`0 0 0 ${inputBtnFocusWidth} ${inputBtnFocusColor}`)
 
     expect(inputBtnPaddingYSm).toEqual('.25rem')
     expect(inputBtnPaddingXSm).toEqual('.5rem')

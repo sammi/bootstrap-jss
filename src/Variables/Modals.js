@@ -1,6 +1,5 @@
 import { lineHeightBase } from './Fonts'
 import { borderWidth, borderRadiusLg } from './Components'
-import format from 'string-format'
 import { rgba } from '../Functions/rgba'
 import { grays, black, white } from './Colors'
 
@@ -12,11 +11,11 @@ export const modalDialogMarginYSmUp = '1.75rem'
 export const modalTitleLineHeight = lineHeightBase
 
 export const modalContentBg = white
-export const modalContentBorderColor = format('{}', rgba(black, 0.2))
+export const modalContentBorderColor = rgba(black, 0.2)
 export const modalContentBorderWidth = borderWidth
 export const modalContentBorderRadius = borderRadiusLg
-export const modalContentBoxShadowXs = format('0 .25rem .5rem {}', rgba(black, 0.5))
-export const modalContentBoxShadowSmUp = format('0 .5rem 1rem {}', rgba(black, 0.5))
+export const modalContentBoxShadowXs = `0 .25rem .5rem ${rgba(black, 0.5)}`
+export const modalContentBoxShadowSmUp = `0 .5rem 1rem ${rgba(black, 0.5)}`
 
 export const modalBackdropBg = black
 export const modalBackdropOpacity = 0.5

@@ -2,7 +2,6 @@ import _ from 'lodash'
 import { rgba } from '../Functions/rgba'
 import { lighten } from '../Functions/lighten'
 import { size } from '../Functions/size'
-import format from 'string-format'
 
 import { white, grays, black, themeColors } from './Colors'
 import { bodyColor, bodyBg } from './Body'
@@ -171,14 +170,14 @@ describe('Forms', () => {
     expect(inputColor).toEqual(grays._700)
     expect(inputBorderColor).toEqual(grays._400)
     expect(inputBorderWidth).toEqual(inputBtnBorderWidth)
-    expect(inputBoxShadow).toEqual(format('inset 0 1px 1px {}', rgba(black, 0.075)))
+    expect(inputBoxShadow).toEqual(`inset 0 1px 1px ${rgba(black, 0.075)}`)
 
     expect(inputBorderRadius).toEqual(borderRadius)
     expect(inputBorderRadiusLg).toEqual(borderRadiusLg)
     expect(inputBorderRadiusSm).toEqual(borderRadiusSm)
 
     expect(inputFocusBg).toEqual(inputBg)
-    expect(inputFocusBorderColor).toEqual(format('{}', lighten(componentActiveBg, '25%')))
+    expect(inputFocusBorderColor).toEqual(lighten(componentActiveBg, '25%'))
     expect(inputFocusColor).toEqual(inputColor)
     expect(inputFocusWidth).toEqual(inputBtnFocusWidth)
     expect(inputFocusBoxShadow).toEqual(inputBtnFocusBoxShadow)
@@ -186,39 +185,23 @@ describe('Forms', () => {
     expect(inputPlaceholderColor).toEqual(grays._600)
     expect(inputPlaintextColor).toEqual(bodyColor)
 
-    expect(inputHeightBorder).toEqual(format('{}{}', size(inputBorderWidth).value * 2, size(inputBorderWidth).unit))
+    expect(inputHeightBorder).toEqual(`${size(inputBorderWidth).value * 2}${size(inputBorderWidth).unit}`)
 
-    expect(inputHeightInner).toEqual(format('{}{} + {}{}',
-      size(fontSizeBase).value * size(inputBtnLineHeight).value, size(fontSizeBase).unit,
-      size(inputBtnPaddingY).value * 2, size(fontSizeBase).unit
-    ))
+    expect(inputHeightInner).toEqual(
+      `${size(fontSizeBase).value * size(inputBtnLineHeight).value}${size(fontSizeBase).unit} + ${size(inputBtnPaddingY).value * 2}${size(fontSizeBase).unit}`
+    )
 
-    expect(inputHeight).toEqual(format('calc({}{} + {}{})',
-      size(inputHeightInner).value, size(inputHeightInner).unit,
-      size(inputHeightBorder).value, size(inputHeightBorder).unit
-    ))
+    expect(inputHeight).toEqual(`calc(${inputHeightInner} + ${inputHeightBorder})`)
 
-    expect(inputHeightInnerSm).toEqual(format('{}{}',
-      size(fontSizeSm).value * size(inputBtnLineHeightSm).value + size(inputBtnPaddingYSm).value * 2,
-      size(fontSizeSm).unit
-    ))
+    expect(inputHeightInnerSm).toEqual(`${size(fontSizeSm).value * size(inputBtnLineHeightSm).value + size(inputBtnPaddingYSm).value * 2}${size(fontSizeSm).unit}`)
 
-    expect(inputHeightSm).toEqual(format('calc({} + {})',
-      size(inputHeightInnerSm).value, size(inputHeightInnerSm).unit,
-      size(inputHeightBorder).value, size(inputHeightBorder).unit
-    ))
+    expect(inputHeightSm).toEqual(`calc(${inputHeightInnerSm} + ${inputHeightBorder})`)
 
-    expect(inputHeightInnerLg).toEqual(format('{}{}',
-      size(fontSizeLg).value * size(inputBtnLineHeightLg).value + size(inputBtnPaddingYLg).value * 2,
-      size(fontSizeLg).unit
-    ))
+    expect(inputHeightInnerLg).toEqual(`${size(fontSizeLg).value * size(inputBtnLineHeightLg).value + size(inputBtnPaddingYLg).value * 2}${size(fontSizeLg).unit}`)
 
-    expect(inputHeightLg).toEqual(format('calc({}{} + {}{})',
-      size(inputHeightInnerLg).value, size(inputHeightInnerLg).unit,
-      size(inputHeightBorder).value, size(inputHeightBorder).unit
-    ))
+    expect(inputHeightLg).toEqual(`calc(${inputHeightInnerLg} + ${inputHeightBorder})`)
 
-    expect(inputTransition).toEqual(format('{} .15s easeIn - out, {} .15s easeIn - out', borderColor, boxShadow))
+    expect(inputTransition).toEqual(`${borderColor} .15s easeIn - out, ${boxShadow} .15s easeIn - out`)
 
     expect(formTextMarginTop).toEqual('.25rem')
 
@@ -241,58 +224,36 @@ describe('Forms', () => {
     expect(customControlIndicatorSize).toEqual('1rem')
     expect(customControlIndicatorBg).toEqual(grays._300)
     expect(customControlIndicatorBgSize).toEqual('50% 50%')
-    expect(customControlIndicatorBoxShadow).toEqual(format('inset 0 .25rem .25rem {}', rgba(black, 0.1)))
+    expect(customControlIndicatorBoxShadow).toEqual(`inset 0 .25rem .25rem ${rgba(black, 0.1)}`)
 
     expect(customControlIndicatorDisabledBg).toEqual(grays._200)
     expect(customControlLabelDisabledColor).toEqual(grays._600)
 
     expect(customControlIndicatorCheckedColor).toEqual(componentActiveColor)
     expect(customControlIndicatorCheckedBg).toEqual(componentActiveBg)
-    expect(customControlIndicatorCheckedDisabledBg).toEqual(format('{}', rgba(themeColors.primary, 0.5)))
+    expect(customControlIndicatorCheckedDisabledBg).toEqual(rgba(themeColors.primary, 0.5))
     expect(customControlIndicatorCheckedBoxShadow).toEqual('none')
 
-    expect(customControlIndicatorFocusBoxShadow).toEqual(format(
-      '0 0 0 1px {}, {}',
-      bodyBg,
-      inputBtnFocusBoxShadow
-    ))
+    expect(customControlIndicatorFocusBoxShadow).toEqual(`0 0 0 1px ${bodyBg}, ${inputBtnFocusBoxShadow}`)
 
     expect(customControlIndicatorActiveColor).toEqual(componentActiveColor)
-    expect(customControlIndicatorActiveBg).toEqual(format('{}', lighten(componentActiveBg, '35%')))
+    expect(customControlIndicatorActiveBg).toEqual(lighten(componentActiveBg, '35%'))
     expect(customControlIndicatorActiveBoxShadow).toEqual('none')
 
     expect(customCheckboxIndicatorBorderRadius).toEqual(borderRadius)
 
-    expect(customCheckboxIndicatorIconChecked).toEqual(format(
-      '{}',
-      format(
-        "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='{}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E",
-        _.replace(customControlIndicatorCheckedColor, '', '').trim()
-      )
-    ))
+    expect(customCheckboxIndicatorIconChecked).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='${_.replace(customControlIndicatorCheckedColor, '', '').trim()}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E`)
 
     expect(customCheckboxIndicatorIndeterminateBg).toEqual(componentActiveBg)
 
     expect(customCheckboxIndicatorIndeterminateColor).toEqual(customControlIndicatorCheckedColor)
 
-    expect(customCheckboxIndicatorIconIndeterminate).toEqual(format(
-      '{}',
-      format(
-        "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='{}' d='M0 2h4'/%3E%3C/svg%3E",
-        _.replace(customCheckboxIndicatorIndeterminateColor, '', '').trim()
-      )
-    ))
+    expect(customCheckboxIndicatorIconIndeterminate).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='${_.replace(customCheckboxIndicatorIndeterminateColor, '', '').trim()}' d='M0 2h4'/%3E%3C/svg%3E`)
 
     expect(customCheckboxIndicatorIndeterminateBoxShadow).toEqual('none')
     expect(customRadioIndicatorBorderRadius).toEqual('50%')
 
-    expect(customRadioIndicatorIconChecked).toEqual(format(
-      '{}',
-      format(
-        "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='{}' /%3E%3C/svg%3E",
-        _.replace(customControlIndicatorCheckedColor, '', '').trim()
-      )
-    ))
+    expect(customRadioIndicatorIconChecked).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='${_.replace(customControlIndicatorCheckedColor, '', '').trim()}' /%3E%3C/svg%3E`)
 
     expect(customSelectPaddingY).toEqual('.375rem')
     expect(customSelectPaddingX).toEqual('.75rem')
@@ -307,13 +268,7 @@ describe('Forms', () => {
 
     expect(customSelectIndicatorColor).toEqual(grays._800)
 
-    expect(customSelectIndicator).toEqual(format(
-      '{}',
-      format(
-        "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='{}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E",
-        _.replace(customSelectIndicatorColor, '', '').trim()
-      )
-    ))
+    expect(customSelectIndicator).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='${_.replace(customSelectIndicatorColor, '', '').trim()}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E`)
 
     expect(customSelectBorderWidth).toEqual(inputBtnBorderWidth)
     expect(customSelectBorderColor).toEqual(inputBorderColor)
@@ -321,11 +276,7 @@ describe('Forms', () => {
     expect(customSelectBorderRadius).toEqual(borderRadius)
     expect(customSelectFocusBorderColor).toEqual(inputFocusBorderColor)
 
-    expect(customSelectFocusBoxShadow).toEqual(format(
-      'inset 0 1px 2px {}, 0 0 5px {}',
-      rgba(black, 0.075),
-      rgba(customSelectFocusBorderColor, 0.5)
-    ))
+    expect(customSelectFocusBoxShadow).toEqual(`inset 0 1px 2px ${rgba(black, 0.075)}, 0 0 5px ${rgba(customSelectFocusBorderColor, 0.5)}`)
 
     expect(customSelectFontSizeSm).toEqual('75%')
     expect(customSelectHeightSm).toEqual(inputHeightSm)
@@ -338,16 +289,16 @@ describe('Forms', () => {
     expect(customRangeTrackCursor).toEqual('pointer')
     expect(customRangeTrackBg).toEqual(grays._300)
     expect(customRangeTrackBorderRadius).toEqual('1rem')
-    expect(customRangeTrackBoxShadow).toEqual(format('inset 0 .25rem .25rem {}', rgba(black, 0.1)))
+    expect(customRangeTrackBoxShadow).toEqual(`inset 0 .25rem .25rem ${rgba(black, 0.1)}`)
 
     expect(customRangeThumbWidth).toEqual('1rem')
     expect(customRangeThumbHeight).toEqual(customRangeThumbWidth)
     expect(customRangeThumbBg).toEqual(componentActiveBg)
     expect(customRangeThumbBorder).toEqual('0')
     expect(customRangeThumbBorderRadius).toEqual('1rem')
-    expect(customRangeThumbBoxShadow).toEqual(format('0 .1rem .25rem {}', rgba(black, 0.1)))
-    expect(customRangeThumbFocusBoxShadow).toEqual(format('0 0 0 1px {}, {}', bodyBg, inputBtnFocusBoxShadow))
-    expect(customRangeThumbActiveBg).toEqual(format('{}', lighten(componentActiveBg, '35%')))
+    expect(customRangeThumbBoxShadow).toEqual(`0 .1rem .25rem ${rgba(black, 0.1)}`)
+    expect(customRangeThumbFocusBoxShadow).toEqual(`0 0 0 1px ${bodyBg}, ${inputBtnFocusBoxShadow}`)
+    expect(customRangeThumbActiveBg).toEqual(lighten(componentActiveBg, '35%'))
 
     expect(customFileHeight).toEqual(inputHeight)
     expect(customFileFocusBorderColor).toEqual(inputFocusBorderColor)
