@@ -10,7 +10,8 @@ module.exports = function (api) {
     "@babel/plugin-transform-arrow-functions",
     "@babel/plugin-transform-computed-properties",
     "@babel/plugin-transform-spread",
-    "@babel/plugin-transform-template-literals"
+    "@babel/plugin-transform-template-literals",
+    "@babel/plugin-transform-for-of"
   ];
 
   return {
