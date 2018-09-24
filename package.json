@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.8.32",
+  "version": "0.8.33",
   "description": "Build JSS components for Bootstrap by JSS",
   "author": "Sammi Song",
   "license": "MIT",
@@ -45,9 +45,12 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.1.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/plugin-transform-template-literals": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "ajv": "^6.5.0",
+    "babel-plugin-loop-optimizer": "^1.4.1",
     "coveralls": "^3.0.1",
     "cross-env": "^5.1.4",
     "eslint": "^5.6.0",

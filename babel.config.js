@@ -3,11 +3,14 @@ module.exports = function (api) {
 
   const presets = [
     "@babel/preset-env",
-    "@babel/preset-react"  
+    "@babel/preset-react"
   ];
 
   const plugins = [
-    
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-transform-computed-properties",
+    "@babel/plugin-transform-spread",
+    "@babel/plugin-transform-template-literals"
   ];
 
   return {
