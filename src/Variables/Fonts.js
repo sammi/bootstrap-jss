@@ -13,8 +13,10 @@ export const fontSizeLg = `${size(fontSizeBase).value * 1.25}${size(fontSizeBase
 export const fontSizeSm = `${size(fontSizeBase).value * 0.875}${size(fontSizeBase).unit}`
 
 export const fontWeightLight = 300
+export const fontWeightLighter = 'lighter'
 export const fontWeightNormal = 400
 export const fontWeightBold = 700
+export const fontWeightBolder = 'bolder'
 export const fontWeightBase = fontWeightNormal
 export const lineHeightBase = 1.5
 

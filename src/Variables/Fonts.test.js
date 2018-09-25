@@ -11,6 +11,8 @@ import {
   fontSizeLg,
   fontSizeSm,
   fontWeightLight,
+  fontWeightLighter,
+  fontWeightBolder,
   fontWeightNormal,
   fontWeightBold,
   fontWeightBase,
@@ -67,8 +69,10 @@ describe('Fonts', () => {
 
   it('Font Weight', () => {
     expect(fontWeightLight).toEqual(300)
+    expect(fontWeightLighter).toEqual('lighter')
     expect(fontWeightNormal).toEqual(400)
     expect(fontWeightBold).toEqual(700)
+    expect(fontWeightBolder).toEqual('bolder')
     expect(fontWeightBase).toEqual(fontWeightNormal)
     expect(lineHeightBase).toEqual(1.5)
   })
