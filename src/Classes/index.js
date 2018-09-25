@@ -23,6 +23,7 @@ import * as Modal from './Modal'
 import * as Tooltip from './Tooltip'
 import * as Popover from './Popover'
 import * as Carousel from './Carousel'
+import * as Print from './Print'
 
 const checkExported = true
 
@@ -52,5 +53,6 @@ export {
   Tooltip,
   Popover,
   Carousel,
+  Print,
   checkExported
 }
