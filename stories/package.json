@@ -7,10 +7,10 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@storybook/addon-storyshots": "^3.4.4",
-    "@storybook/react": "^3.4.4",
-    "babel-core": "^6.26.3",
-    "react-test-renderer": "^16.3.2"
+    "@babel/core": "^7.1.0",
+    "@storybook/addon-storyshots": "^3.4.11",
+    "@storybook/react": "^3.4.11",
+    "react-test-renderer": "^16.5.2"
   },
   "dependencies": {
     "bootstrap-jss": "link:..",
