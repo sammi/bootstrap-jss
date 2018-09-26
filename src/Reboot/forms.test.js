@@ -1,8 +1,6 @@
 import { labelMarginBottom } from '../Variables/Forms'
 
-import {
-  forms
-} from './forms'
+import { forms } from './forms'
 
 describe('Reboot', () => {
   it('forms', () => {

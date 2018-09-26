@@ -7,7 +7,7 @@ import { boxShadow } from './boxShadow'
 import { btnBoxShadow, btnFocusWidth, btnActiveBoxShadow } from '../Variables/Buttons'
 
 import { hover } from './hover'
-import {enableShadows} from '../Variables/Options'
+import { enableShadows } from '../Variables/Options'
 
 import { buttonVariant, buttonOutlineVariant, buttonSize } from './buttons'
 
@@ -239,7 +239,7 @@ describe('buttonVariants', () => {
     const lineHeight = 2
     const borderRadius = '10px'
     expect(buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius, true)).toEqual({
-      padding: `${paddingY} ${paddingX}`, 
+      padding: `${paddingY} ${paddingX}`,
       fontSize: fontSize,
       lineHeight: lineHeight,
       borderRadius: borderRadius
@@ -254,7 +254,7 @@ describe('buttonVariants', () => {
     const borderRadius = '10px'
 
     expect(buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius, false)).toEqual({
-      padding: `${paddingY} ${paddingX}`, 
+      padding: `${paddingY} ${paddingX}`,
       fontSize: fontSize,
       lineHeight: lineHeight,
       borderRadius: 0
@@ -269,7 +269,7 @@ describe('buttonVariants', () => {
     const borderRadius = '10px'
 
     expect(buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius)).toEqual({
-      padding: `${paddingY} ${paddingX}`, 
+      padding: `${paddingY} ${paddingX}`,
       fontSize: fontSize,
       lineHeight: lineHeight,
       borderRadius: borderRadius

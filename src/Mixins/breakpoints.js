@@ -1,8 +1,8 @@
-import {size} from '../Functions/size'
+import { size } from '../Functions/size'
 
 const breakpointNext = (name, breakpoints) => {
   let breakPointList = []
-  Object.keys(breakpoints).map(name => { breakPointList.push({name, value: breakpoints[name]}) })
+  Object.keys(breakpoints).map(name => { breakPointList.push({ name, value: breakpoints[name] }) })
   const sortBreakPointList = breakPointList.sort((a, b) => size(a.value).value > size(b.value).value)
 
   let namePosition = -1

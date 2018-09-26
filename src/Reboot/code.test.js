@@ -1,8 +1,6 @@
 import { fontFamilyMonospace } from '../Variables/Fonts'
 
-import {
-  code
-} from './code'
+import { code } from './code'
 
 describe('Reboot', () => {
   it('code', () => {

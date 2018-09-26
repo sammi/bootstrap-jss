@@ -1,8 +1,6 @@
 import { paragraphMarginBottom } from '../Variables/Paragraphs'
 
-import {
-  paragraphMargin
-} from './paragraphMargin'
+import { paragraphMargin } from './paragraphMargin'
 
 describe('Reboot', () => {
   // Reset margins on paragraphs

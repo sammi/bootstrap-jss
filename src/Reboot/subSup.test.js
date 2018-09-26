@@ -1,6 +1,4 @@
-import {
-  subSup
-} from './subSup'
+import { subSup } from './subSup'
 
 describe('Reboot', () => {
   it('subSup', () => {

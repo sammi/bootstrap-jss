@@ -1,6 +1,4 @@
-import {
-  blockquote
-} from './blockquote'
+import { blockquote } from './blockquote'
 
 describe('Reboot', () => {
   it('blockquote', () => {

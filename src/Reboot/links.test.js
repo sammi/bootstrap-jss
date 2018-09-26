@@ -1,9 +1,7 @@
 import { linkColor, linkDecoration, linkHoverColor, linkHoverDecoration } from '../Variables/Links'
 import { hover, hoverFocus } from '../Mixins/hover'
 
-import {
-  links
-} from './links'
+import { links } from './links'
 
 describe('Reboot', () => {
   it('links', () => {

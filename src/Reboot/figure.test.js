@@ -1,6 +1,4 @@
-import {
-  figure
-} from './figure'
+import { figure } from './figure'
 
 describe('Reboot', () => {
   it('figure', () => {

@@ -1,5 +1,5 @@
 //CSS image replacement
-import {textHide} from './textHide'
+import { textHide } from './textHide'
 describe('text hide', () => {
   it('text-hide', () => {
     expect(textHide()).toEqual({

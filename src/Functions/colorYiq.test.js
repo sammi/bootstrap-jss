@@ -1,6 +1,6 @@
-import {colorYiq} from './colorYiq'
+import { colorYiq } from './colorYiq'
 
-import {yiqTextDark, yiqTextLight} from '../Variables/Colors'
+import { yiqTextDark, yiqTextLight } from '../Variables/Colors'
 
 describe('colorYiq', () => {
   it('Color contrast', () => {

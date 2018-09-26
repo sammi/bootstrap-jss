@@ -1,8 +1,6 @@
 import { dtFontWeight } from '../Variables/Fonts'
 
-import {
-  list
-} from './list'
+import { list } from './list'
 
 describe('Reboot', () => {
   it('list', () => {

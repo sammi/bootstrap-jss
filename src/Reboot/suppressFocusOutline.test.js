@@ -1,6 +1,4 @@
-import {
-  suppressFocusOutline
-} from './suppressFocusOutline'
+import { suppressFocusOutline } from './suppressFocusOutline'
 
 describe('Reboot', () => {
   // Suppress the focus outline on elements that cannot be accessed via keyboard.

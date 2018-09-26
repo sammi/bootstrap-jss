@@ -1,4 +1,4 @@
-import {darken} from './darken'
+import { darken } from './darken'
 
 describe('darken', () => {
   it('darken', () => {

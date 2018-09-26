@@ -1,4 +1,4 @@
-import {fadeIn} from './fadeIn'
+import { fadeIn } from './fadeIn'
 
 describe('fadeIn', () => {
   it('fadeIn', () => {

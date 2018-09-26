@@ -47,18 +47,18 @@ const buttonVariant = (
       borderColor: borderColor
     },
     '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle':
-  myEnableGradients
-    ? {
-      color: colorYiq(activeBackgroundColor),
-      backgroundColor: activeBackgroundColor,
-      backgrounImage: 'none',
-      borderColor: activeBorderColor
-    }
-    : {
-      color: colorYiq(activeBackgroundColor),
-      backgroundColor: activeBackgroundColor,
-      borderColor: activeBorderColor
-    },
+      myEnableGradients
+        ? {
+          color: colorYiq(activeBackgroundColor),
+          backgroundColor: activeBackgroundColor,
+          backgrounImage: 'none',
+          borderColor: activeBorderColor
+        }
+        : {
+          color: colorYiq(activeBackgroundColor),
+          backgroundColor: activeBackgroundColor,
+          borderColor: activeBorderColor
+        },
     '&:focus': {
       boxShadow: myEnableShadows
         ? `${myBtnActiveBoxShadow}, 0 0 0 ${myBtnFocusWidth} ${rgba(borderColor, 0.5)}`

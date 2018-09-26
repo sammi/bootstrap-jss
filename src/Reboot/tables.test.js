@@ -1,8 +1,6 @@
 import { tableCellPadding, tableCaptionColor } from '../Variables/Tables'
 
-import {
-  tables
-} from './tables'
+import { tables } from './tables'
 
 describe('Reboot', () => {
   it('tables', () => {

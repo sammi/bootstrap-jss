@@ -1,4 +1,4 @@
-import {transitionBase} from '../Variables/Components'
+import { transitionBase } from '../Variables/Components'
 
 import { transition } from './transition'
 

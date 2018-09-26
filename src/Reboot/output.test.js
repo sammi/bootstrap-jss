@@ -1,6 +1,4 @@
-import {
-  output
-} from './output'
+import { output } from './output'
 
 describe('Reboot', () => {
   it('output', () => {

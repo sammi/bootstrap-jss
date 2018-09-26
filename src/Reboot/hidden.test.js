@@ -1,6 +1,4 @@
-import {
-  hidden
-} from './hidden'
+import { hidden } from './hidden'
 
 describe('Reboot', () => {
   it('hidden', () => {

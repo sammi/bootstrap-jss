@@ -1,6 +1,4 @@
-import {
-  dfn
-} from './dfn'
+import { dfn } from './dfn'
 
 describe('Reboot', () => {
   it('dfn', () => {

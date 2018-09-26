@@ -1,6 +1,4 @@
-import {
-  html5ForOldBrowsers
-} from './html5ForOldBrowsers'
+import { html5ForOldBrowsers } from './html5ForOldBrowsers'
 
 describe('Reboot', () => {
   // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)

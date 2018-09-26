@@ -1,6 +1,4 @@
-import {
-  image
-} from './image'
+import { image } from './image'
 
 describe('Reboot', () => {
   it('image', () => {

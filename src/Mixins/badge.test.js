@@ -1,8 +1,8 @@
-import {colorYiq} from '../Functions/colorYiq'
-import {darken} from '../Functions/darken'
+import { colorYiq } from '../Functions/colorYiq'
+import { darken } from '../Functions/darken'
 import { hoverFocus } from './hover'
 
-import {badgeVariant} from './badge'
+import { badgeVariant } from './badge'
 
 describe('badge', () => {
   it('badge', () => {

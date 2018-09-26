@@ -1,6 +1,4 @@
-import {
-  small
-} from './small'
+import { small } from './small'
 
 describe('Reboot', () => {
   it('small', () => {

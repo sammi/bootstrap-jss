@@ -1,2 +1,2 @@
 
-export const boxShadow = (isEnableShadow, ...shadow) => isEnableShadow ? {boxShadow: [...shadow]} : null
+export const boxShadow = (isEnableShadow, ...shadow) => isEnableShadow ? { boxShadow: [...shadow] } : null

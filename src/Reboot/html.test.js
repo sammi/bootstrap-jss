@@ -1,8 +1,6 @@
 import { black } from '../Variables/Colors'
 import { rgba } from '../Functions/rgba'
-import {
-  html
-} from './html'
+import { html } from './html'
 
 describe('Reboot', () => {
   it('html', () => {

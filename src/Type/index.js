@@ -33,8 +33,8 @@ import {
   blockquoteSmallColor
 } from '../Variables/Fonts'
 
-import {lists} from '../Mixins/lists'
-import {spacer} from '../Variables/Spacing'
+import { lists } from '../Mixins/lists'
+import { spacer } from '../Variables/Spacing'
 
 const checkExported = true
 
@@ -58,7 +58,6 @@ export default {
       fontWeight: leadFontWeight
     }
   },
-
   display: {
     '.display-1': {
       fontSize: display1Size,

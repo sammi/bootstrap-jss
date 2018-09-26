@@ -1,6 +1,4 @@
-import {
-  msViewPort
-} from './msViewPort'
+import { msViewPort } from './msViewPort'
 
 describe('Reboot', () => {
   // IE10+ doesn't honor `<meta name="viewport">` in some cases.

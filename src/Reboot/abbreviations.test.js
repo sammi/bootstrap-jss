@@ -1,6 +1,4 @@
-import {
-  abbreviations
-} from './abbreviations'
+import { abbreviations } from './abbreviations'
 
 describe('Reboot', () => {
   // Abbreviations

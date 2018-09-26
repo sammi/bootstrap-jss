@@ -1,9 +1,9 @@
-import {borderRadius as defaultBorderRadius} from '../Variables/Components'
+import { borderRadius as defaultBorderRadius } from '../Variables/Components'
 
-import {borderRadius, borderTopRadius, borderRightRadius, borderBottomRadius, borderLeftRadius} from './borderRadius'
+import { borderRadius, borderTopRadius, borderRightRadius, borderBottomRadius, borderLeftRadius } from './borderRadius'
 describe('Single side border-radius', () => {
   it('Single side border-radius', () => {
-    expect(borderRadius()).toEqual({borderRadius: defaultBorderRadius})
+    expect(borderRadius()).toEqual({ borderRadius: defaultBorderRadius })
     expect(borderRadius('0.3rem', false)).toEqual(null)
 
     expect(borderTopRadius()).toEqual({

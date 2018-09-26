@@ -1,7 +1,7 @@
 
-import {colorYiq} from '../Functions/colorYiq'
-import {darken} from '../Functions/darken'
-import {hoverFocus} from './hover'
+import { colorYiq } from '../Functions/colorYiq'
+import { darken } from '../Functions/darken'
+import { hoverFocus } from './hover'
 
 const badgeVariant = (bg) => ({
   color: colorYiq(bg),

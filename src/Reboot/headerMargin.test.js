@@ -1,8 +1,6 @@
 import { headingsMarginBottom } from '../Variables/Fonts'
 
-import {
-  headerMargin
-} from './headerMargin'
+import { headerMargin } from './headerMargin'
 
 describe('Reboot', () => {
   //
@@ -16,7 +14,8 @@ describe('Reboot', () => {
   // stylelint-disable selector-list-comma-newline-after
   it('headerMargin', () => {
     expect(headerMargin).toEqual({
-      'h1, h2, h3, h4, h5, h6': {marginTop: 0,
+      'h1, h2, h3, h4, h5, h6': {
+        marginTop: 0,
         marginBottom: headingsMarginBottom
       }
     })

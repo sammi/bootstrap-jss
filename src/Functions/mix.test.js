@@ -1,4 +1,4 @@
-import {mix} from './mix'
+import { mix } from './mix'
 
 describe('mix', () => {
   it('mix', () => {

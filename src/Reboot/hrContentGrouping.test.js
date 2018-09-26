@@ -1,6 +1,4 @@
-import {
-  hrContentGrouping
-} from './hrContentGrouping'
+import { hrContentGrouping } from './hrContentGrouping'
 
 describe('Reboot', () => {
   // Content grouping

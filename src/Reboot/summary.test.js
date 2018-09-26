@@ -1,6 +1,4 @@
-import {
-  summary
-} from './summary'
+import { summary } from './summary'
 
 describe('Reboot', () => {
   it('summary', () => {

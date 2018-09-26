@@ -1,6 +1,4 @@
-import {
-  address
-} from './address'
+import { address } from './address'
 
 describe('Reboot', () => {
   it('address', () => {

@@ -1,4 +1,4 @@
-import {lighten} from './lighten'
+import { lighten } from './lighten'
 
 describe('lighten', () => {
   it('lighten', () => {

@@ -1,5 +1,5 @@
 import Color from 'color'
-import {yiqContrastedThreshold, yiqTextDark, yiqTextLight} from '../Variables/Colors'
+import { yiqContrastedThreshold, yiqTextDark, yiqTextLight } from '../Variables/Colors'
 
 export const colorYiq = rawColor => {
   const rgbColor = Color(rawColor)

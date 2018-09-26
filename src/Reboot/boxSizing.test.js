@@ -1,6 +1,4 @@
-import {
-  boxSizing
-} from './boxSizing'
+import { boxSizing } from './boxSizing'
 
 describe('Reboot', () => {
   it('boxSizing', () => {

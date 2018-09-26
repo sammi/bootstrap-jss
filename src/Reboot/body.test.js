@@ -1,9 +1,7 @@
 import { fontFamilyBase, fontSizeBase, fontWeightBase, lineHeightBase } from '../Variables/Fonts'
 import { bodyColor, bodyBg } from '../Variables/Body'
 
-import {
-  body
-} from './body'
+import { body } from './body'
 
 describe('Reboot', () => {
   // Body

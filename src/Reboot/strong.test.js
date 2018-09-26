@@ -1,6 +1,4 @@
-import {
-  strong
-} from './strong'
+import { strong } from './strong'
 
 describe('Reboot', () => {
   it('strong', () => {

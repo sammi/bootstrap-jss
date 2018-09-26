@@ -12,63 +12,63 @@ import {
 describe('Breakpoint viewport sizes and media queries.', () => {
   it('breakpointNext', () => {
     expect(breakpointNext('sm',
-      {xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px'}
+      { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
     )).toEqual('md')
 
     expect(breakpointNext('sm',
-      {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
+      { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
     )).toEqual('md')
 
     expect(breakpointNext('sm',
-      {xs: 0, sm: '576px', xl: '1200px'}
+      { xs: 0, sm: '576px', xl: '1200px' }
     )).toEqual('xl')
 
     expect(breakpointNext('lg',
-      {xs: 0, sm: '576px', xl: '1200px'}
+      { xs: 0, sm: '576px', xl: '1200px' }
     )).toEqual(false)
 
     expect(breakpointNext('xl',
-      {xs: 0, sm: '576px', xl: '1200px'}
+      { xs: 0, sm: '576px', xl: '1200px' }
     )).toEqual(false)
 
     expect(breakpointNext('xs',
-      {xs: 0, sm: '576px', xl: '1200px'}
+      { xs: 0, sm: '576px', xl: '1200px' }
     )).toEqual('sm')
   })
 
   it('breakpointMin', () => {
     expect(breakpointMin('sm',
-      {xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px'}
+      { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
     )).toEqual('576px')
 
     expect(breakpointMin('xs',
-      {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
+      { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
     )).toEqual(null)
   })
 
   it('breakpointMax', () => {
     expect(breakpointMax('sm',
-      {xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px'}
+      { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
     )).toEqual('768px')
 
     expect(breakpointMax('xs',
-      {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
+      { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
     )).toEqual('576px')
 
     expect(breakpointMax('xl',
-      {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
+      { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
     )).toEqual(null)
   })
 
   it('breakpointInfix', () => {
-    expect(breakpointInfix('xs', {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'})).toEqual('')
-    expect(breakpointInfix('sm', {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'})).toEqual('-sm')
-    expect(breakpointInfix('xl', {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'})).toEqual('-xl')
+    expect(breakpointInfix('xs', { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' })).toEqual('')
+    expect(breakpointInfix('sm', { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' })).toEqual('-sm')
+    expect(breakpointInfix('xl', { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' })).toEqual('-xl')
   })
 
   it('mediaBreakpointUp', () => {
-    const breakpoints = {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
-    const contentStyles = {color: 'red'}
+    const breakpoints = { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
+    const contentStyles = { color: 'red' }
     expect(mediaBreakpointUp('xs', breakpoints, contentStyles)).toEqual(contentStyles)
 
     let mediaQuery = {}
@@ -78,8 +78,8 @@ describe('Breakpoint viewport sizes and media queries.', () => {
   })
 
   it('mediaBreakpointDown', () => {
-    const breakpoints = {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
-    const contentStyles = {color: 'red'}
+    const breakpoints = { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
+    const contentStyles = { color: 'red' }
     expect(mediaBreakpointDown('xl', breakpoints, contentStyles)).toEqual(contentStyles)
 
     let mediaQuery = {}
@@ -88,8 +88,8 @@ describe('Breakpoint viewport sizes and media queries.', () => {
   })
 
   it('mediaBreakpointsBetween', () => {
-    const breakpoints = {xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px'}
-    const contentStyles = {color: 'red'}
+    const breakpoints = { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
+    const contentStyles = { color: 'red' }
 
     let mediaQuery = {}
     mediaQuery['@media (max-width: 768px)'] = contentStyles
@@ -113,8 +113,8 @@ describe('Breakpoint viewport sizes and media queries.', () => {
   })
 
   it('mediaBreakpointsOnly', () => {
-    const breakpoints = {xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px'}
-    const contentStyles = {color: 'red'}
+    const breakpoints = { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
+    const contentStyles = { color: 'red' }
 
     let mediaQuery = {}
     mediaQuery['@media (max-width: 576px)'] = contentStyles
