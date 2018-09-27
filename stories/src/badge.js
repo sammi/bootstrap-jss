@@ -1,11 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import * as Bootstrap from 'bootstrap-jss'
+import { Reboot, Classes } from 'bootstrap-jss'
 import injectSheet, { ThemeProvider } from 'react-jss'
 
-const Reboot = Bootstrap.Reboot
-const { badge, badgeInButton, badgePill, badgeThemeColors } = Bootstrap.Classes.Badge
-const { btn, btnThemeColors, btnOutlineThemeColors, btnInsideLink } = Bootstrap.Classes.Buttons
+const { badge, badgeInButton, badgePill, badgeThemeColors } = Classes.Badge
+const { btn, btnThemeColors, btnOutlineThemeColors, btnInsideLink } = Classes.Buttons
 
 const badgeColors = badgeThemeColors()
 const btnColors = btnThemeColors()

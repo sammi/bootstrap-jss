@@ -1,14 +1,13 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import * as Bootstrap from 'bootstrap-jss'
+import { Reboot, Classes } from 'bootstrap-jss'
 import injectSheet, { ThemeProvider } from 'react-jss'
 import _ from 'lodash'
 import classNames from 'classnames'
 
-const { alert, alertHeading, alertLink, alertDismissible, alertThemeColors } = Bootstrap.Classes.Alert
-const { close, buttonClose } = Bootstrap.Classes.Close
-const { fade } = Bootstrap.Classes.Transitions
-const Reboot = Bootstrap.Reboot
+const { alert, alertHeading, alertLink, alertDismissible, alertThemeColors } = Classes.Alert
+const { close, buttonClose } = Classes.Close
+const { fade } = Classes.Transitions
 
 const themeColors = alertThemeColors()
 
@@ -86,7 +85,7 @@ storiesOf('Alert', module)
       {
         Object.keys(themeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <AlertDismissing show={true} onClose={ () => {} }>
+            <AlertDismissing show={true} onClose={() => { }}>
               <strong>{themeColorName}</strong> You should check in on some of those fields below.
             </AlertDismissing>
           </ThemeProvider>
