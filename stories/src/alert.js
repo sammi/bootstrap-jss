@@ -19,28 +19,28 @@ const styles = theme => ({
   },
   alertLink: {
     ...Reboot,
-    ...themeColors[theme.color],
     ...alertLink,
+    ...themeColors[theme.color],
   },
   alertHeading: {
     ...Reboot,
-    ...themeColors[theme.color],
     ...alertHeading,
+    ...themeColors[theme.color],
   },
   alertDismissible: {
     ...Reboot,
     ...alert,
-    ...themeColors[theme.color],
     ...alertDismissible,
     ...fade,
+    ...themeColors[theme.color],
   },
   close: {
     ...Reboot,
     ...alert,
-    ...themeColors[theme.color],
     ...close,
     ...buttonClose,
     ...alertDismissible.close,
+    ...themeColors[theme.color],
   }
 })
 
