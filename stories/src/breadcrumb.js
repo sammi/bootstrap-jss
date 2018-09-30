@@ -1,14 +1,29 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import injectSheet from 'react-jss'
-import { Functions, Classes } from 'bootstrap-jss'
+import { Reboot, Functions, Classes } from 'bootstrap-jss'
 
-var { breadcrumb, breadcrumbItem } = Classes.Breadcrumb
+const { breadcrumb, breadcrumbItem } = Classes.Breadcrumb
 const { quote } = Functions
 
-breadcrumbItem['& + &']["&::before"].content = quote('>')
+breadcrumbItem['& + &']["&::before"].content = quote('/')
 
-const Breadcrumb = injectSheet({ breadcrumb, breadcrumbItem })(({ classes }) => (
+const styles = {
+  breadcrumb: {
+    ...breadcrumb
+  },
+  breadcrumbItem: {
+    ...breadcrumbItem,
+    '& a': {
+      textDecoration: 'none'
+    },
+    '& a:hover': {
+      textDecoration: 'underline'
+    }
+  }
+}
+
+const Breadcrumb = injectSheet(styles)(({ classes }) => (
   <div>
     <nav>
       <ol className={classes.breadcrumb}>
