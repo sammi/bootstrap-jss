@@ -11,24 +11,26 @@ const btnColors = btnThemeColors()
 const styles = {
   btnGroup: {
     ...btnGroup,
+    marginRight: '2rem'
   },
   btnToolbar: {
-    ...btnToolbar
+    ...btnToolbar,
   },
   btn: {
     ...btn,
+    ...btnColors['btnPrimary']
   },
   btnLeft: {
     ...btn,
-    ...btnColors['btnSecondary']
+    ...btnColors['btnPrimary']
   },
   btnMiddle: {
     ...btn,
-    ...btnColors['btnSecondary']
+    ...btnColors['btnPrimary']
   },
   btnRight: {
     ...btn,
-    ...btnColors['btnSecondary']
+    ...btnColors['btnPrimary']
   }
 }
 
@@ -41,20 +43,20 @@ const BasicButtonGroup = injectSheet(styles)(({ classes }) =>
 )
 
 const ToolbarButtonGroup = injectSheet(styles)(({ classes }) =>
-  <div className={btnToolbar}>
-    <div className={btnGroup}>
-      <button type="button" className={btn}>1</button>
-      <button type="button" className={btn}>2</button>
-      <button type="button" className={btn}>3</button>
-      <button type="button" className={btn}>4</button>
+  <div className={classes.btnToolbar}>
+    <div className={classes.btnGroup}>
+      <button type="button" className={classes.btn}>1</button>
+      <button type="button" className={classes.btn}>2</button>
+      <button type="button" className={classes.btn}>3</button>
+      <button type="button" className={classes.btn}>4</button>
     </div>
-    <div className={btnGroup}>
-      <button type="button" className={btn}>5</button>
-      <button type="button" className={btn}>6</button>
-      <button type="button" className={btn}>7</button>
+    <div className={classes.btnGroup}>
+      <button type="button" className={classes.btn}>5</button>
+      <button type="button" className={classes.btn}>6</button>
+      <button type="button" className={classes.btn}>7</button>
     </div>
-    <div className={btnGroup}>
-      <button type="button" className={btn}>8</button>
+    <div className={classes.btnGroup}>
+      <button type="button" className={classes.btn}>8</button>
     </div>
   </div>
 )

@@ -1,18 +1,21 @@
 import { hover } from '../Mixins/hover'
 import { btnBorderWidth, btnPaddingXSm, btnPaddingXLg, btnPaddingX, btnActiveBoxShadow } from '../Variables/Buttons'
 import { borderRightRadius, borderLeftRadius, borderBottomRadius, borderTopRadius } from '../Mixins/borderRadius'
-import { btnSm, btnLg } from './Buttons'
+import { btn, btnLink, btnSm, btnLg } from './Buttons'
 import { size } from '../Functions/size'
 import { boxShadow } from '../Mixins/boxShadow'
+import { inputGroup } from './InputGroup'
 
-import { btnGroupVertial, btnGroup, btnToolbar, btnSizing, dropdownToggleSplit, dropdownToggle, btnGroupVertical, btnGroupToggle } from './ButtonGroup'
+import {dropdownToggle, btnGroup, dropdownToggleSplit, btnGroupVertial, btnToolbar, btnSizing, btnGroupVertical, btnGroupToggle } from './ButtonGroup'
 
 describe('button group', () => {
+
   const base = {
+    btn: btn,
     position: 'relative',
     display: 'inline-flex',
     verticalAlign: 'middle',
-    '> btn': {
+    '> $btn': {
       position: 'relative',
       flex: `0 1 auto`,
       ...hover({
@@ -21,67 +24,45 @@ describe('button group', () => {
       '&:focus,&:active,&.active': {
         zIndex: 1
       }
-    },
-    'btn + btn,btn + btnGroup,btnGroup + btn,btnGroup + btnGroup': {
-      marginLeft: `-${btnBorderWidth}`
     }
   }
-
-  it('btn-group-vertial', () => {
-    expect(btnGroupVertial).toEqual(base)
+  it('dropdown-toggle', () => {
+    expect(dropdownToggle).toEqual({
+      btnLink: btnLink,
+      ...boxShadow(btnActiveBoxShadow),
+      '&$btnLink': {
+        ...boxShadow('none')
+      }
+    })
   })
 
-  const dropdownToggleExpectValue = {
-    ...boxShadow(btnActiveBoxShadow),
-    '&btnLink': {
-      ...boxShadow('none')
-    }
-  }
-
-  it('btn-group', () => {
+  it('btn-grouo', () => {
     expect(btnGroup).toEqual({
       ...base,
-      '> .btn:first-child': {
+      dropdownToggle: dropdownToggle,
+      '> $btn:first-child': {
         marginLeft: 0
       },
-      '> btn:not(:last-child):not(dropdownToggle),> btnGroup:not(:last-child) > btn': {
+      '> $btn:not(:last-child):not($dropdownToggle),> &:not(:last-child) > $btn': {
         ...borderRightRadius(0)
       },
-      '> btn:not(:first-child),> btnGroup:not(:first-child) > btn': {
+      '> $btn:not(:first-child),> &:not(:first-child) > $btn': {
         ...borderLeftRadius(0)
       },
       show: {
-        ...dropdownToggleExpectValue
+        ...dropdownToggle
       }
     })
   })
 
   it('btn-toolbar', () => {
     expect(btnToolbar).toEqual({
+      inputGroup: inputGroup,
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'flex-start',
-      inputGroup: {
+      '$inputGroup': {
         width: 'auto'
-      }
-    })
-  })
-
-  it('button group sizing', () => {
-    expect(btnSizing).toEqual({
-      'btnGroupSm > btn': {
-        ...btnSm
-      },
-      'btnGroupLg > btn': {
-        ...btnLg
-      },
-      'btn-sm + .dropdown-toggle-split': {
-        paddingRight: `${size(btnPaddingXSm).value * 0.75}${size(btnPaddingXSm).unit}`,
-        paddingLeft: `${size(btnPaddingXSm).value * 0.75}${size(btnPaddingXSm).unit}`
-      },
-      'btnLg + dropdownToggleSplit': {
-        paddingRight: `${size(btnPaddingXLg).value * 0.75})${size(btnPaddingXLg).unit}`,
-        paddingLeft: `${size(btnPaddingXLg).value * 0.75})${size(btnPaddingXLg).unit}`
       }
     })
   })
@@ -99,26 +80,60 @@ describe('button group', () => {
     })
   })
 
+  it('btn-sizing', () => {
+    expect(btnSizing).toEqual({
+      btn: btn,
+      btnSm: btnSm,
+      btnLg: btnLg,
+      btnGroupSm: btnSm,
+      btnGroupLg: btnLg,
+      dropdownToggleSplit: dropdownToggleSplit,
+      '$btnGroupSm > $btn': {
+        ...btnSm
+      },
+      '$btnGroupLg > $btn': {
+        ...btnLg
+      },
+      '$btnSm + $dropdownToggleSplit': {
+        paddingRight: `${size(btnPaddingXSm).value * 0.75}${size(btnPaddingXSm).unit}`,
+        paddingLeft: `${size(btnPaddingXSm).value * 0.75}${size(btnPaddingXSm).unit}`
+      },
+      '$btnLg + $dropdownToggleSplit': {
+        paddingRight: `${size(btnPaddingXLg).value * 0.75})${size(btnPaddingXLg).unit}`,
+        paddingLeft: `${size(btnPaddingXLg).value * 0.75})${size(btnPaddingXLg).unit}`
+      }
+    })
+  })
+
   it('dropdown-toggle', () => {
-    expect(dropdownToggle).toEqual(dropdownToggleExpectValue)
+    expect(dropdownToggle).toEqual({
+      btnLink: btnLink,
+      ...boxShadow(btnActiveBoxShadow),
+      '&$btnLink': {
+        ...boxShadow('none')
+      }
+    })
   })
 
   it('btn-group-vertical', () => {
     expect(btnGroupVertical).toEqual({
+      btn: btn,
+      btnGroup: btnGroup,
+      dropdownToggle: dropdownToggle,
       flexDirection: 'column',
       alignItems: 'flex-start',
       justifyContent: 'center',
-      'btn, btn-group': {
+      '$btn, $btnGroup': {
         width: '100%'
       },
-      '> btn + btn,> btn + btnGroup,> btnGroup + btn,> btnGroup + btnGroup': {
+      '> $btn + $btn,> $btn + $btnGroup,> $btnGroup + $btn,> $btnGroup + $btnGroup': {
         marginTop: `-${btnBorderWidth}`,
         marginLeft: 0
       },
-      '> .btn:not(:last-child):not(.dropdown-toggle),> .btn-group:not(:last-child) > .btn': {
+      '> $btn:not(:last-child):not($dropdownToggle),> $btnGroup:not(:last-child) > $btn': {
         ...borderBottomRadius(0)
       },
-      '> .btn:not(:first-child),> .btn-group:not(:first-child) > .btn': {
+      '> $btn:not(:first-child),> $btnGroup:not(:first-child) > .btn': {
         ...borderTopRadius(0)
       }
     })
@@ -126,11 +141,13 @@ describe('button group', () => {
 
   it('btn-group-toggle', () => {
     expect(btnGroupToggle).toEqual({
-      '> btn,> btnGroup > btn': {
+      btn: btn,
+      btnGroup: btnGroup,
+      '> $btn,> $btnGroup > $btn': {
         marginBottom: 0,
         'input[type="radio"],input[type="checkbox"]': {
           position: 'absolute',
-          clip: `rect(0, 0, 0, 0)`,
+          clip: 'rect(0, 0, 0, 0)',
           pointerEvents: 'none'
         }
       }

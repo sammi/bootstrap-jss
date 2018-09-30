@@ -1,15 +1,17 @@
 import { hover } from '../Mixins/hover'
 import { btnBorderWidth, btnPaddingXSm, btnPaddingXLg, btnPaddingX, btnActiveBoxShadow } from '../Variables/Buttons'
 import { borderRightRadius, borderLeftRadius, borderBottomRadius, borderTopRadius } from '../Mixins/borderRadius'
-import { btnSm, btnLg } from './Buttons'
+import { btn, btnLink, btnSm, btnLg } from './Buttons'
 import { size } from '../Functions/size'
 import { boxShadow } from '../Mixins/boxShadow'
+import { inputGroup } from './InputGroup'
 
 const base = {
+  btn: btn,
   position: 'relative',
   display: 'inline-flex',
   verticalAlign: 'middle',
-  '> btn': {
+  '> $btn': {
     position: 'relative',
     flex: `0 1 auto`,
     ...hover({
@@ -18,30 +20,27 @@ const base = {
     '&:focus,&:active,&.active': {
       zIndex: 1
     }
-  },
-  'btn + btn,btn + btnGroup,btnGroup + btn,btnGroup + btnGroup': {
-    marginLeft: `-${btnBorderWidth}`
   }
 }
 
-const btnGroupVertial = base
-
 const dropdownToggle = {
+  btnLink: btnLink,
   ...boxShadow(btnActiveBoxShadow),
-  '&btnLink': {
+  '&$btnLink': {
     ...boxShadow('none')
   }
 }
 
 const btnGroup = {
   ...base,
-  '> .btn:first-child': {
+  dropdownToggle: dropdownToggle,
+  '> $btn:first-child': {
     marginLeft: 0
   },
-  '> btn:not(:last-child):not(dropdownToggle),> btnGroup:not(:last-child) > btn': {
+  '> $btn:not(:last-child):not($dropdownToggle),> &:not(:last-child) > $btn': {
     ...borderRightRadius(0)
   },
-  '> btn:not(:first-child),> btnGroup:not(:first-child) > btn': {
+  '> $btn:not(:first-child),> &:not(:first-child) > $btn': {
     ...borderLeftRadius(0)
   },
   show: {
@@ -49,29 +48,21 @@ const btnGroup = {
   }
 }
 
-const btnToolbar = {
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'flex-start',
-  inputGroup: {
-    width: 'auto'
+const btnGroupVertial = {
+  ...base,
+  btnGroup: btnGroup,
+  '$btn + $btn,$btn + $btnGroup,$btnGroup + $btn,$btnGroup + $btnGroup': {
+    marginLeft: `-${btnBorderWidth}`
   }
 }
 
-const btnSizing = {
-  'btnGroupSm > btn': {
-    ...btnSm
-  },
-  'btnGroupLg > btn': {
-    ...btnLg
-  },
-  'btn-sm + .dropdown-toggle-split': {
-    paddingRight: `${size(btnPaddingXSm).value * 0.75}${size(btnPaddingXSm).unit}`,
-    paddingLeft: `${size(btnPaddingXSm).value * 0.75}${size(btnPaddingXSm).unit}`
-  },
-  'btnLg + dropdownToggleSplit': {
-    paddingRight: `${size(btnPaddingXLg).value * 0.75})${size(btnPaddingXLg).unit}`,
-    paddingLeft: `${size(btnPaddingXLg).value * 0.75})${size(btnPaddingXLg).unit}`
+const btnToolbar = {
+  inputGroup: inputGroup,
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'flex-start',
+  '$inputGroup': {
+    width: 'auto'
   }
 }
 
@@ -86,42 +77,70 @@ const dropdownToggleSplit = {
   }
 }
 
+const btnSizing = {
+  btn: btn,
+  btnSm: btnSm,
+  btnLg: btnLg,
+  btnGroupSm: btnSm,
+  btnGroupLg: btnLg,
+  dropdownToggleSplit: dropdownToggleSplit,
+  '$btnGroupSm > $btn': {
+    ...btnSm
+  },
+  '$btnGroupLg > $btn': {
+    ...btnLg
+  },
+  '$btnSm + $dropdownToggleSplit': {
+    paddingRight: `${size(btnPaddingXSm).value * 0.75}${size(btnPaddingXSm).unit}`,
+    paddingLeft: `${size(btnPaddingXSm).value * 0.75}${size(btnPaddingXSm).unit}`
+  },
+  '$btnLg + $dropdownToggleSplit': {
+    paddingRight: `${size(btnPaddingXLg).value * 0.75})${size(btnPaddingXLg).unit}`,
+    paddingLeft: `${size(btnPaddingXLg).value * 0.75})${size(btnPaddingXLg).unit}`
+  }
+}
+
 const btnGroupVertical = {
+  btn: btn,
+  btnGroup: btnGroup,
+  dropdownToggle: dropdownToggle,
   flexDirection: 'column',
   alignItems: 'flex-start',
   justifyContent: 'center',
-  'btn, btn-group': {
+  '$btn, $btnGroup': {
     width: '100%'
   },
-  '> btn + btn,> btn + btnGroup,> btnGroup + btn,> btnGroup + btnGroup': {
+  '> $btn + $btn,> $btn + $btnGroup,> $btnGroup + $btn,> $btnGroup + $btnGroup': {
     marginTop: `-${btnBorderWidth}`,
     marginLeft: 0
   },
-  '> .btn:not(:last-child):not(.dropdown-toggle),> .btn-group:not(:last-child) > .btn': {
+  '> $btn:not(:last-child):not($dropdownToggle),> $btnGroup:not(:last-child) > $btn': {
     ...borderBottomRadius(0)
   },
-  '> .btn:not(:first-child),> .btn-group:not(:first-child) > .btn': {
+  '> $btn:not(:first-child),> $btnGroup:not(:first-child) > .btn': {
     ...borderTopRadius(0)
   }
 }
 
 const btnGroupToggle = {
-  '> btn,> btnGroup > btn': {
+  btn: btn,
+  btnGroup: btnGroup,
+  '> $btn,> $btnGroup > $btn': {
     marginBottom: 0,
     'input[type="radio"],input[type="checkbox"]': {
       position: 'absolute',
-      clip: `rect(0, 0, 0, 0)`,
+      clip: 'rect(0, 0, 0, 0)',
       pointerEvents: 'none'
     }
   }
 }
 
 export {
-  btnGroupVertial,
   btnGroup,
+  btnGroupVertial,
   btnToolbar,
-  btnSizing,
   dropdownToggleSplit,
+  btnSizing,
   dropdownToggle,
   btnGroupVertical,
   btnGroupToggle
