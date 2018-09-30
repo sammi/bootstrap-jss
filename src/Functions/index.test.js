@@ -5,6 +5,7 @@ import { lighten } from './lighten'
 import { mix } from './mix'
 import { rgba } from './rgba'
 import { size } from './size'
+import { quote } from './quote'
 
 import * as Functions from './index'
 
@@ -18,6 +19,7 @@ describe('Functions', () => {
       mix,
       rgba,
       size,
+      quote,
       checkExported: true
     })
   })

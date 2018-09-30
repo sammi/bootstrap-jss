@@ -5,6 +5,7 @@ import { lighten } from './lighten'
 import { mix } from './mix'
 import { rgba } from './rgba'
 import { size } from './size'
+import { quote } from './quote'
 
 const checkExported = true
 export {
@@ -15,5 +16,6 @@ export {
   mix,
   rgba,
   size,
+  quote,
   checkExported
 }

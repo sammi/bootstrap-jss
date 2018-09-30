@@ -23,7 +23,7 @@ describe('breadcrumb', () => {
 
   it('breadcrumb-item', () => {
     expect(breadcrumbItem).toEqual({
-      '+ breadcrumbItem': {
+      '& + &': {
         paddingLeft: breadcrumbItemPadding,
         '&::before': {
           display: 'inline-block',
@@ -32,7 +32,7 @@ describe('breadcrumb', () => {
           content: breadcrumbDivider
         }
       },
-      '+ breadcrumbItem:hover::before': {
+      '& + &:hover::before': {
         textDecoration: 'none'
       },
       '&.active': {

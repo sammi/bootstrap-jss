@@ -1,5 +1,6 @@
 import { grays } from './Colors'
 import { borderRadius } from './Components'
+import { quote } from '../Functions/quote'
 
 import {
   breadcrumbPaddingY,
@@ -24,7 +25,7 @@ describe('Breadcrumbs', () => {
     expect(breadcrumbBg).toEqual(grays._200)
     expect(breadcrumbDividerColor).toEqual(grays._600)
     expect(breadcrumbActiveColor).toEqual(grays._600)
-    expect(breadcrumbDivider).toEqual('quote("/")')
+    expect(breadcrumbDivider).toEqual(quote('/'))
 
     expect(breadcrumbBorderRadius).toEqual(borderRadius)
   })

@@ -17,7 +17,7 @@ const breadcrumb = {
 }
 
 const breadcrumbItem = {
-  '+ breadcrumbItem': {
+  '& + &': {
     paddingLeft: breadcrumbItemPadding,
     '&::before': {
       display: 'inline-block',
@@ -26,7 +26,7 @@ const breadcrumbItem = {
       content: breadcrumbDivider
     }
   },
-  '+ breadcrumbItem:hover::before': {
+  '& + &:hover::before': {
     textDecoration: 'none'
   },
   '&.active': {

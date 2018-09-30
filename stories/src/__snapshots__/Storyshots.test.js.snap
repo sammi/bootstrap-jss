@@ -995,6 +995,71 @@ exports[`Storyshots Badge Span badges 1`] = `
 </div>
 `;
 
+exports[`Storyshots Breadcrumb breadcrumb 1`] = `
+<div>
+  <nav>
+    <ol
+      className="Component-breadcrumb-0-1-209"
+    >
+      <li
+        className="Component-breadcrumbItem-0-1-210"
+      >
+        Home
+      </li>
+    </ol>
+  </nav>
+  <nav>
+    <ol
+      className="Component-breadcrumb-0-1-209"
+    >
+      <li
+        className="Component-breadcrumbItem-0-1-210"
+      >
+        <a
+          href="#"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        className="Component-breadcrumbItem-0-1-210"
+      >
+        Library
+      </li>
+    </ol>
+  </nav>
+  <nav>
+    <ol
+      className="Component-breadcrumb-0-1-209"
+    >
+      <li
+        className="Component-breadcrumbItem-0-1-210"
+      >
+        <a
+          href="#"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        className="Component-breadcrumbItem-0-1-210"
+      >
+        <a
+          href="#"
+        >
+          Library
+        </a>
+      </li>
+      <li
+        className="Component-breadcrumbItem-0-1-210"
+      >
+        Data
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
 exports[`Storyshots Reboot Reboot elements 1`] = `
 <div>
   <div>
