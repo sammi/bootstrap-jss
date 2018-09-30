@@ -46,11 +46,8 @@ export const btn = {
     '&:focus': {
       ...boxShadow(enableShadows, btnFocusBoxShadow, btnActiveBoxShadow)
     }
-  }
-}
-
-export const btnInsideLink = {
-  'a.btn.disabled, fieldset:disabled a.btn': {
+  },
+  'a.&.disabled, fieldset:disabled a.&': {
     pointerEvents: 'none'
   }
 }
@@ -87,14 +84,11 @@ export const btnSm = {
 export const btnBlock = {
   display: 'block',
   width: '100%',
-  '+ btnBlock': {
+  '& + &': {
     marginTop: btnBlockSpacingY
-  }
-}
-
-export const btnBlockOverrides = {
+  },
   'input[type="submit"],input[type="reset"],input[type="button"]': {
-    '&.btn-block': {
+    '&.&': {
       width: '100%'
     }
   }

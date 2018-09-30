@@ -23,9 +23,7 @@ import {
   btnSm,
   btnBlock,
   btnThemeColors,
-  btnOutlineThemeColors,
-  btnInsideLink,
-  btnBlockOverrides
+  btnOutlineThemeColors
 } from './Buttons'
 
 describe('Button classes', () => {
@@ -60,20 +58,12 @@ describe('Button classes', () => {
         '&:focus': {
           ...boxShadow(enableShadows, btnFocusBoxShadow, btnActiveBoxShadow)
         }
-      }
-    })
-  })
-
-  // a.btn.disabled,
-  // fieldset:disabled a.btn
-  it('Button inside linke', () => {
-    expect(btnInsideLink).toEqual({
-      'a.btn.disabled, fieldset:disabled a.btn': {
+      },
+      'a.&.disabled, fieldset:disabled a.&': {
         pointerEvents: 'none'
       }
     })
   })
-
   it('btnThemeColors', () => {
     const btnColors = btnThemeColors()
     Object.keys(themeColors).forEach(themeColorName => {
@@ -131,16 +121,11 @@ describe('Button classes', () => {
     expect(btnBlock).toEqual({
       display: 'block',
       width: '100%',
-      '+ btnBlock': {
+      '& + &': {
         marginTop: btnBlockSpacingY
-      }
-    })
-  })
-
-  it('Specificity overrides', () => {
-    expect(btnBlockOverrides).toEqual({
+      },
       'input[type="submit"],input[type="reset"],input[type="button"]': {
-        '&.btn-block': {
+        '&.&': {
           width: '100%'
         }
       }
