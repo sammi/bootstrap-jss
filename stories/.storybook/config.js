@@ -5,6 +5,7 @@ function loadStories() {
   require('../src/alert.js')
   require('../src/badge.js')
   require('../src/breadcrumb.js')
+  require('../src/buttons.js')
 }
 
 configure(loadStories, module)

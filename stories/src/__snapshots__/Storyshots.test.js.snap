@@ -1060,6 +1060,112 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
 </div>
 `;
 
+exports[`Storyshots Buttons Outline Buttons 1`] = `
+<div>
+  <button
+    className="Component-btn-0-1-219"
+    type="button"
+  >
+    btnOutlinePrimary
+  </button>
+  <button
+    className="Component-btn-0-1-220"
+    type="button"
+  >
+    btnOutlineSecondary
+  </button>
+  <button
+    className="Component-btn-0-1-221"
+    type="button"
+  >
+    btnOutlineSuccess
+  </button>
+  <button
+    className="Component-btn-0-1-222"
+    type="button"
+  >
+    btnOutlineInfo
+  </button>
+  <button
+    className="Component-btn-0-1-223"
+    type="button"
+  >
+    btnOutlineWarning
+  </button>
+  <button
+    className="Component-btn-0-1-224"
+    type="button"
+  >
+    btnOutlineDanger
+  </button>
+  <button
+    className="Component-btn-0-1-225"
+    type="button"
+  >
+    btnOutlineLight
+  </button>
+  <button
+    className="Component-btn-0-1-226"
+    type="button"
+  >
+    btnOutlineDark
+  </button>
+</div>
+`;
+
+exports[`Storyshots Buttons Simple Buttons 1`] = `
+<div>
+  <button
+    className="Component-btn-0-1-211"
+    type="button"
+  >
+    btnPrimary
+  </button>
+  <button
+    className="Component-btn-0-1-212"
+    type="button"
+  >
+    btnSecondary
+  </button>
+  <button
+    className="Component-btn-0-1-213"
+    type="button"
+  >
+    btnSuccess
+  </button>
+  <button
+    className="Component-btn-0-1-214"
+    type="button"
+  >
+    btnInfo
+  </button>
+  <button
+    className="Component-btn-0-1-215"
+    type="button"
+  >
+    btnWarning
+  </button>
+  <button
+    className="Component-btn-0-1-216"
+    type="button"
+  >
+    btnDanger
+  </button>
+  <button
+    className="Component-btn-0-1-217"
+    type="button"
+  >
+    btnLight
+  </button>
+  <button
+    className="Component-btn-0-1-218"
+    type="button"
+  >
+    btnDark
+  </button>
+</div>
+`;
+
 exports[`Storyshots Reboot Reboot elements 1`] = `
 <div>
   <div>
