@@ -3,6 +3,7 @@ import * as Close from './Close'
 import * as Transitions from './Transitions'
 import * as Badge from './Badge'
 import * as Buttons from './Buttons'
+import * as ButtonGroup from './ButtonGroup'
 import * as Images from './Images'
 import * as Code from './Code'
 import * as Grid from './Grid'
@@ -33,6 +34,7 @@ export {
   Transitions,
   Badge,
   Buttons,
+  ButtonGroup,
   Images,
   Code,
   Grid,

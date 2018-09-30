@@ -1060,6 +1060,527 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
 </div>
 `;
 
+exports[`Storyshots Button Groups Basic example 1`] = `
+<div
+  className="Component-btnGroup-0-1-227"
+>
+  <button
+    className="Component-btnLeft-0-1-230"
+    type="button"
+  >
+    Left
+  </button>
+  <button
+    className="Component-btnMiddle-0-1-231"
+    type="button"
+  >
+    Middle
+  </button>
+  <button
+    className="Component-btnRight-0-1-232"
+    type="button"
+  >
+    Right
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button Groups Button Toolbar 1`] = `
+<div
+  className={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "inputGroup": Object {
+        "width": "auto",
+      },
+      "justifyContent": "flex-start",
+    }
+  }
+>
+  <div
+    className={
+      Object {
+        "> .btn:first-child": Object {
+          "marginLeft": 0,
+        },
+        "> btn": Object {
+          "&:focus,&:active,&.active": Object {
+            "zIndex": 1,
+          },
+          "&:hover": Object {
+            "zIndex": 1,
+          },
+          "flex": "0 1 auto",
+          "position": "relative",
+        },
+        "> btn:not(:first-child),> btnGroup:not(:first-child) > btn": Object {
+          "borderBottomLeftRadius": ".25rem",
+          "borderTopLeftRadius": ".25rem",
+        },
+        "> btn:not(:last-child):not(dropdownToggle),> btnGroup:not(:last-child) > btn": Object {
+          "borderBottomRightRadius": ".25rem",
+          "borderTopRightRadius": ".25rem",
+        },
+        "btn + btn,btn + btnGroup,btnGroup + btn,btnGroup + btnGroup": Object {
+          "marginLeft": "-1px",
+        },
+        "display": "inline-flex",
+        "position": "relative",
+        "show": Object {
+          "&btnLink": Object {
+            "boxShadow": Array [],
+          },
+          "boxShadow": Array [],
+        },
+        "verticalAlign": "middle",
+      }
+    }
+  >
+    <button
+      className={
+        Object {
+          "&.disabled, &:disabled": Object {
+            "opacity": 0.65,
+          },
+          "&:focus, &.focus": Object {
+            "boxShadow": "0 0 0 .2rem rgba(0, 123, 255, 0.25)",
+            "outline": 0,
+          },
+          "&:hover, &:focus": Object {
+            "textDecoration": "none",
+          },
+          "&:not(:disabled):not(.disabled)": Object {
+            "cursor": "pointer",
+          },
+          "&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active": Object {
+            "&:focus": Object {},
+            "backgroundImage": "none",
+          },
+          "@media screen and (prefers-reduced-motion: reduce)": Object {
+            "transition": "none",
+          },
+          "border": "1px solid transparent",
+          "borderRadius": ".25rem",
+          "display": "inline-block",
+          "fontSize": "1rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "padding": ".375rem .75rem",
+          "textAlign": "center",
+          "transition": Array [
+            "all",
+            "0.2s",
+            "ease-in-out",
+          ],
+          "userSelect": "none",
+          "verticalAlign": "middle",
+          "whiteSpace": "nowrap",
+        }
+      }
+      type="button"
+    >
+      1
+    </button>
+    <button
+      className={
+        Object {
+          "&.disabled, &:disabled": Object {
+            "opacity": 0.65,
+          },
+          "&:focus, &.focus": Object {
+            "boxShadow": "0 0 0 .2rem rgba(0, 123, 255, 0.25)",
+            "outline": 0,
+          },
+          "&:hover, &:focus": Object {
+            "textDecoration": "none",
+          },
+          "&:not(:disabled):not(.disabled)": Object {
+            "cursor": "pointer",
+          },
+          "&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active": Object {
+            "&:focus": Object {},
+            "backgroundImage": "none",
+          },
+          "@media screen and (prefers-reduced-motion: reduce)": Object {
+            "transition": "none",
+          },
+          "border": "1px solid transparent",
+          "borderRadius": ".25rem",
+          "display": "inline-block",
+          "fontSize": "1rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "padding": ".375rem .75rem",
+          "textAlign": "center",
+          "transition": Array [
+            "all",
+            "0.2s",
+            "ease-in-out",
+          ],
+          "userSelect": "none",
+          "verticalAlign": "middle",
+          "whiteSpace": "nowrap",
+        }
+      }
+      type="button"
+    >
+      2
+    </button>
+    <button
+      className={
+        Object {
+          "&.disabled, &:disabled": Object {
+            "opacity": 0.65,
+          },
+          "&:focus, &.focus": Object {
+            "boxShadow": "0 0 0 .2rem rgba(0, 123, 255, 0.25)",
+            "outline": 0,
+          },
+          "&:hover, &:focus": Object {
+            "textDecoration": "none",
+          },
+          "&:not(:disabled):not(.disabled)": Object {
+            "cursor": "pointer",
+          },
+          "&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active": Object {
+            "&:focus": Object {},
+            "backgroundImage": "none",
+          },
+          "@media screen and (prefers-reduced-motion: reduce)": Object {
+            "transition": "none",
+          },
+          "border": "1px solid transparent",
+          "borderRadius": ".25rem",
+          "display": "inline-block",
+          "fontSize": "1rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "padding": ".375rem .75rem",
+          "textAlign": "center",
+          "transition": Array [
+            "all",
+            "0.2s",
+            "ease-in-out",
+          ],
+          "userSelect": "none",
+          "verticalAlign": "middle",
+          "whiteSpace": "nowrap",
+        }
+      }
+      type="button"
+    >
+      3
+    </button>
+    <button
+      className={
+        Object {
+          "&.disabled, &:disabled": Object {
+            "opacity": 0.65,
+          },
+          "&:focus, &.focus": Object {
+            "boxShadow": "0 0 0 .2rem rgba(0, 123, 255, 0.25)",
+            "outline": 0,
+          },
+          "&:hover, &:focus": Object {
+            "textDecoration": "none",
+          },
+          "&:not(:disabled):not(.disabled)": Object {
+            "cursor": "pointer",
+          },
+          "&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active": Object {
+            "&:focus": Object {},
+            "backgroundImage": "none",
+          },
+          "@media screen and (prefers-reduced-motion: reduce)": Object {
+            "transition": "none",
+          },
+          "border": "1px solid transparent",
+          "borderRadius": ".25rem",
+          "display": "inline-block",
+          "fontSize": "1rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "padding": ".375rem .75rem",
+          "textAlign": "center",
+          "transition": Array [
+            "all",
+            "0.2s",
+            "ease-in-out",
+          ],
+          "userSelect": "none",
+          "verticalAlign": "middle",
+          "whiteSpace": "nowrap",
+        }
+      }
+      type="button"
+    >
+      4
+    </button>
+  </div>
+  <div
+    className={
+      Object {
+        "> .btn:first-child": Object {
+          "marginLeft": 0,
+        },
+        "> btn": Object {
+          "&:focus,&:active,&.active": Object {
+            "zIndex": 1,
+          },
+          "&:hover": Object {
+            "zIndex": 1,
+          },
+          "flex": "0 1 auto",
+          "position": "relative",
+        },
+        "> btn:not(:first-child),> btnGroup:not(:first-child) > btn": Object {
+          "borderBottomLeftRadius": ".25rem",
+          "borderTopLeftRadius": ".25rem",
+        },
+        "> btn:not(:last-child):not(dropdownToggle),> btnGroup:not(:last-child) > btn": Object {
+          "borderBottomRightRadius": ".25rem",
+          "borderTopRightRadius": ".25rem",
+        },
+        "btn + btn,btn + btnGroup,btnGroup + btn,btnGroup + btnGroup": Object {
+          "marginLeft": "-1px",
+        },
+        "display": "inline-flex",
+        "position": "relative",
+        "show": Object {
+          "&btnLink": Object {
+            "boxShadow": Array [],
+          },
+          "boxShadow": Array [],
+        },
+        "verticalAlign": "middle",
+      }
+    }
+  >
+    <button
+      className={
+        Object {
+          "&.disabled, &:disabled": Object {
+            "opacity": 0.65,
+          },
+          "&:focus, &.focus": Object {
+            "boxShadow": "0 0 0 .2rem rgba(0, 123, 255, 0.25)",
+            "outline": 0,
+          },
+          "&:hover, &:focus": Object {
+            "textDecoration": "none",
+          },
+          "&:not(:disabled):not(.disabled)": Object {
+            "cursor": "pointer",
+          },
+          "&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active": Object {
+            "&:focus": Object {},
+            "backgroundImage": "none",
+          },
+          "@media screen and (prefers-reduced-motion: reduce)": Object {
+            "transition": "none",
+          },
+          "border": "1px solid transparent",
+          "borderRadius": ".25rem",
+          "display": "inline-block",
+          "fontSize": "1rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "padding": ".375rem .75rem",
+          "textAlign": "center",
+          "transition": Array [
+            "all",
+            "0.2s",
+            "ease-in-out",
+          ],
+          "userSelect": "none",
+          "verticalAlign": "middle",
+          "whiteSpace": "nowrap",
+        }
+      }
+      type="button"
+    >
+      5
+    </button>
+    <button
+      className={
+        Object {
+          "&.disabled, &:disabled": Object {
+            "opacity": 0.65,
+          },
+          "&:focus, &.focus": Object {
+            "boxShadow": "0 0 0 .2rem rgba(0, 123, 255, 0.25)",
+            "outline": 0,
+          },
+          "&:hover, &:focus": Object {
+            "textDecoration": "none",
+          },
+          "&:not(:disabled):not(.disabled)": Object {
+            "cursor": "pointer",
+          },
+          "&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active": Object {
+            "&:focus": Object {},
+            "backgroundImage": "none",
+          },
+          "@media screen and (prefers-reduced-motion: reduce)": Object {
+            "transition": "none",
+          },
+          "border": "1px solid transparent",
+          "borderRadius": ".25rem",
+          "display": "inline-block",
+          "fontSize": "1rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "padding": ".375rem .75rem",
+          "textAlign": "center",
+          "transition": Array [
+            "all",
+            "0.2s",
+            "ease-in-out",
+          ],
+          "userSelect": "none",
+          "verticalAlign": "middle",
+          "whiteSpace": "nowrap",
+        }
+      }
+      type="button"
+    >
+      6
+    </button>
+    <button
+      className={
+        Object {
+          "&.disabled, &:disabled": Object {
+            "opacity": 0.65,
+          },
+          "&:focus, &.focus": Object {
+            "boxShadow": "0 0 0 .2rem rgba(0, 123, 255, 0.25)",
+            "outline": 0,
+          },
+          "&:hover, &:focus": Object {
+            "textDecoration": "none",
+          },
+          "&:not(:disabled):not(.disabled)": Object {
+            "cursor": "pointer",
+          },
+          "&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active": Object {
+            "&:focus": Object {},
+            "backgroundImage": "none",
+          },
+          "@media screen and (prefers-reduced-motion: reduce)": Object {
+            "transition": "none",
+          },
+          "border": "1px solid transparent",
+          "borderRadius": ".25rem",
+          "display": "inline-block",
+          "fontSize": "1rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "padding": ".375rem .75rem",
+          "textAlign": "center",
+          "transition": Array [
+            "all",
+            "0.2s",
+            "ease-in-out",
+          ],
+          "userSelect": "none",
+          "verticalAlign": "middle",
+          "whiteSpace": "nowrap",
+        }
+      }
+      type="button"
+    >
+      7
+    </button>
+  </div>
+  <div
+    className={
+      Object {
+        "> .btn:first-child": Object {
+          "marginLeft": 0,
+        },
+        "> btn": Object {
+          "&:focus,&:active,&.active": Object {
+            "zIndex": 1,
+          },
+          "&:hover": Object {
+            "zIndex": 1,
+          },
+          "flex": "0 1 auto",
+          "position": "relative",
+        },
+        "> btn:not(:first-child),> btnGroup:not(:first-child) > btn": Object {
+          "borderBottomLeftRadius": ".25rem",
+          "borderTopLeftRadius": ".25rem",
+        },
+        "> btn:not(:last-child):not(dropdownToggle),> btnGroup:not(:last-child) > btn": Object {
+          "borderBottomRightRadius": ".25rem",
+          "borderTopRightRadius": ".25rem",
+        },
+        "btn + btn,btn + btnGroup,btnGroup + btn,btnGroup + btnGroup": Object {
+          "marginLeft": "-1px",
+        },
+        "display": "inline-flex",
+        "position": "relative",
+        "show": Object {
+          "&btnLink": Object {
+            "boxShadow": Array [],
+          },
+          "boxShadow": Array [],
+        },
+        "verticalAlign": "middle",
+      }
+    }
+  >
+    <button
+      className={
+        Object {
+          "&.disabled, &:disabled": Object {
+            "opacity": 0.65,
+          },
+          "&:focus, &.focus": Object {
+            "boxShadow": "0 0 0 .2rem rgba(0, 123, 255, 0.25)",
+            "outline": 0,
+          },
+          "&:hover, &:focus": Object {
+            "textDecoration": "none",
+          },
+          "&:not(:disabled):not(.disabled)": Object {
+            "cursor": "pointer",
+          },
+          "&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active": Object {
+            "&:focus": Object {},
+            "backgroundImage": "none",
+          },
+          "@media screen and (prefers-reduced-motion: reduce)": Object {
+            "transition": "none",
+          },
+          "border": "1px solid transparent",
+          "borderRadius": ".25rem",
+          "display": "inline-block",
+          "fontSize": "1rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "padding": ".375rem .75rem",
+          "textAlign": "center",
+          "transition": Array [
+            "all",
+            "0.2s",
+            "ease-in-out",
+          ],
+          "userSelect": "none",
+          "verticalAlign": "middle",
+          "whiteSpace": "nowrap",
+        }
+      }
+      type="button"
+    >
+      8
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Buttons Outline Buttons 1`] = `
 <div>
   <button
