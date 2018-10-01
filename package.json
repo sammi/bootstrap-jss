@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.9.17",
+  "version": "0.9.18",
   "description": "Build JSS components for Bootstrap by JSS",
   "author": "Sammi Song",
   "license": "MIT",
@@ -28,10 +28,7 @@
     "hex-and-rgba": "^1.2.0",
     "jss": "^9.8.7",
     "lodash": "^4.17.11",
-    "percent-value": "^1.0.7",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "^1.1.5"
+    "percent-value": "^1.0.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -58,7 +55,10 @@
     "rollup-plugin-commonjs": "^9.1.8",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-url": "^1.4.0"
+    "rollup-plugin-url": "^1.4.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "^1.1.5"
   },
   "files": [
     "dist"
