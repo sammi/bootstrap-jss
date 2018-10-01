@@ -125,7 +125,7 @@ describe('card', () => {
 
   it('cardHeaderTabs', () => {
     expect(cardHeaderTabs).toEqual({
-      marginRight: `-${size(cardSpacerX).value /2 }${size(cardSpacerX).unit}`,
+      marginRight: `-${size(cardSpacerX).value / 2}${size(cardSpacerX).unit}`,
       marginBottom: `-${cardSpacerY}`,
       marginLeft: `-${size(cardSpacerX).value / 2}${size(cardSpacerX).unit}`,
       borderBottom: 0
@@ -200,7 +200,6 @@ describe('card', () => {
       cardImgTop,
       cardFooter,
       cardImgBottom,
-      cardFooter,
       '&:first-child': {
         ...borderRightRadius(0),
         '$cardImgTop,$cardHeader': {

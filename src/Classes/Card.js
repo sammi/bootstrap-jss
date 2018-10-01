@@ -161,7 +161,6 @@ const cardGroup = (isEenableRounded = enableRounded) => {
     cardImgTop,
     cardHeader,
     cardImgBottom,
-    cardFooter,
     '&:first-child': {
       ...borderRightRadius(0),
       '$cardImgTop,$cardHeader': {

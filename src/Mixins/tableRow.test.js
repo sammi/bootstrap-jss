@@ -3,7 +3,6 @@ import { hover } from './hover'
 
 import { tableRowVariant } from './tableRow'
 
-
 describe('Tables', () => {
   const state = 'valid'
   const background = '#FFF'

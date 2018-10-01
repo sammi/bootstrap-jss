@@ -7,7 +7,6 @@ import { spacing } from './Spacing'
 describe('spacing', () => {
   it('spacing', () => {
     let spacingExpectValue = {}
-    
     for (const [name] of Object.entries(gridBreakpoints)) {
       const infix = breakpointInfix(name, gridBreakpoints)
       let styleValue = {}
