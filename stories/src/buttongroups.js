@@ -4,7 +4,8 @@ import { Classes } from 'bootstrap-jss'
 import injectSheet from 'react-jss'
 
 const { btn, btnThemeColors } = Classes.Buttons
-const { btnGroup, btnToolbar } = Classes.ButtonGroup
+const { btnGroup, btnToolbar, btnDropdownToggle } = Classes.ButtonGroup
+const { dropdownItem, dropdownMenu } = Classes.Dropdown
 
 const btnColors = btnThemeColors()
 
@@ -31,6 +32,18 @@ const styles = {
   btnRight: {
     ...btn,
     ...btnColors['btnPrimary']
+  },
+  btnDropdownToggle: {
+    ...btn,
+    ...btnDropdownToggle
+  },
+  dropdownItem: {
+    ...dropdownItem(),
+    ...btnColors['btnSeconday']
+  },
+  dropdownMenu: {
+    ...dropdownMenu,
+    ...btnColors['btnSeconday']
   }
 }
 
@@ -61,6 +74,24 @@ const ToolbarButtonGroup = injectSheet(styles)(({ classes }) =>
   </div>
 )
 
+const NestingButtongGroup = injectSheet(styles) ( ({classes}) =>
+  <div className={classes.btnGroup}>
+    <button type="button" className={classes.btn}>1</button>
+    <button type="button" className={classes.btn}>2</button>
+
+    <div className={classes.btnGroup} role="group">
+      <button type="button" className={classes.btnDropdownToggle}>
+        Dropdown
+      </button>
+      <div className={classes.dropdownMenu}>
+        <a className={classes.dropdownItem} href="#">Dropdown link</a>
+        <a className={classes.dropdownItem} href="#">Dropdown link</a>
+      </div>
+    </div>
+  </div>
+)
+
 storiesOf('Button Groups', module)
   .add('Basic example', () => <BasicButtonGroup />)
   .add('Button Toolbar', () => <ToolbarButtonGroup />)
+  .add('Nesting', () => <NestingButtongGroup />)
