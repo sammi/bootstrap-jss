@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.9.15",
+  "version": "0.9.16",
   "description": "Build JSS components for Bootstrap by JSS",
   "author": "Sammi Song",
   "license": "MIT",
@@ -23,7 +23,6 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "bootstrap": "^4.1.1",
     "color": "^3.0.0",
     "color-rgba": "^2.0.0",
     "hex-and-rgba": "^1.2.0",
