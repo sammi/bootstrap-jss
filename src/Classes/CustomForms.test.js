@@ -96,7 +96,7 @@ import {
   customSelectLg,
   customFile,
   customFileInput,
-  customFileLable,
+  customFileLabel,
   customRange,
   customFormsOverride
 } from './CustomForms'
@@ -117,36 +117,6 @@ describe('custom forms', () => {
       marginRight: customControlSpacerX
     })
   })
-
-  it('custom-control-input', () => {
-    expect(customControlInput).toEqual({
-      position: 'absolute',
-      zIndex: -1,
-      opacity: 0,
-      '&:checked ~ customControlLabel::before': {
-        color: customControlIndicatorCheckedColor,
-        ...gradientBg(customControlIndicatorCheckedBg),
-        ...boxShadow(customControlIndicatorCheckedBoxShadow)
-      },
-      '&:focus ~ customControlLabel::before': {
-        boxShadow: customControlIndicatorFocusBoxShadow
-      },
-      '&:active ~ customControlLabel::before': {
-        color: customControlIndicatorActiveColor,
-        backgroundColor: customControlIndicatorActiveBg,
-        ...boxShadow(customControlIndicatorActiveBoxShadow)
-      },
-      '&:disabled': {
-        '~ customControlLabel': {
-          color: customControlLabelDisabledColor,
-          '&::before': {
-            backgroundColor: customControlIndicatorDisabledBg
-          }
-        }
-      }
-    })
-  })
-
   it('custom-control-label', () => {
     expect(customControlLabel).toEqual({
       position: 'relative',
@@ -179,12 +149,44 @@ describe('custom forms', () => {
     })
   })
 
+  it('custom-control-input', () => {
+    expect(customControlInput).toEqual({
+      customControlLabel,
+      position: 'absolute',
+      zIndex: -1,
+      opacity: 0,
+      '&:checked ~ $customControlLabel::before': {
+        color: customControlIndicatorCheckedColor,
+        ...gradientBg(customControlIndicatorCheckedBg),
+        ...boxShadow(customControlIndicatorCheckedBoxShadow)
+      },
+      '&:focus ~ $customControlLabel::before': {
+        boxShadow: customControlIndicatorFocusBoxShadow
+      },
+      '&:active ~ $customControlLabel::before': {
+        color: customControlIndicatorActiveColor,
+        backgroundColor: customControlIndicatorActiveBg,
+        ...boxShadow(customControlIndicatorActiveBoxShadow)
+      },
+      '&:disabled': {
+        '~ $customControlLabel': {
+          color: customControlLabelDisabledColor,
+          '&::before': {
+            backgroundColor: customControlIndicatorDisabledBg
+          }
+        }
+      }
+    })
+  })
+
   it('custom-checkbox', () => {
     expect(customCheckbox).toEqual({
-      'customControlLabel::before': {
+      customControlInput,
+      customControlLabel,
+      '$customControlLabel::before': {
         ...borderRadius(customCheckboxIndicatorBorderRadius)
       },
-      'customControlInput:checked ~ customControlLabel': {
+      '$customControlInput:checked ~ $customControlLabel': {
         '&::before': {
           ...gradientBg(customControlIndicatorCheckedBg)
         },
@@ -192,7 +194,7 @@ describe('custom forms', () => {
           backgroundImage: customCheckboxIndicatorIconChecked
         }
       },
-      'customControlInput:indeterminate ~ customControlLabel': {
+      '$customControlInput:indeterminate ~ $customControlLabel': {
         '&::before': {
           ...gradientBg(customCheckboxIndicatorIndeterminateBg),
           ...boxShadow(customCheckboxIndicatorIndeterminateBoxShadow)
@@ -201,11 +203,11 @@ describe('custom forms', () => {
           backgroundImage: customCheckboxIndicatorIconIndeterminate
         }
       },
-      'customControlInput:disabled': {
-        '&:checked ~ .customControlLabel::before': {
+      '$customControlInput:disabled': {
+        '&:checked ~ $customControlLabel::before': {
           backgroundColor: customControlIndicatorCheckedDisabledBg
         },
-        '&:indeterminate ~ customControlLabel::before': {
+        '&:indeterminate ~ $customControlLabel::before': {
           backgroundColor: customControlIndicatorCheckedDisabledBg
         }
       }
@@ -214,10 +216,12 @@ describe('custom forms', () => {
 
   it('custom-radio', () => {
     expect(customRadio).toEqual({
-      'customControlLabel::before': {
+      customControlInput,
+      customControlLabel,
+      '$customControlLabel::before': {
         borderRadius: customRadioIndicatorBorderRadius
       },
-      'customControlInput:checked ~ customControlLabel': {
+      '$customControlInput:checked ~ $customControlLabel': {
         '&::before': {
           ...gradientBg(customControlIndicatorCheckedBg)
         },
@@ -225,8 +229,8 @@ describe('custom forms', () => {
           backgroundImage: customRadioIndicatorIconChecked
         }
       },
-      'customControlInput:disabled': {
-        '&:checked ~ .custom-control-label::before': {
+      '$customControlInput:disabled': {
+        '&:checked ~ $customControlLabel::before': {
           backgroundColor: customControlIndicatorCheckedDisabledBg
         }
       }
@@ -339,18 +343,19 @@ describe('custom forms', () => {
   it('custom-file-input', () => {
     const customFileTextValue = {}
     for (const [lang, value] of Object.entries(customFileText)) {
-      customFileTextValue[`&:lang(${lang}) ~ customFileLabel::after`] = {
+      customFileTextValue[`&:lang(${lang}) ~ $customFileLabel::after`] = {
         content: value
       }
     }
     expect(customFileInput).toEqual({
+      customFileLabel,
       position: 'relative',
       zIndex: 2,
       width: '100%',
       height: customFileHeight,
       margin: 0,
       opacity: 0,
-      '&:focus ~ customFileLabel': {
+      '&:focus ~ $customFileLabel': {
         borderColor: customFileFocusBorderColor,
         boxShadow: customFileFocusBoxShadow,
         '&::after': {
@@ -362,7 +367,7 @@ describe('custom forms', () => {
   })
 
   it('custom-file-label', () => {
-    expect(customFileLable).toEqual({
+    expect(customFileLabel).toEqual({
       position: 'absolute',
       top: 0,
       right: 0,
@@ -521,7 +526,10 @@ describe('custom forms', () => {
 
   it('customer-forms-override', () => {
     expect(customFormsOverride).toEqual({
-      '.custom-control-label::before,.custom-file-label,.custom-select': {
+      customControlLabel,
+      customFileLabel,
+      customSelect,
+      '$customControlLabel::before,$customFileLabel,$customSelect': {
         ...transition(customFormsTransition)
       }
     })

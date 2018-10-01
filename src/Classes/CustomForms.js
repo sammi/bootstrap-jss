@@ -96,33 +96,6 @@ const customControlInline = {
   marginRight: customControlSpacerX
 }
 
-const customControlInput = {
-  position: 'absolute',
-  zIndex: -1,
-  opacity: 0,
-  '&:checked ~ customControlLabel::before': {
-    color: customControlIndicatorCheckedColor,
-    ...gradientBg(customControlIndicatorCheckedBg),
-    ...boxShadow(customControlIndicatorCheckedBoxShadow)
-  },
-  '&:focus ~ customControlLabel::before': {
-    boxShadow: customControlIndicatorFocusBoxShadow
-  },
-  '&:active ~ customControlLabel::before': {
-    color: customControlIndicatorActiveColor,
-    backgroundColor: customControlIndicatorActiveBg,
-    ...boxShadow(customControlIndicatorActiveBoxShadow)
-  },
-  '&:disabled': {
-    '~ customControlLabel': {
-      color: customControlLabelDisabledColor,
-      '&::before': {
-        backgroundColor: customControlIndicatorDisabledBg
-      }
-    }
-  }
-}
-
 const customControlLabel = {
   position: 'relative',
   marginBottom: 0,
@@ -153,11 +126,41 @@ const customControlLabel = {
   }
 }
 
+const customControlInput = {
+  customControlLabel,
+  position: 'absolute',
+  zIndex: -1,
+  opacity: 0,
+  '&:checked ~ $customControlLabel::before': {
+    color: customControlIndicatorCheckedColor,
+    ...gradientBg(customControlIndicatorCheckedBg),
+    ...boxShadow(customControlIndicatorCheckedBoxShadow)
+  },
+  '&:focus ~ $customControlLabel::before': {
+    boxShadow: customControlIndicatorFocusBoxShadow
+  },
+  '&:active ~ $customControlLabel::before': {
+    color: customControlIndicatorActiveColor,
+    backgroundColor: customControlIndicatorActiveBg,
+    ...boxShadow(customControlIndicatorActiveBoxShadow)
+  },
+  '&:disabled': {
+    '~ $customControlLabel': {
+      color: customControlLabelDisabledColor,
+      '&::before': {
+        backgroundColor: customControlIndicatorDisabledBg
+      }
+    }
+  }
+}
+
 const customCheckbox = {
-  'customControlLabel::before': {
+  customControlInput,
+  customControlLabel,
+  '$customControlLabel::before': {
     ...borderRadius(customCheckboxIndicatorBorderRadius)
   },
-  'customControlInput:checked ~ customControlLabel': {
+  '$customControlInput:checked ~ $customControlLabel': {
     '&::before': {
       ...gradientBg(customControlIndicatorCheckedBg)
     },
@@ -165,7 +168,7 @@ const customCheckbox = {
       backgroundImage: customCheckboxIndicatorIconChecked
     }
   },
-  'customControlInput:indeterminate ~ customControlLabel': {
+  '$customControlInput:indeterminate ~ $customControlLabel': {
     '&::before': {
       ...gradientBg(customCheckboxIndicatorIndeterminateBg),
       ...boxShadow(customCheckboxIndicatorIndeterminateBoxShadow)
@@ -174,21 +177,23 @@ const customCheckbox = {
       backgroundImage: customCheckboxIndicatorIconIndeterminate
     }
   },
-  'customControlInput:disabled': {
-    '&:checked ~ .customControlLabel::before': {
+  '$customControlInput:disabled': {
+    '&:checked ~ $customControlLabel::before': {
       backgroundColor: customControlIndicatorCheckedDisabledBg
     },
-    '&:indeterminate ~ customControlLabel::before': {
+    '&:indeterminate ~ $customControlLabel::before': {
       backgroundColor: customControlIndicatorCheckedDisabledBg
     }
   }
 }
 
 const customRadio = {
-  'customControlLabel::before': {
+  customControlInput,
+  customControlLabel,
+  '$customControlLabel::before': {
     borderRadius: customRadioIndicatorBorderRadius
   },
-  'customControlInput:checked ~ customControlLabel': {
+  '$customControlInput:checked ~ $customControlLabel': {
     '&::before': {
       ...gradientBg(customControlIndicatorCheckedBg)
     },
@@ -196,8 +201,8 @@ const customRadio = {
       backgroundImage: customRadioIndicatorIconChecked
     }
   },
-  'customControlInput:disabled': {
-    '&:checked ~ .custom-control-label::before': {
+  '$customControlInput:disabled': {
+    '&:checked ~ $customControlLabel::before': {
       backgroundColor: customControlIndicatorCheckedDisabledBg
     }
   }
@@ -263,29 +268,12 @@ const customFile = {
 
 const customFileTextValue = {}
 for (const [lang, value] of Object.entries(customFileText)) {
-  customFileTextValue[`&:lang(${lang}) ~ customFileLabel::after`] = {
+  customFileTextValue[`&:lang(${lang}) ~ $customFileLabel::after`] = {
     content: value
   }
 }
 
-const customFileInput = {
-  position: 'relative',
-  zIndex: 2,
-  width: '100%',
-  height: customFileHeight,
-  margin: 0,
-  opacity: 0,
-  '&:focus ~ customFileLabel': {
-    borderColor: customFileFocusBorderColor,
-    boxShadow: customFileFocusBoxShadow,
-    '&::after': {
-      borderColor: customFileFocusBorderColor
-    }
-  },
-  ...customFileTextValue
-}
-
-const customFileLable = {
+const customFileLabel = {
   position: 'absolute',
   top: 0,
   right: 0,
@@ -315,6 +303,24 @@ const customFileLable = {
     borderLeft: `${customFileBorderWidth} solid ${customFileBorderColor}`,
     ...borderRadius(`0 ${customFileBorderRadius} ${customFileBorderRadius} 0`)
   }
+}
+
+const customFileInput = {
+  customFileLabel,
+  position: 'relative',
+  zIndex: 2,
+  width: '100%',
+  height: customFileHeight,
+  margin: 0,
+  opacity: 0,
+  '&:focus ~ $customFileLabel': {
+    borderColor: customFileFocusBorderColor,
+    boxShadow: customFileFocusBoxShadow,
+    '&::after': {
+      borderColor: customFileFocusBorderColor
+    }
+  },
+  ...customFileTextValue
 }
 
 const customRange = {
@@ -440,7 +446,10 @@ const customRange = {
 }
 
 const customFormsOverride = {
-  '.custom-control-label::before,.custom-file-label,.custom-select': {
+  customControlLabel,
+  customFileLabel,
+  customSelect,
+  '$customControlLabel::before,$customFileLabel,$customSelect': {
     ...transition(customFormsTransition)
   }
 }
@@ -457,7 +466,7 @@ export {
   customSelectLg,
   customFile,
   customFileInput,
-  customFileLable,
+  customFileLabel,
   customRange,
   customFormsOverride
 }

@@ -6,23 +6,6 @@ import { size } from '../Functions/size'
 import { boxShadow } from '../Mixins/boxShadow'
 import { inputGroup } from './InputGroup'
 
-const base = {
-  btn: btn,
-  position: 'relative',
-  display: 'inline-flex',
-  verticalAlign: 'middle',
-  '> $btn': {
-    position: 'relative',
-    flex: `0 1 auto`,
-    ...hover({
-      zIndex: 1
-    }),
-    '&:focus,&:active,&.active': {
-      zIndex: 1
-    }
-  }
-}
-
 const dropdownToggle = {
   btnLink: btnLink,
   ...boxShadow(btnActiveBoxShadow),
@@ -32,8 +15,21 @@ const dropdownToggle = {
 }
 
 const btnGroup = {
-  ...base,
+  btn: btn,
   dropdownToggle: dropdownToggle,
+  position: 'relative',
+  display: 'inline-flex',
+  verticalAlign: 'middle',
+  '> $btn': {
+    position: 'relative',
+    flex: '0 1 auto',
+    ...hover({
+      zIndex: 1
+    }),
+    '&:focus,&:active,&.active': {
+      zIndex: 1
+    }
+  },
   '> $btn:first-child': {
     marginLeft: 0
   },
@@ -49,8 +45,21 @@ const btnGroup = {
 }
 
 const btnGroupVertial = {
-  ...base,
+  btn: btn,
   btnGroup: btnGroup,
+  position: 'relative',
+  display: 'inline-flex',
+  verticalAlign: 'middle',
+  '> $btn': {
+    position: 'relative',
+    flex: `0 1 auto`,
+    ...hover({
+      zIndex: 1
+    }),
+    '&:focus,&:active,&.active': {
+      zIndex: 1
+    }
+  },
   '$btn + $btn,$btn + $btnGroup,$btnGroup + $btn,$btnGroup + $btnGroup': {
     marginLeft: `-${btnBorderWidth}`
   }

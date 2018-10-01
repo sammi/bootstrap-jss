@@ -14,8 +14,11 @@ import { hover } from '../Mixins/hover'
 import { borderRadius, borderTopRadius, borderBottomRadius, borderRightRadius, borderLeftRadius } from '../Mixins/borderRadius'
 import { mediaBreakpointUp } from '../Mixins/breakpoints'
 import { enableRounded } from '../Variables/Options'
+import { listGroup, listGroupItem } from './ListGroup'
 
 const card = {
+  listGroup: listGroup,
+  listGroupItem: listGroupItem,
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',
@@ -29,13 +32,13 @@ const card = {
     marginRight: 0,
     marginLeft: 0
   },
-  '> listGroup:first-child': {
-    'listGroupItem:first-child': {
+  '> $listGroup:first-child': {
+    '$listGroupItem:first-child': {
       ...borderTopRadius(cardBorderRadius)
     }
   },
-  '> listGroup:last-child': {
-    'listGroupItem:last-child': {
+  '> $listGroup:last-child': {
+    '$listGroupItem:last-child': {
       ...borderBottomRadius(cardBorderRadius)
     }
   }
@@ -71,6 +74,8 @@ const cardLink = {
 }
 
 const cardHeader = {
+  listGroup: listGroup,
+  listGroupItem: listGroupItem,
   padding: `${cardSpacerY} ${cardSpacerX}`,
   marginBottom: 0,
   backgroundColor: cardCapBg,
@@ -78,8 +83,8 @@ const cardHeader = {
   '&:first-child': {
     ...borderRadius(`${cardInnerBorderRadius} ${cardInnerBorderRadius} 0 0`)
   },
-  '+ listGroup': {
-    'listGroupItem:first-child': {
+  '+ $listGroup': {
+    '$listGroupItem:first-child': {
       borderTop: 0
     }
   }
@@ -152,38 +157,41 @@ const cardDeck = {
 }
 
 const cardGroup = (isEenableRounded = enableRounded) => {
-
   const isEenableRoundedValue = (isEenableRounded) => ({
+    cardImgTop,
+    cardHeader,
+    cardImgBottom,
+    cardFooter,
     '&:first-child': {
       ...borderRightRadius(0),
-      'cardImgTop,cardHeader': {
+      '$cardImgTop,$cardHeader': {
         borderTopRightRadius: 0
       },
-      'cardImgBottom,cardFooter': {
+      '$cardImgBottom,$cardFooter': {
         borderBottomRightRadius: 0
       }
     },
     '&:last-child': {
       ...borderLeftRadius(0),
-      'cardImgTop,cardHeader': {
+      '$cardImgTop,$cardHeader': {
         borderTopLeftRadius: 0
       },
-      'cardImgBottom,cardFooter': {
+      '$cardImgBottom,$cardFooter': {
         borderBottomLeftRadius: 0
       }
     },
     '&:only-child': {
       ...borderRadius(cardBorderRadius),
-      'cardImgTop,cardHeader': {
+      '$cardImgTop,$cardHeader': {
         ...borderTopRadius(cardBorderRadius)
       },
-      'cardImgBottom,cardFooter': {
+      '$cardImgBottom,$cardFooter': {
         ...borderBottomRadius(cardBorderRadius)
       }
     },
     '&:not(:first-child):not(:last-child):not(:only-child)': {
       ...borderRadius(0),
-      'cardImgTop,cardImgBottom,cardHeader,cardFooter': {
+      '$cardImgTop,$cardImgBottom,$cardHeader,$cardFooter': {
         ...borderRadius(0)
       }
     }
@@ -225,7 +233,7 @@ const cardColumns = {
       display: 'inline-block',
       width: '100%'
     }
-  }) 
+  })
 }
 
 const accordion = {

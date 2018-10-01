@@ -1581,6 +1581,52 @@ exports[`Storyshots Button Groups Button Toolbar 1`] = `
 </div>
 `;
 
+exports[`Storyshots Button Groups Nesting 1`] = `
+<div
+  className="Component-btnGroup-0-1-245"
+>
+  <button
+    className="Component-btn-0-1-247"
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="Component-btn-0-1-247"
+    type="button"
+  >
+    2
+  </button>
+  <div
+    className="Component-btnGroup-0-1-245"
+    role="group"
+  >
+    <button
+      className="Component-btnDropdownToggle-0-1-251"
+      type="button"
+    >
+      Dropdown
+    </button>
+    <div
+      className="Component-dropdownMenu-0-1-253"
+    >
+      <a
+        className="Component-dropdownItem-0-1-252"
+        href="#"
+      >
+        Dropdown link
+      </a>
+      <a
+        className="Component-dropdownItem-0-1-252"
+        href="#"
+      >
+        Dropdown link
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Buttons Outline Buttons 1`] = `
 <div>
   <button

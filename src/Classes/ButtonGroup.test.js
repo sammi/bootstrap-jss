@@ -6,26 +6,9 @@ import { size } from '../Functions/size'
 import { boxShadow } from '../Mixins/boxShadow'
 import { inputGroup } from './InputGroup'
 
-import {dropdownToggle, btnGroup, dropdownToggleSplit, btnGroupVertial, btnToolbar, btnSizing, btnGroupVertical, btnGroupToggle } from './ButtonGroup'
+import { dropdownToggle, btnGroup, dropdownToggleSplit, btnToolbar, btnSizing, btnGroupVertical, btnGroupToggle } from './ButtonGroup'
 
 describe('button group', () => {
-
-  const base = {
-    btn: btn,
-    position: 'relative',
-    display: 'inline-flex',
-    verticalAlign: 'middle',
-    '> $btn': {
-      position: 'relative',
-      flex: `0 1 auto`,
-      ...hover({
-        zIndex: 1
-      }),
-      '&:focus,&:active,&.active': {
-        zIndex: 1
-      }
-    }
-  }
   it('dropdown-toggle', () => {
     expect(dropdownToggle).toEqual({
       btnLink: btnLink,
@@ -35,11 +18,23 @@ describe('button group', () => {
       }
     })
   })
-
   it('btn-grouo', () => {
     expect(btnGroup).toEqual({
-      ...base,
+      btn: btn,
       dropdownToggle: dropdownToggle,
+      position: 'relative',
+      display: 'inline-flex',
+      verticalAlign: 'middle',
+      '> $btn': {
+        position: 'relative',
+        flex: '0 1 auto',
+        ...hover({
+          zIndex: 1
+        }),
+        '&:focus,&:active,&.active': {
+          zIndex: 1
+        }
+      },
       '> $btn:first-child': {
         marginLeft: 0
       },
