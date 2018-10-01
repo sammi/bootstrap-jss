@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.9.16",
+  "version": "0.9.17",
   "description": "Build JSS components for Bootstrap by JSS",
   "author": "Sammi Song",
   "license": "MIT",
@@ -26,16 +26,12 @@
     "color": "^3.0.0",
     "color-rgba": "^2.0.0",
     "hex-and-rgba": "^1.2.0",
-    "jquery": "^3.3.1",
     "jss": "^9.8.7",
-    "jss-isolate": "^5.1.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.11",
     "percent-value": "^1.0.7",
-    "popper.js": "^1.14.3",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-scripts": "^1.1.4"
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "^1.1.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
