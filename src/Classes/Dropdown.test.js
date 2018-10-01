@@ -20,7 +20,7 @@ import { hoverFocus } from '../Mixins/hover'
 import { gradientBg } from '../Mixins/gradients'
 
 import {
-  dropdownWrapper,
+  dropup, dropdown, dropleft, dropright,
   dropdownToggle, dropdownMenu, dropdownMenuRight,
   dropUp, dropRight, dropLeft, dropdownDivider,
   dropdownItem,
@@ -29,12 +29,11 @@ import {
 } from './Dropdown'
 
 describe('dropdown', () => {
-  it('dropdownWrapper', () => {
-    expect(dropdownWrapper).toEqual({
-      'dropup, dropright, dropdown, dropleft': {
-        position: 'relative'
-      }
-    })
+  it('dropdown position', () => {
+    expect(dropup).toEqual({ position: 'relative' })
+    expect(dropdown).toEqual({ position: 'relative' })
+    expect(dropleft).toEqual({ position: 'relative' })
+    expect(dropright).toEqual({ position: 'relative' })
   })
 
   it('dropdown-toggle', () => {
@@ -82,13 +81,15 @@ describe('dropdown', () => {
 
   it('dropup', () => {
     expect(dropUp).toEqual({
-      dropdownMenu: {
+      dropdownMenu,
+      dropdownToggle,
+      '$dropdownMenu': {
         top: 'auto',
         bottom: '100%',
         marginTop: 0,
         marginBottom: dropdownSpacer
       },
-      dropdownToggle: {
+      '$dropdownToggle': {
         ...caret('up')
       }
     })
@@ -96,14 +97,16 @@ describe('dropdown', () => {
 
   it('dropright', () => {
     expect(dropRight).toEqual({
-      dropdownMenu: {
+      dropdownMenu,
+      dropdownToggle,
+      '$dropdownMenu': {
         top: 0,
         right: 'auto',
         left: '100%',
         marginTop: 0,
         marginLeft: dropdownSpacer
       },
-      dropdownToggle: {
+      '$dropdownToggle': {
         ...caret('right'),
         '&::after': {
           verticalAlign: 0
@@ -114,14 +117,16 @@ describe('dropdown', () => {
 
   it('dropleft', () => {
     expect(dropLeft).toEqual({
-      dropdownMenu: {
+      dropdownMenu,
+      dropdownToggle,
+      '$dropdownMenu': {
         top: 0,
         right: '100%',
         left: 'auto',
         marginTop: 0,
         marginRight: dropdownSpacer
       },
-      dropdownToggle: {
+      '$dropdownToggle': {
         ...caret('left'),
         '&::before': {
           verticalAlign: 0

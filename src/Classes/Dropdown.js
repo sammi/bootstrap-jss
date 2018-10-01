@@ -19,11 +19,12 @@ import { enableGradients } from '../Variables/Options'
 import { hoverFocus } from '../Mixins/hover'
 import { gradientBg } from '../Mixins/gradients'
 
-const dropdownWrapper = {
-  'dropup, dropright, dropdown, dropleft': {
-    position: 'relative'
-  }
-}
+const dropdownPostion = { position: 'relative' }
+
+const dropup = dropdownPostion
+const dropright = dropdownPostion
+const dropdown = dropdownPostion
+const dropleft = dropdownPostion
 
 const dropdownToggle = {
   ...caret
@@ -63,26 +64,30 @@ const dropdownMenuRight = {
 }
 
 const dropUp = {
-  dropdownMenu: {
+  dropdownMenu,
+  dropdownToggle,
+  '$dropdownMenu': {
     top: 'auto',
     bottom: '100%',
     marginTop: 0,
     marginBottom: dropdownSpacer
   },
-  dropdownToggle: {
+  '$dropdownToggle': {
     ...caret('up')
   }
 }
 
 const dropRight = {
-  dropdownMenu: {
+  dropdownMenu,
+  dropdownToggle,
+  '$dropdownMenu': {
     top: 0,
     right: 'auto',
     left: '100%',
     marginTop: 0,
     marginLeft: dropdownSpacer
   },
-  dropdownToggle: {
+  '$dropdownToggle': {
     ...caret('right'),
     '&::after': {
       verticalAlign: 0
@@ -91,14 +96,16 @@ const dropRight = {
 }
 
 const dropLeft = {
-  dropdownMenu: {
+  dropdownMenu,
+  dropdownToggle,
+  '$dropdownMenu': {
     top: 0,
     right: '100%',
     left: 'auto',
     marginTop: 0,
     marginRight: dropdownSpacer
   },
-  dropdownToggle: {
+  '$dropdownToggle': {
     ...caret('left'),
     '&::before': {
       verticalAlign: 0
@@ -160,7 +167,7 @@ const dropdownHeader = {
 }
 
 export {
-  dropdownWrapper,
+  dropup, dropdown, dropleft, dropright,
   dropdownToggle,
   dropdownMenu,
   dropdownMenuRight,
