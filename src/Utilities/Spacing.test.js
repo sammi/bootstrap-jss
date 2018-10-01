@@ -46,14 +46,14 @@ describe('spacing', () => {
         ...mediaBreakpointUp(name, gridBreakpoints, styleValue)
       }
 
-      for(let [size, length] of Object.entries(spacers)) {
+      for (let [size, length] of Object.entries(spacers)) {
         size = size.replace('_', '')
         let infixValue = {}
-        infixValue[`m${infix}-n${size}`] = {margin: `-${length} !important`}
-        infixValue[`mt${infix}-n${size},my${infix}-n${size}`] = {marginTop: `-${length} !important`}
-        infixValue[`mr${infix}-n${size},mx${infix}-n${size}`] = {marginRight: `-${length} !important`}
-        infixValue[`mb${infix}-n${size},my${infix}-n${size}`] = {marginBottom: `-${length} !important`}
-        infixValue[`ml${infix}-n${size},mx${infix}-n${size}`] = {marginLeft: `-${length} !important`}
+        infixValue[`m${infix}-n${size}`] = { margin: `-${length} !important` }
+        infixValue[`mt${infix}-n${size},my${infix}-n${size}`] = { marginTop: `-${length} !important` }
+        infixValue[`mr${infix}-n${size},mx${infix}-n${size}`] = { marginRight: `-${length} !important` }
+        infixValue[`mb${infix}-n${size},my${infix}-n${size}`] = { marginBottom: `-${length} !important` }
+        infixValue[`ml${infix}-n${size},mx${infix}-n${size}`] = { marginLeft: `-${length} !important` }
 
         spacingExpectValue = {
           ...spacingExpectValue,

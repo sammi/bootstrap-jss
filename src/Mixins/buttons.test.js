@@ -275,6 +275,4 @@ describe('buttonVariants', () => {
       borderRadius: borderRadius
     })
   })
-
-
 })

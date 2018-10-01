@@ -1,4 +1,4 @@
-import { fontFamilyMonospace, 
+import { fontFamilyMonospace,
   fontWeightLight as fontWeightLightVariable,
   fontWeightLighter as fontWeightLighterVariable,
   fontWeightNormal as fontWeightNormalVariable,
@@ -11,7 +11,7 @@ import { gridBreakpoints } from '../Variables/Grid'
 import { breakpointInfix } from '../Mixins/breakpoints'
 import { themeColors, white, black } from '../Variables/Colors'
 import { textEmphasisVariant } from '../Mixins/textEmphasis'
-import { textHide as textHideMixin} from '../Mixins/textHide'
+import { textHide as textHideMixin } from '../Mixins/textHide'
 import { rgba } from '../Functions/rgba'
 import { bodyColor } from '../Variables/Body'
 

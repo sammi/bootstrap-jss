@@ -245,7 +245,7 @@ describe('carousel', () => {
         marginLeft: carouselIndicatorSpacer,
         textIndent: '-999px',
         cursor: 'pointer',
-        backgroundColor: rgba(carouselIndicatorActiveBg, .5),
+        backgroundColor: rgba(carouselIndicatorActiveBg, 0.5),
         '&::before': {
           position: 'absolute',
           top: '-10px',

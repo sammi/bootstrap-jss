@@ -1,20 +1,20 @@
-import {hover, hoverFocus, plainHoverFocus, hoverFocusActive} from './hover'
+import { hover, hoverFocus, plainHoverFocus, hoverFocusActive } from './hover'
 describe('hover', () => {
   it('hover', () => {
-    const content = {color: 'red'}
+    const content = { color: 'red' }
 
-    expect(hover(content)).toEqual({'&:hover': {color: 'red'}})
+    expect(hover(content)).toEqual({ '&:hover': { color: 'red' } })
 
     expect(hoverFocus(content)).toEqual({
-      '&:hover, &:focus': {color: 'red'}
+      '&:hover, &:focus': { color: 'red' }
     })
 
     expect(plainHoverFocus(content)).toEqual({
-      '&, &:hover, &:focus': {color: 'red'}
+      '&, &:hover, &:focus': { color: 'red' }
     })
 
     expect(hoverFocusActive(content)).toEqual({
-      '&:hover, &:focus, &:active': {color: 'red'}
+      '&:hover, &:focus, &:active': { color: 'red' }
     })
   })
 })

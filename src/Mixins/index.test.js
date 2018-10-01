@@ -83,7 +83,14 @@ describe('Mixins', () => {
       borderLeftRadius,
       boxShadow,
 
-      gradientBg, gradientX, gradientY, gradientDirectional, gradientXThreeColors, gradientYThreeColors, gradientRadial, gradientStriped,
+      gradientBg,
+      gradientX,
+      gradientY,
+      gradientDirectional,
+      gradientXThreeColors,
+      gradientYThreeColors,
+      gradientRadial,
+      gradientStriped,
 
       transition,
       checkExported: true

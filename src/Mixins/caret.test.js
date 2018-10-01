@@ -23,7 +23,7 @@ describe('caret', () => {
       borderTop: `${caretWidth} solid transparent`,
       borderRight: 0,
       borderBottom: `${caretWidth} solid transparent`,
-      borderLeft: `${caretWidth} solid`,
+      borderLeft: `${caretWidth} solid`
     })
 
     expect(caretLeft()).toEqual({

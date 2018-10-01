@@ -100,7 +100,7 @@ const cardFooter = {
 }
 
 const cardHeaderTabs = {
-  marginRight: `-${size(cardSpacerX).value /2 }${size(cardSpacerX).unit}`,
+  marginRight: `-${size(cardSpacerX).value / 2}${size(cardSpacerX).unit}`,
   marginBottom: `-${cardSpacerY}`,
   marginLeft: `-${size(cardSpacerX).value / 2}${size(cardSpacerX).unit}`,
   borderBottom: 0

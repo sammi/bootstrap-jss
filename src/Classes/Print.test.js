@@ -18,7 +18,7 @@ describe('print', () => {
           '&:not(.btn)': {
             textDecoration: 'underline'
           }
-        }, 
+        },
         'abbr[title]::after': {
           content: ` (" attr(title) ")`
         },

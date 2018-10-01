@@ -35,7 +35,6 @@ import {
 } from './forms'
 
 describe('forms', () => {
-
   it('form control focus - default Value', () => {
     expect(formControlFocus()).toEqual({
       '&:focus': {
