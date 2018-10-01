@@ -28,12 +28,12 @@ import { fontSizeBase } from '../Variables/Fonts'
 
 import {
   popover,
+  popoverHeader,
   bsPopoverTop,
   bsPopoverRight,
   bsPopoverBottom,
   bsPopoverLeft,
   bsPopoverAuto,
-  popoverHeader,
   popoverBody
 } from './Popover'
 
@@ -67,6 +67,21 @@ describe('popover', () => {
           borderColor: 'transparent',
           borderStyle: 'solid'
         }
+      }
+    })
+  })
+
+  it('popover-header', () => {
+    expect(popoverHeader).toEqual({
+      padding: `${popoverHeaderPaddingY} ${popoverHeaderPaddingX}`,
+      marginBottom: 0,
+      fontSize: fontSizeBase,
+      color: popoverHeaderColor,
+      backgroundColor: popoverHeaderBg,
+      borderBottom: `$popover-border-width solid darken($popover-header-bg, 5%)`,
+      ...borderTopRadius(`calc(${size(borderRadiusLg).value - size(popoverBorderWidth).value}${borderRadiusLg.unit}`),
+      '&:empty': {
+        display: 'none'
       }
     })
   })
@@ -120,6 +135,7 @@ describe('popover', () => {
 
   it('bs-popover-bottom', () => {
     expect(bsPopoverBottom).toEqual({
+      popoverHeader,
       marginTop: popoverArrowHeight,
       arrow: {
         top: `calc(-${arrowHeightPlusWidthValue})`
@@ -135,7 +151,7 @@ describe('popover', () => {
         top: popoverBorderWidth,
         borderBottomColor: popoverArrowColor
       },
-      'popoverHeader::before': {
+      '$popoverHeader::before': {
         position: 'absolute',
         top: 0,
         left: '50%',
@@ -187,22 +203,6 @@ describe('popover', () => {
       }
     })
   })
-
-  it('popover-header', () => {
-    expect(popoverHeader).toEqual({
-      padding: `${popoverHeaderPaddingY} ${popoverHeaderPaddingX}`,
-      marginBottom: 0,
-      fontSize: fontSizeBase,
-      color: popoverHeaderColor,
-      backgroundColor: popoverHeaderBg,
-      borderBottom: `$popover-border-width solid darken($popover-header-bg, 5%)`,
-      ...borderTopRadius(`calc(${size(borderRadiusLg).value - size(popoverBorderWidth).value}${borderRadiusLg.unit}`),
-      '&:empty': {
-        display: 'none'
-      }
-    })
-  })
-
   it('popover-body', () => {
     expect(popoverBody).toEqual({
       padding: `${popoverBodyPaddingY} ${popoverBodyPaddingX}`,

@@ -14,7 +14,7 @@ export const mediaPrint = (isEnablePrintStyles = enablePrintStyles) => ({
       '&:not(.btn)': {
         textDecoration: 'underline'
       }
-    }, 
+    },
     'abbr[title]::after': {
       content: ` (" attr(title) ")`
     },

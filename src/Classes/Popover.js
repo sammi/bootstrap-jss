@@ -57,6 +57,19 @@ const popover = {
   }
 }
 
+const popoverHeader = {
+  padding: `${popoverHeaderPaddingY} ${popoverHeaderPaddingX}`,
+  marginBottom: 0,
+  fontSize: fontSizeBase,
+  color: popoverHeaderColor,
+  backgroundColor: popoverHeaderBg,
+  borderBottom: `$popover-border-width solid darken($popover-header-bg, 5%)`,
+  ...borderTopRadius(`calc(${size(borderRadiusLg).value - size(popoverBorderWidth).value}${borderRadiusLg.unit}`),
+  '&:empty': {
+    display: 'none'
+  }
+}
+
 const bsPopoverTop = {
   marginBottom: popoverArrowHeight,
   arrow: {
@@ -101,6 +114,7 @@ const bsPopoverRight = {
 const arrowHeightPlusWidthValue = `${size(popoverArrowHeight).value + size(popoverBorderWidth).value}${size(popoverArrowHeight).unit}`
 
 const bsPopoverBottom = {
+  popoverHeader,
   marginTop: popoverArrowHeight,
   arrow: {
     top: `calc(-${arrowHeightPlusWidthValue})`
@@ -116,7 +130,7 @@ const bsPopoverBottom = {
     top: popoverBorderWidth,
     borderBottomColor: popoverArrowColor
   },
-  'popoverHeader::before': {
+  '$popoverHeader::before': {
     position: 'absolute',
     top: 0,
     left: '50%',
@@ -164,19 +178,6 @@ const bsPopoverAuto = {
   }
 }
 
-const popoverHeader = {
-  padding: `${popoverHeaderPaddingY} ${popoverHeaderPaddingX}`,
-  marginBottom: 0,
-  fontSize: fontSizeBase,
-  color: popoverHeaderColor,
-  backgroundColor: popoverHeaderBg,
-  borderBottom: `$popover-border-width solid darken($popover-header-bg, 5%)`,
-  ...borderTopRadius(`calc(${size(borderRadiusLg).value - size(popoverBorderWidth).value}${borderRadiusLg.unit}`),
-  '&:empty': {
-    display: 'none'
-  }
-}
-
 const popoverBody = {
   padding: `${popoverBodyPaddingY} ${popoverBodyPaddingX}`,
   color: popoverBodyColor
@@ -184,11 +185,11 @@ const popoverBody = {
 
 export {
   popover,
+  popoverHeader,
   bsPopoverTop,
   bsPopoverRight,
   bsPopoverBottom,
   bsPopoverLeft,
   bsPopoverAuto,
-  popoverHeader,
   popoverBody
 }
