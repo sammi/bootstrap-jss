@@ -7,7 +7,12 @@ Build JSS components for Bootstrap by JSS
 <span class="badge-npmversion"><a href="https://npmjs.com/package/bootstrap-jss" title="View this project on NPM"><img src="https://img.shields.io/npm/v/bootstrap-jss.svg" alt="NPM version" /></a></span>
 <span class="badge-npmdownloads"><a href="https://npmjs.com/package/bootstrap-jss" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/bootstrap-jss.svg" alt="NPM downloads" /></a></span>
 
-# Install Visusl Studio Code Extensions
+# Checkout the live demo!
+
+https://sammi.github.io/bootstrap-jss
+
+# Developer quick start
+## Install Visusl Studio Code Extensions
 
 * Jest
 * ESLint
@@ -17,7 +22,7 @@ Build JSS components for Bootstrap by JSS
 * Code Outline
 * Badges
 
-# Test Driven Development
+## Test Driven Development
 
 1. Start the test watcher
 ```bash
@@ -30,12 +35,18 @@ yarn test:watch
 3. When test failed, click "Debug" above each Jest Unit test, step into the source code.
 
 
-# Check the demo by StoryBook
+## Check the localhost StoryBook
  ```bash
  cd stories
  rm -rf node_modules
  yarn install
  yarn start
  ```
-
 Check out http://localhost:9001
+
+## Deploy story book to github
+```bash
+cd stories
+yarn deploy-storybook
+```
+Check out https://sammi.github.io/bootstrap-jss

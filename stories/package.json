@@ -8,7 +8,8 @@
   "private": false,
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",
-    "test": "react-scripts test --env=jsdom --coverage"
+    "test": "react-scripts test --env=jsdom --coverage",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
     "bootstrap-jss": "link:..",
@@ -22,6 +23,7 @@
     "@babel/core": "^7.1.0",
     "@storybook/addon-storyshots": "^3.4.11",
     "@storybook/react": "^3.4.11",
+    "@storybook/storybook-deployer": "^2.3.0",
     "react-test-renderer": "^16.5.2"
   }
 }
