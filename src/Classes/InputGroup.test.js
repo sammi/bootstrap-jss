@@ -16,14 +16,14 @@ import {
   inputPaddingYSm,
   inputPaddingXSm,
   inputLineHeightSm,
-  inputBorderRadiusSm,
-  formControl
+  inputBorderRadiusSm
 } from '../Variables/Forms'
 import { borderRightRadius, borderLeftRadius, borderRadius } from '../Mixins/borderRadius'
 import { fontSizeBase, fontWeightNormal, fontSizeLg, fontSizeSm } from '../Variables/Fonts'
 import { customSelect, customFile, customFileInput, customFileLabel } from './CustomForms'
 import { btn } from './Buttons'
 import { dropdownToggle } from './Dropdown'
+import { formControl } from './Form'
 
 import {
   inputGroup,
@@ -168,39 +168,21 @@ describe('input group', () => {
   it('sizing', () => {
     expect(inputGroupSizing).toEqual(inputGroupSizingValue)
   })
-
-  const inputGroupRadiusValue = {
-    formControl,
-    inputGroup,
-    inputGroupAppend,
-    inputGroupPrepend,
-    inputGroupText,
-    dropdownToggle,
-    btn
-  }
-
-  const inputGroupRadiusValueLastChildKey =
-  '$inputGroup > $inputGroupPrepend > $btn,' +
-  '$inputGroup > $inputGroupPrepend > $inputGroupText,' +
-  '$inputGroup > $inputGroupAppend:not(:last-child) > $btn,' +
-  '$inputGroup > $inputGroupAppend:not(:last-child) > $inputGroupText,' +
-  '$inputGroup > $inputGroupAppend:last-child > $btn:not(:last-child):not($dropdownToggle),' +
-  '$inputGroup > $inputGroupAppend:last-child > $inputGroupText:not(:last-child)'
-  inputGroupRadiusValue[inputGroupRadiusValueLastChildKey] = {
-    ...borderRightRadius(0)
-  }
-  const inputGroupRadiusValueFirstChildKey =
-  '$inputGroup > $inputGroupPrepend > $btn,' +
-  '$inputGroup > $inputGroupPrepend > $inputGroupText,' +
-  '$inputGroup > $inputGroupAppend:not(:first-child) > $btn,' +
-  '$inputGroup > $inputGroupAppend:not(:first-child) > $inputGroupText,' +
-  '$inputGroup > $inputGroupAppend:first-child > $btn:not(:first-child):not($dropdownToggle),' +
-  '$inputGroup > $inputGroupAppend:first-child > $inputGroupText:not(:first-child)'
-  inputGroupRadiusValue[inputGroupRadiusValueFirstChildKey] = {
-    ...borderLeftRadius(0)
-  }
-
   it('input-group-radius', () => {
-    expect(inputGroupRadius).toEqual(inputGroupRadiusValue)
+    expect(inputGroupRadius).toEqual({
+      formControl,
+      inputGroup,
+      inputGroupAppend,
+      inputGroupPrepend,
+      inputGroupText,
+      dropdownToggle,
+      btn,
+      [`$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:last-child) > $btn,$inputGroup > $inputGroupAppend:not(:last-child) >$inputGroupText, $inputGroup > $inputGroupAppend:last-child > $btn:not(:last-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:last-child > $inputGroupText:not(:last-child)`]: {
+        ...borderRightRadius(0)
+      },
+      [`$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:first-child) > $btn,$inputGroup > $inputGroupAppend:not(:first-child) > $inputGroupText,$inputGroup > $inputGroupAppend:first-child > $btn:not(:first-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:first-child > $inputGroupText:not(:first-child)`]: {
+        ...borderLeftRadius(0)
+      }
+    })
   })
 })

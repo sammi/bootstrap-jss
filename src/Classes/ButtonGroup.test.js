@@ -20,8 +20,8 @@ describe('button group', () => {
   })
   it('btn-grouo', () => {
     expect(btnGroup).toEqual({
-      btn: btn,
-      dropdownToggle: dropdownToggle,
+      btn,
+      dropdownToggle,
       position: 'relative',
       display: 'inline-flex',
       verticalAlign: 'middle',
@@ -112,9 +112,9 @@ describe('button group', () => {
 
   it('btn-group-vertical', () => {
     expect(btnGroupVertical).toEqual({
-      btn: btn,
-      btnGroup: btnGroup,
-      dropdownToggle: dropdownToggle,
+      btn,
+      btnGroup,
+      dropdownToggle,
       flexDirection: 'column',
       alignItems: 'flex-start',
       justifyContent: 'center',

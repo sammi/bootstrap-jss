@@ -16,14 +16,14 @@ import {
   inputPaddingYSm,
   inputPaddingXSm,
   inputLineHeightSm,
-  inputBorderRadiusSm,
-  formControl
+  inputBorderRadiusSm
 } from '../Variables/Forms'
 import { borderRightRadius, borderLeftRadius, borderRadius } from '../Mixins/borderRadius'
 import { fontSizeBase, fontWeightNormal, fontSizeLg, fontSizeSm } from '../Variables/Fonts'
 import { customSelect, customFile, customFileInput, customFileLabel } from './CustomForms'
 import { btn } from './Buttons'
 import { dropdownToggle } from './Dropdown'
+import { formControl } from './Form'
 
 const inputGroup = {
   formControl,
@@ -120,16 +120,16 @@ const inputGroupSizing = {
 }
 
 const sizingLgKey = '$inputGroupLg > $formControl, ' +
-'$inputGroupLg > $inputGroupPrepend > $inputGroupText, ' +
-'$inputGroupLg > $inputGroupAppend  > $inputGroupText, ' +
-'$inputGroupLg > $inputGroupPrepend > $btn, ' +
-'$inputGroupLg > $inputGroupAppend  > $btn'
+  '$inputGroupLg > $inputGroupPrepend > $inputGroupText, ' +
+  '$inputGroupLg > $inputGroupAppend  > $inputGroupText, ' +
+  '$inputGroupLg > $inputGroupPrepend > $btn, ' +
+  '$inputGroupLg > $inputGroupAppend  > $btn'
 
 const sizingSmKey = '$inputGroupSm > $formControl, ' +
-'$inputGroupSm > $inputGroupPrepend > $inputGroupText, ' +
-'$inputGroupSm > $inputGroupAppend  > $inputGroupText, ' +
-'$inputGroupSm > $inputGroupPrepend > $btn, ' +
-'$inputGroupSm > $inputGroupAppend  > $btn'
+  '$inputGroupSm > $inputGroupPrepend > $inputGroupText, ' +
+  '$inputGroupSm > $inputGroupAppend  > $inputGroupText, ' +
+  '$inputGroupSm > $inputGroupPrepend > $btn, ' +
+  '$inputGroupSm > $inputGroupAppend  > $btn'
 
 inputGroupSizing[sizingLgKey] = {
   height: inputHeightLg,
@@ -154,31 +154,13 @@ const inputGroupRadius = {
   inputGroupPrepend,
   inputGroupText,
   dropdownToggle,
-  btn
-}
-
-const inputGroupRadiusValueLastChildKey =
-  '$inputGroup > $inputGroupPrepend > $btn,' +
-  '$inputGroup > $inputGroupPrepend > $inputGroupText,' +
-  '$inputGroup > $inputGroupAppend:not(:last-child) > $btn,' +
-  '$inputGroup > $inputGroupAppend:not(:last-child) > $inputGroupText,' +
-  '$inputGroup > $inputGroupAppend:last-child > $btn:not(:last-child):not($dropdownToggle),' +
-  '$inputGroup > $inputGroupAppend:last-child > $inputGroupText:not(:last-child)'
-
-inputGroupRadius[inputGroupRadiusValueLastChildKey] = {
-  ...borderRightRadius(0)
-}
-
-const inputGroupRadiusValueFirstChildKey =
-  '$inputGroup > $inputGroupPrepend > $btn,' +
-  '$inputGroup > $inputGroupPrepend > $inputGroupText,' +
-  '$inputGroup > $inputGroupAppend:not(:first-child) > $btn,' +
-  '$inputGroup > $inputGroupAppend:not(:first-child) > $inputGroupText,' +
-  '$inputGroup > $inputGroupAppend:first-child > $btn:not(:first-child):not($dropdownToggle),' +
-  '$inputGroup > $inputGroupAppend:first-child > $inputGroupText:not(:first-child)'
-
-inputGroupRadius[inputGroupRadiusValueFirstChildKey] = {
-  ...borderLeftRadius(0)
+  btn,
+  [`$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:last-child) > $btn,$inputGroup > $inputGroupAppend:not(:last-child) >$inputGroupText, $inputGroup > $inputGroupAppend:last-child > $btn:not(:last-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:last-child > $inputGroupText:not(:last-child)`]: {
+    ...borderRightRadius(0)
+  },
+  [`$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:first-child) > $btn,$inputGroup > $inputGroupAppend:not(:first-child) > $inputGroupText,$inputGroup > $inputGroupAppend:first-child > $btn:not(:first-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:first-child > $inputGroupText:not(:first-child)`]: {
+    ...borderLeftRadius(0)
+  }
 }
 
 export {

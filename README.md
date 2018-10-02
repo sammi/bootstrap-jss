@@ -22,6 +22,11 @@ https://sammi.github.io/bootstrap-jss
 * Code Outline
 * Badges
 
+## Install latest yarn version
+```bash
+  npm install yarn -g
+```
+
 ## Test Driven Development
 
 1. Start the test watcher

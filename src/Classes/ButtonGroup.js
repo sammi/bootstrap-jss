@@ -15,8 +15,8 @@ const dropdownToggle = {
 }
 
 const btnGroup = {
-  btn: btn,
-  dropdownToggle: dropdownToggle,
+  btn,
+  dropdownToggle,
   position: 'relative',
   display: 'inline-flex',
   verticalAlign: 'middle',
@@ -110,9 +110,9 @@ const btnSizing = {
 }
 
 const btnGroupVertical = {
-  btn: btn,
-  btnGroup: btnGroup,
-  dropdownToggle: dropdownToggle,
+  btn,
+  btnGroup,
+  dropdownToggle,
   flexDirection: 'column',
   alignItems: 'flex-start',
   justifyContent: 'center',
