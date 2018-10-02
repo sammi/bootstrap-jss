@@ -5,6 +5,8 @@ import { themeColors } from '../Variables/Colors'
 import _ from 'lodash'
 import { alertVariant } from '../Mixins/alert'
 import { themeColorLevel } from '../Functions/themeColorLevel'
+import { close } from './Close'
+
 import {
   alertPaddingY,
   alertPaddingX,
@@ -30,8 +32,9 @@ export const alertHeading = { color: 'inherit' }
 export const alertLink = { fontWeight: alertLinkFontWeight }
 
 export const alertDismissible = {
+  close,
   paddingRight: `${size(closeFontSize).value + size(alertPaddingX).value * 2}${size(closeFontSize).unit}`,
-  close: {
+  '$close': {
     position: 'absolute',
     top: '0',
     right: '0',

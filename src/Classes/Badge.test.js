@@ -8,15 +8,10 @@ import {
   badgePillBorderRadius
 } from '../Variables/Badges'
 
-import {
-  themeColors
-} from '../Variables/Colors'
-
-import { borderRadius } from '../Mixins/borderRadius'
-
-import { badgeVariant } from '../Mixins/badge'
-
 import _ from 'lodash'
+import { themeColors } from '../Variables/Colors'
+import { borderRadius } from '../Mixins/borderRadius'
+import { badgeVariant } from '../Mixins/badge'
 
 import {
   badge,

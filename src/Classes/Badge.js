@@ -8,17 +8,10 @@ import {
   badgePillBorderRadius
 } from '../Variables/Badges'
 
-import {
-  borderRadius
-} from '../Mixins/borderRadius'
-
-import {
-  themeColors
-} from '../Variables/Colors'
 import _ from 'lodash'
-import {
-  badgeVariant
-} from '../Mixins/badge'
+import { borderRadius } from '../Mixins/borderRadius'
+import { themeColors } from '../Variables/Colors'
+import { badgeVariant } from '../Mixins/badge'
 
 export const badge = {
   display: 'inline-block',

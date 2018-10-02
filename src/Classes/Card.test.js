@@ -87,7 +87,7 @@ describe('card', () => {
       ...hover({
         textDecoration: 'none'
       }),
-      '+ cardLink': {
+      '+ &': {
         marginLeft: cardSpacerX
       }
     })
@@ -173,16 +173,17 @@ describe('card', () => {
 
   it('cardDeck', () => {
     expect(cardDeck).toEqual({
+      card,
       display: 'flex',
       flexDirection: 'column',
-      card: {
+      '$card': {
         marginBottom: cardDeckMargin
       },
       ...mediaBreakpointUp('sm', {
         flexFlow: 'row wrap',
         marginRight: `-${cardDeckMargin}`,
         marginLeft: `-${cardDeckMargin}`,
-        card: {
+        '$card': {
           display: 'flex',
           flex: '1 0 0%',
           flexDirection: 'column',
@@ -197,8 +198,9 @@ describe('card', () => {
   it('cardGroup', () => {
     const isEenableRounded = enableRounded
     const isEenableRoundedValue = (isEenableRounded) => ({
-      cardImgTop,
+      cardHeader,
       cardFooter,
+      cardImgTop,
       cardImgBottom,
       '&:first-child': {
         ...borderRightRadius(0),
@@ -236,17 +238,18 @@ describe('card', () => {
     })
 
     const cardGroupValue = (isEenableRounded) => ({
+      card,
       display: 'flex',
       flexDirection: 'column',
-      '> card': {
+      '> $card': {
         marginBottom: cardGroupMargin
       },
       ...mediaBreakpointUp('sm', {
         flexFlow: 'row wrap',
-        '> card': {
+        '> $card': {
           flex: '1 0 0%',
           marginBottom: 0,
-          '+ card': {
+          '+ $card': {
             marginLeft: 0,
             borderLeft: 0
           },
@@ -261,7 +264,8 @@ describe('card', () => {
 
   it('cardColumns', () => {
     expect(cardColumns).toEqual({
-      'card': {
+      card,
+      '$card': {
         marginBottom: cardColumnsMargin
       },
       ...mediaBreakpointUp('sm', {
@@ -269,7 +273,7 @@ describe('card', () => {
         columnGap: cardColumnsGap,
         orphans: 1,
         widows: 1,
-        card: {
+        '$card': {
           display: 'inline-block',
           width: '100%'
         }
@@ -279,21 +283,22 @@ describe('card', () => {
 
   it('accordion', () => {
     expect(accordion).toEqual({
-      'card:not(:first-of-type):not(:last-of-type)': {
+      card,
+      '$card:not(:first-of-type):not(:last-of-type)': {
         borderBottom: 0,
         borderRadius: 0
       },
-      'card:not(:first-of-type)': {
+      '$card:not(:first-of-type)': {
         'cardHeader:first-child': {
           borderRadius: 0
         }
       },
-      'card:first-of-type': {
+      '$card:first-of-type': {
         borderBottom: 0,
         borderBottomRightRadius: 0,
         borderBottomLeftRadius: 0
       },
-      'card:last-of-type': {
+      '$card:last-of-type': {
         borderTopLeftRadius: 0,
         borderTopRightRadius: 0
       }

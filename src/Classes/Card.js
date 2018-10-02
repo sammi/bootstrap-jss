@@ -68,7 +68,7 @@ const cardLink = {
   ...hover({
     textDecoration: 'none'
   }),
-  '+ cardLink': {
+  '+ &': {
     marginLeft: cardSpacerX
   }
 }
@@ -136,16 +136,17 @@ const cardImgBottom = {
 }
 
 const cardDeck = {
+  card,
   display: 'flex',
   flexDirection: 'column',
-  card: {
+  '$card': {
     marginBottom: cardDeckMargin
   },
   ...mediaBreakpointUp('sm', {
     flexFlow: 'row wrap',
     marginRight: `-${cardDeckMargin}`,
     marginLeft: `-${cardDeckMargin}`,
-    card: {
+    '$card': {
       display: 'flex',
       flex: '1 0 0%',
       flexDirection: 'column',
@@ -158,8 +159,9 @@ const cardDeck = {
 
 const cardGroup = (isEenableRounded = enableRounded) => {
   const isEenableRoundedValue = (isEenableRounded) => ({
-    cardImgTop,
     cardHeader,
+    cardFooter,
+    cardImgTop,
     cardImgBottom,
     '&:first-child': {
       ...borderRightRadius(0),
@@ -197,17 +199,18 @@ const cardGroup = (isEenableRounded = enableRounded) => {
   })
 
   const cardGroupValue = (isEenableRounded) => ({
+    card,
     display: 'flex',
     flexDirection: 'column',
-    '> card': {
+    '> $card': {
       marginBottom: cardGroupMargin
     },
     ...mediaBreakpointUp('sm', {
       flexFlow: 'row wrap',
-      '> card': {
+      '> $card': {
         flex: '1 0 0%',
         marginBottom: 0,
-        '+ card': {
+        '+ $card': {
           marginLeft: 0,
           borderLeft: 0
         },
@@ -220,7 +223,8 @@ const cardGroup = (isEenableRounded = enableRounded) => {
 }
 
 const cardColumns = {
-  'card': {
+  card,
+  '$card': {
     marginBottom: cardColumnsMargin
   },
   ...mediaBreakpointUp('sm', {
@@ -228,7 +232,7 @@ const cardColumns = {
     columnGap: cardColumnsGap,
     orphans: 1,
     widows: 1,
-    card: {
+    '$card': {
       display: 'inline-block',
       width: '100%'
     }
@@ -236,21 +240,22 @@ const cardColumns = {
 }
 
 const accordion = {
-  'card:not(:first-of-type):not(:last-of-type)': {
+  card,
+  '$card:not(:first-of-type):not(:last-of-type)': {
     borderBottom: 0,
     borderRadius: 0
   },
-  'card:not(:first-of-type)': {
+  '$card:not(:first-of-type)': {
     'cardHeader:first-child': {
       borderRadius: 0
     }
   },
-  'card:first-of-type': {
+  '$card:first-of-type': {
     borderBottom: 0,
     borderBottomRightRadius: 0,
     borderBottomLeftRadius: 0
   },
-  'card:last-of-type': {
+  '$card:last-of-type': {
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0
   }
