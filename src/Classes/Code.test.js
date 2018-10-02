@@ -37,10 +37,11 @@ describe('Code', () => {
 
   it('Blocks of code', () => {
     expect(pre).toEqual({
+      code,
       display: 'block',
       fontSize: codeFontSize,
       color: preColor,
-      code: {
+      '$code': {
         fontSize: 'inherit',
         color: 'inherit',
         wordBreak: 'normal'

@@ -21,7 +21,7 @@ import {
 } from '../Variables/Forms'
 import { borderRightRadius, borderLeftRadius, borderRadius } from '../Mixins/borderRadius'
 import { fontSizeBase, fontWeightNormal, fontSizeLg, fontSizeSm } from '../Variables/Fonts'
-import { customSelect, customFile } from './CustomForms'
+import { customSelect, customFile, customFileInput, customFileLabel } from './CustomForms'
 import { btn } from './Buttons'
 import { dropdownToggle } from './Dropdown'
 
@@ -29,6 +29,8 @@ const inputGroup = {
   formControl,
   customSelect,
   customFile,
+  customFileInput,
+  customFileLabel,
   position: 'relative',
   display: 'flex',
   flexWrap: 'wrap',

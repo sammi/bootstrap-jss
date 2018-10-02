@@ -29,10 +29,11 @@ export const kbd = {
 }
 
 export const pre = {
+  code,
   display: 'block',
   fontSize: codeFontSize,
   color: preColor,
-  code: {
+  '$code': {
     fontSize: 'inherit',
     color: 'inherit',
     wordBreak: 'normal'
