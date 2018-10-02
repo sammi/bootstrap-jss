@@ -70,14 +70,14 @@ const nextPrevLeftRight = {
   }
 }
 
-const activeCarouselItemRight = {
-  'active.carouselItemRight': {
+const carouselItemRight = {
+  'active.&': {
     ...nextRight
   }
 }
 
-const activeCarouselItemLeft = {
-  'active.carouselItemRight': {
+const carouselItemLeft = {
+  'active.&': {
     ...prevLeft
   }
 }
@@ -86,34 +86,41 @@ const carouselItemNext = {
   ...base,
   ...nextPrev,
   ...nextRight,
-  '&.carousleItemLeft': {
+  carouselItemLeft,
+  '&$carouselItemLeft': {
     ...nextPrevLeftRight
   },
-  ...activeCarouselItemRight
+  ...carouselItemRight
 }
 
 const carouselItemPrev = {
   ...base,
   ...nextPrev,
-  '&.carousleItemRight': {
+  carouselItemRight,
+  '&$carouselItemRight': {
     ...nextPrevLeftRight
   },
-  ...activeCarouselItemLeft
+  ...carouselItemLeft
 }
 
 const carouselFade = {
-  carouselItem: {
+  carouselItem,
+  carouselItemNext,
+  carouselItemLeft,
+  carouselItemPrev,
+  carouselItemRight,
+  '$carouselItem': {
     opacity: 0,
     transitionDuration: '.6s',
     transitionProperty: 'opacity'
   },
-  '.carousel-item.active,.carousel-item-next.carousel-item-left,.carousel-item-prev.carousel-item-right': {
+  '$carouselItem.active,$carouselItemNext$carouselItemLeft,$carouselItemPrev$carouselItemRight': {
     opacity: 1
   },
-  '.active.carousel-item-left,.active.carousel-item-right': {
+  '.active$carouselItemLeft,.active$carouselItemRight': {
     opacity: 0
   },
-  '.carousel-item-next,.carousel-item-prev,.carousel-item.active,.active.carousel-item-left,.active.carousel-item-prev': {
+  '$carouselItemNext,$carouselItemPrev,$carouselItem.active,.active$carouselItemLeft,.active$carouselItemPrev': {
     transform: `translateX(0)`,
     '@supports (transform-style: preserve-3d)': {
       transform: `translate3d(0, 0, 0)`
@@ -236,8 +243,8 @@ export {
   carousel,
   carouselInner,
   carouselItem,
-  activeCarouselItemRight,
-  activeCarouselItemLeft,
+  carouselItemRight,
+  carouselItemLeft,
   carouselItemNext,
   carouselItemPrev,
   carouselFade,

@@ -26,8 +26,8 @@ import {
   carouselItem,
   carouselItemNext,
   carouselItemPrev,
-  activeCarouselItemRight,
-  activeCarouselItemLeft,
+  carouselItemRight,
+  carouselItemLeft,
   carouselFade,
   carouselControlPrev,
   carouselControlNext,
@@ -95,16 +95,16 @@ describe('carousel', () => {
   }
 
   it('carousel-item-right', () => {
-    expect(activeCarouselItemRight).toEqual({
-      'active.carouselItemRight': {
+    expect(carouselItemRight).toEqual({
+      'active.&': {
         ...nextRight
       }
     })
   })
 
   it('carousel-item-left', () => {
-    expect(activeCarouselItemLeft).toEqual({
-      'active.carouselItemRight': {
+    expect(carouselItemLeft).toEqual({
+      'active.&': {
         ...prevLeft
       }
     })
@@ -115,10 +115,11 @@ describe('carousel', () => {
       ...base,
       ...nextPrev,
       ...nextRight,
-      '&.carousleItemLeft': {
+      carouselItemLeft,
+      '&$carouselItemLeft': {
         ...nextPrevLeftRight
       },
-      ...activeCarouselItemRight
+      ...carouselItemRight
     })
   })
 
@@ -126,27 +127,33 @@ describe('carousel', () => {
     expect(carouselItemPrev).toEqual({
       ...base,
       ...nextPrev,
-      '&.carousleItemRight': {
+      carouselItemRight,
+      '&$carouselItemRight': {
         ...nextPrevLeftRight
       },
-      ...activeCarouselItemLeft
+      ...carouselItemLeft
     })
   })
 
   it('carousel-fade', () => {
     expect(carouselFade).toEqual({
-      carouselItem: {
+      carouselItem,
+      carouselItemNext,
+      carouselItemLeft,
+      carouselItemPrev,
+      carouselItemRight,
+      '$carouselItem': {
         opacity: 0,
         transitionDuration: '.6s',
         transitionProperty: 'opacity'
       },
-      '.carousel-item.active,.carousel-item-next.carousel-item-left,.carousel-item-prev.carousel-item-right': {
+      '$carouselItem.active,$carouselItemNext$carouselItemLeft,$carouselItemPrev$carouselItemRight': {
         opacity: 1
       },
-      '.active.carousel-item-left,.active.carousel-item-right': {
+      '.active$carouselItemLeft,.active$carouselItemRight': {
         opacity: 0
       },
-      '.carousel-item-next,.carousel-item-prev,.carousel-item.active,.active.carousel-item-left,.active.carousel-item-prev': {
+      '$carouselItemNext,$carouselItemPrev,$carouselItem.active,.active$carouselItemLeft,.active$carouselItemPrev': {
         transform: `translateX(0)`,
         '@supports (transform-style: preserve-3d)': {
           transform: `translate3d(0, 0, 0)`
