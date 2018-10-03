@@ -6,6 +6,7 @@ Build JSS components for Bootstrap by JSS
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1135d152405baa4e466b/test_coverage)](https://codeclimate.com/github/sammi/bootstrap-jss/test_coverage)
 <span class="badge-npmversion"><a href="https://npmjs.com/package/bootstrap-jss" title="View this project on NPM"><img src="https://img.shields.io/npm/v/bootstrap-jss.svg" alt="NPM version" /></a></span>
 <span class="badge-npmdownloads"><a href="https://npmjs.com/package/bootstrap-jss" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/bootstrap-jss.svg" alt="NPM downloads" /></a></span>
+[![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](https://sammi.github.io/bootstrap-jss)
 
 # Checkout the live demo!
 
