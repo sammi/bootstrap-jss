@@ -11,7 +11,7 @@ describe('badge', () => {
       color: colorYiq(bg),
       backgroundColor: bg,
       '&[href]': {
-        extend: hoverFocus({
+        ...hoverFocus({
           color: colorYiq(bg),
           textDecoration: 'none',
           backgroundColor: darken(bg, '10%')

@@ -10,6 +10,15 @@ import {
 
 describe('embed', () => {
   it('embed-responsive', () => {
+    const embedResponsiveItem = {
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      border: 0
+    }
     expect(embedResponsive).toEqual({
       position: 'relative',
       display: 'block',
@@ -20,15 +29,8 @@ describe('embed', () => {
         display: 'block',
         content: ''
       },
-      'embedResponsiveItem,iframe,embed,object,video': {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        border: 0
-      }
+      embedResponsiveItem,
+      '$embedResponsiveItem,iframe,embed,object,video': embedResponsiveItem
     })
   })
 

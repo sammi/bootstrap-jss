@@ -3,18 +3,13 @@ import { rgba } from '../Functions/rgba'
 import { colorYiq } from '../Functions/colorYiq'
 import { gradientBg } from './gradients'
 import { boxShadow } from './boxShadow'
-
 import { btnBoxShadow, btnFocusWidth, btnActiveBoxShadow } from '../Variables/Buttons'
-
 import { hover } from './hover'
 import { enableShadows } from '../Variables/Options'
+import { caret } from './caret'
 
 import { buttonVariant, buttonOutlineVariant, buttonSize } from './buttons'
 
-// Button variants
-//
-// Easily pump out default styles, as well as :hover, :focus, :active,
-// and disabled options for all buttons
 describe('buttonVariants', () => {
   it('buttonVariant', () => {
     const backgroundColor = '#abc'
@@ -27,6 +22,9 @@ describe('buttonVariants', () => {
       backgroundColor,
       borderColor)
     ).toEqual({
+      dropdownToggle: {
+        ...caret()
+      },
       color: colorYiq(backgroundColor),
       ...gradientBg(backgroundColor),
       borderColor: borderColor,
@@ -44,7 +42,7 @@ describe('buttonVariants', () => {
         backgroundColor: backgroundColor,
         borderColor: borderColor
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
         color: colorYiq(activeBackgroundColor),
         backgroundColor: activeBackgroundColor,
         borderColor: activeBorderColor
@@ -80,6 +78,9 @@ describe('buttonVariants', () => {
       myBtnFocusWidth,
       myBtnActiveBoxShadow
     )).toEqual({
+      dropdownToggle: {
+        ...caret()
+      },
       color: colorYiq(backgroundColor),
       ...gradientBg(backgroundColor),
       borderColor: borderColor,
@@ -97,7 +98,7 @@ describe('buttonVariants', () => {
         backgroundColor: backgroundColor,
         borderColor: borderColor
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
         color: colorYiq(activeBackgroundColor),
         backgroundColor: activeBackgroundColor,
         backgrounImage: 'none',
@@ -134,6 +135,9 @@ describe('buttonVariants', () => {
       myBtnFocusWidth,
       myBtnActiveBoxShadow
     )).toEqual({
+      dropdownToggle: {
+        ...caret()
+      },
       color: colorYiq(backgroundColor),
       ...gradientBg(backgroundColor),
       borderColor: borderColor,
@@ -151,7 +155,7 @@ describe('buttonVariants', () => {
         backgroundColor: backgroundColor,
         borderColor: borderColor
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
         color: colorYiq(activeBackgroundColor),
         backgroundColor: activeBackgroundColor,
         borderColor: activeBorderColor
@@ -170,6 +174,9 @@ describe('buttonVariants', () => {
     const mybtnFocusWidth = btnFocusWidth
 
     expect(buttonOutlineVariant(color)).toEqual({
+      dropdownToggle: {
+        ...caret()
+      },
       color: color,
       backgroundColor: 'transparent',
       backgroundImage: 'none',
@@ -186,7 +193,7 @@ describe('buttonVariants', () => {
         color: color,
         backgroundColor: 'tranparent'
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
         color: colorYiq(ativeBackgroundColor),
         backgroundColor: ativeBackgroundColor,
         borderColor: activeBorderColor,
@@ -205,6 +212,9 @@ describe('buttonVariants', () => {
     const myBtnFocusWidth = btnFocusWidth
 
     expect(buttonOutlineVariant(color, colorHover, ativeBackgroundColor, activeBorderColor, myBtnFocusWidth, true)).toEqual({
+      dropdownToggle: {
+        ...caret()
+      },
       color: color,
       backgroundColor: 'transparent',
       backgroundImage: 'none',
@@ -221,7 +231,7 @@ describe('buttonVariants', () => {
         color: color,
         backgroundColor: 'tranparent'
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
         color: colorYiq(ativeBackgroundColor),
         backgroundColor: ativeBackgroundColor,
         borderColor: activeBorderColor,

@@ -1,7 +1,7 @@
 import { invisible as invisibleMixin } from '../Mixins/visibility'
 
 const visible = {
-  ...invisibleMixin('visible')  
+  ...invisibleMixin('visible')
 }
 
 const invisible = {

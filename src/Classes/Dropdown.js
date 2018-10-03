@@ -27,7 +27,7 @@ const dropdown = dropdownPostion
 const dropleft = dropdownPostion
 
 const dropdownToggle = {
-  ...caret
+  ...caret()
 }
 
 const dropdownMenu = {

@@ -38,7 +38,7 @@ describe('dropdown', () => {
 
   it('dropdown-toggle', () => {
     expect(dropdownToggle).toEqual({
-      ...caret
+      ...caret()
     })
   })
 

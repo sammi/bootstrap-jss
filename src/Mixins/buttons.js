@@ -7,6 +7,7 @@ import { darken } from '../Functions/darken'
 
 import { btnBoxShadow, btnFocusWidth, btnActiveBoxShadow } from '../Variables/Buttons'
 import { enableShadows, enableGradients, enableRounded } from '../Variables/Options'
+import { caret } from './caret'
 
 const buttonVariant = (
   backgroundColor,
@@ -27,6 +28,9 @@ const buttonVariant = (
   activeBorderColor = activeBorderColor || darken(borderColor, '12.5%')
 
   return {
+    dropdownToggle: {
+      ...caret()
+    },
     color: colorYiq(backgroundColor),
     ...gradientBg(backgroundColor),
     borderColor: borderColor,
@@ -46,7 +50,7 @@ const buttonVariant = (
       backgroundColor: backgroundColor,
       borderColor: borderColor
     },
-    '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle':
+    '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle':
       myEnableGradients
         ? {
           color: colorYiq(activeBackgroundColor),
@@ -75,6 +79,9 @@ const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, activeBor
   myEnableShadows = myEnableShadows || enableShadows
 
   return {
+    dropdownToggle: {
+      ...caret()
+    },
     color: color,
     backgroundColor: 'transparent',
     backgroundImage: 'none',
@@ -91,7 +98,7 @@ const buttonOutlineVariant = (color, colorHover, ativeBackgroundColor, activeBor
       color: color,
       backgroundColor: 'tranparent'
     },
-    '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle': {
+    '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
       color: colorYiq(ativeBackgroundColor),
       backgroundColor: ativeBackgroundColor,
       borderColor: activeBorderColor,

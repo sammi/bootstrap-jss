@@ -1,5 +1,15 @@
 import percentValue from 'percent-value'
 
+const embedResponsiveItem = {
+  position: 'absolute',
+  top: 0,
+  bottom: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  border: 0
+}
+
 const embedResponsive = {
   position: 'relative',
   display: 'block',
@@ -10,15 +20,8 @@ const embedResponsive = {
     display: 'block',
     content: ''
   },
-  'embedResponsiveItem,iframe,embed,object,video': {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    border: 0
-  }
+  embedResponsiveItem,
+  '$embedResponsiveItem,iframe,embed,object,video': embedResponsiveItem
 }
 
 const embedResponsive21by9 = {
@@ -50,5 +53,5 @@ export {
   embedResponsive21by9,
   embedResponsive16by9,
   embedResponsive4by3,
-  embedResponsive1by1,
+  embedResponsive1by1
 }

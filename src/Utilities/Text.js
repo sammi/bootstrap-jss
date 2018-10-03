@@ -1,4 +1,5 @@
-import { fontFamilyMonospace, 
+import {
+  fontFamilyMonospace,
   fontWeightLight as fontWeightLightVariable,
   fontWeightLighter as fontWeightLighterVariable,
   fontWeightNormal as fontWeightNormalVariable,
@@ -11,7 +12,7 @@ import { gridBreakpoints } from '../Variables/Grid'
 import { breakpointInfix } from '../Mixins/breakpoints'
 import { themeColors, white, black } from '../Variables/Colors'
 import { textEmphasisVariant } from '../Mixins/textEmphasis'
-import { textHide as textHideMixin} from '../Mixins/textHide'
+import { textHide as textHideMixin } from '../Mixins/textHide'
 import { rgba } from '../Functions/rgba'
 import { bodyColor } from '../Variables/Body'
 
@@ -27,28 +28,28 @@ const textNowrap = {
 const textTruncate = textTruncateMixin
 
 const responsive = {}
-for(const [name] of Object.entries(gridBreakpoints)) {
+for (const [name] of Object.entries(gridBreakpoints)) {
   const infix = breakpointInfix(name, gridBreakpoints)
   responsive[`text${infix}-left`] = { textAlign: 'left !important' }
   responsive[`text${infix}-right`] = { textAlign: 'right !important' }
   responsive[`text${infix}-center`] = { textAlign: 'center !important' }
 }
 
-const textLowercase = {textTransform: 'lowercase !important'}
-const textUppercase = {textTransform: 'uppercase !important'}
-const textCapitalize = {textTransform: 'capitalize !important'}
+const textLowercase = { textTransform: 'lowercase !important' }
+const textUppercase = { textTransform: 'uppercase !important' }
+const textCapitalize = { textTransform: 'capitalize !important' }
 
-const fontWeightLight = {fontWeight: `${fontWeightLightVariable} !important`}
-const fontWeightLighter = {fontWeight: `${fontWeightLighterVariable} !important`}
-const fontWeightNormal = {fontWeight: `${fontWeightNormalVariable} !important`}
-const fontWeightBold = {fontWeight: `${fontWeightBoldVariable} !important`}
-const fontWeightBolder = {fontWeight: `${fontWeightBolderVariable} !important`}
-const fontWeightItalic = {fontWeight: 'italic !important'}
+const fontWeightLight = { fontWeight: `${fontWeightLightVariable} !important` }
+const fontWeightLighter = { fontWeight: `${fontWeightLighterVariable} !important` }
+const fontWeightNormal = { fontWeight: `${fontWeightNormalVariable} !important` }
+const fontWeightBold = { fontWeight: `${fontWeightBoldVariable} !important` }
+const fontWeightBolder = { fontWeight: `${fontWeightBolderVariable} !important` }
+const fontWeightItalic = { fontWeight: 'italic !important' }
 
-const textWhite = {color: `${white} !important`}
+const textWhite = { color: `${white} !important` }
 
 let textThemeColorsValue = {}
-for(const [color, value] of Object.entries(themeColors)) {
+for (const [color, value] of Object.entries(themeColors)) {
   textThemeColorsValue = {
     ...textThemeColorsValue,
     ...textEmphasisVariant(`text-${color}`, value)
@@ -56,10 +57,10 @@ for(const [color, value] of Object.entries(themeColors)) {
 }
 const textThemeColors = textThemeColorsValue
 
-const textBody = {color: `${bodyColor} !important`}
-const textMuted = {color: `${textMutedVariable} !important`}
-const textBlack50 = {color: `${rgba(black, 0.5)} !important`}
-const textWhite50 = {color: `${rgba(white, 0.5)} !important`}
+const textBody = { color: `${bodyColor} !important` }
+const textMuted = { color: `${textMutedVariable} !important` }
+const textBlack50 = { color: `${rgba(black, 0.5)} !important` }
+const textWhite50 = { color: `${rgba(white, 0.5)} !important` }
 
 const textHide = { ...textHideMixin() }
 const textDecorationNone = { textDecoration: 'none !important' }
