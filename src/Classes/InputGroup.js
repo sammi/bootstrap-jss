@@ -113,38 +113,30 @@ const inputGroupAppend = {
   marginLeft: `-${inputBorderWidth}`
 }
 
-const inputGroupSizing = {
+const inputGroupLg = {
   formControl,
   inputGroupAppend,
-  inputGroupText
+  inputGroupText,
+  [`& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupAppend  > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn`]: {
+    height: inputHeightLg,
+    padding: `${inputPaddingYLg} ${inputPaddingXLg}`,
+    fontSize: fontSizeLg,
+    lineHeight: inputLineHeightLg,
+    ...borderRadius(inputBorderRadiusLg)
+  }
 }
 
-const sizingLgKey = '$inputGroupLg > $formControl, ' +
-  '$inputGroupLg > $inputGroupPrepend > $inputGroupText, ' +
-  '$inputGroupLg > $inputGroupAppend  > $inputGroupText, ' +
-  '$inputGroupLg > $inputGroupPrepend > $btn, ' +
-  '$inputGroupLg > $inputGroupAppend  > $btn'
-
-const sizingSmKey = '$inputGroupSm > $formControl, ' +
-  '$inputGroupSm > $inputGroupPrepend > $inputGroupText, ' +
-  '$inputGroupSm > $inputGroupAppend  > $inputGroupText, ' +
-  '$inputGroupSm > $inputGroupPrepend > $btn, ' +
-  '$inputGroupSm > $inputGroupAppend  > $btn'
-
-inputGroupSizing[sizingLgKey] = {
-  height: inputHeightLg,
-  padding: `${inputPaddingYLg} ${inputPaddingXLg}`,
-  fontSize: fontSizeLg,
-  lineHeight: inputLineHeightLg,
-  ...borderRadius(inputBorderRadiusLg)
-}
-
-inputGroupSizing[sizingSmKey] = {
-  height: inputHeightSm,
-  padding: `${inputPaddingYSm} ${inputPaddingXSm}`,
-  fontSize: fontSizeSm,
-  lineHeight: inputLineHeightSm,
-  ...borderRadius(inputBorderRadiusSm)
+const inputGroupSm = {
+  formControl,
+  inputGroupAppend,
+  inputGroupText,
+  [`& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn`]: {
+    height: inputHeightSm,
+    padding: `${inputPaddingYSm} ${inputPaddingXSm}`,
+    fontSize: fontSizeSm,
+    lineHeight: inputLineHeightSm,
+    ...borderRadius(inputBorderRadiusSm)
+  }
 }
 
 const inputGroupRadius = {
@@ -168,6 +160,7 @@ export {
   inputGroupPrepend,
   inputGroupAppend,
   inputGroupText,
-  inputGroupSizing,
+  inputGroupLg,
+  inputGroupSm,
   inputGroupRadius
 }

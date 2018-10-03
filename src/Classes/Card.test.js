@@ -26,8 +26,8 @@ import {
 describe('card', () => {
   it('card', () => {
     expect(card).toEqual({
-      listGroup: listGroup,
-      listGroupItem: listGroupItem,
+      listGroup,
+      listGroupItem,
       position: 'relative',
       display: 'flex',
       flexDirection: 'column',
@@ -95,8 +95,8 @@ describe('card', () => {
 
   it('cardHeader', () => {
     expect(cardHeader).toEqual({
-      listGroup: listGroup,
-      listGroupItem: listGroupItem,
+      listGroup,
+      listGroupItem,
       padding: `${cardSpacerY} ${cardSpacerX}`,
       marginBottom: 0,
       backgroundColor: cardCapBg,

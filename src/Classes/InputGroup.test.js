@@ -30,7 +30,8 @@ import {
   inputGroupPrepend,
   inputGroupAppend,
   inputGroupText,
-  inputGroupSizing,
+  inputGroupLg,
+  inputGroupSm,
   inputGroupRadius
 } from './InputGroup'
 
@@ -131,43 +132,36 @@ describe('input group', () => {
     })
   })
 
-  const inputGroupSizingValue = {
-    formControl,
-    inputGroupAppend,
-    inputGroupText
-  }
-
-  const sizingLgKey = '$inputGroupLg > $formControl, ' +
-  '$inputGroupLg > $inputGroupPrepend > $inputGroupText, ' +
-  '$inputGroupLg > $inputGroupAppend  > $inputGroupText, ' +
-  '$inputGroupLg > $inputGroupPrepend > $btn, ' +
-  '$inputGroupLg > $inputGroupAppend  > $btn'
-
-  const sizingSmKey = '$inputGroupSm > $formControl, ' +
-  '$inputGroupSm > $inputGroupPrepend > $inputGroupText, ' +
-  '$inputGroupSm > $inputGroupAppend  > $inputGroupText, ' +
-  '$inputGroupSm > $inputGroupPrepend > $btn, ' +
-  '$inputGroupSm > $inputGroupAppend  > $btn'
-
-  inputGroupSizingValue[sizingLgKey] = {
-    height: inputHeightLg,
-    padding: `${inputPaddingYLg} ${inputPaddingXLg}`,
-    fontSize: fontSizeLg,
-    lineHeight: inputLineHeightLg,
-    ...borderRadius(inputBorderRadiusLg)
-  }
-
-  inputGroupSizingValue[sizingSmKey] = {
-    height: inputHeightSm,
-    padding: `${inputPaddingYSm} ${inputPaddingXSm}`,
-    fontSize: fontSizeSm,
-    lineHeight: inputLineHeightSm,
-    ...borderRadius(inputBorderRadiusSm)
-  }
-
-  it('sizing', () => {
-    expect(inputGroupSizing).toEqual(inputGroupSizingValue)
+  it('input-group-lg', () => {
+    expect(inputGroupLg).toEqual({
+      formControl,
+      inputGroupAppend,
+      inputGroupText,
+      [`& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupAppend  > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn`]: {
+        height: inputHeightLg,
+        padding: `${inputPaddingYLg} ${inputPaddingXLg}`,
+        fontSize: fontSizeLg,
+        lineHeight: inputLineHeightLg,
+        ...borderRadius(inputBorderRadiusLg)
+      }
+    })
   })
+
+  it('intput-group-sm', () => {
+    expect(inputGroupSm).toEqual({
+      formControl,
+      inputGroupAppend,
+      inputGroupText,
+      [`& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn`]: {
+        height: inputHeightSm,
+        padding: `${inputPaddingYSm} ${inputPaddingXSm}`,
+        fontSize: fontSizeSm,
+        lineHeight: inputLineHeightSm,
+        ...borderRadius(inputBorderRadiusSm)
+      }
+    })
+  })
+
   it('input-group-radius', () => {
     expect(inputGroupRadius).toEqual({
       formControl,

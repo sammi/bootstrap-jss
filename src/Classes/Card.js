@@ -17,8 +17,8 @@ import { enableRounded } from '../Variables/Options'
 import { listGroup, listGroupItem } from './ListGroup'
 
 const card = {
-  listGroup: listGroup,
-  listGroupItem: listGroupItem,
+  listGroup,
+  listGroupItem,
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',
@@ -74,8 +74,8 @@ const cardLink = {
 }
 
 const cardHeader = {
-  listGroup: listGroup,
-  listGroupItem: listGroupItem,
+  listGroup,
+  listGroupItem,
   padding: `${cardSpacerY} ${cardSpacerX}`,
   marginBottom: 0,
   backgroundColor: cardCapBg,
