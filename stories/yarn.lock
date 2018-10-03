@@ -330,7 +330,7 @@
 
 "@storybook/storybook-deployer@^2.3.0":
   version "2.3.0"
-  resolved "http://registry.npmjs.org/@storybook/storybook-deployer/-/storybook-deployer-2.3.0.tgz#43d3cc105a571e27b9c3e363c43d7da4a6a486e9"
+  resolved "https://registry.yarnpkg.com/@storybook/storybook-deployer/-/storybook-deployer-2.3.0.tgz#43d3cc105a571e27b9c3e363c43d7da4a6a486e9"
   integrity sha512-islhy4R8i8sxdLD71X2Wy1wo5ZgsDCVqHVN91+1lB+zAOweLTi1aQm2dcRh+me65jAopkJdFjmbiQ2TVgjAo2w==
   dependencies:
     git-url-parse "^8.1.0"
