@@ -5,13 +5,14 @@ import { btn, btnLink, btnSm, btnLg } from './Buttons'
 import { size } from '../Functions/size'
 import { boxShadow } from '../Mixins/boxShadow'
 import { inputGroup } from './InputGroup'
+import { dropup, dropright, dropleft } from './Dropdown'
 
 import { dropdownToggle, btnGroup, dropdownToggleSplit, btnToolbar, btnSizing, btnGroupVertical, btnGroupToggle } from './ButtonGroup'
 
 describe('button group', () => {
   it('dropdown-toggle', () => {
     expect(dropdownToggle).toEqual({
-      btnLink: btnLink,
+      btnLink,
       ...boxShadow(btnActiveBoxShadow),
       '&$btnLink': {
         ...boxShadow('none')
@@ -52,7 +53,7 @@ describe('button group', () => {
 
   it('btn-toolbar', () => {
     expect(btnToolbar).toEqual({
-      inputGroup: inputGroup,
+      inputGroup,
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'flex-start',
@@ -64,12 +65,15 @@ describe('button group', () => {
 
   it('dropdown-toggle-split', () => {
     expect(dropdownToggleSplit).toEqual({
+      dropup,
+      dropright,
+      dropleft,
       paddingRight: `${size(btnPaddingX).value * 0.75}${size(btnPaddingX).unit}`,
       paddingLeft: `${size(btnPaddingX).value * 0.75}${size(btnPaddingX).unit}`,
-      '&::after,dropup &::after,dropright &::after': {
+      '&::after,$dropup &::after,$dropright &::after': {
         marginLeft: 0
       },
-      'dropleft &::before': {
+      '$dropleft &::before': {
         marginRight: 0
       }
     })
@@ -77,12 +81,12 @@ describe('button group', () => {
 
   it('btn-sizing', () => {
     expect(btnSizing).toEqual({
-      btn: btn,
-      btnSm: btnSm,
-      btnLg: btnLg,
+      btn,
+      btnSm,
+      btnLg,
+      dropdownToggleSplit,
       btnGroupSm: btnSm,
       btnGroupLg: btnLg,
-      dropdownToggleSplit: dropdownToggleSplit,
       '$btnGroupSm > $btn': {
         ...btnSm
       },
@@ -102,7 +106,7 @@ describe('button group', () => {
 
   it('dropdown-toggle', () => {
     expect(dropdownToggle).toEqual({
-      btnLink: btnLink,
+      btnLink,
       ...boxShadow(btnActiveBoxShadow),
       '&$btnLink': {
         ...boxShadow('none')
@@ -136,8 +140,8 @@ describe('button group', () => {
 
   it('btn-group-toggle', () => {
     expect(btnGroupToggle).toEqual({
-      btn: btn,
-      btnGroup: btnGroup,
+      btn,
+      btnGroup,
       '> $btn,> $btnGroup > $btn': {
         marginBottom: 0,
         'input[type="radio"],input[type="checkbox"]': {

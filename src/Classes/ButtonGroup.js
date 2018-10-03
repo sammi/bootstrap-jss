@@ -5,9 +5,10 @@ import { btn, btnLink, btnSm, btnLg } from './Buttons'
 import { size } from '../Functions/size'
 import { boxShadow } from '../Mixins/boxShadow'
 import { inputGroup } from './InputGroup'
+import { dropup, dropright, dropleft } from './Dropdown'
 
 const dropdownToggle = {
-  btnLink: btnLink,
+  btnLink,
   ...boxShadow(btnActiveBoxShadow),
   '&$btnLink': {
     ...boxShadow('none')
@@ -45,8 +46,8 @@ const btnGroup = {
 }
 
 const btnGroupVertial = {
-  btn: btn,
-  btnGroup: btnGroup,
+  btn,
+  btnGroup,
   position: 'relative',
   display: 'inline-flex',
   verticalAlign: 'middle',
@@ -66,7 +67,7 @@ const btnGroupVertial = {
 }
 
 const btnToolbar = {
-  inputGroup: inputGroup,
+  inputGroup,
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'flex-start',
@@ -76,23 +77,26 @@ const btnToolbar = {
 }
 
 const dropdownToggleSplit = {
+  dropup,
+  dropright,
+  dropleft,
   paddingRight: `${size(btnPaddingX).value * 0.75}${size(btnPaddingX).unit}`,
   paddingLeft: `${size(btnPaddingX).value * 0.75}${size(btnPaddingX).unit}`,
-  '&::after,dropup &::after,dropright &::after': {
+  '&::after,$dropup &::after,$dropright &::after': {
     marginLeft: 0
   },
-  'dropleft &::before': {
+  '$dropleft &::before': {
     marginRight: 0
   }
 }
 
 const btnSizing = {
-  btn: btn,
-  btnSm: btnSm,
-  btnLg: btnLg,
+  btn,
+  btnSm,
+  btnLg,
+  dropdownToggleSplit,
   btnGroupSm: btnSm,
   btnGroupLg: btnLg,
-  dropdownToggleSplit: dropdownToggleSplit,
   '$btnGroupSm > $btn': {
     ...btnSm
   },
@@ -132,8 +136,8 @@ const btnGroupVertical = {
 }
 
 const btnGroupToggle = {
-  btn: btn,
-  btnGroup: btnGroup,
+  btn,
+  btnGroup,
   '> $btn,> $btnGroup > $btn': {
     marginBottom: 0,
     'input[type="radio"],input[type="checkbox"]': {
