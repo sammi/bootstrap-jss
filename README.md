@@ -32,7 +32,7 @@ https://sammi.github.io/bootstrap-jss
 1. Start the test watcher
 ```bash
 rm -rf node_modules
-yarn install
+yarn
 yarn test:watch
 ```
 2. Change and save code, make sure all tests are passing
@@ -44,7 +44,7 @@ yarn test:watch
  ```bash
  cd stories
  rm -rf node_modules
- yarn install
+ yarn
  yarn start
  ```
 Check out http://localhost:9001
