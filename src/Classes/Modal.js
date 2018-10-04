@@ -13,26 +13,14 @@ import { borderRadius, borderTopRadius } from '../Mixins/borderRadius'
 import { boxShadow } from '../Mixins/boxShadow'
 import { mediaBreakpointUp } from '../Mixins/breakpoints'
 import { gridBreakpoints } from '../Variables/Grid'
+import { close } from '../Classes/Close'
 
 const modalOpen = {
   overflow: 'hidden'
 }
 
-const modalDialog = {
-  position: 'relative',
-  width: 'auto',
-  margin: modalDialogMargin,
-  pointerEvents: 'none',
-  'modal.fade &': {
-    ...transition(modalTransition),
-    transform: `translate(0, -25%)`
-  },
-  'modal.show &': {
-    transform: `translate(0, 0)`
-  }
-}
-
 const modal = {
+  modalOpen,
   position: 'fixed',
   top: 0,
   right: 0,
@@ -42,9 +30,24 @@ const modal = {
   display: 'none',
   overflow: 'hidden',
   outline: 0,
-  'modalOpen &': {
+  '$modalOpen &': {
     overflowX: 'hidden',
     overflowY: 'auto'
+  }
+}
+
+const modalDialog = {
+  modal,
+  position: 'relative',
+  width: 'auto',
+  margin: modalDialogMargin,
+  pointerEvents: 'none',
+  '$modal.fade &': {
+    ...transition(modalTransition),
+    transform: `translate(0, -25%)`
+  },
+  '$modal.show &': {
+    transform: `translate(0, 0)`
   }
 }
 
@@ -85,13 +88,14 @@ const modalBackdrop = {
 }
 
 const modalHeader = {
+  close,
   display: 'flex',
   alignItems: 'flex-start',
   justifyContent: 'space-between',
   padding: modalHeaderPadding,
   borderBottom: `${modalHeaderBorderWidth} solid ${modalHeaderBorderColor}`,
   ...borderTopRadius(modalContentBorderRadius),
-  close: {
+  '$close': {
     padding: modalHeaderPadding,
     margin: `-${modalHeaderPadding} -${modalHeaderPadding} -${modalHeaderPadding} auto`
   }
@@ -132,22 +136,27 @@ const modalScrollbarMeasure = {
 
 const modalResponsive = {
   ...mediaBreakpointUp('sm', gridBreakpoints, {
-    modalDialog: {
+    modalDialog,
+    modalDialogCentered,
+    modalContent,
+    modalSm,
+    '$modalDialog': {
       maxWidth: modalMd,
       margin: `${modalDialogMarginYSmUp} auto`
     },
-    modalDialogCentered: {
+    '$modalDialogCentered': {
       minHeight: `calc(100% - ${size(modalDialogMarginYSmUp).value * 2}${size(modalDialogMarginYSmUp).unit})`
     },
-    modalContent: {
+    '$modalContent': {
       ...boxShadow(modalContentBoxShadowSmUp)
     },
-    modalSm: {
+    '$modalSm': {
       maxWidth: modalSm
     }
   }),
   ...mediaBreakpointUp('lg', gridBreakpoints, {
-    modalLg: {
+    modalLg,
+    '$modalLg': {
       maxWidth: modalLg
     }
   })

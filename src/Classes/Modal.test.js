@@ -13,6 +13,7 @@ import { borderRadius, borderTopRadius } from '../Mixins/borderRadius'
 import { boxShadow } from '../Mixins/boxShadow'
 import { mediaBreakpointUp } from '../Mixins/breakpoints'
 import { gridBreakpoints } from '../Variables/Grid'
+import { close } from '../Classes/Close'
 
 import {
   modalOpen,
@@ -38,6 +39,7 @@ describe('modal', () => {
 
   it('modal', () => {
     expect(modal).toEqual({
+      modalOpen,
       position: 'fixed',
       top: 0,
       right: 0,
@@ -47,7 +49,7 @@ describe('modal', () => {
       display: 'none',
       overflow: 'hidden',
       outline: 0,
-      'modalOpen &': {
+      '$modalOpen &': {
         overflowX: 'hidden',
         overflowY: 'auto'
       }
@@ -56,15 +58,16 @@ describe('modal', () => {
 
   it('modal-dialog', () => {
     expect(modalDialog).toEqual({
+      modal,
       position: 'relative',
       width: 'auto',
       margin: modalDialogMargin,
       pointerEvents: 'none',
-      'modal.fade &': {
+      '$modal.fade &': {
         ...transition(modalTransition),
         transform: `translate(0, -25%)`
       },
-      'modal.show &': {
+      '$modal.show &': {
         transform: `translate(0, 0)`
       }
     })
@@ -114,13 +117,14 @@ describe('modal', () => {
 
   it('modal-header', () => {
     expect(modalHeader).toEqual({
+      close,
       display: 'flex',
       alignItems: 'flex-start',
       justifyContent: 'space-between',
       padding: modalHeaderPadding,
       borderBottom: `${modalHeaderBorderWidth} solid ${modalHeaderBorderColor}`,
       ...borderTopRadius(modalContentBorderRadius),
-      close: {
+      '$close': {
         padding: modalHeaderPadding,
         margin: `-${modalHeaderPadding} -${modalHeaderPadding} -${modalHeaderPadding} auto`
       }
@@ -171,22 +175,27 @@ describe('modal', () => {
   it('modal-reponsive', () => {
     expect(modalResponsive).toEqual({
       ...mediaBreakpointUp('sm', gridBreakpoints, {
-        modalDialog: {
+        modalDialog,
+        modalDialogCentered,
+        modalContent,
+        modalSm,
+        '$modalDialog': {
           maxWidth: modalMd,
           margin: `${modalDialogMarginYSmUp} auto`
         },
-        modalDialogCentered: {
+        '$modalDialogCentered': {
           minHeight: `calc(100% - ${size(modalDialogMarginYSmUp).value * 2}${size(modalDialogMarginYSmUp).unit})`
         },
-        modalContent: {
+        '$modalContent': {
           ...boxShadow(modalContentBoxShadowSmUp)
         },
-        modalSm: {
+        '$modalSm': {
           maxWidth: modalSm
         }
       }),
       ...mediaBreakpointUp('lg', gridBreakpoints, {
-        modalLg: {
+        modalLg,
+        '$modalLg': {
           maxWidth: modalLg
         }
       })
