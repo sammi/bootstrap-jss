@@ -154,7 +154,7 @@ const navbarLight = {
         color: navbarLightDisabledColor
       }
     },
-    'show > navLink,active > navLink,navLink.show,navLink.active': {
+    'show > $navLink,active > $navLink,$navLink.show,$navLink.active': {
       color: navbarLightActiveColor
     }
   },
@@ -193,7 +193,7 @@ const navbarDark = {
         color: navbarDarkDisabledColor
       }
     },
-    'show > navLink, active > navLink,navLink.show,navLink.active': {
+    'show > $navLink, active > $navLink,$navLink.show,$navLink.active': {
       color: navbarDarkActiveColor
     }
   },

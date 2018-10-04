@@ -106,20 +106,23 @@ const tableHeadDark = {
 }
 
 const tableDark = {
+  tableBordered,
+  tableStriped,
+  tableHover,
   color: tableDarkColor,
   backgroundColor: tableDarkBg,
   'th,td,thead th': {
     borderColor: tableDarkBorderColor
   },
-  '&.tableBordered': {
+  '&$tableBordered': {
     border: 0
   },
-  '&.tableStriped': {
+  '&$tableStriped': {
     'tbody tr:nth-of-type(odd)': {
       backgroundColor: tableDarkAccentBg
     }
   },
-  '&.tableHover': {
+  '&$tableHover': {
     'tbody tr': {
       ...hover({
         backgroundColor: tableDarkHoverBg
@@ -134,12 +137,13 @@ for (const [breakpoint] of Object.entries(gridBreakpoints)) {
   const infix = breakpointInfix(next, gridBreakpoints)
   tableResponsive[`&${infix}`] = {
     ...mediaBreakpointDown(breakpoint, {
+      tableBordered,
       display: 'block',
       width: '100%',
       overflowX: 'auto',
       '-webkit-overflow-scrolling': 'touch',
       '-ms-overflow-style': '-ms-autohiding-scrollbar',
-      '> tableBordered': {
+      '> $tableBordered': {
         border: 0
       }
     })

@@ -13,7 +13,7 @@ import { progressBarStripes, progress, progressBar, progressBarStiped, progressB
 describe('progress', () => {
   it('progress-bar-strips', () => {
     expect(progressBarStripes).toEqual({
-      '@keyframes progressBarStripes': {
+      '@keyframes progress-bar-stripes': {
         from: {
           backgroundPosition: `${progressHeight} 0`
         },
@@ -58,7 +58,7 @@ describe('progress', () => {
 
   it('progress-bar-animated', () => {
     expect(progressBarAnimated).toEqual({
-      animation: `progressBarStripes ${progressBarAnimationTiming}`
+      animation: `progress-bar-stripes ${progressBarAnimationTiming}`
     })
   })
 })

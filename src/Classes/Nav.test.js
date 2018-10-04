@@ -9,7 +9,9 @@ import {
   navTabsLinkActiveBorderColor,
   navPillsBorderRadius,
   navPillsLinkActiveColor,
-  navPillsLinkActiveBg
+  navPillsLinkActiveBg,
+  navLinkPaddingY,
+  navLinkPaddingX
 } from '../Variables/Navs'
 import { borderTopRadius, borderRadius } from '../Mixins/borderRadius'
 import { hoverFocus } from '../Mixins/hover'
@@ -29,28 +31,13 @@ describe('nav', () => {
 
   it('nav-link', () => {
     expect(navLink).toEqual({
-      borderBottom: `${navTabsBorderWidth} solid ${navTabsBorderColor}`,
-      navItem: {
-        marginBottom: `-${navTabsBorderWidth}`
-      },
-      navLink: {
-        border: `${navTabsBorderWidth} solid transparent`,
-        ...borderTopRadius(navTabsBorderRadius),
-        ...hoverFocus({ borderColor: navTabsLinkHoverBorderColor }),
-        '&.disabled': {
-          color: navLinkDisabledColor,
-          backgroundColor: 'transparent',
-          borderColor: 'transparent'
-        }
-      },
-      'navLink.active,navItem.show navLink': {
-        color: navTabsLinkActiveColor,
-        backgroundColor: navTabsLinkActiveBg,
-        borderColor: navTabsLinkActiveBorderColor
-      },
-      dropdownMenu: {
-        marginTop: `-${navTabsBorderWidth}`,
-        ...borderTopRadius(0)
+      display: 'block',
+      padding: `${navLinkPaddingY} ${navLinkPaddingX}`,
+      ...hoverFocus({
+        textDecoration: 'none'
+      }),
+      '&.disabled': {
+        color: navLinkDisabledColor
       }
     })
   })
@@ -73,7 +60,7 @@ describe('nav', () => {
           borderColor: 'transparent'
         }
       },
-      'navLink.active,navItem.show navLink': {
+      '$navLink.active,$navItem.show $navLink': {
         color: navTabsLinkActiveColor,
         backgroundColor: navTabsLinkActiveBg,
         borderColor: navTabsLinkActiveBorderColor
@@ -90,7 +77,7 @@ describe('nav', () => {
       navLink: {
         ...borderRadius(navPillsBorderRadius)
       },
-      'navLink.active,show > navLink': {
+      '$navLink.active,show > $navLink': {
         color: navPillsLinkActiveColor,
         backgroundColor: navPillsLinkActiveBg
       }
@@ -127,7 +114,7 @@ describe('nav', () => {
 
   it('tab-content', () => {
     expect(tabContent).toEqual({
-      '> tab-pane': {
+      '> tabPane': {
         display: 'none'
       },
       '> active': {

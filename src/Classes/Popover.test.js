@@ -94,14 +94,14 @@ describe('popover', () => {
       arrow: {
         bottom: `calc(-${arrowHeightPlusWidthValue})`
       },
-      'arrow::before,arrow::after': {
+      '$arrow::before,$arrow::after': {
         borderWidth: `${popoverArrowHeight} ${size(popoverArrowWidth).value / 2}${size(popoverArrowWidth).unit} 0`
       },
-      'arrow::before': {
+      '$arrow::before': {
         bottom: 0,
         borderTopColor: popoverArrowOuterColor
       },
-      'arrow::after': {
+      '$arrow::after': {
         bottom: popoverBorderWidth,
         borderTopColor: popoverArrowColor
       }
@@ -119,14 +119,14 @@ describe('popover', () => {
         height: popoverArrowWidth,
         margin: `${borderRadiusLg} 0`
       },
-      'arrow::before,arrow::after': {
+      '$arrow::before,$arrow::after': {
         borderWidth: `${popoverArrowWidthValue} ${popoverArrowHeight} ${popoverArrowWidthValue} 0`
       },
-      'arrow::before': {
+      '$arrow::before': {
         left: 0,
         borderRightColor: popoverArrowOuterColor
       },
-      'arrow::after': {
+      '$arrow::after': {
         left: popoverBorderWidth,
         borderRightColor: popoverArrowColor
       }
@@ -140,14 +140,14 @@ describe('popover', () => {
       arrow: {
         top: `calc(-${arrowHeightPlusWidthValue})`
       },
-      'arrow::before,arrow::after': {
+      '$arrow::before,$arrow::after': {
         borderWidth: `0 ${popoverArrowWidthValue} ${popoverArrowHeight} ${popoverArrowWidthValue}`
       },
-      'arrow::before': {
+      '$arrow::before': {
         top: 0,
         borderBottomColor: popoverArrowOuterColor
       },
-      'arrow::after': {
+      '$arrow::after': {
         top: popoverBorderWidth,
         borderBottomColor: popoverArrowColor
       },
@@ -173,14 +173,14 @@ describe('popover', () => {
         height: popoverArrowWidth,
         margin: `${borderRadiusLg} 0`
       },
-      'arrow::before,arrow::after': {
+      '$arrow::before,$arrow::after': {
         borderWidth: `${popoverArrowWidthValue} 0 ${popoverArrowWidthValue} ${popoverArrowHeight}`
       },
-      'arrow::before': {
+      '$arrow::before': {
         right: 0,
         borderLeftColor: popoverArrowOuterColor
       },
-      'arrow::after': {
+      '$arrow::after': {
         right: popoverBorderWidth,
         borderLeftColor: popoverArrowColor
       }

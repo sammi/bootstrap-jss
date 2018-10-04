@@ -127,20 +127,23 @@ describe('Basic Bootstrap table', () => {
 
   it('table dark', () => {
     expect(tableDark).toEqual({
+      tableBordered,
+      tableStriped,
+      tableHover,
       color: tableDarkColor,
       backgroundColor: tableDarkBg,
       'th,td,thead th': {
         borderColor: tableDarkBorderColor
       },
-      '&.tableBordered': {
+      '&$tableBordered': {
         border: 0
       },
-      '&.tableStriped': {
+      '&$tableStriped': {
         'tbody tr:nth-of-type(odd)': {
           backgroundColor: tableDarkAccentBg
         }
       },
-      '&.tableHover': {
+      '&$tableHover': {
         'tbody tr': {
           ...hover({
             backgroundColor: tableDarkHoverBg
@@ -157,12 +160,13 @@ describe('Basic Bootstrap table', () => {
       const infix = breakpointInfix(next, gridBreakpoints)
       expectValue[`&${infix}`] = {
         ...mediaBreakpointDown(breakpoint, {
+          tableBordered,
           display: 'block',
           width: '100%',
           overflowX: 'auto',
           '-webkit-overflow-scrolling': 'touch',
           '-ms-overflow-style': '-ms-autohiding-scrollbar',
-          '> tableBordered': {
+          '> $tableBordered': {
             border: 0
           }
         })

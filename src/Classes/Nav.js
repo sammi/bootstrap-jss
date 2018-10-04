@@ -9,7 +9,9 @@ import {
   navTabsLinkActiveBorderColor,
   navPillsBorderRadius,
   navPillsLinkActiveColor,
-  navPillsLinkActiveBg
+  navPillsLinkActiveBg,
+  navLinkPaddingY,
+  navLinkPaddingX
 } from '../Variables/Navs'
 import { borderTopRadius, borderRadius } from '../Mixins/borderRadius'
 import { hoverFocus } from '../Mixins/hover'
@@ -23,28 +25,13 @@ const nav = {
 }
 
 const navLink = {
-  borderBottom: `${navTabsBorderWidth} solid ${navTabsBorderColor}`,
-  navItem: {
-    marginBottom: `-${navTabsBorderWidth}`
-  },
-  navLink: {
-    border: `${navTabsBorderWidth} solid transparent`,
-    ...borderTopRadius(navTabsBorderRadius),
-    ...hoverFocus({ borderColor: navTabsLinkHoverBorderColor }),
-    '&.disabled': {
-      color: navLinkDisabledColor,
-      backgroundColor: 'transparent',
-      borderColor: 'transparent'
-    }
-  },
-  'navLink.active,navItem.show navLink': {
-    color: navTabsLinkActiveColor,
-    backgroundColor: navTabsLinkActiveBg,
-    borderColor: navTabsLinkActiveBorderColor
-  },
-  dropdownMenu: {
-    marginTop: `-${navTabsBorderWidth}`,
-    ...borderTopRadius(0)
+  display: 'block',
+  padding: `${navLinkPaddingY} ${navLinkPaddingX}`,
+  ...hoverFocus({
+    textDecoration: 'none'
+  }),
+  '&.disabled': {
+    color: navLinkDisabledColor
   }
 }
 
@@ -65,7 +52,7 @@ const navTabs = {
       borderColor: 'transparent'
     }
   },
-  'navLink.active,navItem.show navLink': {
+  '$navLink.active,$navItem.show $navLink': {
     color: navTabsLinkActiveColor,
     backgroundColor: navTabsLinkActiveBg,
     borderColor: navTabsLinkActiveBorderColor
@@ -80,7 +67,7 @@ const navPills = {
   navLink: {
     ...borderRadius(navPillsBorderRadius)
   },
-  'navLink.active,show > navLink': {
+  '$navLink.active,show > $navLink': {
     color: navPillsLinkActiveColor,
     backgroundColor: navPillsLinkActiveBg
   }
@@ -109,7 +96,7 @@ const navJustified = {
 }
 
 const tabContent = {
-  '> tab-pane': {
+  '> tabPane': {
     display: 'none'
   },
   '> active': {

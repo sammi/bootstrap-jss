@@ -9,7 +9,7 @@ import { transition } from '../Mixins/transition'
 import { gradientStriped } from '../Mixins/gradients'
 
 const progressBarStripes = {
-  '@keyframes progressBarStripes': {
+  '@keyframes progress-bar-stripes': {
     from: {
       backgroundPosition: `${progressHeight} 0`
     },
@@ -46,7 +46,7 @@ const progressBarStiped = {
 }
 
 const progressBarAnimated = {
-  animation: `progressBarStripes ${progressBarAnimationTiming}`
+  animation: `progress-bar-stripes ${progressBarAnimationTiming}`
 }
 
 export {

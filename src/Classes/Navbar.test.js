@@ -172,7 +172,7 @@ describe('Navbar', () => {
             color: navbarLightDisabledColor
           }
         },
-        'show > navLink,active > navLink,navLink.show,navLink.active': {
+        'show > $navLink,active > $navLink,$navLink.show,$navLink.active': {
           color: navbarLightActiveColor
         }
       },
@@ -213,7 +213,7 @@ describe('Navbar', () => {
             color: navbarDarkDisabledColor
           }
         },
-        'show > navLink, active > navLink,navLink.show,navLink.active': {
+        'show > $navLink, active > $navLink,$navLink.show,$navLink.active': {
           color: navbarDarkActiveColor
         }
       },
