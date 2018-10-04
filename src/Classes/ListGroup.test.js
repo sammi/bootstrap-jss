@@ -75,18 +75,19 @@ describe('list-group', () => {
 
   it('list-group-flush', () => {
     expect(listGroupFlush).toEqual({
-      listGroupItem: {
+      listGroupItem,
+      '$listGroupItem': {
         borderRight: 0,
         borderLeft: 0,
         ...borderRadius(0)
       },
       '&:first-child': {
-        'listGroupItem:first-child': {
+        '$listGroupItem:first-child': {
           borderTop: 0
         }
       },
       '&:last-child': {
-        'listGroupItem:last-child': {
+        '$listGroupItem:last-child': {
           borderBottom: 0
         }
       }
