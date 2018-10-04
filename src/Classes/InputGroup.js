@@ -26,8 +26,12 @@ import { dropdownToggle } from './Dropdown'
 import { formControl } from './Form'
 
 const inputGroup = {
-  formControl,
-  customSelect,
+  formControl: {
+    ...formControl()
+  },
+  customSelect: {
+    ...customSelect()
+  },
   customFile,
   customFileInput,
   customFileLabel,
@@ -36,22 +40,22 @@ const inputGroup = {
   flexWrap: 'wrap',
   alignItems: 'stretch',
   width: '100%',
-  '> $formControl,> $customSelect, > $customFile': {
+  '> $formControl, & > $customSelect, & > $customFile': {
     position: 'relative',
     flex: '1 1 auto',
     width: '1%',
     marginBottom: 0,
-    '+ $formControl, + $customSelect, + $customFile': {
+    '+ $formControl, & + $customSelect, & + $customFile': {
       marginLeft: `-${inputBorderWidth}`
     }
   },
-  '> $formControl:focus,> $customSelect:focus,> $customFile $customFileInput:focus ~ $customFileLabel': {
+  '> $formControl:focus, & > $customSelect:focus, & > $customFile $customFileInput:focus ~ $customFileLabel': {
     zIndex: 3
   },
   '> $customFile $customFileInput:focus': {
     zIndex: 4
   },
-  '> $formControl,> $customSelect': {
+  '> $formControl, & > $customSelect': {
     '&:not(:last-child)': {
       ...borderRightRadius(0)
     },
@@ -62,7 +66,7 @@ const inputGroup = {
   '> $customFile': {
     display: 'flex',
     alignItems: 'center',
-    '&:not(:last-child) $customFileLabel,&:not(:last-child) $customFileLabel::after': {
+    '&:not(:last-child) $customFileLabel, &:not(:last-child) $customFileLabel::after': {
       ...borderRightRadius(0)
     },
     '&:not(:first-child) $customFileLabel': {

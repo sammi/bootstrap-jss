@@ -59,7 +59,7 @@ describe('Button classes', () => {
           ...boxShadow(enableShadows, btnFocusBoxShadow, btnActiveBoxShadow)
         }
       },
-      'a.&.disabled, fieldset:disabled a.&': {
+      'a$btn.disabled, fieldset:disabled a$btn': {
         pointerEvents: 'none'
       }
     })

@@ -39,10 +39,10 @@ describe('button group', () => {
       '> $btn:first-child': {
         marginLeft: 0
       },
-      '> $btn:not(:last-child):not($dropdownToggle),> &:not(:last-child) > $btn': {
+      '> $btn:not(:last-child):not($dropdownToggle), & > &:not(:last-child) > $btn': {
         ...borderRightRadius(0)
       },
-      '> $btn:not(:first-child),> &:not(:first-child) > $btn': {
+      '> $btn:not(:first-child), & > &:not(:first-child) > $btn': {
         ...borderLeftRadius(0)
       },
       show: {

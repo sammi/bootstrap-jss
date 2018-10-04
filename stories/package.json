@@ -24,6 +24,7 @@
     "@storybook/addon-storyshots": "^3.4.11",
     "@storybook/react": "^3.4.11",
     "@storybook/storybook-deployer": "^2.3.0",
-    "react-test-renderer": "^16.5.2"
+    "react-test-renderer": "^16.5.2",
+    "stringify-object": "^3.2.2"
   }
 }
