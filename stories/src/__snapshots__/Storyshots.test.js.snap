@@ -1062,22 +1062,22 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
 
 exports[`Storyshots Button Groups Basic example 1`] = `
 <div
-  className="Component-btnGroup-0-1-237 Component-btnGroup-0-1-227"
+  className="Component-btnGroup-0-1-227"
 >
   <button
-    className="Component-btnLeft-0-1-239 Component-btnLeft-0-1-230"
+    className="Component-btnLeft-0-1-230"
     type="button"
   >
     Left
   </button>
   <button
-    className="Component-btnMiddle-0-1-240 Component-btnMiddle-0-1-231"
+    className="Component-btnMiddle-0-1-231"
     type="button"
   >
     Middle
   </button>
   <button
-    className="Component-btnRight-0-1-241 Component-btnRight-0-1-232"
+    className="Component-btnRight-0-1-232"
     type="button"
   >
     Right
@@ -1087,63 +1087,63 @@ exports[`Storyshots Button Groups Basic example 1`] = `
 
 exports[`Storyshots Button Groups Button Toolbar 1`] = `
 <div
-  className="Component-btnToolbar-0-1-254 Component-btnToolbar-0-1-246"
+  className="Component-btnToolbar-0-1-237"
 >
   <div
-    className="Component-btnGroup-0-1-255 Component-btnGroup-0-1-245"
+    className="Component-btnGroup-0-1-236"
   >
     <button
-      className="Component-btn-0-1-256 Component-btn-0-1-247"
+      className="Component-btn-0-1-238"
       type="button"
     >
       1
     </button>
     <button
-      className="Component-btn-0-1-256 Component-btn-0-1-247"
+      className="Component-btn-0-1-238"
       type="button"
     >
       2
     </button>
     <button
-      className="Component-btn-0-1-256 Component-btn-0-1-247"
+      className="Component-btn-0-1-238"
       type="button"
     >
       3
     </button>
     <button
-      className="Component-btn-0-1-256 Component-btn-0-1-247"
+      className="Component-btn-0-1-238"
       type="button"
     >
       4
     </button>
   </div>
   <div
-    className="Component-btnGroup-0-1-255 Component-btnGroup-0-1-245"
+    className="Component-btnGroup-0-1-236"
   >
     <button
-      className="Component-btn-0-1-256 Component-btn-0-1-247"
+      className="Component-btn-0-1-238"
       type="button"
     >
       5
     </button>
     <button
-      className="Component-btn-0-1-256 Component-btn-0-1-247"
+      className="Component-btn-0-1-238"
       type="button"
     >
       6
     </button>
     <button
-      className="Component-btn-0-1-256 Component-btn-0-1-247"
+      className="Component-btn-0-1-238"
       type="button"
     >
       7
     </button>
   </div>
   <div
-    className="Component-btnGroup-0-1-255 Component-btnGroup-0-1-245"
+    className="Component-btnGroup-0-1-236"
   >
     <button
-      className="Component-btn-0-1-256 Component-btn-0-1-247"
+      className="Component-btn-0-1-238"
       type="button"
     >
       8
@@ -1154,41 +1154,41 @@ exports[`Storyshots Button Groups Button Toolbar 1`] = `
 
 exports[`Storyshots Button Groups Nesting 1`] = `
 <div
-  className="Component-btnGroup-0-1-273 Component-btnGroup-0-1-263"
+  className="Component-btnGroup-0-1-245"
 >
   <button
-    className="Component-btn-0-1-274 Component-btn-0-1-265"
+    className="Component-btn-0-1-247"
     type="button"
   >
     1
   </button>
   <button
-    className="Component-btn-0-1-274 Component-btn-0-1-265"
+    className="Component-btn-0-1-247"
     type="button"
   >
     2
   </button>
   <div
-    className="Component-btnGroup-0-1-273 Component-btnGroup-0-1-263"
+    className="Component-btnGroup-0-1-245"
     role="group"
   >
     <button
-      className="Component-btnDropdownToggle-0-1-278 Component-btnDropdownToggle-0-1-269"
+      className="Component-btnDropdownToggle-0-1-251"
       type="button"
     >
       Dropdown
     </button>
     <div
-      className="Component-dropdownMenu-0-1-280 Component-dropdownMenu-0-1-271"
+      className="Component-dropdownMenu-0-1-253"
     >
       <a
-        className="Component-dropdownItem-0-1-279 Component-dropdownItem-0-1-270"
+        className="Component-dropdownItem-0-1-252"
         href="#"
       >
         Dropdown link
       </a>
       <a
-        className="Component-dropdownItem-0-1-279 Component-dropdownItem-0-1-270"
+        className="Component-dropdownItem-0-1-252"
         href="#"
       >
         Dropdown link
