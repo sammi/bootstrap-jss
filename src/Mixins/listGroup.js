@@ -8,7 +8,7 @@ export const listGroupItemVariant = (state, backgroundColor, color) => {
   expectValue[`listGroupItem-${state}`] = {
     color: color,
     backgroundColor: backgroundColor,
-    '&.listGroupItemAction': {
+    '&$listGroupItemAction': {
       ...hoverFocus({
         color: color,
         backgroundColor: darken(backgroundColor, '5%')

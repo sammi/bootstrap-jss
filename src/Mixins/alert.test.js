@@ -3,7 +3,7 @@ import { alertVariant } from './alert'
 describe('variant', () => {
   it('alertVariant', () => {
     expect(alertVariant('#fff', '#000', '#0F0', false)).toEqual({
-      'alertLink': {
+      '$alertLink': {
         'color': '#00cc00'
       },
       'borderColor': '#000',
@@ -15,7 +15,7 @@ describe('variant', () => {
     })
 
     expect(alertVariant('#fff', '#000', '#0F0', true)).toEqual({
-      'alertLink': {
+      '$alertLink': {
         'color': '#00cc00'
       },
       'borderColor': '#000',
@@ -27,7 +27,7 @@ describe('variant', () => {
     })
 
     expect(alertVariant('#fff', '#000', '#0F0')).toEqual({
-      'alertLink': {
+      '$alertLink': {
         'color': '#00cc00'
       },
       'borderColor': '#000',

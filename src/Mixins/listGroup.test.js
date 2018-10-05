@@ -13,7 +13,7 @@ describe('list groups', () => {
     expectValue[`listGroupItem-${state}`] = {
       color: color,
       backgroundColor: backgroundColor,
-      '&.listGroupItemAction': {
+      '&$listGroupItemAction': {
         ...hoverFocus({
           color: color,
           backgroundColor: darken(backgroundColor, '5%')

@@ -64,25 +64,25 @@ const formValidationState = (state, color) => {
     },
     ...formControlCustomSelectDisplay
   }
-  expectValue['formControl'] = formControlCustomSelect
-  expectValue['customSelect'] = formControlCustomSelect
+  expectValue['$formControl'] = formControlCustomSelect
+  expectValue['$customSelect'] = formControlCustomSelect
 
   const formControlFile = {}
   formControlFile[`wasValidated &:${state},&.is${state}`] = { ...formControlCustomSelectDisplay }
-  expectValue['formControlFile'] = formControlFile
+  expectValue['$formControlFile'] = formControlFile
 
   const formCheckInput = {}
   formCheckInput[`wasValidated &:${state},&.is${state}`] = {
-    '~ formCheckLabel': {
+    '~ $formCheckLabel': {
       color: color
     },
     ...formControlCustomSelectDisplay
   }
-  expectValue['formCheckInput'] = formCheckInput
+  expectValue['$formCheckInput'] = formCheckInput
 
   const customControlInput = {}
   customControlInput[`wasValidated &:${state},&.is${state}`] = {
-    '~ customControlLabel': {
+    '~ $customControlLabel': {
       color: color
     },
     '&::before': {
@@ -90,21 +90,21 @@ const formValidationState = (state, color) => {
     },
     ...formControlCustomSelectDisplay,
     '&:checked': {
-      '~ customControlLabel::before': {
+      '~ $customControlLabel::before': {
         ...gradientBg(lighten(color, '10%'))
       }
     },
     '&:focus': {
-      '~ customControlLabel::before': {
+      '~ $customControlLabel::before': {
         boxShadow: `0 0 0 1px ${bodyBg}, 0 0 0 ${inputFocusWidth} ${rgba(color, 0.25)}`
       }
     }
   }
-  expectValue['customControlInput'] = customControlInput
+  expectValue['$customControlInput'] = customControlInput
 
   const cutomFileInput = {}
   customControlInput[`wasValidated &:${state},&.is${state}`] = {
-    '~ customFileLable': {
+    '~ $customFileLable': {
       borderColor: color,
       '&::before': {
         borderColor: 'inherit'
@@ -112,12 +112,12 @@ const formValidationState = (state, color) => {
     },
     ...formControlCustomSelectDisplay,
     '&:focus': {
-      '~ customFileLabel': {
+      '~ $customFileLabel': {
         boxShadow: `0 0 0 ${inputFocusWidth} ${rgba(color, 0.25)}`
       }
     }
   }
-  expectValue['cutomFileInput'] = cutomFileInput
+  expectValue['$cutomFileInput'] = cutomFileInput
   return expectValue
 }
 

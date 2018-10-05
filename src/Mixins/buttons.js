@@ -28,7 +28,7 @@ const buttonVariant = (
   activeBorderColor = activeBorderColor || darken(borderColor, '12.5%')
 
   return {
-    dropdownToggle: {
+    '$dropdownToggle': {
       ...caret()
     },
     color: colorYiq(backgroundColor),
@@ -50,7 +50,7 @@ const buttonVariant = (
       backgroundColor: backgroundColor,
       borderColor: borderColor
     },
-    '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle':
+    '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, &.show > &$dropdownToggle':
       myEnableGradients
         ? {
           color: colorYiq(activeBackgroundColor),

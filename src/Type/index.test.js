@@ -33,7 +33,7 @@ import {
   blockquoteSmallColor
 } from '../Variables/Fonts'
 
-import { lists } from '../Mixins/lists'
+import { listUnstyled } from '../Mixins/lists'
 import { spacer } from '../Variables/Spacing'
 
 import type from './index'
@@ -113,10 +113,10 @@ describe('type', () => {
   it('Lists', () => {
     expect(type.lists).toEqual({
       '.list-unstyled': {
-        ...(lists.listUnstyled)
+        ...(listUnstyled)
       },
       '.list-inline': {
-        ...(lists.listUnstyled)
+        ...(listUnstyled)
       },
       '.list-inline-item': {
         display: 'inline-block',

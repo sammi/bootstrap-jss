@@ -1,7 +1,7 @@
-import { lists } from './lists'
+import { listUnstyled } from './lists'
 describe('lists', () => {
   it('listUnstyled', () => {
-    expect(lists.listUnstyled).toEqual({
+    expect(listUnstyled).toEqual({
       paddingLeft: 0,
       listStyle: 'none'
     })

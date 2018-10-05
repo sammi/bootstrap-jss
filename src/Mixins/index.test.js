@@ -15,7 +15,7 @@ import { alertVariant } from './alert'
 import { buttonVariant, buttonOutlineVariant, buttonSize } from './buttons'
 import { caretDown, caretUp, caretRight, caretLeft, caret } from './caret'
 import { paginationSize } from './pagination'
-import { lists } from './lists'
+import { listUnstyled } from './lists'
 import { listGroupItemVariant } from './listGroup'
 import { navDivider } from './navDivider'
 import { formControlFocus, formValidationState } from './forms'
@@ -67,7 +67,7 @@ describe('Mixins', () => {
       caretLeft,
       caret,
       paginationSize,
-      lists,
+      listUnstyled,
       listGroupItemVariant,
       navDivider,
       formControlFocus,

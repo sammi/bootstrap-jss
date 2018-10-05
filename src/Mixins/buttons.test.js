@@ -10,8 +10,8 @@ import { caret } from './caret'
 
 import { buttonVariant, buttonOutlineVariant, buttonSize } from './buttons'
 
-describe('buttonVariants', () => {
-  it('buttonVariant', () => {
+describe('button-variants', () => {
+  it('button-variant', () => {
     const backgroundColor = '#abc'
     const borderColor = '#def'
     const hoverBackgroundColor = darken(backgroundColor, '7.5%')
@@ -22,7 +22,7 @@ describe('buttonVariants', () => {
       backgroundColor,
       borderColor)
     ).toEqual({
-      dropdownToggle: {
+      '$dropdownToggle': {
         ...caret()
       },
       color: colorYiq(backgroundColor),
@@ -42,7 +42,7 @@ describe('buttonVariants', () => {
         backgroundColor: backgroundColor,
         borderColor: borderColor
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, &.show > &$dropdownToggle': {
         color: colorYiq(activeBackgroundColor),
         backgroundColor: activeBackgroundColor,
         borderColor: activeBorderColor
@@ -53,7 +53,7 @@ describe('buttonVariants', () => {
     })
   })
 
-  it('buttonVariant, enable shadows, enable gradients', () => {
+  it('button-variant, enable shadows, enable gradients', () => {
     const backgroundColor = '#abc'
     const borderColor = '#def'
     const hoverBackgroundColor = darken(backgroundColor, '75%')
@@ -78,7 +78,7 @@ describe('buttonVariants', () => {
       myBtnFocusWidth,
       myBtnActiveBoxShadow
     )).toEqual({
-      dropdownToggle: {
+      '$dropdownToggle': {
         ...caret()
       },
       color: colorYiq(backgroundColor),
@@ -98,7 +98,7 @@ describe('buttonVariants', () => {
         backgroundColor: backgroundColor,
         borderColor: borderColor
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, &.show > &$dropdownToggle': {
         color: colorYiq(activeBackgroundColor),
         backgroundColor: activeBackgroundColor,
         backgrounImage: 'none',
@@ -110,7 +110,7 @@ describe('buttonVariants', () => {
     })
   })
 
-  it('buttonVariant, disable shadows, disable gradients', () => {
+  it('button-variant, disable shadows, disable gradients', () => {
     const backgroundColor = '#abc'
     const borderColor = '#def'
     const hoverBackgroundColor = darken(backgroundColor, '75%')
@@ -135,7 +135,7 @@ describe('buttonVariants', () => {
       myBtnFocusWidth,
       myBtnActiveBoxShadow
     )).toEqual({
-      dropdownToggle: {
+      '$dropdownToggle': {
         ...caret()
       },
       color: colorYiq(backgroundColor),
@@ -155,7 +155,7 @@ describe('buttonVariants', () => {
         backgroundColor: backgroundColor,
         borderColor: borderColor
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, &.show > &$dropdownToggle': {
         color: colorYiq(activeBackgroundColor),
         backgroundColor: activeBackgroundColor,
         borderColor: activeBorderColor
