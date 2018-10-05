@@ -32,7 +32,6 @@ https://sammi.github.io/bootstrap-jss
 
 1. Start the test watcher
 ```bash
-rm -rf node_modules
 yarn
 yarn test:watch
 ```
@@ -41,10 +40,10 @@ yarn test:watch
 3. When test failed, click "Debug" above each Jest Unit test, step into the source code.
 
 
-## Check the localhost StoryBook
+## Setup the localhost StoryBook
  ```bash
+ yarn build
  cd stories
- rm -rf node_modules
  yarn
  yarn start
  ```
