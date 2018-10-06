@@ -26,7 +26,7 @@ describe('button group', () => {
       position: 'relative',
       display: 'inline-flex',
       verticalAlign: 'middle',
-      '> $btn': {
+      '& > $btn': {
         position: 'relative',
         flex: '0 1 auto',
         ...hover({
@@ -36,13 +36,13 @@ describe('button group', () => {
           zIndex: 1
         }
       },
-      '> $btn:first-child': {
+      '& > $btn:first-child': {
         marginLeft: 0
       },
-      '> $btn:not(:last-child):not($dropdownToggle), & > &:not(:last-child) > $btn': {
+      '& > $btn:not(:last-child):not($dropdownToggle), & > &:not(:last-child) > $btn': {
         ...borderRightRadius(0)
       },
-      '> $btn:not(:first-child), & > &:not(:first-child) > $btn': {
+      '& > $btn:not(:first-child), & > &:not(:first-child) > $btn': {
         ...borderLeftRadius(0)
       },
       show: {
@@ -125,14 +125,14 @@ describe('button group', () => {
       '$btn, $btnGroup': {
         width: '100%'
       },
-      '> $btn + $btn,> $btn + $btnGroup,> $btnGroup + $btn,> $btnGroup + $btnGroup': {
+      '& > $btn + $btn,& > $btn + $btnGroup,& > $btnGroup + $btn,& > $btnGroup + $btnGroup': {
         marginTop: `-${btnBorderWidth}`,
         marginLeft: 0
       },
-      '> $btn:not(:last-child):not($dropdownToggle),> $btnGroup:not(:last-child) > $btn': {
+      '& > $btn:not(:last-child):not($dropdownToggle),& > $btnGroup:not(:last-child) > $btn': {
         ...borderBottomRadius(0)
       },
-      '> $btn:not(:first-child),> $btnGroup:not(:first-child) > .btn': {
+      '& > $btn:not(:first-child),& > $btnGroup:not(:first-child) > .btn': {
         ...borderTopRadius(0)
       }
     })
@@ -142,7 +142,7 @@ describe('button group', () => {
     expect(btnGroupToggle).toEqual({
       btn,
       btnGroup,
-      '> $btn,> $btnGroup > $btn': {
+      '& > $btn,& > $btnGroup > $btn': {
         marginBottom: 0,
         'input[type="radio"],input[type="checkbox"]': {
           position: 'absolute',

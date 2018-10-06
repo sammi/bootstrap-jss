@@ -1,21 +1,23 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Classes } from 'bootstrap-jss'
+import { Classes, Utilities } from 'bootstrap-jss'
 import injectSheet from 'react-jss'
 
 const { btn, btnThemeColors } = Classes.Buttons
 const { btnGroup, btnToolbar, btnDropdownToggle } = Classes.ButtonGroup
 const { dropdownItem, dropdownMenu } = Classes.Dropdown
+const { spacing } = Utilities.Spacing
 
 const btnColors = btnThemeColors()
 
 const styles = {
   btnGroup: {
     ...btnGroup,
-    marginRight: '2rem'
+    ...spacing['mr-2']
   },
   btnToolbar: {
     ...btnToolbar,
+    ...spacing['mb-3']
   },
   btn: {
     ...btn,

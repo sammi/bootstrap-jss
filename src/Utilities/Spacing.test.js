@@ -3,6 +3,7 @@ import { spacers } from '../Variables/Spacing'
 import { mediaBreakpointUp, breakpointInfix } from '../Mixins/breakpoints'
 
 import { spacing } from './Spacing'
+import stringifyObject from 'stringify-object'
 
 describe('spacing', () => {
   it('spacing', () => {

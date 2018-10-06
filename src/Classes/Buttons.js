@@ -47,7 +47,7 @@ export const btn = {
       ...boxShadow(enableShadows, btnFocusBoxShadow, btnActiveBoxShadow)
     }
   },
-  'a$btn.disabled, fieldset:disabled a$btn': {
+  'a&.disabled, fieldset:disabled a&': {
     pointerEvents: 'none'
   }
 }

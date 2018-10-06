@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.10.12",
+  "version": "0.10.13",
   "description": "Build JSS components for Bootstrap by JSS",
   "author": "Sammi Song",
   "license": "MIT",
@@ -55,7 +55,8 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-url": "^1.4.0",
-    "react-scripts": "^1.1.5"
+    "react-scripts": "^1.1.5",
+    "stringify-object": "^3.2.2"
   },
   "files": [
     "dist"
