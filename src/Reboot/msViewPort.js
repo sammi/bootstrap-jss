@@ -1,7 +1,9 @@
 export const msViewPort = {
-  'at-root': {
-    '-ms-viewport': {
-      width: 'device-width'
+  '@global': {
+    'at-root': {
+      '-ms-viewport': {
+        width: 'device-width'
+      }
     }
   }
 }

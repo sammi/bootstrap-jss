@@ -1,5 +1,7 @@
 export const hidden = {
-  '[hidden]': {
-    disable: 'none !important'
+  '@global': {
+    '[hidden]': {
+      disable: 'none !important'
+    }
   }
 }

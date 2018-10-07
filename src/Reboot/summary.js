@@ -1,6 +1,8 @@
 export const summary = {
-  summary: {
-    display: 'list-item',
-    cursor: 'pointer'
+  '@global': {
+    summary: {
+      display: 'list-item',
+      cursor: 'pointer'
+    }
   }
 }

@@ -28,7 +28,7 @@ const buttonVariant = (
   activeBorderColor = activeBorderColor || darken(borderColor, '12.5%')
 
   return {
-    '$dropdownToggle': {
+    dropdownToggle: {
       ...caret()
     },
     color: colorYiq(backgroundColor),

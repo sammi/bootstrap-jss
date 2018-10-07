@@ -1,5 +1,7 @@
 export const output = {
-  output: {
-    display: 'inline-block'
+  '@global': {
+    output: {
+      display: 'inline-block'
+    }
   }
 }

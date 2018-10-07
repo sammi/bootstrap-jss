@@ -1,5 +1,7 @@
 export const small = {
-  small: {
-    fontSize: '80%'
+  '@global': {
+    small: {
+      fontSize: '80%'
+    }
   }
 }

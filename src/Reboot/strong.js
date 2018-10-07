@@ -1,5 +1,7 @@
 export const strong = {
-  'b,strong': {
-    fontWeight: 'bolder'
+  '@global': {
+    'b,strong': {
+      fontWeight: 'bolder'
+    }
   }
 }

@@ -22,7 +22,7 @@ describe('button-variants', () => {
       backgroundColor,
       borderColor)
     ).toEqual({
-      '$dropdownToggle': {
+      dropdownToggle: {
         ...caret()
       },
       color: colorYiq(backgroundColor),
@@ -78,7 +78,7 @@ describe('button-variants', () => {
       myBtnFocusWidth,
       myBtnActiveBoxShadow
     )).toEqual({
-      '$dropdownToggle': {
+      dropdownToggle: {
         ...caret()
       },
       color: colorYiq(backgroundColor),
@@ -135,7 +135,7 @@ describe('button-variants', () => {
       myBtnFocusWidth,
       myBtnActiveBoxShadow
     )).toEqual({
-      '$dropdownToggle': {
+      dropdownToggle: {
         ...caret()
       },
       color: colorYiq(backgroundColor),

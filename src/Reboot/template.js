@@ -1,5 +1,7 @@
 export const template = {
-  template: {
-    display: 'none'
+  '@global': {
+    template: {
+      display: 'none'
+    }
   }
 }

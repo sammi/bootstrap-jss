@@ -3,8 +3,10 @@ import { strong } from './strong'
 describe('Reboot', () => {
   it('strong', () => {
     expect(strong).toEqual({
-      'b,strong': {
-        fontWeight: 'bolder'
+      '@global': {
+        'b,strong': {
+          fontWeight: 'bolder'
+        }
       }
     })
   })

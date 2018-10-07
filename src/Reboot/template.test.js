@@ -5,8 +5,10 @@ import {
 describe('Reboot', () => {
   it('template', () => {
     expect(template).toEqual({
-      template: {
-        display: 'none'
+      '@global': {
+        template: {
+          display: 'none'
+        }
       }
     })
   })

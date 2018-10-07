@@ -1,7 +1,9 @@
 export const hrContentGrouping = {
-  hr: {
-    boxSizing: 'content-box',
-    height: 0,
-    overflow: 'visible'
+  '@global': {
+    hr: {
+      boxSizing: 'content-box',
+      height: 0,
+      overflow: 'visible'
+    }
   }
 }

@@ -1,7 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Classes, Utilities } from 'bootstrap-jss'
-import injectSheet from 'react-jss'
+import { Classes, Utilities, Reboot } from 'bootstrap-jss'
+import injectSheet, { jss } from 'react-jss'
+import preset from 'jss-preset-default'
+
+jss.setup(preset())
 
 const { btn, btnThemeColors } = Classes.Buttons
 const { btnGroup, btnToolbar, btnDropdownToggle } = Classes.ButtonGroup
@@ -12,42 +15,55 @@ const btnColors = btnThemeColors()
 
 const styles = {
   btnGroup: {
+    ...Reboot,
     ...btnGroup,
     ...spacing['mr-2']
   },
   btnToolbar: {
+    ...Reboot,
     ...btnToolbar,
     ...spacing['mb-3']
   },
   btn: {
+    ...Reboot,
     ...btn,
     ...btnColors['btnPrimary']
   },
   btnLeft: {
+    ...Reboot,
     ...btn,
     ...btnColors['btnPrimary']
   },
   btnMiddle: {
+    ...Reboot,
     ...btn,
     ...btnColors['btnPrimary']
   },
   btnRight: {
+    ...Reboot,
     ...btn,
     ...btnColors['btnPrimary']
   },
   btnDropdownToggle: {
+    ...Reboot,
     ...btn,
     ...btnDropdownToggle
   },
   dropdownItem: {
+    ...Reboot,
     ...dropdownItem(),
     ...btnColors['btnSeconday']
   },
   dropdownMenu: {
+    ...Reboot,
     ...dropdownMenu,
     ...btnColors['btnSeconday']
   }
 }
+
+const sheet = jss.createStyleSheet(styles)
+
+console.log(sheet.toString())
 
 const BasicButtonGroup = injectSheet(styles)(({ classes }) =>
   <div className={classes.btnGroup}>
