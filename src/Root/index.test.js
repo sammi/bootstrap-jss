@@ -15,9 +15,7 @@ describe('root', () => {
     rootVariables['--font-family-monospace'] = fontFamilyMonospace
 
     expect(root).toEqual({
-      ':root': {
-        ...rootVariables
-      }
+      ':root': rootVariables
     })
   })
 })

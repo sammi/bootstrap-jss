@@ -1,115 +1,55 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Classes, Utilities, Reboot } from 'bootstrap-jss'
-import injectSheet, { jss } from 'react-jss'
-import preset from 'jss-preset-default'
+import { Reboot, Classes } from 'bootstrap-jss'
 
-jss.setup(preset())
+import injectSheet from 'react-jss'
 
-const { btn, btnThemeColors } = Classes.Buttons
-const { btnGroup, btnToolbar, btnDropdownToggle } = Classes.ButtonGroup
-const { dropdownItem, dropdownMenu } = Classes.Dropdown
-const { spacing } = Utilities.Spacing
-
-const btnColors = btnThemeColors()
+const { btn } = Classes.Buttons
+const { btnGroup, btnGroupToggle} = Classes.ButtonGroup
+const { btnThemeColors, btnLink } = Classes.Buttons
+const { dropdownToggle } = Classes.Dropdown
+const themeColors = btnThemeColors()
 
 const styles = {
-  btnGroup: {
-    ...Reboot,
-    ...btnGroup,
-    ...spacing['mr-2']
+  reboot: {
+    ...Reboot.forms
   },
-  btnToolbar: {
-    ...Reboot,
-    ...btnToolbar,
-    ...spacing['mb-3']
+  btn,
+  btnGroup,
+  btnGroupToggle,
+  dropdownToggle,
+  btnLink,
+  active: {},
+  show: {},
+  secondary: {
+    ...themeColors.btnSecondary
   },
-  btn: {
-    ...Reboot,
-    ...btn,
-    ...btnColors['btnPrimary']
+  btnContainer: {
+    composes: ['$reboot', '$btnGroup', '$btnGroupToggle']
   },
-  btnLeft: {
-    ...Reboot,
-    ...btn,
-    ...btnColors['btnPrimary']
+  btnActiveSecondary: {
+    composes: ['$btn', '$secondary', '$active']
   },
-  btnMiddle: {
-    ...Reboot,
-    ...btn,
-    ...btnColors['btnPrimary']
-  },
-  btnRight: {
-    ...Reboot,
-    ...btn,
-    ...btnColors['btnPrimary']
-  },
-  btnDropdownToggle: {
-    ...Reboot,
-    ...btn,
-    ...btnDropdownToggle
-  },
-  dropdownItem: {
-    ...Reboot,
-    ...dropdownItem(),
-    ...btnColors['btnSeconday']
-  },
-  dropdownMenu: {
-    ...Reboot,
-    ...dropdownMenu,
-    ...btnColors['btnSeconday']
+  btnSecondary: {
+    composes: ['$btn', '$secondary']
   }
 }
 
-const sheet = jss.createStyleSheet(styles)
-
-console.log(sheet.toString())
-
 const BasicButtonGroup = injectSheet(styles)(({ classes }) =>
-  <div className={classes.btnGroup}>
-    <button type="button" className={classes.btnLeft}>Left</button>
-    <button type="button" className={classes.btnMiddle}>Middle</button>
-    <button type="button" className={classes.btnRight}>Right</button>
-  </div>
-)
+  <div className={classes.btnContainer} >
+    <label className={classes.btnActiveSecondary}>
+      <input type="radio" name="options" id="option1" /> checked
+    </label>
 
-const ToolbarButtonGroup = injectSheet(styles)(({ classes }) =>
-  <div className={classes.btnToolbar}>
-    <div className={classes.btnGroup}>
-      <button type="button" className={classes.btn}>1</button>
-      <button type="button" className={classes.btn}>2</button>
-      <button type="button" className={classes.btn}>3</button>
-      <button type="button" className={classes.btn}>4</button>
-    </div>
-    <div className={classes.btnGroup}>
-      <button type="button" className={classes.btn}>5</button>
-      <button type="button" className={classes.btn}>6</button>
-      <button type="button" className={classes.btn}>7</button>
-    </div>
-    <div className={classes.btnGroup}>
-      <button type="button" className={classes.btn}>8</button>
-    </div>
-  </div>
-)
+    <label className={classes.btnSecondary}>
+        <input type="radio" name="options" id="option2"/> Radio
+    </label>
 
-const NestingButtongGroup = injectSheet(styles) ( ({classes}) =>
-  <div className={classes.btnGroup}>
-    <button type="button" className={classes.btn}>1</button>
-    <button type="button" className={classes.btn}>2</button>
-
-    <div className={classes.btnGroup} role="group">
-      <button type="button" className={classes.btnDropdownToggle}>
-        Dropdown
-      </button>
-      <div className={classes.dropdownMenu}>
-        <a className={classes.dropdownItem} href="#">Dropdown link</a>
-        <a className={classes.dropdownItem} href="#">Dropdown link</a>
-      </div>
-    </div>
+    <label className={classes.btnSecondary}>
+      <input type="radio" name="options" id="option3"/> Radio
+    </label>
   </div>
 )
 
 storiesOf('Button Groups', module)
   .add('Basic example', () => <BasicButtonGroup />)
-  .add('Button Toolbar', () => <ToolbarButtonGroup />)
-  .add('Nesting', () => <NestingButtongGroup />)

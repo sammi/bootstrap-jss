@@ -40,14 +40,14 @@ export const btn = {
   '&:not(:disabled):not(.disabled)': {
     cursor: 'pointer'
   },
-  '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active': {
+  '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled)$active': {
     backgroundImage: 'none',
     ...boxShadow(enableShadows, btnActiveBoxShadow),
     '&:focus': {
       ...boxShadow(enableShadows, btnFocusBoxShadow, btnActiveBoxShadow)
     }
   },
-  'a&.disabled, fieldset:disabled a&': {
+  '&a&.disabled, fieldset:disabled a&': {
     pointerEvents: 'none'
   }
 }

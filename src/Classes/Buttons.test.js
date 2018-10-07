@@ -25,6 +25,9 @@ import {
   btnThemeColors,
   btnOutlineThemeColors
 } from './Buttons'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('Button classes', () => {
   it('btn', () => {
@@ -52,17 +55,18 @@ describe('Button classes', () => {
       '&:not(:disabled):not(.disabled)': {
         cursor: 'pointer'
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active': {
+      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled)$active': {
         backgroundImage: 'none',
         ...boxShadow(enableShadows, btnActiveBoxShadow),
         '&:focus': {
           ...boxShadow(enableShadows, btnFocusBoxShadow, btnActiveBoxShadow)
         }
       },
-      'a&.disabled, fieldset:disabled a&': {
+      '&a&.disabled, fieldset:disabled a&': {
         pointerEvents: 'none'
       }
     })
+    expect(jss.createStyleSheet({ active: {}, btn }).toString()).toBeDefined()
   })
   it('btnThemeColors', () => {
     const btnColors = btnThemeColors()
@@ -71,6 +75,7 @@ describe('Button classes', () => {
         buttonVariant(themeColors[themeColorName])
       )
     })
+    expect(jss.createStyleSheet({ btnColors }).toString()).toBeDefined()
   })
 
   it('btnThemeColors', () => {
@@ -80,6 +85,7 @@ describe('Button classes', () => {
         buttonOutlineVariant(themeColors[themeColorName])
       )
     })
+    expect(jss.createStyleSheet({ btnOutlineColors }).toString()).toBeDefined()
   })
 
   it('btnLink', () => {
@@ -103,21 +109,25 @@ describe('Button classes', () => {
         pointerEvents: 'none'
       }
     })
+
+    expect(jss.createStyleSheet({ btnLink }).toString()).toBeDefined()
   })
 
-  it('btnLg', () => {
+  it('btn-lg', () => {
     expect(btnLg).toEqual({
       ...buttonSize(btnPaddingYLg, btnPaddingXLg, fontSizeLg, btnLineHeightLg, btnBorderRadiusLg)
     })
+    expect(jss.createStyleSheet({ btnLg }).toString()).toBeDefined()
   })
 
-  it('btnLg', () => {
+  it('btn-sm', () => {
     expect(btnSm).toEqual({
       ...buttonSize(btnPaddingYSm, btnPaddingXSm, fontSizeSm, btnLineHeightSm, btnBorderRadiusSm)
     })
+    expect(jss.createStyleSheet({ btnLg }).toString()).toBeDefined()
   })
 
-  it('btnBlock', () => {
+  it('btn-block', () => {
     expect(btnBlock).toEqual({
       display: 'block',
       width: '100%',
@@ -130,5 +140,6 @@ describe('Button classes', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ btnBlock }).toString()).toBeDefined()
   })
 })
