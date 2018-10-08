@@ -7,8 +7,10 @@ import {
 } from '../Variables/Tooltips'
 import { resetText } from '../Mixins/resetText'
 import { borderRadius } from '../Mixins/borderRadius'
-
 import { tooltip, bsTooltipTop, bsTooltipRight, bsTooltipBottom, bsTooltipLeft, bsTooltipAuto, tooltipInner } from './Tooltip'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('tooltip', () => {
   it('tooltip', () => {
@@ -21,10 +23,10 @@ describe('tooltip', () => {
       fontSize: tooltipFontSize,
       wordWrap: 'break-word',
       opacity: 0,
-      '&.show': {
+      '&$show': {
         opacity: tooltipOpacity
       },
-      arrow: {
+      '&$arrow': {
         position: 'absolute',
         display: 'block',
         width: tooltipArrowWidth,
@@ -37,12 +39,13 @@ describe('tooltip', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ show: {}, arrow: {}, tooltip }).toString()).toBeDefined()
   })
 
   it('tooltip-top', () => {
     expect(bsTooltipTop).toEqual({
       padding: `${tooltipArrowHeight} 0`,
-      arrow: {
+      '&$arrow': {
         bottom: 0,
         '&::before': {
           top: 0,
@@ -51,13 +54,14 @@ describe('tooltip', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, bsTooltipTop }).toString()).toBeDefined()
   })
 
   it('bs-tooltip-right', () => {
     const tooltipArrowWidthValue = `${size(tooltipArrowWidth).value / 2}${size(tooltipArrowWidth).unit}`
     expect(bsTooltipRight).toEqual({
       padding: `0 ${tooltipArrowHeight}`,
-      arrow: {
+      '&$arrow': {
         left: 0,
         width: tooltipArrowHeight,
         height: tooltipArrowWidth,
@@ -68,6 +72,7 @@ describe('tooltip', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, bsTooltipRight }).toString()).toBeDefined()
   })
 
   const tooltipArrowWidthValue = `${size(tooltipArrowWidth).value / 2}${size(tooltipArrowWidth).unit}`
@@ -75,7 +80,7 @@ describe('tooltip', () => {
   it('bs-tooltip-bottom', () => {
     expect(bsTooltipBottom).toEqual({
       padding: `${tooltipArrowHeight} 0`,
-      arrow: {
+      '&$arrow': {
         top: 0,
         '&::before': {
           bottom: 0,
@@ -84,12 +89,13 @@ describe('tooltip', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, bsTooltipBottom }).toString()).toBeDefined()
   })
 
   it('bs-tooltip-left', () => {
     expect(bsTooltipLeft).toEqual({
       padding: `0 ${tooltipArrowHeight}`,
-      arrow: {
+      '&$arrow': {
         right: 0,
         width: tooltipArrowHeight,
         height: tooltipArrowWidth,
@@ -100,6 +106,7 @@ describe('tooltip', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, bsTooltipLeft }).toString()).toBeDefined()
   })
 
   it('bs-tooltip-auto', () => {
@@ -117,6 +124,7 @@ describe('tooltip', () => {
         ...bsTooltipLeft
       }
     })
+    expect(jss.createStyleSheet({ show: {}, arrow: {}, bsTooltipAuto }).toString()).toBeDefined()
   })
 
   it('tooltip-inner', () => {
@@ -128,5 +136,6 @@ describe('tooltip', () => {
       backgroundColor: tooltipBg,
       ...borderRadius(tooltipBorderRadius)
     })
+    expect(jss.createStyleSheet({ tooltipInner }).toString()).toBeDefined()
   })
 })

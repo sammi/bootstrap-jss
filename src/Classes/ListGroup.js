@@ -52,11 +52,11 @@ const listGroupItem = {
     zIndex: 1,
     textDecoration: 'none'
   }),
-  '&.disabled,&:disabled': {
+  '&$disabled,&:disabled': {
     color: listGroupDisabledColor,
     backgroundColor: listGroupDisabledBg
   },
-  '&.active': {
+  '&$active': {
     zIndex: 2,
     color: listGroupActiveColor,
     backgroundColor: listGroupActiveBg,
@@ -65,19 +65,18 @@ const listGroupItem = {
 }
 
 const listGroupFlush = {
-  listGroupItem,
-  '$listGroupItem': {
+  '&$listGroupItem': {
     borderRight: 0,
     borderLeft: 0,
     ...borderRadius(0)
   },
   '&:first-child': {
-    '$listGroupItem:first-child': {
+    '&$listGroupItem:first-child': {
       borderTop: 0
     }
   },
   '&:last-child': {
-    '$listGroupItem:last-child': {
+    '&$listGroupItem:last-child': {
       borderBottom: 0
     }
   }

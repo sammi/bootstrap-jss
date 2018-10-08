@@ -100,6 +100,9 @@ import {
   customRange,
   customFormsOverride
 } from './CustomForms'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('custom forms', () => {
   it('custom-control', () => {
@@ -109,6 +112,7 @@ describe('custom forms', () => {
       minHeight: `${lineHeightBase}rem`,
       paddingLeft: customControlGutter
     })
+    expect(jss.createStyleSheet({ customControl }).toString()).toBeDefined()
   })
 
   it('custom-control-inline', () => {
@@ -116,6 +120,7 @@ describe('custom forms', () => {
       display: 'inline-flex',
       marginRight: customControlSpacerX
     })
+    expect(jss.createStyleSheet({ customControl }).toString()).toBeDefined()
   })
   it('custom-control-label', () => {
     expect(customControlLabel).toEqual({
@@ -147,11 +152,11 @@ describe('custom forms', () => {
         backgroundSize: customControlIndicatorBgSize
       }
     })
+    expect(jss.createStyleSheet({ customControlLabel }).toString()).toBeDefined()
   })
 
   it('custom-control-input', () => {
     expect(customControlInput).toEqual({
-      customControlLabel,
       position: 'absolute',
       zIndex: -1,
       opacity: 0,
@@ -169,7 +174,7 @@ describe('custom forms', () => {
         ...boxShadow(customControlIndicatorActiveBoxShadow)
       },
       '&:disabled': {
-        '~ $customControlLabel': {
+        '& ~ $customControlLabel': {
           color: customControlLabelDisabledColor,
           '&::before': {
             backgroundColor: customControlIndicatorDisabledBg
@@ -177,16 +182,15 @@ describe('custom forms', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ customControlLabel: {}, customControlInput }).toString()).toBeDefined()
   })
 
   it('custom-checkbox', () => {
     expect(customCheckbox).toEqual({
-      customControlInput,
-      customControlLabel,
-      '$customControlLabel::before': {
+      '&$customControlLabel::before': {
         ...borderRadius(customCheckboxIndicatorBorderRadius)
       },
-      '$customControlInput:checked ~ $customControlLabel': {
+      '&$customControlInput:checked ~ $customControlLabel': {
         '&::before': {
           ...gradientBg(customControlIndicatorCheckedBg)
         },
@@ -194,7 +198,7 @@ describe('custom forms', () => {
           backgroundImage: customCheckboxIndicatorIconChecked
         }
       },
-      '$customControlInput:indeterminate ~ $customControlLabel': {
+      '&$customControlInput:indeterminate ~ $customControlLabel': {
         '&::before': {
           ...gradientBg(customCheckboxIndicatorIndeterminateBg),
           ...boxShadow(customCheckboxIndicatorIndeterminateBoxShadow)
@@ -203,7 +207,7 @@ describe('custom forms', () => {
           backgroundImage: customCheckboxIndicatorIconIndeterminate
         }
       },
-      '$customControlInput:disabled': {
+      '&$customControlInput:disabled': {
         '&:checked ~ $customControlLabel::before': {
           backgroundColor: customControlIndicatorCheckedDisabledBg
         },
@@ -212,16 +216,15 @@ describe('custom forms', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ customControlLabel: {}, customControlInput: {}, customCheckbox }).toString()).toBeDefined()
   })
 
   it('custom-radio', () => {
     expect(customRadio).toEqual({
-      customControlInput,
-      customControlLabel,
-      '$customControlLabel::before': {
+      '&$customControlLabel::before': {
         borderRadius: customRadioIndicatorBorderRadius
       },
-      '$customControlInput:checked ~ $customControlLabel': {
+      '&$customControlInput:checked ~ $customControlLabel': {
         '&::before': {
           ...gradientBg(customControlIndicatorCheckedBg)
         },
@@ -229,12 +232,13 @@ describe('custom forms', () => {
           backgroundImage: customRadioIndicatorIconChecked
         }
       },
-      '$customControlInput:disabled': {
+      '&$customControlInput:disabled': {
         '&:checked ~ $customControlLabel::before': {
           backgroundColor: customControlIndicatorCheckedDisabledBg
         }
       }
     })
+    expect(jss.createStyleSheet({ customControlLabel: {}, customControlInput: {}, customRadio }).toString()).toBeDefined()
   })
 
   it('custom-select', () => {
@@ -275,6 +279,7 @@ describe('custom forms', () => {
       }
     }
     expect(customSelect()).toEqual(expectValue)
+    expect(jss.createStyleSheet({ customSelect: { ...customSelect() } }).toString()).toBeDefined()
     expect(customSelect(false)).toEqual({
       display: 'inline-block',
       width: '100%',
@@ -310,6 +315,7 @@ describe('custom forms', () => {
         opacity: 0
       }
     })
+    expect(jss.createStyleSheet({ customSelect: { ...customSelect(false) } }).toString()).toBeDefined()
   })
 
   it('custom-select-sm', () => {
@@ -319,6 +325,7 @@ describe('custom forms', () => {
       paddingBottom: customSelectPaddingY,
       fontSize: customSelectFontSizeLg
     })
+    expect(jss.createStyleSheet({ customSelectSm }).toString()).toBeDefined()
   })
 
   it('custom-select-lg', () => {
@@ -328,6 +335,7 @@ describe('custom forms', () => {
       paddingBottom: customSelectPaddingY,
       fontSize: customSelectFontSizeLg
     })
+    expect(jss.createStyleSheet({ customSelectLg }).toString()).toBeDefined()
   })
 
   it('custom-file', () => {
@@ -338,6 +346,7 @@ describe('custom forms', () => {
       height: customFileHeight,
       marginBottom: 0
     })
+    expect(jss.createStyleSheet({ customFile }).toString()).toBeDefined()
   })
 
   it('custom-file-input', () => {
@@ -348,7 +357,6 @@ describe('custom forms', () => {
       }
     }
     expect(customFileInput).toEqual({
-      customFileLabel,
       position: 'relative',
       zIndex: 2,
       width: '100%',
@@ -364,6 +372,7 @@ describe('custom forms', () => {
       },
       ...customFileTextValue
     })
+    expect(jss.createStyleSheet({ customFileLabel: {}, customFileInput }).toString()).toBeDefined()
   })
 
   it('custom-file-label', () => {
@@ -398,6 +407,7 @@ describe('custom forms', () => {
         ...borderRadius(`0 ${customFileBorderRadius} ${customFileBorderRadius} 0`)
       }
     })
+    expect(jss.createStyleSheet({ customFileLabel }).toString()).toBeDefined()
   })
 
   it('custom-range', () => {
@@ -522,16 +532,15 @@ describe('custom forms', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ customRange }).toString()).toBeDefined()
   })
 
   it('customer-forms-override', () => {
     expect(customFormsOverride).toEqual({
-      customControlLabel,
-      customFileLabel,
-      customSelect,
-      '$customControlLabel::before,$customFileLabel,$customSelect': {
+      '&$customControlLabel::before,&$customFileLabel,&$customSelect': {
         ...transition(customFormsTransition)
       }
     })
+    expect(jss.createStyleSheet({ customControlLabel: {}, customFileLabel: {}, customSelect: {}, customFormsOverride }).toString()).toBeDefined()
   })
 })

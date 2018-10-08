@@ -127,7 +127,6 @@ const customControlLabel = {
 }
 
 const customControlInput = {
-  customControlLabel,
   position: 'absolute',
   zIndex: -1,
   opacity: 0,
@@ -145,7 +144,7 @@ const customControlInput = {
     ...boxShadow(customControlIndicatorActiveBoxShadow)
   },
   '&:disabled': {
-    '~ $customControlLabel': {
+    '& ~ $customControlLabel': {
       color: customControlLabelDisabledColor,
       '&::before': {
         backgroundColor: customControlIndicatorDisabledBg
@@ -155,12 +154,10 @@ const customControlInput = {
 }
 
 const customCheckbox = {
-  customControlInput,
-  customControlLabel,
-  '$customControlLabel::before': {
+  '&$customControlLabel::before': {
     ...borderRadius(customCheckboxIndicatorBorderRadius)
   },
-  '$customControlInput:checked ~ $customControlLabel': {
+  '&$customControlInput:checked ~ $customControlLabel': {
     '&::before': {
       ...gradientBg(customControlIndicatorCheckedBg)
     },
@@ -168,7 +165,7 @@ const customCheckbox = {
       backgroundImage: customCheckboxIndicatorIconChecked
     }
   },
-  '$customControlInput:indeterminate ~ $customControlLabel': {
+  '&$customControlInput:indeterminate ~ $customControlLabel': {
     '&::before': {
       ...gradientBg(customCheckboxIndicatorIndeterminateBg),
       ...boxShadow(customCheckboxIndicatorIndeterminateBoxShadow)
@@ -177,7 +174,7 @@ const customCheckbox = {
       backgroundImage: customCheckboxIndicatorIconIndeterminate
     }
   },
-  '$customControlInput:disabled': {
+  '&$customControlInput:disabled': {
     '&:checked ~ $customControlLabel::before': {
       backgroundColor: customControlIndicatorCheckedDisabledBg
     },
@@ -188,12 +185,10 @@ const customCheckbox = {
 }
 
 const customRadio = {
-  customControlInput,
-  customControlLabel,
-  '$customControlLabel::before': {
+  '&$customControlLabel::before': {
     borderRadius: customRadioIndicatorBorderRadius
   },
-  '$customControlInput:checked ~ $customControlLabel': {
+  '&$customControlInput:checked ~ $customControlLabel': {
     '&::before': {
       ...gradientBg(customControlIndicatorCheckedBg)
     },
@@ -201,7 +196,7 @@ const customRadio = {
       backgroundImage: customRadioIndicatorIconChecked
     }
   },
-  '$customControlInput:disabled': {
+  '&$customControlInput:disabled': {
     '&:checked ~ $customControlLabel::before': {
       backgroundColor: customControlIndicatorCheckedDisabledBg
     }
@@ -306,7 +301,6 @@ const customFileLabel = {
 }
 
 const customFileInput = {
-  customFileLabel,
   position: 'relative',
   zIndex: 2,
   width: '100%',
@@ -446,10 +440,7 @@ const customRange = {
 }
 
 const customFormsOverride = {
-  customControlLabel,
-  customFileLabel,
-  customSelect,
-  '$customControlLabel::before,$customFileLabel,$customSelect': {
+  '&$customControlLabel::before,&$customFileLabel,&$customSelect': {
     ...transition(customFormsTransition)
   }
 }

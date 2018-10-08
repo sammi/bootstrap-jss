@@ -64,30 +64,26 @@ const dropdownMenuRight = {
 }
 
 const dropUp = {
-  dropdownMenu,
-  dropdownToggle,
-  '$dropdownMenu': {
+  '&$dropdownMenu': {
     top: 'auto',
     bottom: '100%',
     marginTop: 0,
     marginBottom: dropdownSpacer
   },
-  '$dropdownToggle': {
+  '&$dropdownToggle': {
     ...caret('up')
   }
 }
 
 const dropRight = {
-  dropdownMenu,
-  dropdownToggle,
-  '$dropdownMenu': {
+  '&$dropdownMenu': {
     top: 0,
     right: 'auto',
     left: '100%',
     marginTop: 0,
     marginLeft: dropdownSpacer
   },
-  '$dropdownToggle': {
+  '&$dropdownToggle': {
     ...caret('right'),
     '&::after': {
       verticalAlign: 0
@@ -96,16 +92,14 @@ const dropRight = {
 }
 
 const dropLeft = {
-  dropdownMenu,
-  dropdownToggle,
-  '$dropdownMenu': {
+  '&$dropdownMenu': {
     top: 0,
     right: '100%',
     left: 'auto',
     marginTop: 0,
     marginRight: dropdownSpacer
   },
-  '$dropdownToggle': {
+  '&$dropdownToggle': {
     ...caret('left'),
     '&::before': {
       verticalAlign: 0
@@ -138,12 +132,12 @@ const dropdownItem = (isEnableGradients = enableGradients) => {
       textDecoration: 'none',
       ...gradientBg(dropdownLinkHoverBg)
     }),
-    '&.active,&:active': {
+    '&$active,&:active': {
       color: dropdownLinkActiveColor,
       textDecoration: 'none',
       ...gradientBg(dropdownLinkActiveBg)
     },
-    '&.disabled,&:disabled': {
+    '&$disabled,&:disabled': {
       color: dropdownLinkDisabledColor,
       backgroundColor: 'transparent',
       ...backgroundImageValue

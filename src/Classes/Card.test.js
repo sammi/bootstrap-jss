@@ -22,12 +22,13 @@ import {
   cardImg, cardImgTop, cardImgBottom, cardDeck, cardGroup, cardColumns,
   accordion
 } from './Card'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('card', () => {
   it('card', () => {
     expect(card).toEqual({
-      listGroup,
-      listGroupItem,
       position: 'relative',
       display: 'flex',
       flexDirection: 'column',
@@ -37,21 +38,22 @@ describe('card', () => {
       backgroundClip: 'border-box',
       border: `${cardBorderWidth} solid ${cardBorderColor}`,
       ...borderRadius(cardBorderRadius),
-      '> hr': {
+      '& > hr': {
         marginRight: 0,
         marginLeft: 0
       },
-      '> $listGroup:first-child': {
-        '$listGroupItem:first-child': {
+      '& > $listGroup:first-child': {
+        '&$listGroupItem:first-child': {
           ...borderTopRadius(cardBorderRadius)
         }
       },
-      '> $listGroup:last-child': {
-        '$listGroupItem:last-child': {
+      '& > $listGroup:last-child': {
+        '&$listGroupItem:last-child': {
           ...borderBottomRadius(cardBorderRadius)
         }
       }
     })
+    expect(jss.createStyleSheet({ listGroup: {}, listGroupItem: {}, card }).toString()).toBeDefined()
   })
 
   it('cardBody', () => {
@@ -59,12 +61,14 @@ describe('card', () => {
       flex: '1 1 auto',
       padding: cardSpacerX
     })
+    expect(jss.createStyleSheet({ cardBody }).toString()).toBeDefined()
   })
 
   it('cardTitle', () => {
     expect(cardTitle).toEqual({
       marginBottom: cardSpacerY
     })
+    expect(jss.createStyleSheet({ cardTitle }).toString()).toBeDefined()
   })
 
   it('cardSubtitle', () => {
@@ -72,6 +76,7 @@ describe('card', () => {
       marginTop: `-${size(cardSpacerY).value / 2}${size(cardSpacerY).unit}`,
       marginBottom: 0
     })
+    expect(jss.createStyleSheet({ cardSubtitle }).toString()).toBeDefined()
   })
 
   it('cardText', () => {
@@ -80,6 +85,7 @@ describe('card', () => {
         marginBottom: 0
       }
     })
+    expect(jss.createStyleSheet({ cardText }).toString()).toBeDefined()
   })
 
   it('cardLink', () => {
@@ -87,10 +93,11 @@ describe('card', () => {
       ...hover({
         textDecoration: 'none'
       }),
-      '+ &': {
+      '& + &': {
         marginLeft: cardSpacerX
       }
     })
+    expect(jss.createStyleSheet({ cardLink }).toString()).toBeDefined()
   })
 
   it('cardHeader', () => {
@@ -104,12 +111,13 @@ describe('card', () => {
       '&:first-child': {
         ...borderRadius(`${cardInnerBorderRadius} ${cardInnerBorderRadius} 0 0`)
       },
-      '+ $listGroup': {
-        '$listGroupItem:first-child': {
+      '& + $listGroup': {
+        '&$listGroupItem:first-child': {
           borderTop: 0
         }
       }
     })
+    expect(jss.createStyleSheet({ listGroup: {}, listGroupItem: {}, cardHeader }).toString()).toBeDefined()
   })
 
   it('cardFooter', () => {
@@ -121,6 +129,7 @@ describe('card', () => {
         ...borderRadius(`0 0 ${cardInnerBorderRadius} ${cardInnerBorderRadius}`)
       }
     })
+    expect(jss.createStyleSheet({ cardFooter }).toString()).toBeDefined()
   })
 
   it('cardHeaderTabs', () => {
@@ -130,6 +139,7 @@ describe('card', () => {
       marginLeft: `-${size(cardSpacerX).value / 2}${size(cardSpacerX).unit}`,
       borderBottom: 0
     })
+    expect(jss.createStyleSheet({ cardHeaderTabs }).toString()).toBeDefined()
   })
 
   it('cardHeaderPills', () => {
@@ -137,6 +147,7 @@ describe('card', () => {
       marginRight: `-${size(cardSpacerX).value / 2}${size(cardSpacerX).unit}`,
       marginLeft: `-${size(cardSpacerX).value / 2}${size(cardSpacerX).unit}`
     })
+    expect(jss.createStyleSheet({ cardHeaderPills }).toString()).toBeDefined()
   })
 
   it('cardImgOverlay', () => {
@@ -148,6 +159,7 @@ describe('card', () => {
       left: 0,
       padding: cardImgOverlayPadding
     })
+    expect(jss.createStyleSheet({ cardImgOverlay }).toString()).toBeDefined()
   })
 
   it('cardImg', () => {
@@ -155,6 +167,7 @@ describe('card', () => {
       width: '100%',
       ...borderRadius(cardInnerBorderRadius)
     })
+    expect(jss.createStyleSheet({ cardImg }).toString()).toBeDefined()
   })
 
   it('cardImgTop', () => {
@@ -162,6 +175,7 @@ describe('card', () => {
       width: '100%',
       ...borderTopRadius(cardInnerBorderRadius)
     })
+    expect(jss.createStyleSheet({ cardImgTop }).toString()).toBeDefined()
   })
 
   it('cardImgBottom', () => {
@@ -169,21 +183,21 @@ describe('card', () => {
       width: '100%',
       ...borderBottomRadius(cardInnerBorderRadius)
     })
+    expect(jss.createStyleSheet({ cardImgBottom }).toString()).toBeDefined()
   })
 
   it('cardDeck', () => {
     expect(cardDeck).toEqual({
-      card,
       display: 'flex',
       flexDirection: 'column',
-      '$card': {
+      '&$card': {
         marginBottom: cardDeckMargin
       },
       ...mediaBreakpointUp('sm', {
         flexFlow: 'row wrap',
         marginRight: `-${cardDeckMargin}`,
         marginLeft: `-${cardDeckMargin}`,
-        '$card': {
+        '&$card': {
           display: 'flex',
           flex: '1 0 0%',
           flexDirection: 'column',
@@ -193,79 +207,76 @@ describe('card', () => {
         }
       })
     })
+    expect(jss.createStyleSheet({ card: {}, cardDeck }).toString()).toBeDefined()
   })
 
   it('cardGroup', () => {
-    const isEenableRounded = enableRounded
-    const isEenableRoundedValue = (isEenableRounded) => ({
-      cardHeader,
-      cardFooter,
-      cardImgTop,
-      cardImgBottom,
+    const isEnableRounded = enableRounded
+    const isEnableRoundedValue = (isEnableRounded) => ({
       '&:first-child': {
         ...borderRightRadius(0),
-        '$cardImgTop,$cardHeader': {
+        '&$cardImgTop,&$cardHeader': {
           borderTopRightRadius: 0
         },
-        '$cardImgBottom,$cardFooter': {
+        '&$cardImgBottom,&$cardFooter': {
           borderBottomRightRadius: 0
         }
       },
       '&:last-child': {
         ...borderLeftRadius(0),
-        '$cardImgTop,$cardHeader': {
+        '&$cardImgTop,&$cardHeader': {
           borderTopLeftRadius: 0
         },
-        '$cardImgBottom,$cardFooter': {
+        '&$cardImgBottom,&$cardFooter': {
           borderBottomLeftRadius: 0
         }
       },
       '&:only-child': {
         ...borderRadius(cardBorderRadius),
-        '$cardImgTop,$cardHeader': {
+        '&$cardImgTop,&$cardHeader': {
           ...borderTopRadius(cardBorderRadius)
         },
-        '$cardImgBottom,$cardFooter': {
+        '&$cardImgBottom,&$cardFooter': {
           ...borderBottomRadius(cardBorderRadius)
         }
       },
       '&:not(:first-child):not(:last-child):not(:only-child)': {
         ...borderRadius(0),
-        '$cardImgTop,$cardImgBottom,$cardHeader,$cardFooter': {
+        '&$cardImgTop,&$cardImgBottom,&$cardHeader,&$cardFooter': {
           ...borderRadius(0)
         }
       }
     })
 
-    const cardGroupValue = (isEenableRounded) => ({
-      card,
+    const cardGroupValue = (isEnableRounded) => ({
       display: 'flex',
       flexDirection: 'column',
-      '> $card': {
+      '& > $card': {
         marginBottom: cardGroupMargin
       },
       ...mediaBreakpointUp('sm', {
         flexFlow: 'row wrap',
-        '> $card': {
+        '& > $card': {
           flex: '1 0 0%',
           marginBottom: 0,
-          '+ $card': {
+          '& + $card': {
             marginLeft: 0,
             borderLeft: 0
           },
-          ...isEenableRoundedValue(isEenableRounded)
+          ...isEnableRoundedValue(isEnableRounded)
         }
       })
     })
 
     expect(cardGroup()).toEqual(cardGroupValue(enableRounded))
-    expect(cardGroup(isEenableRounded)).toEqual(cardGroupValue(enableRounded))
+    expect(cardGroup(isEnableRounded)).toEqual(cardGroupValue(enableRounded))
+    expect(jss.createStyleSheet({ card: {}, cardGroup: cardGroup() }).toString()).toBeDefined()
+    expect(jss.createStyleSheet({ card: {}, cardGroup: cardGroup(isEnableRounded) }).toString()).toBeDefined()
   })
 
   it('cardColumns', () => {
     expect(cardColumns).toEqual({
-      card,
-      '$card': {
+      '&$card': {
         marginBottom: cardColumnsMargin
       },
       ...mediaBreakpointUp('sm', {
@@ -273,35 +284,36 @@ describe('card', () => {
         columnGap: cardColumnsGap,
         orphans: 1,
         widows: 1,
-        '$card': {
+        '&$card': {
           display: 'inline-block',
           width: '100%'
         }
       })
     })
+    expect(jss.createStyleSheet({ card: {}, cardColumns }).toString()).toBeDefined()
   })
 
   it('accordion', () => {
     expect(accordion).toEqual({
-      card,
-      '$card:not(:first-of-type):not(:last-of-type)': {
+      '&$card:not(:first-of-type):not(:last-of-type)': {
         borderBottom: 0,
         borderRadius: 0
       },
-      '$card:not(:first-of-type)': {
+      '&$card:not(:first-of-type)': {
         'cardHeader:first-child': {
           borderRadius: 0
         }
       },
-      '$card:first-of-type': {
+      '&$card:first-of-type': {
         borderBottom: 0,
         borderBottomRightRadius: 0,
         borderBottomLeftRadius: 0
       },
-      '$card:last-of-type': {
+      '&$card:last-of-type': {
         borderTopLeftRadius: 0,
         borderTopRightRadius: 0
       }
     })
+    expect(jss.createStyleSheet({ card: {}, accordion }).toString()).toBeDefined()
   })
 })

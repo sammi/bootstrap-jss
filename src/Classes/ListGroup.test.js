@@ -11,8 +11,10 @@ import { borderTopRadius, borderBottomRadius, borderRadius } from '../Mixins/bor
 import { themeColorLevel } from '../Functions/themeColorLevel'
 import { themeColors } from '../Variables/Colors'
 import { listGroupItemVariant } from '../Mixins/listGroup'
-
 import { listGroup, listGroupItemAction, listGroupItem, listGroupFlush, listGroupThemeColors } from './ListGroup'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('list-group', () => {
   it('list-group', () => {
@@ -22,6 +24,7 @@ describe('list-group', () => {
       paddingLeft: 0,
       marginBottom: 0
     })
+    expect(jss.createStyleSheet({ listGroup }).toString()).toBeDefined()
   })
 
   it('list-group-item-action', () => {
@@ -39,6 +42,7 @@ describe('list-group', () => {
         backgroundColor: listGroupActionActiveBg
       }
     })
+    expect(jss.createStyleSheet({ listGroupItemAction }).toString()).toBeDefined()
   })
 
   it('list-group-item', () => {
@@ -60,38 +64,39 @@ describe('list-group', () => {
         zIndex: 1,
         textDecoration: 'none'
       }),
-      '&.disabled,&:disabled': {
+      '&$disabled,&:disabled': {
         color: listGroupDisabledColor,
         backgroundColor: listGroupDisabledBg
       },
-      '&.active': {
+      '&$active': {
         zIndex: 2,
         color: listGroupActiveColor,
         backgroundColor: listGroupActiveBg,
         borderColor: listGroupActiveBorderColor
       }
     })
+    expect(jss.createStyleSheet({ active: {}, disabled: {}, listGroupItem }).toString()).toBeDefined()
   })
 
   it('list-group-flush', () => {
     expect(listGroupFlush).toEqual({
-      listGroupItem,
-      '$listGroupItem': {
+      '&$listGroupItem': {
         borderRight: 0,
         borderLeft: 0,
         ...borderRadius(0)
       },
       '&:first-child': {
-        '$listGroupItem:first-child': {
+        '&$listGroupItem:first-child': {
           borderTop: 0
         }
       },
       '&:last-child': {
-        '$listGroupItem:last-child': {
+        '&$listGroupItem:last-child': {
           borderBottom: 0
         }
       }
     })
+    expect(jss.createStyleSheet({ listGroupItem: {}, listGroupFlush }).toString()).toBeDefined()
   })
 
   it('list-group-theme-colors', () => {
@@ -104,6 +109,8 @@ describe('list-group', () => {
       }
     }
     expect(listGroupThemeColors()).toEqual(expectValue)
+    expect(jss.createStyleSheet({ listGroupThemeColors: { ...listGroupThemeColors() } }).toString()).toBeDefined()
     expect(listGroupThemeColors(themeColors)).toEqual(expectValue)
+    expect(jss.createStyleSheet({ listGroupThemeColors: { ...listGroupThemeColors(themeColors) } }).toString()).toBeDefined()
   })
 })

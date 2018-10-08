@@ -14,7 +14,7 @@ export const close = {
     textDecroation: 'none',
     opacity: 0.75
   }),
-  '&:not(:disabled):not(.disabled)': {
+  '&:not(:disabled):not($disabled)': {
     cursor: 'pointer'
   }
 }

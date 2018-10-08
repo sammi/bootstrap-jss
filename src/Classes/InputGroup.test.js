@@ -24,7 +24,6 @@ import { customSelect, customFile, customFileInput, customFileLabel, customContr
 import { btn } from './Buttons'
 import { dropdownToggle } from './Dropdown'
 import { formControl } from './Form'
-
 import {
   inputGroup,
   inputGroupPrepend,
@@ -34,6 +33,9 @@ import {
   inputGroupSm,
   inputGroupRadius
 } from './InputGroup'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('input group', () => {
   it('input-group', () => {
@@ -44,30 +46,27 @@ describe('input group', () => {
       customSelect: {
         ...customSelect()
       },
-      customFile,
-      customFileInput,
-      customFileLabel,
       position: 'relative',
       display: 'flex',
       flexWrap: 'wrap',
       alignItems: 'stretch',
       width: '100%',
-      '> $formControl, & > $customSelect, & > $customFile': {
+      '& > $formControl, & > $customSelect, & > $customFile': {
         position: 'relative',
         flex: '1 1 auto',
         width: '1%',
         marginBottom: 0,
-        '+ $formControl, & + $customSelect, & + $customFile': {
+        '& + $formControl, & + $customSelect, & + $customFile': {
           marginLeft: `-${inputBorderWidth}`
         }
       },
-      '> $formControl:focus, & > $customSelect:focus, & > $customFile $customFileInput:focus ~ $customFileLabel': {
+      '& > $formControl:focus, & > $customSelect:focus, & > $customFile $customFileInput:focus ~ $customFileLabel': {
         zIndex: 3
       },
-      '> $customFile $customFileInput:focus': {
+      '& > $customFile $customFileInput:focus': {
         zIndex: 4
       },
-      '> $formControl, & > $customSelect': {
+      '& > $formControl, & > $customSelect': {
         '&:not(:last-child)': {
           ...borderRightRadius(0)
         },
@@ -75,7 +74,7 @@ describe('input group', () => {
           ...borderLeftRadius(0)
         }
       },
-      '> $customFile': {
+      '& > $customFile': {
         display: 'flex',
         alignItems: 'center',
         '&:not(:last-child) $customFileLabel, &:not(:last-child) $customFileLabel::after': {
@@ -86,17 +85,23 @@ describe('input group', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({
+      formControl: {},
+      customFile: {},
+      customFileLabel: {},
+      customSelect: {},
+      customFileInput: {},
+      inputGroup
+    }).toString()).toBeDefined()
   })
 
   const inputGroupPrependAppend = {
-    inputGroupText,
-    btn,
     display: 'flex',
-    '$btn': {
+    '&$btn': {
       position: 'relative',
       zIndex: 2
     },
-    '$btn + $btn, $btn + $inputGroupText, $inputGroupText + $inputGroupText, $inputGroupText + $btn': {
+    '&$btn + $btn, &$btn + $inputGroupText, &$inputGroupText + $inputGroupText, &$inputGroupText + $btn': {
       marginLeft: `-${inputBorderWidth}`
     }
   }
@@ -106,6 +111,7 @@ describe('input group', () => {
       ...inputGroupPrependAppend,
       marginRight: `-${inputBorderWidth}`
     })
+    expect(jss.createStyleSheet({ btn: {}, inputGroupText: {}, inputGroupPrepend }).toString()).toBeDefined()
   })
 
   it('input-group-append', () => {
@@ -113,6 +119,7 @@ describe('input group', () => {
       ...inputGroupPrependAppend,
       marginLeft: `-${inputBorderWidth}`
     })
+    expect(jss.createStyleSheet({ btn: {}, inputGroupText: {}, inputGroupAppend }).toString()).toBeDefined()
   })
 
   it('input-group-text', () => {
@@ -130,18 +137,16 @@ describe('input group', () => {
       backgroundColor: inputGroupAddonBg,
       border: `${inputBorderWidth} solid ${inputGroupAddonBorderColor}`,
       ...borderRadius(inputBorderRadius),
-      'input[type="radio"],input[type="checkbox"]': {
+      '& input[type="radio"],input[type="checkbox"]': {
         marginTop: 0
       }
     })
+    expect(jss.createStyleSheet({ inputGroupText }).toString()).toBeDefined()
   })
 
   it('input-group-lg', () => {
     expect(inputGroupLg).toEqual({
-      formControl,
-      inputGroupAppend,
-      inputGroupText,
-      [`& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupAppend  > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn`]: {
+      '& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupAppend  > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn': {
         height: inputHeightLg,
         padding: `${inputPaddingYLg} ${inputPaddingXLg}`,
         fontSize: fontSizeLg,
@@ -149,14 +154,19 @@ describe('input group', () => {
         ...borderRadius(inputBorderRadiusLg)
       }
     })
+    expect(jss.createStyleSheet({
+      btn: {},
+      formControl: {},
+      inputGroupAppend: {},
+      inputGroupPrepend: {},
+      inputGroupText: {},
+      inputGroupLg
+    }).toString()).toBeDefined()
   })
 
   it('intput-group-sm', () => {
     expect(inputGroupSm).toEqual({
-      formControl,
-      inputGroupAppend,
-      inputGroupText,
-      [`& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn`]: {
+      '& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn': {
         height: inputHeightSm,
         padding: `${inputPaddingYSm} ${inputPaddingXSm}`,
         fontSize: fontSizeSm,
@@ -164,23 +174,34 @@ describe('input group', () => {
         ...borderRadius(inputBorderRadiusSm)
       }
     })
+    expect(jss.createStyleSheet({
+      btn: {},
+      formControl: {},
+      inputGroupAppend: {},
+      inputGroupPrepend: {},
+      inputGroupText: {},
+      inputGroupSm
+    }).toString()).toBeDefined()
   })
 
   it('input-group-radius', () => {
     expect(inputGroupRadius).toEqual({
-      formControl,
-      inputGroup,
-      inputGroupAppend,
-      inputGroupPrepend,
-      inputGroupText,
-      dropdownToggle,
-      btn,
-      [`$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:last-child) > $btn,$inputGroup > $inputGroupAppend:not(:last-child) >$inputGroupText, $inputGroup > $inputGroupAppend:last-child > $btn:not(:last-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:last-child > $inputGroupText:not(:last-child)`]: {
+      '$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:last-child) > $btn,$inputGroup > $inputGroupAppend:not(:last-child) >$inputGroupText, $inputGroup > $inputGroupAppend:last-child > $btn:not(:last-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:last-child > $inputGroupText:not(:last-child)': {
         ...borderRightRadius(0)
       },
-      [`$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:first-child) > $btn,$inputGroup > $inputGroupAppend:not(:first-child) > $inputGroupText,$inputGroup > $inputGroupAppend:first-child > $btn:not(:first-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:first-child > $inputGroupText:not(:first-child)`]: {
+      '$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:first-child) > $btn,$inputGroup > $inputGroupAppend:not(:first-child) > $inputGroupText,$inputGroup > $inputGroupAppend:first-child > $btn:not(:first-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:first-child > $inputGroupText:not(:first-child)': {
         ...borderLeftRadius(0)
       }
     })
+    expect(jss.createStyleSheet({
+      formControl: {},
+      inputGroup: {},
+      inputGroupAppend: {},
+      inputGroupPrepend: {},
+      inputGroupText: {},
+      dropdownToggle: {},
+      btn: {},
+      inputGroupRadius
+    }).toString()).toBeDefined()
   })
 })

@@ -3,8 +3,10 @@ import { borderRadiusSm } from '../Variables/Components'
 import { borderRadius } from '../Mixins/borderRadius'
 import { boxShadow } from '../Mixins/boxShadow'
 import { kbdBoxShadow, nestedKbdFontWeight } from '../Variables/Fonts'
-
 import { code, kbd, pre, preScrollable } from './Code'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('Code', () => {
   it('Inline code', () => {
@@ -12,10 +14,11 @@ describe('Code', () => {
       fontSize: codeFontSize,
       color: codeColor,
       wordBreak: 'break-word',
-      'a > &': {
+      '& a > &': {
         color: 'inherit'
       }
     })
+    expect(jss.createStyleSheet({ code }).toString()).toBeDefined()
   })
 
   it('User input typically entered via keyboard', () => {
@@ -33,6 +36,7 @@ describe('Code', () => {
         ...boxShadow('none')
       }
     })
+    expect(jss.createStyleSheet({ kbd }).toString()).toBeDefined()
   })
 
   it('Blocks of code', () => {
@@ -41,19 +45,20 @@ describe('Code', () => {
       display: 'block',
       fontSize: codeFontSize,
       color: preColor,
-      '$code': {
+      '&$code': {
         fontSize: 'inherit',
         color: 'inherit',
         wordBreak: 'normal'
       }
     })
+    expect(jss.createStyleSheet({ code: {}, pre }).toString()).toBeDefined()
   })
 
-  // Enable scrollable blocks of code
   it('pre-scrollable', () => {
     expect(preScrollable).toEqual({
       maxHeight: preScrollableMaxHeight,
       overflowY: 'scroll'
     })
+    expect(jss.createStyleSheet({ preScrollable }).toString()).toBeDefined()
   })
 })

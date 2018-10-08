@@ -17,8 +17,6 @@ import { enableRounded } from '../Variables/Options'
 import { listGroup, listGroupItem } from './ListGroup'
 
 const card = {
-  listGroup,
-  listGroupItem,
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',
@@ -28,17 +26,17 @@ const card = {
   backgroundClip: 'border-box',
   border: `${cardBorderWidth} solid ${cardBorderColor}`,
   ...borderRadius(cardBorderRadius),
-  '> hr': {
+  '& > hr': {
     marginRight: 0,
     marginLeft: 0
   },
-  '> $listGroup:first-child': {
-    '$listGroupItem:first-child': {
+  '& > $listGroup:first-child': {
+    '&$listGroupItem:first-child': {
       ...borderTopRadius(cardBorderRadius)
     }
   },
-  '> $listGroup:last-child': {
-    '$listGroupItem:last-child': {
+  '& > $listGroup:last-child': {
+    '&$listGroupItem:last-child': {
       ...borderBottomRadius(cardBorderRadius)
     }
   }
@@ -68,7 +66,7 @@ const cardLink = {
   ...hover({
     textDecoration: 'none'
   }),
-  '+ &': {
+  '& + &': {
     marginLeft: cardSpacerX
   }
 }
@@ -83,8 +81,8 @@ const cardHeader = {
   '&:first-child': {
     ...borderRadius(`${cardInnerBorderRadius} ${cardInnerBorderRadius} 0 0`)
   },
-  '+ $listGroup': {
-    '$listGroupItem:first-child': {
+  '& + $listGroup': {
+    '&$listGroupItem:first-child': {
       borderTop: 0
     }
   }
@@ -136,17 +134,16 @@ const cardImgBottom = {
 }
 
 const cardDeck = {
-  card,
   display: 'flex',
   flexDirection: 'column',
-  '$card': {
+  '&$card': {
     marginBottom: cardDeckMargin
   },
   ...mediaBreakpointUp('sm', {
     flexFlow: 'row wrap',
     marginRight: `-${cardDeckMargin}`,
     marginLeft: `-${cardDeckMargin}`,
-    '$card': {
+    '&$card': {
       display: 'flex',
       flex: '1 0 0%',
       flexDirection: 'column',
@@ -157,74 +154,68 @@ const cardDeck = {
   })
 }
 
-const cardGroup = (isEenableRounded = enableRounded) => {
-  const isEenableRoundedValue = (isEenableRounded) => ({
-    cardHeader,
-    cardFooter,
-    cardImgTop,
-    cardImgBottom,
+const cardGroup = (isEnableRounded = enableRounded) => {
+  const isEnableRoundedValue = (isEnableRounded) => ({
     '&:first-child': {
       ...borderRightRadius(0),
-      '$cardImgTop,$cardHeader': {
+      '&$cardImgTop,&$cardHeader': {
         borderTopRightRadius: 0
       },
-      '$cardImgBottom,$cardFooter': {
+      '&$cardImgBottom,&$cardFooter': {
         borderBottomRightRadius: 0
       }
     },
     '&:last-child': {
       ...borderLeftRadius(0),
-      '$cardImgTop,$cardHeader': {
+      '&$cardImgTop,&$cardHeader': {
         borderTopLeftRadius: 0
       },
-      '$cardImgBottom,$cardFooter': {
+      '&$cardImgBottom,&$cardFooter': {
         borderBottomLeftRadius: 0
       }
     },
     '&:only-child': {
       ...borderRadius(cardBorderRadius),
-      '$cardImgTop,$cardHeader': {
+      '&$cardImgTop,&$cardHeader': {
         ...borderTopRadius(cardBorderRadius)
       },
-      '$cardImgBottom,$cardFooter': {
+      '&$cardImgBottom,&$cardFooter': {
         ...borderBottomRadius(cardBorderRadius)
       }
     },
     '&:not(:first-child):not(:last-child):not(:only-child)': {
       ...borderRadius(0),
-      '$cardImgTop,$cardImgBottom,$cardHeader,$cardFooter': {
+      '&$cardImgTop,&$cardImgBottom,&$cardHeader,&$cardFooter': {
         ...borderRadius(0)
       }
     }
   })
 
-  const cardGroupValue = (isEenableRounded) => ({
-    card,
+  const cardGroupValue = (isEnableRounded) => ({
     display: 'flex',
     flexDirection: 'column',
-    '> $card': {
+    '& > $card': {
       marginBottom: cardGroupMargin
     },
     ...mediaBreakpointUp('sm', {
       flexFlow: 'row wrap',
-      '> $card': {
+      '& > $card': {
         flex: '1 0 0%',
         marginBottom: 0,
-        '+ $card': {
+        '& + $card': {
           marginLeft: 0,
           borderLeft: 0
         },
-        ...isEenableRoundedValue(isEenableRounded)
+        ...isEnableRoundedValue(isEnableRounded)
       }
     })
   })
 
-  return cardGroupValue(isEenableRounded)
+  return cardGroupValue(isEnableRounded)
 }
 
 const cardColumns = {
-  card,
-  '$card': {
+  '&$card': {
     marginBottom: cardColumnsMargin
   },
   ...mediaBreakpointUp('sm', {
@@ -232,7 +223,7 @@ const cardColumns = {
     columnGap: cardColumnsGap,
     orphans: 1,
     widows: 1,
-    '$card': {
+    '&$card': {
       display: 'inline-block',
       width: '100%'
     }
@@ -240,22 +231,21 @@ const cardColumns = {
 }
 
 const accordion = {
-  card,
-  '$card:not(:first-of-type):not(:last-of-type)': {
+  '&$card:not(:first-of-type):not(:last-of-type)': {
     borderBottom: 0,
     borderRadius: 0
   },
-  '$card:not(:first-of-type)': {
+  '&$card:not(:first-of-type)': {
     'cardHeader:first-child': {
       borderRadius: 0
     }
   },
-  '$card:first-of-type': {
+  '&$card:first-of-type': {
     borderBottom: 0,
     borderBottomRightRadius: 0,
     borderBottomLeftRadius: 0
   },
-  '$card:last-of-type': {
+  '&$card:last-of-type': {
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0
   }

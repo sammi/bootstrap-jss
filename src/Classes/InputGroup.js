@@ -32,30 +32,27 @@ const inputGroup = {
   customSelect: {
     ...customSelect()
   },
-  customFile,
-  customFileInput,
-  customFileLabel,
   position: 'relative',
   display: 'flex',
   flexWrap: 'wrap',
   alignItems: 'stretch',
   width: '100%',
-  '> $formControl, & > $customSelect, & > $customFile': {
+  '& > $formControl, & > $customSelect, & > $customFile': {
     position: 'relative',
     flex: '1 1 auto',
     width: '1%',
     marginBottom: 0,
-    '+ $formControl, & + $customSelect, & + $customFile': {
+    '& + $formControl, & + $customSelect, & + $customFile': {
       marginLeft: `-${inputBorderWidth}`
     }
   },
-  '> $formControl:focus, & > $customSelect:focus, & > $customFile $customFileInput:focus ~ $customFileLabel': {
+  '& > $formControl:focus, & > $customSelect:focus, & > $customFile $customFileInput:focus ~ $customFileLabel': {
     zIndex: 3
   },
-  '> $customFile $customFileInput:focus': {
+  '& > $customFile $customFileInput:focus': {
     zIndex: 4
   },
-  '> $formControl, & > $customSelect': {
+  '& > $formControl, & > $customSelect': {
     '&:not(:last-child)': {
       ...borderRightRadius(0)
     },
@@ -63,7 +60,7 @@ const inputGroup = {
       ...borderLeftRadius(0)
     }
   },
-  '> $customFile': {
+  '& > $customFile': {
     display: 'flex',
     alignItems: 'center',
     '&:not(:last-child) $customFileLabel, &:not(:last-child) $customFileLabel::after': {
@@ -89,20 +86,18 @@ const inputGroupText = {
   backgroundColor: inputGroupAddonBg,
   border: `${inputBorderWidth} solid ${inputGroupAddonBorderColor}`,
   ...borderRadius(inputBorderRadius),
-  'input[type="radio"],input[type="checkbox"]': {
+  '& input[type="radio"],input[type="checkbox"]': {
     marginTop: 0
   }
 }
 
 const inputGroupPrependAppend = {
-  inputGroupText,
-  btn,
   display: 'flex',
-  '$btn': {
+  '&$btn': {
     position: 'relative',
     zIndex: 2
   },
-  '$btn + $btn, $btn + $inputGroupText, $inputGroupText + $inputGroupText, $inputGroupText + $btn': {
+  '&$btn + $btn, &$btn + $inputGroupText, &$inputGroupText + $inputGroupText, &$inputGroupText + $btn': {
     marginLeft: `-${inputBorderWidth}`
   }
 }
@@ -118,10 +113,7 @@ const inputGroupAppend = {
 }
 
 const inputGroupLg = {
-  formControl,
-  inputGroupAppend,
-  inputGroupText,
-  [`& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupAppend  > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn`]: {
+  '& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupAppend  > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn': {
     height: inputHeightLg,
     padding: `${inputPaddingYLg} ${inputPaddingXLg}`,
     fontSize: fontSizeLg,
@@ -131,10 +123,7 @@ const inputGroupLg = {
 }
 
 const inputGroupSm = {
-  formControl,
-  inputGroupAppend,
-  inputGroupText,
-  [`& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn`]: {
+  '& > $formControl,& > $inputGroupPrepend > $inputGroupText,& > $inputGroupPrepend > $btn,& > $inputGroupAppend  > $btn': {
     height: inputHeightSm,
     padding: `${inputPaddingYSm} ${inputPaddingXSm}`,
     fontSize: fontSizeSm,
@@ -144,17 +133,10 @@ const inputGroupSm = {
 }
 
 const inputGroupRadius = {
-  formControl,
-  inputGroup,
-  inputGroupAppend,
-  inputGroupPrepend,
-  inputGroupText,
-  dropdownToggle,
-  btn,
-  [`$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:last-child) > $btn,$inputGroup > $inputGroupAppend:not(:last-child) >$inputGroupText, $inputGroup > $inputGroupAppend:last-child > $btn:not(:last-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:last-child > $inputGroupText:not(:last-child)`]: {
+  '$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:last-child) > $btn,$inputGroup > $inputGroupAppend:not(:last-child) >$inputGroupText, $inputGroup > $inputGroupAppend:last-child > $btn:not(:last-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:last-child > $inputGroupText:not(:last-child)': {
     ...borderRightRadius(0)
   },
-  [`$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:first-child) > $btn,$inputGroup > $inputGroupAppend:not(:first-child) > $inputGroupText,$inputGroup > $inputGroupAppend:first-child > $btn:not(:first-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:first-child > $inputGroupText:not(:first-child)`]: {
+  '$inputGroup > $inputGroupPrepend > $btn,$inputGroup > $inputGroupPrepend > $inputGroupText,$inputGroup > $inputGroupAppend:not(:first-child) > $btn,$inputGroup > $inputGroupAppend:not(:first-child) > $inputGroupText,$inputGroup > $inputGroupAppend:first-child > $btn:not(:first-child):not($dropdownToggle),$inputGroup > $inputGroupAppend:first-child > $inputGroupText:not(:first-child)': {
     ...borderLeftRadius(0)
   }
 }

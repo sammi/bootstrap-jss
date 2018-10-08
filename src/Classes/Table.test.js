@@ -13,8 +13,10 @@ import { tableRowVariant } from '../Mixins/tableRow'
 import { themeColorLevel } from '../Functions/themeColorLevel'
 import { gridBreakpoints } from '../Variables/Grid'
 import { mediaBreakpointDown, breakpointNext, breakpointInfix } from '../Mixins/breakpoints'
-
 import { table, tableSm, tableBordered, tableBorderLess, tableStriped, tableHover, tableBackgrounds, tableHeadDark, tableDark, tableResponsive } from './Table'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('Basic Bootstrap table', () => {
   const tableBorderWidthSize = size(tableBorderWidth)
@@ -40,6 +42,7 @@ describe('Basic Bootstrap table', () => {
         backgroundColor: bodyBg
       }
     })
+    expect(jss.createStyleSheet({ table }).toString()).toBeDefined()
   })
 
   it('table-sm', () => {
@@ -48,6 +51,7 @@ describe('Basic Bootstrap table', () => {
         padding: tableCellPaddingSm
       }
     })
+    expect(jss.createStyleSheet({ tableSm }).toString()).toBeDefined()
   })
 
   it('table-bordered', () => {
@@ -62,6 +66,7 @@ describe('Basic Bootstrap table', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ tableBordered }).toString()).toBeDefined()
   })
 
   it('table-borderless', () => {
@@ -70,6 +75,7 @@ describe('Basic Bootstrap table', () => {
         border: 0
       }
     })
+    expect(jss.createStyleSheet({ tableBorderLess }).toString()).toBeDefined()
   })
 
   it('table-striped', () => {
@@ -78,6 +84,7 @@ describe('Basic Bootstrap table', () => {
       backgroundColor: tableAccentBg
     }
     expect(tableStriped).toEqual(expectValue)
+    expect(jss.createStyleSheet({ tableStriped }).toString()).toBeDefined()
   })
 
   it('table-hover', () => {
@@ -88,6 +95,7 @@ describe('Basic Bootstrap table', () => {
         })
       }
     })
+    expect(jss.createStyleSheet({ tableHover }).toString()).toBeDefined()
   })
 
   it('table backgrounds', () => {
@@ -102,19 +110,20 @@ describe('Basic Bootstrap table', () => {
       ...tableRowVariant('active', tableActiveBg)
     }
     expect(tableBackgrounds).toEqual(expectValue)
+    expect(jss.createStyleSheet({ tableBackgrounds }).toString()).toBeDefined()
   })
 
   it('Dark table head styles', () => {
     expect(tableHeadDark).toEqual({
       'table': {
-        'theadDark': {
+        '&$theadDark': {
           'th': {
             color: tableDarkColor,
             backgroundColor: tableDarkBg,
             borderColor: tableDarkBorderColor
           }
         },
-        'theadLight': {
+        '&$theadLight': {
           'th': {
             color: tableHeadColor,
             backgroundColor: tableHeadBg,
@@ -123,6 +132,7 @@ describe('Basic Bootstrap table', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ theadDark: {}, theadLight: {}, tableHeadDark }).toString()).toBeDefined()
   })
 
   it('table dark', () => {
@@ -151,6 +161,7 @@ describe('Basic Bootstrap table', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ tableBordered: {}, tableStriped: {}, tableHover: {}, tableDark }).toString()).toBeDefined()
   })
 
   it('table-responsive', () => {
@@ -160,7 +171,6 @@ describe('Basic Bootstrap table', () => {
       const infix = breakpointInfix(next, gridBreakpoints)
       expectValue[`&${infix}`] = {
         ...mediaBreakpointDown(breakpoint, {
-          tableBordered,
           display: 'block',
           width: '100%',
           overflowX: 'auto',
@@ -174,5 +184,6 @@ describe('Basic Bootstrap table', () => {
     }
 
     expect(tableResponsive).toEqual(expectValue)
+    expect(jss.createStyleSheet({ tableBordered: {}, tableResponsive }).toString()).toBeDefined()
   })
 })

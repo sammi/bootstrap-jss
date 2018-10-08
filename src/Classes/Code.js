@@ -8,7 +8,7 @@ export const code = {
   fontSize: codeFontSize,
   color: codeColor,
   wordBreak: 'break-word',
-  'a > &': {
+  '& a > &': {
     color: 'inherit'
   }
 }
@@ -33,7 +33,7 @@ export const pre = {
   display: 'block',
   fontSize: codeFontSize,
   color: preColor,
-  '$code': {
+  '&$code': {
     fontSize: 'inherit',
     color: 'inherit',
     wordBreak: 'normal'

@@ -36,12 +36,16 @@ import {
   carouselIndicators,
   carouselCaption
 } from './Carousel'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('carousel', () => {
   it('carousel', () => {
     expect(carousel).toEqual({
       position: 'relative'
     })
+    expect(jss.createStyleSheet({ carousel }).toString()).toBeDefined()
   })
 
   it('carousel-inner', () => {
@@ -50,6 +54,7 @@ describe('carousel', () => {
       width: '100%',
       overflow: 'hidden'
     })
+    expect(jss.createStyleSheet({ carouselInner }).toString()).toBeDefined()
   })
 
   it('carousel-item', () => {
@@ -62,6 +67,7 @@ describe('carousel', () => {
       backfaceVisibility: 'hidden',
       perspective: '1000px'
     })
+    expect(jss.createStyleSheet({ carouselItem }).toString()).toBeDefined()
   })
 
   const base = {
@@ -96,18 +102,20 @@ describe('carousel', () => {
 
   it('carousel-item-right', () => {
     expect(carouselItemRight).toEqual({
-      'active.&': {
+      '&active.&': {
         ...nextRight
       }
     })
+    expect(jss.createStyleSheet({ carouselItemRight }).toString()).toBeDefined()
   })
 
   it('carousel-item-left', () => {
     expect(carouselItemLeft).toEqual({
-      'active.&': {
+      '&active.&': {
         ...prevLeft
       }
     })
+    expect(jss.createStyleSheet({ carouselItemRight }).toString()).toBeDefined()
   })
 
   it('carousel-item-next', () => {
@@ -115,51 +123,55 @@ describe('carousel', () => {
       ...base,
       ...nextPrev,
       ...nextRight,
-      carouselItemLeft,
       '&$carouselItemLeft': {
         ...nextPrevLeftRight
       },
       ...carouselItemRight
     })
+    expect(jss.createStyleSheet({ carouselItemLeft: {}, carouselItemNext }).toString()).toBeDefined()
   })
 
   it('carousel-item-prev', () => {
     expect(carouselItemPrev).toEqual({
       ...base,
       ...nextPrev,
-      carouselItemRight,
       '&$carouselItemRight': {
         ...nextPrevLeftRight
       },
       ...carouselItemLeft
     })
+    expect(jss.createStyleSheet({ carouselItemRight: {}, carouselItemPrev }).toString()).toBeDefined()
   })
 
   it('carousel-fade', () => {
     expect(carouselFade).toEqual({
-      carouselItem,
-      carouselItemNext,
-      carouselItemLeft,
-      carouselItemPrev,
-      carouselItemRight,
-      '$carouselItem': {
+      '&$carouselItem': {
         opacity: 0,
         transitionDuration: '.6s',
         transitionProperty: 'opacity'
       },
-      '$carouselItem.active,$carouselItemNext$carouselItemLeft,$carouselItemPrev$carouselItemRight': {
+      '&$carouselItem$active,&$carouselItemNext$carouselItemLeft,&$carouselItemPrev$carouselItemRight': {
         opacity: 1
       },
-      '.active$carouselItemLeft,.active$carouselItemRight': {
+      '&$active$carouselItemLeft,&$active$carouselItemRight': {
         opacity: 0
       },
-      '$carouselItemNext,$carouselItemPrev,$carouselItem.active,.active$carouselItemLeft,.active$carouselItemPrev': {
+      '&$carouselItemNext,&$carouselItemPrev,&$carouselItem$active,&$active$carouselItemLeft,&$active$carouselItemPrev': {
         transform: `translateX(0)`,
         '@supports (transform-style: preserve-3d)': {
           transform: `translate3d(0, 0, 0)`
         }
       }
     })
+    expect(jss.createStyleSheet({
+      active: {},
+      carouselItem: {},
+      carouselItemNext: {},
+      carouselItemPrev: {},
+      carouselItemLeft: {},
+      carouselItemRight: {},
+      carouselFade
+    }).toString()).toBeDefined()
   })
 
   const carouselControlPrevNext = {
@@ -187,12 +199,14 @@ describe('carousel', () => {
       left: 0,
       background: `linear-gradient(90deg, rgba(${black}, .25), rgba(${black}, .001))`
     })
+    expect(jss.createStyleSheet({ carouselControlPrev: { ...carouselControlPrev(true) } }).toString()).toBeDefined()
 
     expect(carouselControlPrev()).toEqual({
       ...carouselControlPrevNext,
       left: 0,
-      background: enableGradients ? `linear-gradient(90deg, rgba(${black}, .25), rgba(${black}, .001))` : null
+      ...(enableGradients ? { background: `linear-gradient(90deg, rgba(${black}, .25), rgba(${black}, .001))` } : null)
     })
+    expect(jss.createStyleSheet({ carouselControlPrev: { ...carouselControlPrev() } }).toString()).toBeDefined()
   })
 
   it('carousel-control-next', () => {
@@ -201,11 +215,14 @@ describe('carousel', () => {
       right: 0,
       background: `linear-gradient(270deg, rgba(${black}, .25), rgba(${black}, .001))`
     })
+    expect(jss.createStyleSheet({ carouselControlNext: { ...carouselControlNext(true) } }).toString()).toBeDefined()
+
     expect(carouselControlNext()).toEqual({
       ...carouselControlPrevNext,
       right: 0,
-      background: enableGradients ? `linear-gradient(270deg, rgba(${black}, .25), rgba(${black}, .001))` : null
+      ...(enableGradients ? { background: `linear-gradient(270deg, rgba(${black}, .25), rgba(${black}, .001))` } : null)
     })
+    expect(jss.createStyleSheet({ carouselControlNext: { ...carouselControlNext() } }).toString()).toBeDefined()
   })
 
   const carouselControlPrevNextIcon = {
@@ -221,6 +238,7 @@ describe('carousel', () => {
       ...carouselControlPrevNextIcon,
       backgroundImage: carouselControlPrevIconBg
     })
+    expect(jss.createStyleSheet({ carouselControlPrevIcon }).toString()).toBeDefined()
   })
 
   it('carousel-control-next-icon', () => {
@@ -228,6 +246,7 @@ describe('carousel', () => {
       ...carouselControlPrevNextIcon,
       backgroundImage: carouselControlNextIconBg
     })
+    expect(jss.createStyleSheet({ carouselControlPrevIcon }).toString()).toBeDefined()
   })
 
   it('carousel-indicators', () => {
@@ -272,10 +291,11 @@ describe('carousel', () => {
           content: ''
         }
       },
-      active: {
+      '&active': {
         backgroundColor: carouselIndicatorActiveBg
       }
     })
+    expect(jss.createStyleSheet({ carouselIndicators }).toString()).toBeDefined()
   })
 
   it('carousel-caption', () => {
@@ -291,4 +311,5 @@ describe('carousel', () => {
       textAlign: 'center'
     })
   })
+  expect(jss.createStyleSheet({ carouselCaption }).toString()).toBeDefined()
 })

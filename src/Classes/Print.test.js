@@ -3,8 +3,6 @@ import { grays, black, white } from '../Variables/Colors'
 import { printPageSize, printBodyMinWidth } from '../Variables/Printing'
 import { tableBorderColor } from '../Variables/Tables'
 import { enablePrintStyles } from '../Variables/Options'
-import { btn } from '../Classes/Buttons'
-
 import { mediaPrint } from './Print'
 
 describe('print', () => {
@@ -16,7 +14,6 @@ describe('print', () => {
           boxShadow: 'none !important'
         },
         a: {
-          btn,
           '&:not($btn)': {
             textDecoration: 'underline'
           }

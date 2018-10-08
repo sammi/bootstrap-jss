@@ -5,12 +5,15 @@ import { boxShadow } from '../Mixins/boxShadow'
 import { size } from '../Functions/size'
 import { figureCaptionFontSize, figureCaptionColor } from '../Variables/Figures'
 import { spacer } from '../Variables/Spacing'
-
 import { imgFluid, imgThumbnail, figure, figureImg, figureCaption } from './Images'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('Images', () => {
   it('img-fluid', () => {
     expect(imgFluid).toEqual({ ...imgFluidMixin })
+    expect(jss.createStyleSheet({ imgFluid }).toString()).toBeDefined()
   })
 
   it('img-thumbnail', () => {
@@ -22,12 +25,14 @@ describe('Images', () => {
       ...boxShadow(thumbnailBoxShadow),
       ...imgFluidMixin
     })
+    expect(jss.createStyleSheet({ imgThumbnail }).toString()).toBeDefined()
   })
 
   it('figure', () => {
     expect(figure).toEqual({
       display: 'inline-block'
     })
+    expect(jss.createStyleSheet({ figure }).toString()).toBeDefined()
   })
 
   it('figure-img', () => {
@@ -36,6 +41,7 @@ describe('Images', () => {
       marginBottom: `${spacerSize.value / 2}${spacerSize.unit}`,
       lineHeight: 1
     })
+    expect(jss.createStyleSheet({ figureImg }).toString()).toBeDefined()
   })
 
   it('figure-captio', () => {
@@ -43,5 +49,6 @@ describe('Images', () => {
       fontSize: figureCaptionFontSize,
       color: figureCaptionColor
     })
+    expect(jss.createStyleSheet({ figureCaption }).toString()).toBeDefined()
   })
 })

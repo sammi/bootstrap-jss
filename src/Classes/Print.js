@@ -3,7 +3,6 @@ import { grays, black, white } from '../Variables/Colors'
 import { printPageSize, printBodyMinWidth } from '../Variables/Printing'
 import { tableBorderColor } from '../Variables/Tables'
 import { enablePrintStyles } from '../Variables/Options'
-import { btn } from '../Classes/Buttons'
 
 export const mediaPrint = (isEnablePrintStyles = enablePrintStyles) => ({
   '@media print': {
@@ -12,7 +11,6 @@ export const mediaPrint = (isEnablePrintStyles = enablePrintStyles) => ({
       boxShadow: 'none !important'
     },
     a: {
-      btn,
       '&:not($btn)': {
         textDecoration: 'underline'
       }

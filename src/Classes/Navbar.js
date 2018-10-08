@@ -21,7 +21,7 @@ const navbar = {
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: `${navbarPaddingY} ${navbarPaddingX}`,
-  '> container, > containerFluid': {
+  '& > $container, > $containerFluid': {
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
@@ -48,11 +48,11 @@ const navbarNav = {
   paddingLeft: 0,
   marginBottom: 0,
   listStyle: 'none',
-  navLink: {
+  '&$navLink': {
     paddingRight: 0,
     paddingLeft: 0
   },
-  dropdownMenu: {
+  '&$dropdownMenu': {
     position: 'static',
     float: 'none'
   }
@@ -80,7 +80,7 @@ const navbarToggle = {
   ...hoverFocus({
     textDecoration: 'none'
   }),
-  '&:not(:disabled):not(.disabled)': {
+  '&:not(:disabled):not($disabled)': {
     cursor: 'pointer'
   }
 }

@@ -88,14 +88,14 @@ const tableBackgrounds = expectValue
 
 const tableHeadDark = {
   'table': {
-    'theadDark': {
+    '&$theadDark': {
       'th': {
         color: tableDarkColor,
         backgroundColor: tableDarkBg,
         borderColor: tableDarkBorderColor
       }
     },
-    'theadLight': {
+    '&$theadLight': {
       'th': {
         color: tableHeadColor,
         backgroundColor: tableHeadBg,
@@ -137,7 +137,6 @@ for (const [breakpoint] of Object.entries(gridBreakpoints)) {
   const infix = breakpointInfix(next, gridBreakpoints)
   tableResponsive[`&${infix}`] = {
     ...mediaBreakpointDown(breakpoint, {
-      tableBordered,
       display: 'block',
       width: '100%',
       overflowX: 'auto',

@@ -3,13 +3,13 @@ import { transition } from '../Mixins/transition'
 
 export const fade = {
   ...transition(transitionFade),
-  '&:not(.show)': {
+  '&:not($show)': {
     opacity: 0
   }
 }
 
 export const collapse = {
-  '&:not(.show)': {
+  '&:not($show)': {
     display: 'none'
   }
 }

@@ -13,8 +13,10 @@ import {
 import { hoverFocus } from '../Mixins/hover'
 import { mediaBreakpointDown, mediaBreakpointUp, breakpointNext, breakpointInfix } from '../Mixins/breakpoints'
 import { gridBreakpoints } from '../Variables/Grid'
-
 import { navbar, navbarBrand, navbarNav, navbarText, navbarCollapse, navbarToggle, navbarToggleIcon, navbarExpand, navbarLight, navbarDark } from './Navbar'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('Navbar', () => {
   it('navbar', () => {
@@ -25,13 +27,14 @@ describe('Navbar', () => {
       alignItems: 'center',
       justifyContent: 'space-between',
       padding: `${navbarPaddingY} ${navbarPaddingX}`,
-      '> container, > containerFluid': {
+      '& > $container, > $containerFluid': {
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: 'space-between'
       }
     })
+    expect(jss.createStyleSheet({ container: {}, containerFluid: {}, navbar }).toString()).toBeDefined()
   })
 
   it('navbar-brand', () => {
@@ -47,6 +50,7 @@ describe('Navbar', () => {
         textDecoration: 'none'
       })
     })
+    expect(jss.createStyleSheet({ navbarBrand }).toString()).toBeDefined()
   })
 
   it('navbar-nav', () => {
@@ -56,15 +60,16 @@ describe('Navbar', () => {
       paddingLeft: 0,
       marginBottom: 0,
       listStyle: 'none',
-      navLink: {
+      '&$navLink': {
         paddingRight: 0,
         paddingLeft: 0
       },
-      dropdownMenu: {
+      '&$dropdownMenu': {
         position: 'static',
         float: 'none'
       }
     })
+    expect(jss.createStyleSheet({ navLink: {}, dropdownMenu: {}, navbarNav }).toString()).toBeDefined()
   })
 
   it('navbar-text', () => {
@@ -73,6 +78,7 @@ describe('Navbar', () => {
       paddingTop: navLinkPaddingY,
       paddingBottom: navLinkPaddingY
     })
+    expect(jss.createStyleSheet({ navbarText }).toString()).toBeDefined()
   })
 
   it('navbar-collapse', () => {
@@ -81,6 +87,7 @@ describe('Navbar', () => {
       flexGrow: 1,
       alignItems: 'center'
     })
+    expect(jss.createStyleSheet({ navbarCollapse }).toString()).toBeDefined()
   })
 
   it('navbar-toggle', () => {
@@ -94,10 +101,11 @@ describe('Navbar', () => {
       ...hoverFocus({
         textDecoration: 'none'
       }),
-      '&:not(:disabled):not(.disabled)': {
+      '&:not(:disabled):not($disabled)': {
         cursor: 'pointer'
       }
     })
+    expect(jss.createStyleSheet({ disabled: {}, navbarToggle }).toString()).toBeDefined()
   })
 
   it('navbar-toggler-icon', () => {
@@ -110,6 +118,7 @@ describe('Navbar', () => {
       background: 'no-repeat center center',
       backgroundSize: '100% 100%'
     })
+    expect(jss.createStyleSheet({ disabled: {}, navbarToggleIcon }).toString()).toBeDefined()
   })
 
   it('navbar-expand', () => {

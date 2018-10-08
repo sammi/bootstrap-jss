@@ -19,7 +19,6 @@ import { borderRadius } from '../Mixins/borderRadius'
 import { mediaBreakpointUp } from '../Mixins/breakpoints'
 import { formControlFocus, formValidationState } from '../Mixins'
 import { size } from '../Functions/size'
-import { customSelect, customControl, customControlLabel } from './CustomForms'
 
 import {
   formControl,
@@ -34,6 +33,9 @@ import {
   formValidation,
   formInline
 } from './Form'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('Textual form controls', () => {
   it('formControl', () => {
@@ -64,6 +66,7 @@ describe('Textual form controls', () => {
         opacity: 1
       }
     })
+    expect(jss.createStyleSheet({ formControl: { ...formControl() } }).toString()).toBeDefined()
 
     expect(formControl(true)).toEqual({
       display: 'block',
@@ -92,6 +95,7 @@ describe('Textual form controls', () => {
         opacity: 1
       }
     })
+    expect(jss.createStyleSheet({ formControl: { ...formControl(true) } }).toString()).toBeDefined()
 
     expect(formControl(false)).toEqual({
       display: 'block',
@@ -121,6 +125,7 @@ describe('Textual form controls', () => {
       }
     })
   })
+  expect(jss.createStyleSheet({ formControl: { ...formControl(false) } }).toString()).toBeDefined()
 
   it('selectFormControl', () => {
     expect(selectFormControl).toEqual({
@@ -132,6 +137,7 @@ describe('Textual form controls', () => {
         backgroundColor: inputBg
       }
     })
+    expect(jss.createStyleSheet({ selectFormControl }).toString()).toBeDefined()
   })
 
   it('formControlFileRange', () => {
@@ -139,6 +145,7 @@ describe('Textual form controls', () => {
       display: 'block',
       width: '100%'
     })
+    expect(jss.createStyleSheet({ formControlFileRange }).toString()).toBeDefined()
   })
 
   it('formLabels', () => {
@@ -153,24 +160,25 @@ describe('Textual form controls', () => {
       fontSize: 'inherit',
       lineHeight: inputLineHeight
     })
+    expect(jss.createStyleSheet({ colFormLabel }).toString()).toBeDefined()
     expect(colFormLabelLg).toEqual({
       paddingTop: `calc(${inputPaddingYLgSize.value + inputBorderWidthSize.value}${inputPaddingYLgSize.unit})`,
       paddingBottom: `calc(${inputPaddingYLgSize.value + inputBorderWidthSize.value}${inputPaddingYLgSize.unit})`,
       fontSize: fontSizeLg,
       lineHeight: inputLineHeightLg
     })
+    expect(jss.createStyleSheet({ colFormLabelLg }).toString()).toBeDefined()
     expect(colFormLabelSm).toEqual({
       paddingTop: `calc(${inputPaddingYSmSize.value + inputBorderWidthSize.value}${inputPaddingYSmSize.unit})`,
       paddingBottom: `calc(${inputPaddingYSmSize.value + inputBorderWidthSize.value}${inputPaddingYSmSize.unit})`,
       fontSize: fontSizeSm,
       lineHeight: inputLineHeightSm
     })
+    expect(jss.createStyleSheet({ colFormLabelSm }).toString()).toBeDefined()
   })
 
   it('formControlPlaintext', () => {
     expect(formControlPlaintext).toEqual({
-      formControlSm,
-      formControlLg,
       display: 'block',
       width: '100%',
       paddingTop: inputPaddingY,
@@ -181,11 +189,12 @@ describe('Textual form controls', () => {
       backgroundColor: 'transparent',
       border: 'solid transparent',
       borderWidth: `${inputBorderWidth} 0`,
-      '&.$formControlSm,&.$formControlLg': {
+      '&$formControlSm,&$formControlLg': {
         paddingRight: 0,
         paddingLeft: 0
       }
     })
+    expect(jss.createStyleSheet({ formControlSm: {}, formControlLg: {}, formControlPlaintext }).toString()).toBeDefined()
   })
 
   it('form control sizing', () => {
@@ -194,34 +203,38 @@ describe('Textual form controls', () => {
       fontSize: fontSizeSm,
       lineHeight: inputLineHeightSm,
       ...borderRadius(inputBorderRadiusSm),
-      'select.&': {
+      '& select &': {
         '&:not([size]):not([multiple])': {
           height: inputHeightSm
         }
       }
     })
+    expect(jss.createStyleSheet({ formControlSm }).toString()).toBeDefined()
 
     expect(formControlLg).toEqual({
       padding: `${inputPaddingYLg} ${inputPaddingXLg}`,
       fontSize: fontSizeLg,
       lineHeight: inputLineHeightLg,
       ...borderRadius(inputBorderRadiusLg),
-      'select.&': {
+      '& select &': {
         '&:not([size]):not([multiple])': {
           height: inputHeightLg
         }
       }
     })
+    expect(jss.createStyleSheet({ formControlLg }).toString()).toBeDefined()
   })
 
   it('form groups', () => {
     expect(formGroup).toEqual({
       marginBottom: formGroupMarginBottom
     })
+    expect(jss.createStyleSheet({ formGroup }).toString()).toBeDefined()
     expect(formText).toEqual({
       display: 'block',
       marginTop: formTextMarginTop
     })
+    expect(jss.createStyleSheet({ formText }).toString()).toBeDefined()
   })
 
   it('form row', () => {
@@ -230,11 +243,12 @@ describe('Textual form controls', () => {
       flexWrap: 'wrap',
       marginRight: '-5px',
       marginLeft: '-5px',
-      '> .col, > [class*="col-"]': {
+      '& > $col, > [class*="col-"]': {
         paddingRight: '5px',
         paddingLeft: '5px'
       }
     })
+    expect(jss.createStyleSheet({ col: {}, formRow }).toString()).toBeDefined()
   })
 
   it('form checks', () => {
@@ -243,13 +257,14 @@ describe('Textual form controls', () => {
       display: 'block',
       paddingLeft: formCheckInputGutter
     })
+    expect(jss.createStyleSheet({ formCheck }).toString()).toBeDefined()
 
     expect(formCheckLabel).toEqual({
       marginBottom: 0
     })
+    expect(jss.createStyleSheet({ formCheckLabel }).toString()).toBeDefined()
 
     expect(formCheckInput).toEqual({
-      formCheckLabel,
       position: 'absolute',
       marginTop: formCheckInputMarginY,
       marginLeft: `-${formCheckInputGutter}`,
@@ -257,6 +272,7 @@ describe('Textual form controls', () => {
         color: textMuted
       }
     })
+    expect(jss.createStyleSheet({ formCheckLabel: {}, formCheckInput }).toString()).toBeDefined()
 
     expect(formCheckInline).toEqual({
       formCheckInput,
@@ -264,13 +280,14 @@ describe('Textual form controls', () => {
       alignItems: 'center',
       paddingLeft: 0,
       marginRight: formCheckInlineMarginX,
-      '$formCheckInput': {
+      '&$formCheckInput': {
         position: 'static',
         marginTop: 0,
         marginRight: formCheckInlineInputMarginX,
         marginLeft: 0
       }
     })
+    expect(jss.createStyleSheet({ formCheckInput: {}, formCheckLabel: {}, formCheckInline }).toString()).toBeDefined()
   })
 
   it('form validation', () => {
@@ -278,71 +295,75 @@ describe('Textual form controls', () => {
       ...formValidationState('valid', formFeedbackValidColor),
       ...formValidationState('invalid', formFeedbackInvalidColor)
     })
+    expect(jss.createStyleSheet({ formCheckInput: {}, formValidation }).toString()).toBeDefined()
   })
 
   it('inline forms', () => {
     expect(formInline).toEqual({
-      formCheck,
       display: 'flex',
       flexFlow: 'row wrap',
       alignItems: 'center',
-      '$formCheck': {
+      '&$formCheck': {
         width: '100%'
       },
       ...mediaBreakpointUp('sm', {
-        formGroup,
-        formControl,
-        formControlPlaintext,
-        customSelect,
-        formCheck,
-        formCheckInput,
-        customControl,
-        customControlLabel,
         label: {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           marginBottom: 0
         },
-        '$formGroup': {
+        '&$formGroup': {
           display: 'flex',
           flex: '0 0 auto',
           flexFlow: 'row wrap',
           alignItems: 'center',
           marginBottom: 0
         },
-        '$formControl': {
+        '&$formControl': {
           display: 'inline-block',
           width: 'auto',
           verticalAlign: 'middle'
         },
-        '$formControlPlaintext': {
+        '&$formControlPlaintext': {
           display: 'inline-block'
         },
-        '$inputGroup, $customSelect': {
+        '&$inputGroup, &$customSelect': {
           width: 'auto'
         },
-        '$formCheck': {
+        '&$formCheck': {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           width: 'auto',
           paddingLeft: 0
         },
-        '$formCheckInput': {
+        '&$formCheckInput': {
           position: 'relative',
           marginTop: 0,
           marginRight: formCheckInputMarginX,
           marginLeft: 0
         },
-        '$customControl': {
+        '&$customControl': {
           alignItems: 'center',
           justifyContent: 'center'
         },
-        '$customControlLabel': {
+        '&$customControlLabel': {
           marginBottom: 0
         }
       })
     })
   })
+  expect(jss.createStyleSheet({
+    formCheck: {},
+    formGroup: {},
+    formControl: {},
+    formControlPlaintext: {},
+    inputGroup: {},
+    customSelect: {},
+    formCheckInput: {},
+    customControl: {},
+    customControlLabel: {},
+    formInline
+  }).toString()).toBeDefined()
 })

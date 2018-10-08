@@ -25,7 +25,6 @@ import { boxShadow } from '../Mixins/boxShadow'
 import { borderRadiusLg } from '../Variables/Components'
 import { size } from '../Functions/size'
 import { fontSizeBase } from '../Variables/Fonts'
-
 import {
   popover,
   popoverHeader,
@@ -36,6 +35,9 @@ import {
   bsPopoverAuto,
   popoverBody
 } from './Popover'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('popover', () => {
   it('popover', () => {
@@ -54,7 +56,7 @@ describe('popover', () => {
       border: `${popoverBorderWidth} solid ${popoverBorderColor}`,
       ...borderRadius(popoverBorderRadius),
       ...boxShadow(popoverBoxShadow),
-      arrow: {
+      '&$arrow': {
         position: 'absolute',
         display: 'block',
         width: popoverArrowWidth,
@@ -69,6 +71,7 @@ describe('popover', () => {
         }
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, popover }).toString()).toBeDefined()
   })
 
   it('popover-header', () => {
@@ -84,6 +87,7 @@ describe('popover', () => {
         display: 'none'
       }
     })
+    expect(jss.createStyleSheet({ popoverHeader }).toString()).toBeDefined()
   })
 
   const arrowHeightPlusWidthValue = `${size(popoverArrowHeight).value + size(popoverBorderWidth).value}${size(popoverArrowHeight).unit}`
@@ -91,21 +95,22 @@ describe('popover', () => {
   it('bs-popover-top', () => {
     expect(bsPopoverTop).toEqual({
       marginBottom: popoverArrowHeight,
-      arrow: {
+      '&$arrow': {
         bottom: `calc(-${arrowHeightPlusWidthValue})`
       },
-      '$arrow::before,$arrow::after': {
+      '&$arrow::before,&$arrow::after': {
         borderWidth: `${popoverArrowHeight} ${size(popoverArrowWidth).value / 2}${size(popoverArrowWidth).unit} 0`
       },
-      '$arrow::before': {
+      '&$arrow::before': {
         bottom: 0,
         borderTopColor: popoverArrowOuterColor
       },
-      '$arrow::after': {
+      '&$arrow::after': {
         bottom: popoverBorderWidth,
         borderTopColor: popoverArrowColor
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, bsPopoverTop }).toString()).toBeDefined()
   })
 
   const popoverArrowWidthValue = `{size(popoverArrowWidth).value / 2}${size(popoverArrowWidth.unit)}`
@@ -113,45 +118,45 @@ describe('popover', () => {
   it('bs-popover-right', () => {
     expect(bsPopoverRight).toEqual({
       marginLeft: popoverArrowHeight,
-      arrow: {
+      '&$arrow': {
         left: `calc(-${size(popoverArrowHeight).value + size(popoverBorderWidth).value}${size(popoverArrowHeight).unit})`,
         width: popoverArrowHeight,
         height: popoverArrowWidth,
         margin: `${borderRadiusLg} 0`
       },
-      '$arrow::before,$arrow::after': {
+      '&$arrow::before,&$arrow::after': {
         borderWidth: `${popoverArrowWidthValue} ${popoverArrowHeight} ${popoverArrowWidthValue} 0`
       },
-      '$arrow::before': {
+      '&$arrow::before': {
         left: 0,
         borderRightColor: popoverArrowOuterColor
       },
-      '$arrow::after': {
+      '&$arrow::after': {
         left: popoverBorderWidth,
         borderRightColor: popoverArrowColor
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, bsPopoverRight }).toString()).toBeDefined()
   })
 
   it('bs-popover-bottom', () => {
     expect(bsPopoverBottom).toEqual({
-      popoverHeader,
       marginTop: popoverArrowHeight,
-      arrow: {
+      '&$arrow': {
         top: `calc(-${arrowHeightPlusWidthValue})`
       },
-      '$arrow::before,$arrow::after': {
+      '&$arrow::before,&$arrow::after': {
         borderWidth: `0 ${popoverArrowWidthValue} ${popoverArrowHeight} ${popoverArrowWidthValue}`
       },
-      '$arrow::before': {
+      '&$arrow::before': {
         top: 0,
         borderBottomColor: popoverArrowOuterColor
       },
-      '$arrow::after': {
+      '&$arrow::after': {
         top: popoverBorderWidth,
         borderBottomColor: popoverArrowColor
       },
-      '$popoverHeader::before': {
+      '&$popoverHeader::before': {
         position: 'absolute',
         top: 0,
         left: '50%',
@@ -162,29 +167,31 @@ describe('popover', () => {
         borderBottom: `${popoverBorderWidth} solid ${popoverHeaderBg}`
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, popoverHeader: {}, bsPopoverBottom }).toString()).toBeDefined()
   })
 
   it('bs-popover-left', () => {
     expect(bsPopoverLeft).toEqual({
       marginRight: popoverArrowHeight,
-      arrow: {
+      '&$arrow': {
         right: `calc({arrowHeightPlusWidthValue})`,
         width: popoverArrowHeight,
         height: popoverArrowWidth,
         margin: `${borderRadiusLg} 0`
       },
-      '$arrow::before,$arrow::after': {
+      '&$arrow::before,&$arrow::after': {
         borderWidth: `${popoverArrowWidthValue} 0 ${popoverArrowWidthValue} ${popoverArrowHeight}`
       },
-      '$arrow::before': {
+      '&$arrow::before': {
         right: 0,
         borderLeftColor: popoverArrowOuterColor
       },
-      '$arrow::after': {
+      '&$arrow::after': {
         right: popoverBorderWidth,
         borderLeftColor: popoverArrowColor
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, popoverHeader: {}, bsPopoverLeft }).toString()).toBeDefined()
   })
 
   it('bs-popover-auto', () => {
@@ -202,11 +209,13 @@ describe('popover', () => {
         ...bsPopoverLeft
       }
     })
+    expect(jss.createStyleSheet({ arrow: {}, popoverHeader: {}, bsPopoverAuto }).toString()).toBeDefined()
   })
   it('popover-body', () => {
     expect(popoverBody).toEqual({
       padding: `${popoverBodyPaddingY} ${popoverBodyPaddingX}`,
       color: popoverBodyColor
     })
+    expect(jss.createStyleSheet({ popoverBody }).toString()).toBeDefined()
   })
 })

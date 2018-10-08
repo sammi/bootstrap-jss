@@ -14,7 +14,6 @@ import { boxShadow } from '../Mixins/boxShadow'
 import { mediaBreakpointUp } from '../Mixins/breakpoints'
 import { gridBreakpoints } from '../Variables/Grid'
 import { close } from '../Classes/Close'
-
 import {
   modalOpen,
   modal,
@@ -29,17 +28,20 @@ import {
   modalScrollbarMeasure,
   modalResponsive
 } from './Modal'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('modal', () => {
   it('modal-open', () => {
     expect(modalOpen).toEqual({
       overflow: 'hidden'
     })
+    expect(jss.createStyleSheet({ modalOpen }).toString()).toBeDefined()
   })
 
   it('modal', () => {
     expect(modal).toEqual({
-      modalOpen,
       position: 'fixed',
       top: 0,
       right: 0,
@@ -49,28 +51,29 @@ describe('modal', () => {
       display: 'none',
       overflow: 'hidden',
       outline: 0,
-      '$modalOpen &': {
+      '&$modalOpen &': {
         overflowX: 'hidden',
         overflowY: 'auto'
       }
     })
+    expect(jss.createStyleSheet({ modalOpen: {}, modal }).toString()).toBeDefined()
   })
 
   it('modal-dialog', () => {
     expect(modalDialog).toEqual({
-      modal,
       position: 'relative',
       width: 'auto',
       margin: modalDialogMargin,
       pointerEvents: 'none',
-      '$modal.fade &': {
+      '&$modal$fade &': {
         ...transition(modalTransition),
         transform: `translate(0, -25%)`
       },
-      '$modal.show &': {
+      '&$modal$show &': {
         transform: `translate(0, 0)`
       }
     })
+    expect(jss.createStyleSheet({ modal: {}, show: {}, fade: {}, modalDialog }).toString()).toBeDefined()
   })
 
   it('modal-dialog-centered', () => {
@@ -79,6 +82,7 @@ describe('modal', () => {
       alignItems: 'center',
       minHeight: `calc(100% - ${size(modalDialogMargin).value * 2}${size(modalDialogMargin).unit}))`
     })
+    expect(jss.createStyleSheet({ modalDialogCentered }).toString()).toBeDefined()
   })
 
   it('modal-content', () => {
@@ -95,6 +99,7 @@ describe('modal', () => {
       ...boxShadow(modalContentBoxShadowXs),
       outline: 0
     })
+    expect(jss.createStyleSheet({ modalContent }).toString()).toBeDefined()
   })
 
   it('modal-backdrop', () => {
@@ -106,29 +111,30 @@ describe('modal', () => {
       left: 0,
       zIndex: zindexModalBackdrop,
       backgroundColor: modalBackdropBg,
-      '&.fade': {
+      '&$fade': {
         opacity: 0
       },
-      '&.show': {
+      '&$show': {
         opacity: modalBackdropOpacity
       }
     })
+    expect(jss.createStyleSheet({ fade: {}, show: {}, modalBackdrop }).toString()).toBeDefined()
   })
 
   it('modal-header', () => {
     expect(modalHeader).toEqual({
-      close,
       display: 'flex',
       alignItems: 'flex-start',
       justifyContent: 'space-between',
       padding: modalHeaderPadding,
       borderBottom: `${modalHeaderBorderWidth} solid ${modalHeaderBorderColor}`,
       ...borderTopRadius(modalContentBorderRadius),
-      '$close': {
+      '&$close': {
         padding: modalHeaderPadding,
         margin: `-${modalHeaderPadding} -${modalHeaderPadding} -${modalHeaderPadding} auto`
       }
     })
+    expect(jss.createStyleSheet({ close: {}, modalHeader }).toString()).toBeDefined()
   })
 
   it('modal-title', () => {
@@ -136,6 +142,7 @@ describe('modal', () => {
       marginBottom: 0,
       lineHeight: modalTitleLineHeight
     })
+    expect(jss.createStyleSheet({ modalTitle }).toString()).toBeDefined()
   })
 
   it('modal-body', () => {
@@ -144,6 +151,7 @@ describe('modal', () => {
       flex: '1 1 auto',
       padding: modalInnerPadding
     })
+    expect(jss.createStyleSheet({ modalBody }).toString()).toBeDefined()
   })
 
   it('modal-footer', () => {
@@ -153,13 +161,14 @@ describe('modal', () => {
       justifyContent: 'flex-end',
       padding: modalInnerPadding,
       borderTop: `${modalFooterBorderWidth} solid ${modalFooterBorderColor}`,
-      '> :not(:first-child)': {
+      '& > :not(:first-child)': {
         marginLeft: '.25rem'
       },
-      '> :not(:last-child)': {
+      '& > :not(:last-child)': {
         marginRight: '.25rem'
       }
     })
+    expect(jss.createStyleSheet({ modalFooter }).toString()).toBeDefined()
   })
 
   it('modal-scrollbar-measue', () => {
@@ -170,15 +179,12 @@ describe('modal', () => {
       height: '50px',
       overflow: 'scroll'
     })
+    expect(jss.createStyleSheet({ modalScrollbarMeasure }).toString()).toBeDefined()
   })
 
   it('modal-reponsive', () => {
     expect(modalResponsive).toEqual({
       ...mediaBreakpointUp('sm', gridBreakpoints, {
-        modalDialog,
-        modalDialogCentered,
-        modalContent,
-        modalSm,
         '$modalDialog': {
           maxWidth: modalMd,
           margin: `${modalDialogMarginYSmUp} auto`
@@ -194,11 +200,18 @@ describe('modal', () => {
         }
       }),
       ...mediaBreakpointUp('lg', gridBreakpoints, {
-        modalLg,
         '$modalLg': {
           maxWidth: modalLg
         }
       })
     })
+    expect(jss.createStyleSheet({
+      modalDialog: {},
+      modalDialogCentered: {},
+      modalContent: {},
+      modalLg: {},
+      modalSm: {},
+      modalResponsive
+    }).toString()).toBeDefined()
   })
 })

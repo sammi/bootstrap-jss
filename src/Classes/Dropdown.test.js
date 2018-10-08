@@ -27,6 +27,9 @@ import {
   dropdownItemText,
   dropdownHeader
 } from './Dropdown'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('dropdown', () => {
   it('dropdown position', () => {
@@ -34,12 +37,17 @@ describe('dropdown', () => {
     expect(dropdown).toEqual({ position: 'relative' })
     expect(dropleft).toEqual({ position: 'relative' })
     expect(dropright).toEqual({ position: 'relative' })
+    expect(jss.createStyleSheet({ dropup }).toString()).toBeDefined()
+    expect(jss.createStyleSheet({ dropdown }).toString()).toBeDefined()
+    expect(jss.createStyleSheet({ dropleft }).toString()).toBeDefined()
+    expect(jss.createStyleSheet({ dropright }).toString()).toBeDefined()
   })
 
   it('dropdown-toggle', () => {
     expect(dropdownToggle).toEqual({
       ...caret()
     })
+    expect(jss.createStyleSheet({ dropdownToggle }).toString()).toBeDefined()
   })
 
   it('dropdown-menu', () => {
@@ -70,6 +78,7 @@ describe('dropdown', () => {
         display: 'block'
       }
     })
+    expect(jss.createStyleSheet({ dropdownMenu }).toString()).toBeDefined()
   })
 
   it('dropdown-menu-right', () => {
@@ -77,68 +86,67 @@ describe('dropdown', () => {
       right: 0,
       left: 'auto'
     })
+    expect(jss.createStyleSheet({ dropdownMenuRight }).toString()).toBeDefined()
   })
 
   it('dropup', () => {
     expect(dropUp).toEqual({
-      dropdownMenu,
-      dropdownToggle,
-      '$dropdownMenu': {
+      '&$dropdownMenu': {
         top: 'auto',
         bottom: '100%',
         marginTop: 0,
         marginBottom: dropdownSpacer
       },
-      '$dropdownToggle': {
+      '&$dropdownToggle': {
         ...caret('up')
       }
     })
+    expect(jss.createStyleSheet({ dropdownMenu: {}, dropdownToggle: {}, dropUp }).toString()).toBeDefined()
   })
 
   it('dropright', () => {
     expect(dropRight).toEqual({
-      dropdownMenu,
-      dropdownToggle,
-      '$dropdownMenu': {
+      '&$dropdownMenu': {
         top: 0,
         right: 'auto',
         left: '100%',
         marginTop: 0,
         marginLeft: dropdownSpacer
       },
-      '$dropdownToggle': {
+      '&$dropdownToggle': {
         ...caret('right'),
         '&::after': {
           verticalAlign: 0
         }
       }
     })
+    expect(jss.createStyleSheet({ dropdownMenu: {}, dropdownToggle: {}, dropRight }).toString()).toBeDefined()
   })
 
   it('dropleft', () => {
     expect(dropLeft).toEqual({
-      dropdownMenu,
-      dropdownToggle,
-      '$dropdownMenu': {
+      '&$dropdownMenu': {
         top: 0,
         right: '100%',
         left: 'auto',
         marginTop: 0,
         marginRight: dropdownSpacer
       },
-      '$dropdownToggle': {
+      '&$dropdownToggle': {
         ...caret('left'),
         '&::before': {
           verticalAlign: 0
         }
       }
     })
+    expect(jss.createStyleSheet({ dropdownMenu: {}, dropdownToggle: {}, dropRight }).toString()).toBeDefined()
   })
 
   it('dropdown-divider', () => {
     expect(dropdownDivider).toEqual({
       ...navDivider(dropdownDividerBg)
     })
+    expect(jss.createStyleSheet({ dropdownDivider }).toString()).toBeDefined()
   })
 
   it('dropdown-item', () => {
@@ -162,17 +170,18 @@ describe('dropdown', () => {
         textDecoration: 'none',
         ...gradientBg(dropdownLinkHoverBg)
       }),
-      '&.active,&:active': {
+      '&$active,&:active': {
         color: dropdownLinkActiveColor,
         textDecoration: 'none',
         ...gradientBg(dropdownLinkActiveBg)
       },
-      '&.disabled,&:disabled': {
+      '&$disabled,&:disabled': {
         color: dropdownLinkDisabledColor,
         backgroundColor: 'transparent',
         ...backgroundImageValue
       }
     })
+    expect(jss.createStyleSheet({ active: {}, disabled: {}, dropdownItem: { ...dropdownItem() } }).toString()).toBeDefined()
 
     expect(dropdownItem(true)).toEqual({
       display: 'block',
@@ -190,17 +199,18 @@ describe('dropdown', () => {
         textDecoration: 'none',
         ...gradientBg(dropdownLinkHoverBg)
       }),
-      '&.active,&:active': {
+      '&$active,&:active': {
         color: dropdownLinkActiveColor,
         textDecoration: 'none',
         ...gradientBg(dropdownLinkActiveBg)
       },
-      '&.disabled,&:disabled': {
+      '&$disabled,&:disabled': {
         color: dropdownLinkDisabledColor,
         backgroundColor: 'transparent',
         backgroundImage: 'none'
       }
     })
+    expect(jss.createStyleSheet({ active: {}, disabled: {}, dropdownItem: { ...dropdownItem() } }).toString()).toBeDefined()
   })
 
   it('dropdown-item-text', () => {
@@ -209,6 +219,7 @@ describe('dropdown', () => {
       padding: `${dropdownItemPaddingY} ${dropdownItemPaddingX}`,
       color: dropdownLinkColor
     })
+    expect(jss.createStyleSheet({ dropdownItemText }).toString()).toBeDefined()
   })
 
   it('dropdown-header', () => {
@@ -220,5 +231,6 @@ describe('dropdown', () => {
       color: dropdownHeaderColor,
       whiteSpace: 'nowrap'
     })
+    expect(jss.createStyleSheet({ dropdownHeader }).toString()).toBeDefined()
   })
 })

@@ -41,7 +41,7 @@ const popover = {
   border: `${popoverBorderWidth} solid ${popoverBorderColor}`,
   ...borderRadius(popoverBorderRadius),
   ...boxShadow(popoverBoxShadow),
-  arrow: {
+  '&$arrow': {
     position: 'absolute',
     display: 'block',
     width: popoverArrowWidth,
@@ -72,17 +72,17 @@ const popoverHeader = {
 
 const bsPopoverTop = {
   marginBottom: popoverArrowHeight,
-  arrow: {
+  '&$arrow': {
     bottom: `calc(-${size(popoverArrowHeight).value + size(popoverBorderWidth).value}${size(popoverArrowHeight).unit})`
   },
-  '$arrow::before,$arrow::after': {
+  '&$arrow::before,&$arrow::after': {
     borderWidth: `${popoverArrowHeight} ${size(popoverArrowWidth).value / 2}${size(popoverArrowWidth).unit} 0`
   },
-  '$arrow::before': {
+  '&$arrow::before': {
     bottom: 0,
     borderTopColor: popoverArrowOuterColor
   },
-  '$arrow::after': {
+  '&$arrow::after': {
     bottom: popoverBorderWidth,
     borderTopColor: popoverArrowColor
   }
@@ -92,20 +92,20 @@ const popoverArrowWidthValue = `{size(popoverArrowWidth).value / 2}${size(popove
 
 const bsPopoverRight = {
   marginLeft: popoverArrowHeight,
-  arrow: {
+  '&$arrow': {
     left: `calc(-${size(popoverArrowHeight).value + size(popoverBorderWidth).value}${size(popoverArrowHeight).unit})`,
     width: popoverArrowHeight,
     height: popoverArrowWidth,
     margin: `${borderRadiusLg} 0`
   },
-  '$arrow::before,$arrow::after': {
+  '&$arrow::before,&$arrow::after': {
     borderWidth: `${popoverArrowWidthValue} ${popoverArrowHeight} ${popoverArrowWidthValue} 0`
   },
-  '$arrow::before': {
+  '&$arrow::before': {
     left: 0,
     borderRightColor: popoverArrowOuterColor
   },
-  '$arrow::after': {
+  '&$arrow::after': {
     left: popoverBorderWidth,
     borderRightColor: popoverArrowColor
   }
@@ -114,23 +114,22 @@ const bsPopoverRight = {
 const arrowHeightPlusWidthValue = `${size(popoverArrowHeight).value + size(popoverBorderWidth).value}${size(popoverArrowHeight).unit}`
 
 const bsPopoverBottom = {
-  popoverHeader,
   marginTop: popoverArrowHeight,
-  arrow: {
+  '&$arrow': {
     top: `calc(-${arrowHeightPlusWidthValue})`
   },
-  '$arrow::before,$arrow::after': {
+  '&$arrow::before,&$arrow::after': {
     borderWidth: `0 ${popoverArrowWidthValue} ${popoverArrowHeight} ${popoverArrowWidthValue}`
   },
-  '$arrow::before': {
+  '&$arrow::before': {
     top: 0,
     borderBottomColor: popoverArrowOuterColor
   },
-  '$arrow::after': {
+  '&$arrow::after': {
     top: popoverBorderWidth,
     borderBottomColor: popoverArrowColor
   },
-  '$popoverHeader::before': {
+  '&$popoverHeader::before': {
     position: 'absolute',
     top: 0,
     left: '50%',
@@ -144,20 +143,20 @@ const bsPopoverBottom = {
 
 const bsPopoverLeft = {
   marginRight: popoverArrowHeight,
-  arrow: {
+  '&$arrow': {
     right: `calc({arrowHeightPlusWidthValue})`,
     width: popoverArrowHeight,
     height: popoverArrowWidth,
     margin: `${borderRadiusLg} 0`
   },
-  '$arrow::before,$arrow::after': {
+  '&$arrow::before,&$arrow::after': {
     borderWidth: `${popoverArrowWidthValue} 0 ${popoverArrowWidthValue} ${popoverArrowHeight}`
   },
-  '$arrow::before': {
+  '&$arrow::before': {
     right: 0,
     borderLeftColor: popoverArrowOuterColor
   },
-  '$arrow::after': {
+  '&$arrow::after': {
     right: popoverBorderWidth,
     borderLeftColor: popoverArrowColor
   }

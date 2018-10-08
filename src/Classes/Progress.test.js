@@ -7,8 +7,10 @@ import { borderRadius } from '../Mixins/borderRadius'
 import { boxShadow } from '../Mixins/boxShadow'
 import { transition } from '../Mixins/transition'
 import { gradientStriped } from '../Mixins/gradients'
-
 import { progressBarStripes, progress, progressBar, progressBarStiped, progressBarAnimated } from './Progress'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('progress', () => {
   it('progress-bar-strips', () => {
@@ -34,6 +36,7 @@ describe('progress', () => {
       ...borderRadius(progressBorderRadius),
       ...boxShadow(progressBoxShadow)
     })
+    expect(jss.createStyleSheet({ progress }).toString()).toBeDefined()
   })
 
   it('progess-bar', () => {
@@ -47,6 +50,7 @@ describe('progress', () => {
       backgroundColor: progressBarBg,
       ...transition(progressBarTransition)
     })
+    expect(jss.createStyleSheet({ progressBar }).toString()).toBeDefined()
   })
 
   it('progress-bar-striped', () => {
@@ -54,11 +58,13 @@ describe('progress', () => {
       ...gradientStriped(),
       backgroundSize: `${progressHeight} ${progressHeight}`
     })
+    expect(jss.createStyleSheet({ progressBarStiped }).toString()).toBeDefined()
   })
 
   it('progress-bar-animated', () => {
     expect(progressBarAnimated).toEqual({
       animation: `progress-bar-stripes ${progressBarAnimationTiming}`
     })
+    expect(jss.createStyleSheet({ progressBarAnimated }).toString()).toBeDefined()
   })
 })

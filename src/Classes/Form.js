@@ -96,7 +96,7 @@ const formControlSm = {
   fontSize: fontSizeSm,
   lineHeight: inputLineHeightSm,
   ...borderRadius(inputBorderRadiusSm),
-  'select.&': {
+  '& select &': {
     '&:not([size]):not([multiple])': {
       height: inputHeightSm
     }
@@ -107,7 +107,7 @@ const formControlLg = {
   fontSize: fontSizeLg,
   lineHeight: inputLineHeightLg,
   ...borderRadius(inputBorderRadiusLg),
-  'select.&': {
+  '& select &': {
     '&:not([size]):not([multiple])': {
       height: inputHeightLg
     }
@@ -115,8 +115,6 @@ const formControlLg = {
 }
 
 const formControlPlaintext = {
-  formControlSm,
-  formControlLg,
   display: 'block',
   width: '100%',
   paddingTop: inputPaddingY,
@@ -127,7 +125,7 @@ const formControlPlaintext = {
   backgroundColor: 'transparent',
   border: 'solid transparent',
   borderWidth: `${inputBorderWidth} 0`,
-  '&.$formControlSm,&.$formControlLg': {
+  '&$formControlSm,&$formControlLg': {
     paddingRight: 0,
     paddingLeft: 0
   }
@@ -147,7 +145,7 @@ const formRow = {
   flexWrap: 'wrap',
   marginRight: '-5px',
   marginLeft: '-5px',
-  '> .col, > [class*="col-"]': {
+  '& > $col, > [class*="col-"]': {
     paddingRight: '5px',
     paddingLeft: '5px'
   }
@@ -164,7 +162,6 @@ const formCheckLabel = {
 }
 
 const formCheckInput = {
-  formCheckLabel,
   position: 'absolute',
   marginTop: formCheckInputMarginY,
   marginLeft: `-${formCheckInputGutter}`,
@@ -179,7 +176,7 @@ const formCheckInline = {
   alignItems: 'center',
   paddingLeft: 0,
   marginRight: formCheckInlineMarginX,
-  '$formCheckInput': {
+  '&$formCheckInput': {
     position: 'static',
     marginTop: 0,
     marginRight: formCheckInlineInputMarginX,
@@ -193,11 +190,10 @@ const formValidation = {
 }
 
 const formInline = {
-  formCheck,
   display: 'flex',
   flexFlow: 'row wrap',
   alignItems: 'center',
-  '$formCheck': {
+  '&$formCheck': {
     width: '100%'
   },
   ...mediaBreakpointUp('sm', {
@@ -215,42 +211,42 @@ const formInline = {
       justifyContent: 'center',
       marginBottom: 0
     },
-    '$formGroup': {
+    '&$formGroup': {
       display: 'flex',
       flex: '0 0 auto',
       flexFlow: 'row wrap',
       alignItems: 'center',
       marginBottom: 0
     },
-    '$formControl': {
+    '&$formControl': {
       display: 'inline-block',
       width: 'auto',
       verticalAlign: 'middle'
     },
-    '$formControlPlaintext': {
+    '&$formControlPlaintext': {
       display: 'inline-block'
     },
-    '$inputGroup, $customSelect': {
+    '&$inputGroup, &$customSelect': {
       width: 'auto'
     },
-    '$formCheck': {
+    '&$formCheck': {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       width: 'auto',
       paddingLeft: 0
     },
-    '$formCheckInput': {
+    '&$formCheckInput': {
       position: 'relative',
       marginTop: 0,
       marginRight: formCheckInputMarginX,
       marginLeft: 0
     },
-    '$customControl': {
+    '&$customControl': {
       alignItems: 'center',
       justifyContent: 'center'
     },
-    '$customControlLabel': {
+    '&$customControlLabel': {
       marginBottom: 0
     }
   })

@@ -30,29 +30,29 @@ const navLink = {
   ...hoverFocus({
     textDecoration: 'none'
   }),
-  '&.disabled': {
+  '&$disabled': {
     color: navLinkDisabledColor
   }
 }
 
 const navTabs = {
   borderBottom: `${navTabsBorderWidth} solid ${navTabsBorderColor}`,
-  navItem: {
+  '&$navItem': {
     marginBottom: `-${navTabsBorderWidth}`
   },
-  navLink: {
+  '&$navLink': {
     border: `${navTabsBorderWidth} solid transparent`,
     ...borderTopRadius(navTabsBorderRadius),
     ...hoverFocus({
       borderColor: navTabsLinkHoverBorderColor
     }),
-    '&.disabled': {
+    '&$disabled': {
       color: navLinkDisabledColor,
       backgroundColor: 'transparent',
       borderColor: 'transparent'
     }
   },
-  '$navLink.active,$navItem.show $navLink': {
+  '&$navLink$active,&$navItem$show $navLink': {
     color: navTabsLinkActiveColor,
     backgroundColor: navTabsLinkActiveBg,
     borderColor: navTabsLinkActiveBorderColor
@@ -64,31 +64,31 @@ const navTabs = {
 }
 
 const navPills = {
-  navLink: {
+  '&$navLink': {
     ...borderRadius(navPillsBorderRadius)
   },
-  '$navLink.active,show > $navLink': {
+  '&$navLink$active,&$show > $navLink': {
     color: navPillsLinkActiveColor,
     backgroundColor: navPillsLinkActiveBg
   }
 }
 
 const navPill = {
-  navItem: {
+  '&$navItem': {
     flex: '1 1 auto',
     textAlign: 'center'
   }
 }
 
 const navFill = {
-  navItem: {
+  '&$navItem': {
     flex: '1 1 auto',
     textAlign: 'center'
   }
 }
 
 const navJustified = {
-  navItem: {
+  '&$navItem': {
     flexBasis: 0,
     flexGrow: 1,
     textAlign: 'center'
@@ -96,10 +96,10 @@ const navJustified = {
 }
 
 const tabContent = {
-  '> tabPane': {
+  '& > $tabPane': {
     display: 'none'
   },
-  '> active': {
+  '& > $active': {
     display: 'block'
   }
 }

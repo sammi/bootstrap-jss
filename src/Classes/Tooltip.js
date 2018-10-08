@@ -17,10 +17,10 @@ const tooltip = {
   fontSize: tooltipFontSize,
   wordWrap: 'break-word',
   opacity: 0,
-  '&.show': {
+  '&$show': {
     opacity: tooltipOpacity
   },
-  arrow: {
+  '&$arrow': {
     position: 'absolute',
     display: 'block',
     width: tooltipArrowWidth,
@@ -36,7 +36,7 @@ const tooltip = {
 
 const bsTooltipTop = {
   padding: `${tooltipArrowHeight} 0`,
-  arrow: {
+  '&$arrow': {
     bottom: 0,
     '&::before': {
       top: 0,
@@ -49,7 +49,7 @@ const bsTooltipTop = {
 const tooltipArrowWidthValue = `${size(tooltipArrowWidth).value / 2}${size(tooltipArrowWidth).unit}`
 const bsTooltipRight = {
   padding: `0 ${tooltipArrowHeight}`,
-  arrow: {
+  '&$arrow': {
     left: 0,
     width: tooltipArrowHeight,
     height: tooltipArrowWidth,
@@ -63,7 +63,7 @@ const bsTooltipRight = {
 
 const bsTooltipBottom = {
   padding: `${tooltipArrowHeight} 0`,
-  arrow: {
+  '&$arrow': {
     top: 0,
     '&::before': {
       bottom: 0,
@@ -75,7 +75,7 @@ const bsTooltipBottom = {
 
 const bsTooltipLeft = {
   padding: `0 ${tooltipArrowHeight}`,
-  arrow: {
+  '&$arrow': {
     right: 0,
     width: tooltipArrowHeight,
     height: tooltipArrowWidth,

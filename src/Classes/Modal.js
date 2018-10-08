@@ -20,7 +20,6 @@ const modalOpen = {
 }
 
 const modal = {
-  modalOpen,
   position: 'fixed',
   top: 0,
   right: 0,
@@ -30,23 +29,22 @@ const modal = {
   display: 'none',
   overflow: 'hidden',
   outline: 0,
-  '$modalOpen &': {
+  '&$modalOpen &': {
     overflowX: 'hidden',
     overflowY: 'auto'
   }
 }
 
 const modalDialog = {
-  modal,
   position: 'relative',
   width: 'auto',
   margin: modalDialogMargin,
   pointerEvents: 'none',
-  '$modal.fade &': {
+  '&$modal$fade &': {
     ...transition(modalTransition),
     transform: `translate(0, -25%)`
   },
-  '$modal.show &': {
+  '&$modal$show &': {
     transform: `translate(0, 0)`
   }
 }
@@ -79,23 +77,22 @@ const modalBackdrop = {
   left: 0,
   zIndex: zindexModalBackdrop,
   backgroundColor: modalBackdropBg,
-  '&.fade': {
+  '&$fade': {
     opacity: 0
   },
-  '&.show': {
+  '&$show': {
     opacity: modalBackdropOpacity
   }
 }
 
 const modalHeader = {
-  close,
   display: 'flex',
   alignItems: 'flex-start',
   justifyContent: 'space-between',
   padding: modalHeaderPadding,
   borderBottom: `${modalHeaderBorderWidth} solid ${modalHeaderBorderColor}`,
   ...borderTopRadius(modalContentBorderRadius),
-  '$close': {
+  '&$close': {
     padding: modalHeaderPadding,
     margin: `-${modalHeaderPadding} -${modalHeaderPadding} -${modalHeaderPadding} auto`
   }
@@ -118,10 +115,10 @@ const modalFooter = {
   justifyContent: 'flex-end',
   padding: modalInnerPadding,
   borderTop: `${modalFooterBorderWidth} solid ${modalFooterBorderColor}`,
-  '> :not(:first-child)': {
+  '& > :not(:first-child)': {
     marginLeft: '.25rem'
   },
-  '> :not(:last-child)': {
+  '& > :not(:last-child)': {
     marginRight: '.25rem'
   }
 }
@@ -136,10 +133,6 @@ const modalScrollbarMeasure = {
 
 const modalResponsive = {
   ...mediaBreakpointUp('sm', gridBreakpoints, {
-    modalDialog,
-    modalDialogCentered,
-    modalContent,
-    modalSm,
     '$modalDialog': {
       maxWidth: modalMd,
       margin: `${modalDialogMarginYSmUp} auto`
@@ -155,7 +148,6 @@ const modalResponsive = {
     }
   }),
   ...mediaBreakpointUp('lg', gridBreakpoints, {
-    modalLg,
     '$modalLg': {
       maxWidth: modalLg
     }

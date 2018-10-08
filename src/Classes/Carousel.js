@@ -71,13 +71,13 @@ const nextPrevLeftRight = {
 }
 
 const carouselItemRight = {
-  'active.&': {
+  '&active.&': {
     ...nextRight
   }
 }
 
 const carouselItemLeft = {
-  'active.&': {
+  '&active.&': {
     ...prevLeft
   }
 }
@@ -86,7 +86,6 @@ const carouselItemNext = {
   ...base,
   ...nextPrev,
   ...nextRight,
-  carouselItemLeft,
   '&$carouselItemLeft': {
     ...nextPrevLeftRight
   },
@@ -96,7 +95,6 @@ const carouselItemNext = {
 const carouselItemPrev = {
   ...base,
   ...nextPrev,
-  carouselItemRight,
   '&$carouselItemRight': {
     ...nextPrevLeftRight
   },
@@ -104,23 +102,18 @@ const carouselItemPrev = {
 }
 
 const carouselFade = {
-  carouselItem,
-  carouselItemNext,
-  carouselItemLeft,
-  carouselItemPrev,
-  carouselItemRight,
-  '$carouselItem': {
+  '&$carouselItem': {
     opacity: 0,
     transitionDuration: '.6s',
     transitionProperty: 'opacity'
   },
-  '$carouselItem.active,$carouselItemNext$carouselItemLeft,$carouselItemPrev$carouselItemRight': {
+  '&$carouselItem$active,&$carouselItemNext$carouselItemLeft,&$carouselItemPrev$carouselItemRight': {
     opacity: 1
   },
-  '.active$carouselItemLeft,.active$carouselItemRight': {
+  '&$active$carouselItemLeft,&$active$carouselItemRight': {
     opacity: 0
   },
-  '$carouselItemNext,$carouselItemPrev,$carouselItem.active,.active$carouselItemLeft,.active$carouselItemPrev': {
+  '&$carouselItemNext,&$carouselItemPrev,&$carouselItem$active,&$active$carouselItemLeft,&$active$carouselItemPrev': {
     transform: `translateX(0)`,
     '@supports (transform-style: preserve-3d)': {
       transform: `translate3d(0, 0, 0)`
@@ -151,7 +144,7 @@ const carouselControlPrev = (isEnableGradients = enableGradients) => {
   return {
     ...carouselControlPrevNext,
     left: 0,
-    background: isEnableGradients ? `linear-gradient(90deg, rgba(${black}, .25), rgba(${black}, .001))` : null
+    ...(isEnableGradients ? { background: `linear-gradient(90deg, rgba(${black}, .25), rgba(${black}, .001))` } : null)
   }
 }
 
@@ -159,7 +152,7 @@ const carouselControlNext = (isEnableGradients = enableGradients) => {
   return {
     ...carouselControlPrevNext,
     right: 0,
-    background: isEnableGradients ? `linear-gradient(270deg, rgba(${black}, .25), rgba(${black}, .001))` : null
+    ...(isEnableGradients ? { background: `linear-gradient(270deg, rgba(${black}, .25), rgba(${black}, .001))` } : null)
   }
 }
 
@@ -222,7 +215,7 @@ const carouselIndicators = {
       content: ''
     }
   },
-  active: {
+  '&active': {
     backgroundColor: carouselIndicatorActiveBg
   }
 }
