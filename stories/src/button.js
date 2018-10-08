@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Reboot, Classes, Utilities } from 'bootstrap-jss'
+import { Reboot, Classes } from 'bootstrap-jss'
 
 import injectSheet, { ThemeProvider } from 'react-jss'
 const { btn, btnLg, btnSm, btnLink, btnThemeColors, btnBlock } = Classes.Buttons
