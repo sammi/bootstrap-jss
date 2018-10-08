@@ -7,6 +7,9 @@ import {
 import { borderRadius } from '../Mixins/borderRadius'
 
 import { breadcrumb, breadcrumbItem } from './Breadcrumb'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('breadcrumb', () => {
   it('breadcrumb', () => {
@@ -19,6 +22,7 @@ describe('breadcrumb', () => {
       backgroundColor: breadcrumbBg,
       ...borderRadius(breadcrumbBorderRadius)
     })
+    expect(jss.createStyleSheet({ breadcrumb }).toString()).toBeDefined()
   })
 
   it('breadcrumb-item', () => {
@@ -35,9 +39,10 @@ describe('breadcrumb', () => {
       '& + &:hover::before': {
         textDecoration: 'none'
       },
-      '&.active': {
+      '&$active': {
         color: breadcrumbActiveColor
       }
     })
   })
+  expect(jss.createStyleSheet({ active: {}, breadcrumbItem }).toString()).toBeDefined()
 })

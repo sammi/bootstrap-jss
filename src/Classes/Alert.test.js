@@ -19,6 +19,9 @@ import {
 } from '../Variables/Alerts'
 
 import { alert, alertHeading, alertLink, alertDismissible, alertThemeColors } from './Alert'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('Alert classes', () => {
   it('alert', () => {
@@ -29,18 +32,21 @@ describe('Alert classes', () => {
       border: `${alertBorderWidth} solid transparent`,
       ...borderRadius(alertBorderRadius)
     })
+    expect(jss.createStyleSheet({ alert }).toString()).toBeDefined()
   })
 
   it('alertHeading', () => {
     expect(alertHeading).toEqual({
       color: 'inherit'
     })
+    expect(jss.createStyleSheet({ alertHeading }).toString()).toBeDefined()
   })
 
   it('alertLink', () => {
     expect(alertLink).toEqual({
       fontWeight: alertLinkFontWeight
     })
+    expect(jss.createStyleSheet({ alertLink }).toString()).toBeDefined()
   })
 
   it('alertDismissible', () => {
@@ -55,6 +61,7 @@ describe('Alert classes', () => {
         color: 'inherit'
       }
     })
+    expect(jss.createStyleSheet({ alertDismissible }).toString()).toBeDefined()
   })
 
   it('alert-theme-colors', () => {

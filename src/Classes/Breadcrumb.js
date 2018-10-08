@@ -29,7 +29,7 @@ const breadcrumbItem = {
   '& + &:hover::before': {
     textDecoration: 'none'
   },
-  '&.active': {
+  '&$active': {
     color: breadcrumbActiveColor
   }
 }

@@ -7,18 +7,15 @@ import {
   badgePillPaddingX,
   badgePillBorderRadius
 } from '../Variables/Badges'
-
 import _ from 'lodash'
 import { themeColors } from '../Variables/Colors'
 import { borderRadius } from '../Mixins/borderRadius'
 import { badgeVariant } from '../Mixins/badge'
 
-import {
-  badge,
-  badgeInButton,
-  badgePill,
-  badgeThemeColors
-} from './Badge'
+import { badge, badgeInButton, badgePill, badgeThemeColors } from './Badge'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('Badge classes', () => {
   it('badge', () => {
@@ -36,6 +33,7 @@ describe('Badge classes', () => {
         display: 'none'
       }
     })
+    expect(jss.createStyleSheet({ badge }).toString()).toBeDefined()
   })
 
   it('quick fix for badges in buttons', () => {
@@ -43,6 +41,7 @@ describe('Badge classes', () => {
       position: 'relative',
       top: '-1px'
     })
+    expect(jss.createStyleSheet({ badgeInButton }).toString()).toBeDefined()
   })
 
   it('Pill badges, Make them extra rounded with a modifier to replace v3\'s badges.', () => {
@@ -51,6 +50,7 @@ describe('Badge classes', () => {
       paddingLeft: badgePillPaddingX,
       ...borderRadius(badgePillBorderRadius)
     })
+    expect(jss.createStyleSheet({ badgePill }).toString()).toBeDefined()
   })
 
   it('badgeThemeColors', () => {
@@ -60,5 +60,6 @@ describe('Badge classes', () => {
         badgeVariant(themeColors[themeColorName])
       )
     })
+    expect(jss.createStyleSheet({ badgeColors }).toString()).toBeDefined()
   })
 })
