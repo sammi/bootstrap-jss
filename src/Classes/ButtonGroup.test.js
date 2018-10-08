@@ -21,7 +21,7 @@ describe('button group', () => {
       ...hover({
         zIndex: 1
       }),
-      '&:focus,:active,$active': {
+      '&:focus,&:active,&$active': {
         zIndex: 1
       }
     },
@@ -37,10 +37,10 @@ describe('button group', () => {
         marginLeft: 0
       },
       '&> $btn:not(:last-child):not($dropdownToggle),> :not(:last-child) > $btn': {
-        ...borderRightRadius(0)
+        ...borderRightRadius(0, false)
       },
       '&> $btn:not(:first-child),> :not(:first-child) > $btn': {
-        ...borderLeftRadius(0)
+        ...borderLeftRadius(0, false)
       },
       '&$show $dropdownToggle': {
         ...boxShadow(btnActiveBoxShadow),
@@ -67,10 +67,10 @@ describe('button group', () => {
         marginLeft: 0
       },
       '&> $btn:not(:last-child):not($dropdownToggle),> $btnGroup:not(:last-child) > $btn': {
-        ...borderBottomRadius(0)
+        ...borderBottomRadius(0, false)
       },
       '&> $btn:not(:first-child),> $btnGroup:not(:first-child) > $btn': {
-        ...borderTopRadius(0)
+        ...borderTopRadius(0, false)
       }
     })
 

@@ -29,25 +29,25 @@ export const btn = {
   ...hoverFocus({
     textDecoration: 'none'
   }),
-  '&:focus, &.focus': {
+  '&:focus, &$focus': {
     outline: 0,
     boxShadow: btnFocusBoxShadow
   },
-  '&.disabled, &:disabled': {
+  '&$disabled, &:disabled': {
     opacity: btnDisabledOpacity,
     ...boxShadow(enableShadows, 'none')
   },
-  '&:not(:disabled):not(.disabled)': {
+  '&:not(:disabled):not($disabled)': {
     cursor: 'pointer'
   },
-  '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled)$active': {
+  '&:not(:disabled):not($disabled):active, &:not(:disabled):not($disabled)$active': {
     backgroundImage: 'none',
     ...boxShadow(enableShadows, btnActiveBoxShadow),
     '&:focus': {
       ...boxShadow(enableShadows, btnFocusBoxShadow, btnActiveBoxShadow)
     }
   },
-  '&a&.disabled, fieldset:disabled a&': {
+  '&a &$disabled, fieldset:disabled a&': {
     pointerEvents: 'none'
   }
 }
@@ -62,12 +62,12 @@ export const btnLink = {
     backgroundColor: 'transparent',
     borderColor: 'transparent'
   }),
-  '&:focus, &.focus': {
+  '&:focus, &$focus': {
     textDecoration: linkHoverDecoration,
     borderColor: 'transparent',
     boxShadow: 'none'
   },
-  '&:disabled,&.disabled': {
+  '&:disabled,&$disabled': {
     color: btnLinkDisabledColor,
     pointerEvents: 'none'
   }
@@ -94,18 +94,28 @@ export const btnBlock = {
   }
 }
 
+export const globalInputOverrides = {
+  '@global': {
+    'input[type="submit"],input[type="reset"],input[type="button"]': {
+      '&$btnBlock': {
+        width: '100%'
+      }
+    }
+  }
+}
+
 export const btnThemeColors = () => {
   let btnColors = {}
-  Object.keys(themeColors).forEach(themeColorName => {
-    btnColors['btn' + _.upperFirst(themeColorName)] = buttonVariant(themeColors[themeColorName])
-  })
+  for (const [key, value] of Object.entries(themeColors)) {
+    btnColors['btn' + _.upperFirst(key)] = buttonVariant(value, value)
+  }
   return btnColors
 }
 
 export const btnOutlineThemeColors = () => {
   let btnOutlineColors = {}
-  Object.keys(themeColors).forEach(themeColorName => {
-    btnOutlineColors['btnOutline' + _.upperFirst(themeColorName)] = buttonOutlineVariant(themeColors[themeColorName])
-  })
+  for (const [key, value] of Object.entries(themeColors)) {
+    btnOutlineColors['btnOutline' + _.upperFirst(key)] = buttonOutlineVariant(value, value)
+  }
   return btnOutlineColors
 }

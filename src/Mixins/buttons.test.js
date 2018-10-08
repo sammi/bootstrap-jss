@@ -6,9 +6,11 @@ import { boxShadow } from './boxShadow'
 import { btnBoxShadow, btnFocusWidth, btnActiveBoxShadow } from '../Variables/Buttons'
 import { hover } from './hover'
 import { enableShadows } from '../Variables/Options'
-import { caret } from './caret'
 
 import { buttonVariant, buttonOutlineVariant, buttonSize } from './buttons'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 describe('button-variants', () => {
   it('button-variant', () => {
@@ -18,13 +20,11 @@ describe('button-variants', () => {
     const hoverBorderColor = darken(borderColor, '10%')
     const activeBackgroundColor = darken(backgroundColor, '10%')
     const activeBorderColor = darken(borderColor, '12.5%')
+
     expect(buttonVariant(
       backgroundColor,
       borderColor)
     ).toEqual({
-      dropdownToggle: {
-        ...caret()
-      },
       color: colorYiq(backgroundColor),
       ...gradientBg(backgroundColor),
       borderColor: borderColor,
@@ -34,15 +34,15 @@ describe('button-variants', () => {
         ...gradientBg(hoverBackgroundColor),
         borderColor: hoverBorderColor
       }),
-      '&:focus, &.focus': {
+      '&:focus, &$focus': {
         boxShadow: `0 0 0 ${btnFocusWidth} ${rgba(borderColor, 0.5)}`
       },
-      '&.disabled, &:disabled': {
+      '&$disabled, &:disabled': {
         color: colorYiq(backgroundColor),
         backgroundColor: backgroundColor,
         borderColor: borderColor
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, &.show > &$dropdownToggle': {
+      '&:not(:disabled):not($disabled):active, &:not(:disabled):not($disabled)$active, &$show > &$dropdownToggle': {
         color: colorYiq(activeBackgroundColor),
         backgroundColor: activeBackgroundColor,
         borderColor: activeBorderColor
@@ -51,6 +51,17 @@ describe('button-variants', () => {
         boxShadow: `0 0 0 ${btnFocusWidth} ${rgba(borderColor, 0.5)}`
       }
     })
+
+    expect(jss.createStyleSheet({
+      show: {},
+      active: {},
+      dropdownToggle: {},
+      disabled: {},
+      focus: {},
+      buttonVariant: {
+        ...buttonVariant(backgroundColor, borderColor)
+      }
+    }).toString()).toBeDefined()
   })
 
   it('button-variant, enable shadows, enable gradients', () => {
@@ -78,9 +89,6 @@ describe('button-variants', () => {
       myBtnFocusWidth,
       myBtnActiveBoxShadow
     )).toEqual({
-      dropdownToggle: {
-        ...caret()
-      },
       color: colorYiq(backgroundColor),
       ...gradientBg(backgroundColor),
       borderColor: borderColor,
@@ -90,15 +98,15 @@ describe('button-variants', () => {
         ...gradientBg(hoverBackgroundColor),
         borderColor: hoverBorderColor
       }),
-      '&:focus, &.focus': {
+      '&:focus, &$focus': {
         boxShadow: `${btnBoxShadow}, 0 0 0 ${btnFocusWidth} ${rgba(borderColor, 0.5)}`
       },
-      '&.disabled, &:disabled': {
+      '&$disabled, &:disabled': {
         color: colorYiq(backgroundColor),
         backgroundColor: backgroundColor,
         borderColor: borderColor
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, &.show > &$dropdownToggle': {
+      '&:not(:disabled):not($disabled):active, &:not(:disabled):not($disabled)$active, &$show > &$dropdownToggle': {
         color: colorYiq(activeBackgroundColor),
         backgroundColor: activeBackgroundColor,
         backgrounImage: 'none',
@@ -108,6 +116,27 @@ describe('button-variants', () => {
         boxShadow: `${myBtnActiveBoxShadow}, 0 0 0 ${myBtnFocusWidth} ${rgba(borderColor, 0.5)}`
       }
     })
+
+    expect(jss.createStyleSheet({
+      show: {},
+      active: {},
+      dropdownToggle: {},
+      disabled: {},
+      focus: {},
+      buttonVariant: {
+        ...buttonVariant(backgroundColor,
+          borderColor,
+          hoverBackgroundColor,
+          hoverBorderColor,
+          activeBackgroundColor,
+          activeBorderColor,
+          enableShadows,
+          enableGradients,
+          myBtnBoxShadow,
+          myBtnFocusWidth,
+          myBtnActiveBoxShadow)
+      }
+    }).toString()).toBeDefined()
   })
 
   it('button-variant, disable shadows, disable gradients', () => {
@@ -135,9 +164,6 @@ describe('button-variants', () => {
       myBtnFocusWidth,
       myBtnActiveBoxShadow
     )).toEqual({
-      dropdownToggle: {
-        ...caret()
-      },
       color: colorYiq(backgroundColor),
       ...gradientBg(backgroundColor),
       borderColor: borderColor,
@@ -147,15 +173,15 @@ describe('button-variants', () => {
         ...gradientBg(hoverBackgroundColor),
         borderColor: hoverBorderColor
       }),
-      '&:focus, &.focus': {
+      '&:focus, &$focus': {
         boxShadow: `0 0 0 ${myBtnFocusWidth} ${rgba(borderColor, 0.5)}`
       },
-      '&.disabled, &:disabled': {
+      '&$disabled, &:disabled': {
         color: colorYiq(backgroundColor),
         backgroundColor: backgroundColor,
         borderColor: borderColor
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, &.show > &$dropdownToggle': {
+      '&:not(:disabled):not($disabled):active, &:not(:disabled):not($disabled)$active, &$show > &$dropdownToggle': {
         color: colorYiq(activeBackgroundColor),
         backgroundColor: activeBackgroundColor,
         borderColor: activeBorderColor
@@ -164,6 +190,27 @@ describe('button-variants', () => {
         boxShadow: `0 0 0 ${btnFocusWidth} ${rgba(borderColor, 0.5)}`
       }
     })
+
+    expect(jss.createStyleSheet({
+      show: {},
+      active: {},
+      dropdownToggle: {},
+      disabled: {},
+      focus: {},
+      buttonVariant: {
+        ...buttonVariant(backgroundColor,
+          borderColor,
+          hoverBackgroundColor,
+          hoverBorderColor,
+          activeBackgroundColor,
+          activeBorderColor,
+          enableShadows,
+          enableGradients,
+          myBtnBoxShadow,
+          myBtnFocusWidth,
+          myBtnActiveBoxShadow)
+      }
+    }).toString()).toBeDefined()
   })
 
   it('buttonOutlineVariant', () => {
@@ -174,9 +221,6 @@ describe('button-variants', () => {
     const mybtnFocusWidth = btnFocusWidth
 
     expect(buttonOutlineVariant(color)).toEqual({
-      dropdownToggle: {
-        ...caret()
-      },
       color: color,
       backgroundColor: 'transparent',
       backgroundImage: 'none',
@@ -186,14 +230,14 @@ describe('button-variants', () => {
         backgroundColor: ativeBackgroundColor,
         borderColor: activeBorderColor
       },
-      '&:focus, &.focus': {
+      '&:focus, &$focus': {
         boxShadow: `0 0 0 ${mybtnFocusWidth} ${rgba(color, 0.5)}`
       },
-      '&.disabled, &:disabled': {
+      '&$disabled, &:disabled': {
         color: color,
         backgroundColor: 'tranparent'
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
+      '&:not(:disabled):not($disabled):active, &:not(:disabled):not($disabled)$active, &$show > &$dropdownToggle': {
         color: colorYiq(ativeBackgroundColor),
         backgroundColor: ativeBackgroundColor,
         borderColor: activeBorderColor,
@@ -202,6 +246,17 @@ describe('button-variants', () => {
         }
       }
     })
+
+    expect(jss.createStyleSheet({
+      show: {},
+      active: {},
+      dropdownToggle: {},
+      disabled: {},
+      focus: {},
+      buttonVariant: {
+        ...buttonOutlineVariant(color)
+      }
+    }).toString()).toBeDefined()
   })
 
   it('buttonOutlineVariant, enableShadows = true', () => {
@@ -212,9 +267,6 @@ describe('button-variants', () => {
     const myBtnFocusWidth = btnFocusWidth
 
     expect(buttonOutlineVariant(color, colorHover, ativeBackgroundColor, activeBorderColor, myBtnFocusWidth, true)).toEqual({
-      dropdownToggle: {
-        ...caret()
-      },
       color: color,
       backgroundColor: 'transparent',
       backgroundImage: 'none',
@@ -224,14 +276,14 @@ describe('button-variants', () => {
         backgroundColor: ativeBackgroundColor,
         borderColor: activeBorderColor
       },
-      '&:focus, &.focus': {
+      '&:focus, &$focus': {
         boxShadow: `0 0 0 ${myBtnFocusWidth} ${rgba(color, 0.5)}`
       },
-      '&.disabled, &:disabled': {
+      '&$disabled, &:disabled': {
         color: color,
         backgroundColor: 'tranparent'
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &$dropdownToggle': {
+      '&:not(:disabled):not($disabled):active, &:not(:disabled):not($disabled)$active, &$show > &$dropdownToggle': {
         color: colorYiq(ativeBackgroundColor),
         backgroundColor: ativeBackgroundColor,
         borderColor: activeBorderColor,
@@ -240,6 +292,17 @@ describe('button-variants', () => {
         }
       }
     })
+
+    expect(jss.createStyleSheet({
+      show: {},
+      active: {},
+      dropdownToggle: {},
+      disabled: {},
+      focus: {},
+      buttonVariant: {
+        ...buttonOutlineVariant(color, colorHover, ativeBackgroundColor, activeBorderColor, myBtnFocusWidth, true)
+      }
+    }).toString()).toBeDefined()
   })
 
   it('buttonSize, enable rounded corner', () => {
@@ -254,6 +317,12 @@ describe('button-variants', () => {
       lineHeight: lineHeight,
       borderRadius: borderRadius
     })
+
+    expect(jss.createStyleSheet({
+      buttonVariant: {
+        ...buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius, true)
+      }
+    }).toString()).toBeDefined()
   })
 
   it('buttonSize, disable rounded corner', () => {
@@ -269,6 +338,12 @@ describe('button-variants', () => {
       lineHeight: lineHeight,
       borderRadius: 0
     })
+
+    expect(jss.createStyleSheet({
+      buttonVariant: {
+        ...buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius, false)
+      }
+    }).toString()).toBeDefined()
   })
 
   it('buttonSize, default', () => {
@@ -284,5 +359,11 @@ describe('button-variants', () => {
       lineHeight: lineHeight,
       borderRadius: borderRadius
     })
+
+    expect(jss.createStyleSheet({
+      buttonVariant: {
+        ...buttonSize(paddingY, paddingX, fontSize, lineHeight, borderRadius)
+      }
+    }).toString()).toBeDefined()
   })
 })

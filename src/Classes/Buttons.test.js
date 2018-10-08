@@ -23,7 +23,8 @@ import {
   btnSm,
   btnBlock,
   btnThemeColors,
-  btnOutlineThemeColors
+  btnOutlineThemeColors,
+  globalInputOverrides
 } from './Buttons'
 import jss from 'jss'
 import preset from 'jss-preset-default'
@@ -44,47 +45,44 @@ describe('Button classes', () => {
       ...hoverFocus({
         textDecoration: 'none'
       }),
-      '&:focus, &.focus': {
+      '&:focus, &$focus': {
         outline: 0,
         boxShadow: btnFocusBoxShadow
       },
-      '&.disabled, &:disabled': {
+      '&$disabled, &:disabled': {
         opacity: btnDisabledOpacity,
         ...boxShadow(enableShadows, 'none')
       },
-      '&:not(:disabled):not(.disabled)': {
+      '&:not(:disabled):not($disabled)': {
         cursor: 'pointer'
       },
-      '&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled)$active': {
+      '&:not(:disabled):not($disabled):active, &:not(:disabled):not($disabled)$active': {
         backgroundImage: 'none',
         ...boxShadow(enableShadows, btnActiveBoxShadow),
         '&:focus': {
           ...boxShadow(enableShadows, btnFocusBoxShadow, btnActiveBoxShadow)
         }
       },
-      '&a&.disabled, fieldset:disabled a&': {
+      '&a &$disabled, fieldset:disabled a&': {
         pointerEvents: 'none'
       }
     })
-    expect(jss.createStyleSheet({ active: {}, btn }).toString()).toBeDefined()
+    expect(jss.createStyleSheet({ focus: {}, active: {}, disabled: {}, btn }).toString()).toBeDefined()
   })
-  it('btnThemeColors', () => {
+
+  it('btnColors', () => {
     const btnColors = btnThemeColors()
-    Object.keys(themeColors).forEach(themeColorName => {
-      expect(btnColors['btn' + _.upperFirst(themeColorName)]).toEqual(
-        buttonVariant(themeColors[themeColorName])
-      )
-    })
+    for (const [key, value] of Object.entries(themeColors)) {
+      expect(btnColors['btn' + _.upperFirst(key)]).toEqual(buttonVariant(value, value))
+    }
     expect(jss.createStyleSheet({ btnColors }).toString()).toBeDefined()
   })
 
-  it('btnThemeColors', () => {
+  it('btnOutlineColors', () => {
     const btnOutlineColors = btnOutlineThemeColors()
-    Object.keys(themeColors).forEach(themeColorName => {
-      expect(btnOutlineColors['btnOutline' + _.upperFirst(themeColorName)]).toEqual(
-        buttonOutlineVariant(themeColors[themeColorName])
-      )
-    })
+    for (const [key, value] of Object.entries(themeColors)) {
+      expect(btnOutlineColors['btnOutline' + _.upperFirst(key)]).toEqual(buttonOutlineVariant(value, value))
+    }
     expect(jss.createStyleSheet({ btnOutlineColors }).toString()).toBeDefined()
   })
 
@@ -99,18 +97,18 @@ describe('Button classes', () => {
         backgroundColor: 'transparent',
         borderColor: 'transparent'
       }),
-      '&:focus, &.focus': {
+      '&:focus, &$focus': {
         textDecoration: linkHoverDecoration,
         borderColor: 'transparent',
         boxShadow: 'none'
       },
-      '&:disabled,&.disabled': {
+      '&:disabled,&$disabled': {
         color: btnLinkDisabledColor,
         pointerEvents: 'none'
       }
     })
 
-    expect(jss.createStyleSheet({ btnLink }).toString()).toBeDefined()
+    expect(jss.createStyleSheet({ focus: {}, disabled: {}, btnLink }).toString()).toBeDefined()
   })
 
   it('btn-lg', () => {
@@ -142,4 +140,17 @@ describe('Button classes', () => {
     })
     expect(jss.createStyleSheet({ btnBlock }).toString()).toBeDefined()
   })
+
+  it('globalInputOverrides', () => {
+    expect(globalInputOverrides).toEqual({
+      '@global': {
+        'input[type="submit"],input[type="reset"],input[type="button"]': {
+          '&$btnBlock': {
+            width: '100%'
+          }
+        }
+      }
+    })
+  })
+  expect(jss.createStyleSheet({ btnBlock: {}, globalInputOverrides }).toString()).toBeDefined()
 })

@@ -64,7 +64,7 @@ const caret = (direction = 'down', myEnableCaret = enableCaret) => {
         width: 0,
         height: 0,
         marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
-        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAlign: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...getCaret(direction),
         '&:empty::after': {

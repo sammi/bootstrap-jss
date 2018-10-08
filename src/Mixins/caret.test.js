@@ -40,7 +40,7 @@ describe('caret', () => {
         width: 0,
         height: 0,
         marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
-        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAlign: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...caretDown(),
         '&:empty::after': {
@@ -55,7 +55,7 @@ describe('caret', () => {
         width: 0,
         height: 0,
         marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
-        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAlign: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...caretUp(),
         '&:empty::after': {
@@ -70,7 +70,7 @@ describe('caret', () => {
         width: 0,
         height: 0,
         marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
-        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAlign: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...caretRight(),
         '&:empty::after': {
@@ -85,7 +85,7 @@ describe('caret', () => {
         width: 0,
         height: 0,
         marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
-        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAlign: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         '&::after': {
           display: 'none'
@@ -113,7 +113,7 @@ describe('caret', () => {
         width: 0,
         height: 0,
         marginLeft: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
-        verticalAligh: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
+        verticalAlign: `${size(caretWidth).value * 0.85}${size(caretWidth).unit}`,
         content: '',
         ...caretDown(),
         '&:empty::after': {
