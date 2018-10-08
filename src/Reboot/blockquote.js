@@ -1,7 +1,5 @@
 export const blockquote = {
-  '@global': {
-    blockquote: {
-      margin: ['0', '0', '1rem']
-    }
+  blockquote: {
+    margin: ['0', '0', '1rem']
   }
 }

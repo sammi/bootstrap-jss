@@ -6,17 +6,15 @@ import { body } from './body'
 describe('Reboot', () => {
   it('body', () => {
     expect(body).toEqual({
-      '@global': {
-        body: {
-          margin: 0,
-          fontFamily: fontFamilyBase,
-          fontSize: fontSizeBase,
-          fontWeight: fontWeightBase,
-          lineHeight: lineHeightBase,
-          color: bodyColor,
-          textAlign: 'left',
-          backgroundColor: bodyBg
-        }
+      body: {
+        margin: 0,
+        fontFamily: fontFamilyBase,
+        fontSize: fontSizeBase,
+        fontWeight: fontWeightBase,
+        lineHeight: lineHeightBase,
+        color: bodyColor,
+        textAlign: 'left',
+        backgroundColor: bodyBg
       }
     })
   })

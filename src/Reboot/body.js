@@ -2,16 +2,14 @@ import { fontFamilyBase, fontSizeBase, fontWeightBase, lineHeightBase } from '..
 import { bodyColor, bodyBg } from '../Variables/Body'
 
 export const body = {
-  '@global': {
-    body: {
-      margin: 0,
-      fontFamily: fontFamilyBase,
-      fontSize: fontSizeBase,
-      fontWeight: fontWeightBase,
-      lineHeight: lineHeightBase,
-      color: bodyColor,
-      textAlign: 'left',
-      backgroundColor: bodyBg
-    }
+  body: {
+    margin: 0,
+    fontFamily: fontFamilyBase,
+    fontSize: fontSizeBase,
+    fontWeight: fontWeightBase,
+    lineHeight: lineHeightBase,
+    color: bodyColor,
+    textAlign: 'left',
+    backgroundColor: bodyBg
   }
 }

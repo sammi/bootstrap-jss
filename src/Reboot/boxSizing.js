@@ -1,7 +1,5 @@
 export const boxSizing = {
-  '@global': {
-    '*,*::before,*::after': {
-      boxSizing: 'border-box'
-    }
+  '*,*::before,*::after': {
+    boxSizing: 'border-box'
   }
 }

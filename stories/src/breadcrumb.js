@@ -11,11 +11,13 @@ breadcrumbItem['& + &']["&::before"].content = quote('/')
 const styles = {
   active: {},
   breadcrumb: {
-    ...breadcrumb
+    ...breadcrumb,
+    '& a': {
+      ...Reboot.links.a
+    }
   },
   breadcrumbItem: {
     ...breadcrumbItem,
-    ...Reboot.links
   }
 }
 

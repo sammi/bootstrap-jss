@@ -1,14 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Reboot, Classes } from 'bootstrap-jss'
+import { Classes } from 'bootstrap-jss'
 import injectSheet, { ThemeProvider } from 'react-jss'
 import _ from 'lodash'
-import classNames from 'classnames'
 
-const { alert, alertHeading, alertLink, alertDismissible, alertThemeColors } = Classes.Alert
+const { alert, alertLink, alertThemeColors } = Classes.Alert
 const { close, buttonClose } = Classes.Close
-const { fade } = Classes.Transitions
-
 const themeColors = alertThemeColors()
 
 const styles = theme => ({
@@ -17,58 +14,33 @@ const styles = theme => ({
   show: {},
   focus: {},
   dropdownToggle: {},
-  alert: {
-    ...Reboot,
-    ...alert,
+  close: {
+    ...close,
+    ...buttonClose,
     ...themeColors[theme.color],
   },
   alertLink: {
-    ...Reboot,
     ...alertLink,
     ...themeColors[theme.color],
   },
-  alertHeading: {
-    ...Reboot,
-    ...alertHeading,
-    ...themeColors[theme.color],
-  },
-  alertDismissible: {
-    ...Reboot,
+  alert: {
     ...alert,
-    ...alertDismissible,
-    ...fade,
-    ...themeColors[theme.color],
-  },
-  close: {
-    ...Reboot,
-    ...alert,
-    ...close,
-    ...buttonClose,
-    ...alertDismissible.close,
     ...themeColors[theme.color],
   }
 })
 
-const AlertHeading = injectSheet(styles)(({ classes, children }) => (
-  <h1 className={classes.alertHeading}>{children}</h1>
-))
+const Alert = injectSheet(styles)(({ children, classes }) => (
+  <div className={classes.alert}>{children}</div>)
+)
 
-const AlertLink = injectSheet(styles)(({ classes, children }) => (
-  <a href='/' className={classes.alertLink}>{children}</a>
-))
-
-const AlertDismissing = injectSheet(styles)(({ classes, show, onClose, children }) => (
-  <div className={classNames(classes.alertDismissible, 'show')} role="alert">
-    {children}
-    <button type="button" className={classes.close} data-dismiss="alert" aria-label="Close" onClick={onClose}>
+const AlertDismissing = injectSheet(styles)(({ classes }) => (
+  <div className={classes.alert}>
+    A simple primary alert with a example <a href="#" className={classes.alertLink}>link</a>
+    <button type="button" className={classes.close}>
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
 ))
-
-const Alert = injectSheet(styles)(({ themeKey, children, classes }) => (
-  <div className={classes.alert}>{children}</div>)
-)
 
 storiesOf('Alert', module)
   .add('Theme colors', () =>
@@ -76,10 +48,7 @@ storiesOf('Alert', module)
       {
         Object.keys(themeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <Alert themeKey={_.replace(themeColorName, 'alert', '')}>
-              <AlertHeading>{themeColorName}</AlertHeading>
-              This is a {_.toLower(_.replace(themeColorName, 'alert', ''))} <AlertLink>alert</AlertLink> — check it out!
-            </Alert>
+            <Alert>{themeColorName}</Alert>
           </ThemeProvider>
         ))
       }
@@ -90,9 +59,7 @@ storiesOf('Alert', module)
       {
         Object.keys(themeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <AlertDismissing show={true} onClose={() => { }}>
-              <strong>{themeColorName}</strong> You should check in on some of those fields below.
-            </AlertDismissing>
+            <AlertDismissing />
           </ThemeProvider>
         ))
       }

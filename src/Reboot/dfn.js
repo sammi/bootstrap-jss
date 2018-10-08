@@ -1,7 +1,5 @@
 export const dfn = {
-  '@global': {
-    dfn: {
-      fontStyle: 'italic'
-    }
+  dfn: {
+    fontStyle: 'italic'
   }
 }

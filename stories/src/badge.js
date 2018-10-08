@@ -3,23 +3,17 @@ import { storiesOf } from '@storybook/react'
 import { Reboot, Classes } from 'bootstrap-jss'
 import injectSheet, { ThemeProvider } from 'react-jss'
 
-const { badge, badgeInButton, badgePill, badgeThemeColors } = Classes.Badge
-const { btn, btnThemeColors, btnOutlineThemeColors, btnInsideLink } = Classes.Buttons
+const { badge, badgePill, badgeThemeColors } = Classes.Badge
+const { btn, btnThemeColors, btnOutlineThemeColors } = Classes.Buttons
 
 const badgeColors = badgeThemeColors()
 const btnColors = btnThemeColors()
 const btnOutlineColors = btnOutlineThemeColors()
 
 const HeaderBadge = injectSheet(theme => ({
-  active: {},
-  disabled: {},
-  show: {},
-  focus: {},
-  dropdownToggle: {},
   badge: {
-    ...Reboot.headerMargin,
     ...badge,
-    ...badgeColors[theme.color],
+    ...badgeColors[theme.color]
   },
 })) (
   ({classes, children}) =>
@@ -40,33 +34,27 @@ const ButtonBadge = injectSheet( theme => ({
   focus: {},
   dropdownToggle: {},
   container: {
-    ...Reboot.forms.button,
     ...btn,
-    ...btnColors['btnPrimary'],
-    margin: '2px'
+    ...btnColors['btnSecondary'],
+    marginRight: '0.25rem'
   },
-  button: {
-    ...badgeInButton,
+  badge: {
+    ...badge,
     ...badgeColors[theme.color],
+    ...btnOutlineColors[theme.color]
   }
 })) (
   ({classes, children}) =>
   <button type="button" className={classes.container}>
-    Notifications <span className={classes.button}>{children}</span>
+    Notifications <span className={classes.badge}>{children}</span>
   </button>
 )
 
 const SpanBadge = injectSheet( theme => ({
-  active: {},
-  disabled: {},
-  show: {},
-  focus: {},
-  dropdownToggle: {},
   badge: {
-    ...Reboot.list,
     ...badge,
     ...badgeColors[theme.color],
-    margin: '2px',
+    marginRight: '0.25rem'
   },
 })) (
   ({classes, children}) =>
@@ -74,17 +62,11 @@ const SpanBadge = injectSheet( theme => ({
 )
 
 const PillBadge = injectSheet(theme => ({
-  active: {},
-  disabled: {},
-  show: {},
-  focus: {},
-  dropdownToggle: {},
   badgePill: {
-    ...Reboot.list,
     ...badge,
     ...badgePill,
     ...badgeColors[theme.color],
-    margin: '2px',
+    marginRight: '0.25rem'
   },
 })) (
   ({classes, children}) =>
@@ -92,23 +74,17 @@ const PillBadge = injectSheet(theme => ({
 )
 
 const LinkBadge = injectSheet(theme => ({
-  active: {},
-  disabled: {},
-  show: {},
-  focus: {},
-  dropdownToggle: {},
   btnInsideLink: {
-    ...Reboot.links,
-    ...btn,
+    ...Reboot.links.a,
+    ...badge,
     ...badgeColors[theme.color],
-    ...btnColors[theme.color],
-    ...btnOutlineColors[theme.color],
-    margin: '2px',
+    marginRight: '0.25rem'
   }
 })) (
   ({classes, children}) =>
   <a href="#" className={classes.btnInsideLink}>{children}</a>
 )
+
 
 storiesOf('Badge', module)
   .add('Badge in header', () =>
