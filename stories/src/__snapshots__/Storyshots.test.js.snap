@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Button Groups Basic example 1`] = `
+exports[`Storyshots Button groups 1`] = `
 <div>
   <div
     className="Component-btnContainer-0-1-12 Component-reboot-0-1-6 Component-btnGroup-0-1-2 Component-btnGroupToggle-0-1-3"
@@ -273,6 +273,145 @@ exports[`Storyshots Button Groups Basic example 1`] = `
       />
        Radio
     </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button sizes 1`] = `
+<div>
+  <button
+    className="Component-btnPrimaryLarge-0-1-126 Component-btnMargin-0-1-125 Component-reboot-0-1-117 Component-btn-0-1-113 Component-btnLg-0-1-115 Component-primaryColor-0-1-118"
+    type="button"
+  >
+    Primary Large
+  </button>
+  <button
+    className="Component-btnSecondaryLarge-0-1-127 Component-btnMargin-0-1-125 Component-reboot-0-1-117 Component-btn-0-1-113 Component-btnLg-0-1-115 Component-secondaryColor-0-1-119"
+    type="button"
+  >
+    Secondary Large
+  </button>
+  <button
+    className="Component-btnPrimarySmall-0-1-128 Component-btnMargin-0-1-125 Component-reboot-0-1-117 Component-btn-0-1-113 Component-btnSm-0-1-116 Component-primaryColor-0-1-118"
+    type="button"
+  >
+    Primary Small
+  </button>
+  <button
+    className="Component-btnSecondarySmall-0-1-129 Component-btnMargin-0-1-125 Component-reboot-0-1-117 Component-btn-0-1-113 Component-btnSm-0-1-116 Component-secondaryColor-0-1-119"
+    type="button"
+  >
+    Secondary Small
+  </button>
+  <button
+    className="Component-btnPrimaryBlock-0-1-130 Component-btnMargin-0-1-125 Component-reboot-0-1-117 Component-btn-0-1-113 Component-btnBlock-0-1-114 Component-primaryColor-0-1-118"
+    type="button"
+  >
+    Primary Block
+  </button>
+  <button
+    className="Component-btnSecondaryBlock-0-1-131 Component-btnMargin-0-1-125 Component-reboot-0-1-117 Component-btn-0-1-113 Component-btnBlock-0-1-114 Component-secondaryColor-0-1-119"
+    type="button"
+  >
+    Secondar Block
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button states 1`] = `
+<div>
+  <button
+    className="Component-btnPrimaryLarge-0-1-144 Component-btnMargin-0-1-143 Component-btn-0-1-132 Component-btnLg-0-1-134 Component-primaryColor-0-1-136"
+    disabled={true}
+    type="button"
+  >
+    Primary Large
+  </button>
+  <button
+    className="Component-btnSecondaryLarge-0-1-145 Component-btnMargin-0-1-143 Component-btn-0-1-132 Component-btnLg-0-1-134 Component-secondaryColor-0-1-137"
+    disabled={true}
+    type="button"
+  >
+    Secondary Large
+  </button>
+  <a
+    className="Component-btnPrimaryLargeDisabled-0-1-146 Component-btnMargin-0-1-143 Component-btn-0-1-132 Component-btnLg-0-1-134 Component-primaryColor-0-1-136 Component-disabled-0-1-139 Component-btnLink-0-1-135"
+    href="#"
+  >
+    Primary link
+  </a>
+  <a
+    className="Component-btnSecondaryLargeDisabled-0-1-147 Component-btnMargin-0-1-143 Component-btn-0-1-132 Component-btnLg-0-1-134 Component-secondaryColor-0-1-137 Component-disabled-0-1-139 Component-btnLink-0-1-135"
+    href="#"
+  >
+    Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Button toolbar 1`] = `
+<div
+  className="Component-btnToolbar-0-1-148"
+>
+  <div
+    className="Component-btnGroup-0-1-150"
+  >
+    <button
+      className="Component-btnPrimary-0-1-161 Component-btn-0-1-149 Component-primaryColor-0-1-151"
+      type="button"
+    >
+      1
+    </button>
+    <button
+      className="Component-btnPrimary-0-1-161 Component-btn-0-1-149 Component-primaryColor-0-1-151"
+      type="button"
+    >
+      2
+    </button>
+    <button
+      className="Component-btnPrimary-0-1-161 Component-btn-0-1-149 Component-primaryColor-0-1-151"
+      type="button"
+    >
+      3
+    </button>
+    <button
+      className="Component-btnPrimary-0-1-161 Component-btn-0-1-149 Component-primaryColor-0-1-151"
+      type="button"
+    >
+      4
+    </button>
+  </div>
+  <div
+    className="Component-btnGroup-0-1-150"
+  >
+    <button
+      className="Component-btnSecondary-0-1-162 Component-btn-0-1-149 Component-secondaryColor-0-1-152"
+      type="button"
+    >
+      5
+    </button>
+    <button
+      className="Component-btnSecondary-0-1-162 Component-btn-0-1-149 Component-secondaryColor-0-1-152"
+      type="button"
+    >
+      6
+    </button>
+    <button
+      className="Component-btnSecondary-0-1-162 Component-btn-0-1-149 Component-secondaryColor-0-1-152"
+      type="button"
+    >
+      7
+    </button>
+  </div>
+  <div
+    className="Component-btnGroup-0-1-150"
+  >
+    <button
+      className="Component-dangerColor-0-1-153"
+      type="button"
+    >
+      8
+    </button>
   </div>
 </div>
 `;
