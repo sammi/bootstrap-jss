@@ -3,18 +3,17 @@
 exports[`Storyshots Alert Dismissing 1`] = `
 <div>
   <div
-    className="Component-alertDismissible-0-1-249 show"
-    role="alert"
+    className="Component-alert-0-1-72"
   >
-    <strong>
-      alertPrimary
-    </strong>
-     You should check in on some of those fields below.
+    A simple primary alert with a example 
+    <a
+      className="Component-alertLink-0-1-71"
+      href="#"
+    >
+      link
+    </a>
     <button
-      aria-label="Close"
-      className="Component-close-0-1-250"
-      data-dismiss="alert"
-      onClick={[Function]}
+      className="Component-close-0-1-70"
       type="button"
     >
       <span
@@ -25,18 +24,17 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-259 show"
-    role="alert"
+    className="Component-alert-0-1-80"
   >
-    <strong>
-      alertSecondary
-    </strong>
-     You should check in on some of those fields below.
+    A simple primary alert with a example 
+    <a
+      className="Component-alertLink-0-1-79"
+      href="#"
+    >
+      link
+    </a>
     <button
-      aria-label="Close"
-      className="Component-close-0-1-260"
-      data-dismiss="alert"
-      onClick={[Function]}
+      className="Component-close-0-1-78"
       type="button"
     >
       <span
@@ -47,18 +45,17 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-269 show"
-    role="alert"
+    className="Component-alert-0-1-88"
   >
-    <strong>
-      alertSuccess
-    </strong>
-     You should check in on some of those fields below.
+    A simple primary alert with a example 
+    <a
+      className="Component-alertLink-0-1-87"
+      href="#"
+    >
+      link
+    </a>
     <button
-      aria-label="Close"
-      className="Component-close-0-1-270"
-      data-dismiss="alert"
-      onClick={[Function]}
+      className="Component-close-0-1-86"
       type="button"
     >
       <span
@@ -69,18 +66,17 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-279 show"
-    role="alert"
+    className="Component-alert-0-1-96"
   >
-    <strong>
-      alertInfo
-    </strong>
-     You should check in on some of those fields below.
+    A simple primary alert with a example 
+    <a
+      className="Component-alertLink-0-1-95"
+      href="#"
+    >
+      link
+    </a>
     <button
-      aria-label="Close"
-      className="Component-close-0-1-280"
-      data-dismiss="alert"
-      onClick={[Function]}
+      className="Component-close-0-1-94"
       type="button"
     >
       <span
@@ -91,18 +87,17 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-289 show"
-    role="alert"
+    className="Component-alert-0-1-104"
   >
-    <strong>
-      alertWarning
-    </strong>
-     You should check in on some of those fields below.
+    A simple primary alert with a example 
+    <a
+      className="Component-alertLink-0-1-103"
+      href="#"
+    >
+      link
+    </a>
     <button
-      aria-label="Close"
-      className="Component-close-0-1-290"
-      data-dismiss="alert"
-      onClick={[Function]}
+      className="Component-close-0-1-102"
       type="button"
     >
       <span
@@ -113,18 +108,17 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-299 show"
-    role="alert"
+    className="Component-alert-0-1-112"
   >
-    <strong>
-      alertDanger
-    </strong>
-     You should check in on some of those fields below.
+    A simple primary alert with a example 
+    <a
+      className="Component-alertLink-0-1-111"
+      href="#"
+    >
+      link
+    </a>
     <button
-      aria-label="Close"
-      className="Component-close-0-1-300"
-      data-dismiss="alert"
-      onClick={[Function]}
+      className="Component-close-0-1-110"
       type="button"
     >
       <span
@@ -135,18 +129,17 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-309 show"
-    role="alert"
+    className="Component-alert-0-1-120"
   >
-    <strong>
-      alertLight
-    </strong>
-     You should check in on some of those fields below.
+    A simple primary alert with a example 
+    <a
+      className="Component-alertLink-0-1-119"
+      href="#"
+    >
+      link
+    </a>
     <button
-      aria-label="Close"
-      className="Component-close-0-1-310"
-      data-dismiss="alert"
-      onClick={[Function]}
+      className="Component-close-0-1-118"
       type="button"
     >
       <span
@@ -157,18 +150,17 @@ exports[`Storyshots Alert Dismissing 1`] = `
     </button>
   </div>
   <div
-    className="Component-alertDismissible-0-1-319 show"
-    role="alert"
+    className="Component-alert-0-1-128"
   >
-    <strong>
-      alertDark
-    </strong>
-     You should check in on some of those fields below.
+    A simple primary alert with a example 
+    <a
+      className="Component-alertLink-0-1-127"
+      href="#"
+    >
+      link
+    </a>
     <button
-      aria-label="Close"
-      className="Component-close-0-1-320"
-      data-dismiss="alert"
-      onClick={[Function]}
+      className="Component-close-0-1-126"
       type="button"
     >
       <span
@@ -184,156 +176,44 @@ exports[`Storyshots Alert Dismissing 1`] = `
 exports[`Storyshots Alert Theme colors 1`] = `
 <div>
   <div
-    className="Component-alert-0-1-6"
+    className="Component-alert-0-1-8"
   >
-    <h1
-      className="Component-alertHeading-0-1-18"
-    >
-      alertPrimary
-    </h1>
-    This is a 
-    primary
-     
-    <a
-      className="Component-alertLink-0-1-27"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
+    alertPrimary
   </div>
   <div
-    className="Component-alert-0-1-36"
+    className="Component-alert-0-1-16"
   >
-    <h1
-      className="Component-alertHeading-0-1-48"
-    >
-      alertSecondary
-    </h1>
-    This is a 
-    secondary
-     
-    <a
-      className="Component-alertLink-0-1-57"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
+    alertSecondary
   </div>
   <div
-    className="Component-alert-0-1-66"
+    className="Component-alert-0-1-24"
   >
-    <h1
-      className="Component-alertHeading-0-1-78"
-    >
-      alertSuccess
-    </h1>
-    This is a 
-    success
-     
-    <a
-      className="Component-alertLink-0-1-87"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
+    alertSuccess
   </div>
   <div
-    className="Component-alert-0-1-96"
+    className="Component-alert-0-1-32"
   >
-    <h1
-      className="Component-alertHeading-0-1-108"
-    >
-      alertInfo
-    </h1>
-    This is a 
-    info
-     
-    <a
-      className="Component-alertLink-0-1-117"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
+    alertInfo
   </div>
   <div
-    className="Component-alert-0-1-126"
+    className="Component-alert-0-1-40"
   >
-    <h1
-      className="Component-alertHeading-0-1-138"
-    >
-      alertWarning
-    </h1>
-    This is a 
-    warning
-     
-    <a
-      className="Component-alertLink-0-1-147"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
+    alertWarning
   </div>
   <div
-    className="Component-alert-0-1-156"
+    className="Component-alert-0-1-48"
   >
-    <h1
-      className="Component-alertHeading-0-1-168"
-    >
-      alertDanger
-    </h1>
-    This is a 
-    danger
-     
-    <a
-      className="Component-alertLink-0-1-177"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
+    alertDanger
   </div>
   <div
-    className="Component-alert-0-1-186"
+    className="Component-alert-0-1-56"
   >
-    <h1
-      className="Component-alertHeading-0-1-198"
-    >
-      alertLight
-    </h1>
-    This is a 
-    light
-     
-    <a
-      className="Component-alertLink-0-1-207"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
+    alertLight
   </div>
   <div
-    className="Component-alert-0-1-216"
+    className="Component-alert-0-1-64"
   >
-    <h1
-      className="Component-alertHeading-0-1-228"
-    >
-      alertDark
-    </h1>
-    This is a 
-    dark
-     
-    <a
-      className="Component-alertLink-0-1-237"
-      href="/"
-    >
-      alert
-    </a>
-     — check it out!
+    alertDark
   </div>
 </div>
 `;
@@ -341,89 +221,89 @@ exports[`Storyshots Alert Theme colors 1`] = `
 exports[`Storyshots Badge Badge in button 1`] = `
 <div>
   <button
-    className="Component-container-0-1-374"
+    className="Component-container-0-1-142"
     type="button"
   >
     Notifications 
     <span
-      className="Component-button-0-1-375"
+      className="Component-badge-0-1-143"
     >
       4
     </span>
   </button>
   <button
-    className="Component-container-0-1-381"
+    className="Component-container-0-1-149"
     type="button"
   >
     Notifications 
     <span
-      className="Component-button-0-1-382"
+      className="Component-badge-0-1-150"
     >
       4
     </span>
   </button>
   <button
-    className="Component-container-0-1-388"
+    className="Component-container-0-1-156"
     type="button"
   >
     Notifications 
     <span
-      className="Component-button-0-1-389"
+      className="Component-badge-0-1-157"
     >
       4
     </span>
   </button>
   <button
-    className="Component-container-0-1-395"
+    className="Component-container-0-1-163"
     type="button"
   >
     Notifications 
     <span
-      className="Component-button-0-1-396"
+      className="Component-badge-0-1-164"
     >
       4
     </span>
   </button>
   <button
-    className="Component-container-0-1-402"
+    className="Component-container-0-1-170"
     type="button"
   >
     Notifications 
     <span
-      className="Component-button-0-1-403"
+      className="Component-badge-0-1-171"
     >
       4
     </span>
   </button>
   <button
-    className="Component-container-0-1-409"
+    className="Component-container-0-1-177"
     type="button"
   >
     Notifications 
     <span
-      className="Component-button-0-1-410"
+      className="Component-badge-0-1-178"
     >
       4
     </span>
   </button>
   <button
-    className="Component-container-0-1-416"
+    className="Component-container-0-1-184"
     type="button"
   >
     Notifications 
     <span
-      className="Component-button-0-1-417"
+      className="Component-badge-0-1-185"
     >
       4
     </span>
   </button>
   <button
-    className="Component-container-0-1-423"
+    className="Component-container-0-1-191"
     type="button"
   >
     Notifications 
     <span
-      className="Component-button-0-1-424"
+      className="Component-badge-0-1-192"
     >
       4
     </span>
@@ -438,7 +318,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-326"
+          className="Component-badge-0-1-129"
         >
           123
         </span>
@@ -446,7 +326,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-326"
+          className="Component-badge-0-1-129"
         >
           123
         </span>
@@ -454,7 +334,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-326"
+          className="Component-badge-0-1-129"
         >
           123
         </span>
@@ -462,7 +342,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-326"
+          className="Component-badge-0-1-129"
         >
           123
         </span>
@@ -470,7 +350,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-326"
+          className="Component-badge-0-1-129"
         >
           123
         </span>
@@ -478,7 +358,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-326"
+          className="Component-badge-0-1-129"
         >
           123
         </span>
@@ -490,7 +370,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-332"
+          className="Component-badge-0-1-130"
         >
           123
         </span>
@@ -498,7 +378,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-332"
+          className="Component-badge-0-1-130"
         >
           123
         </span>
@@ -506,7 +386,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-332"
+          className="Component-badge-0-1-130"
         >
           123
         </span>
@@ -514,7 +394,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-332"
+          className="Component-badge-0-1-130"
         >
           123
         </span>
@@ -522,7 +402,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-332"
+          className="Component-badge-0-1-130"
         >
           123
         </span>
@@ -530,7 +410,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-332"
+          className="Component-badge-0-1-130"
         >
           123
         </span>
@@ -542,7 +422,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-338"
+          className="Component-badge-0-1-131"
         >
           123
         </span>
@@ -550,7 +430,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-338"
+          className="Component-badge-0-1-131"
         >
           123
         </span>
@@ -558,7 +438,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-338"
+          className="Component-badge-0-1-131"
         >
           123
         </span>
@@ -566,7 +446,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-338"
+          className="Component-badge-0-1-131"
         >
           123
         </span>
@@ -574,7 +454,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-338"
+          className="Component-badge-0-1-131"
         >
           123
         </span>
@@ -582,7 +462,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-338"
+          className="Component-badge-0-1-131"
         >
           123
         </span>
@@ -594,7 +474,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-344"
+          className="Component-badge-0-1-132"
         >
           123
         </span>
@@ -602,7 +482,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-344"
+          className="Component-badge-0-1-132"
         >
           123
         </span>
@@ -610,7 +490,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-344"
+          className="Component-badge-0-1-132"
         >
           123
         </span>
@@ -618,7 +498,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-344"
+          className="Component-badge-0-1-132"
         >
           123
         </span>
@@ -626,7 +506,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-344"
+          className="Component-badge-0-1-132"
         >
           123
         </span>
@@ -634,7 +514,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-344"
+          className="Component-badge-0-1-132"
         >
           123
         </span>
@@ -646,7 +526,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-350"
+          className="Component-badge-0-1-133"
         >
           123
         </span>
@@ -654,7 +534,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-350"
+          className="Component-badge-0-1-133"
         >
           123
         </span>
@@ -662,7 +542,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-350"
+          className="Component-badge-0-1-133"
         >
           123
         </span>
@@ -670,7 +550,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-350"
+          className="Component-badge-0-1-133"
         >
           123
         </span>
@@ -678,7 +558,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-350"
+          className="Component-badge-0-1-133"
         >
           123
         </span>
@@ -686,7 +566,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-350"
+          className="Component-badge-0-1-133"
         >
           123
         </span>
@@ -698,7 +578,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-356"
+          className="Component-badge-0-1-134"
         >
           123
         </span>
@@ -706,7 +586,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-356"
+          className="Component-badge-0-1-134"
         >
           123
         </span>
@@ -714,7 +594,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-356"
+          className="Component-badge-0-1-134"
         >
           123
         </span>
@@ -722,7 +602,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-356"
+          className="Component-badge-0-1-134"
         >
           123
         </span>
@@ -730,7 +610,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-356"
+          className="Component-badge-0-1-134"
         >
           123
         </span>
@@ -738,7 +618,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-356"
+          className="Component-badge-0-1-134"
         >
           123
         </span>
@@ -750,7 +630,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-362"
+          className="Component-badge-0-1-135"
         >
           123
         </span>
@@ -758,7 +638,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-362"
+          className="Component-badge-0-1-135"
         >
           123
         </span>
@@ -766,7 +646,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-362"
+          className="Component-badge-0-1-135"
         >
           123
         </span>
@@ -774,7 +654,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-362"
+          className="Component-badge-0-1-135"
         >
           123
         </span>
@@ -782,7 +662,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-362"
+          className="Component-badge-0-1-135"
         >
           123
         </span>
@@ -790,7 +670,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-362"
+          className="Component-badge-0-1-135"
         >
           123
         </span>
@@ -802,7 +682,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h1>
         Example heading 
         <span
-          className="Component-badge-0-1-368"
+          className="Component-badge-0-1-136"
         >
           123
         </span>
@@ -810,7 +690,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h2>
         Example heading 
         <span
-          className="Component-badge-0-1-368"
+          className="Component-badge-0-1-136"
         >
           123
         </span>
@@ -818,7 +698,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h3>
         Example heading 
         <span
-          className="Component-badge-0-1-368"
+          className="Component-badge-0-1-136"
         >
           123
         </span>
@@ -826,7 +706,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h4>
         Example heading 
         <span
-          className="Component-badge-0-1-368"
+          className="Component-badge-0-1-136"
         >
           123
         </span>
@@ -834,7 +714,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h5>
         Example heading 
         <span
-          className="Component-badge-0-1-368"
+          className="Component-badge-0-1-136"
         >
           123
         </span>
@@ -842,7 +722,7 @@ exports[`Storyshots Badge Badge in header 1`] = `
       <h6>
         Example heading 
         <span
-          className="Component-badge-0-1-368"
+          className="Component-badge-0-1-136"
         >
           123
         </span>
@@ -855,49 +735,49 @@ exports[`Storyshots Badge Badge in header 1`] = `
 exports[`Storyshots Badge Link badges 1`] = `
 <div>
   <a
-    className="Component-btnInsideLink-0-1-526"
+    className="Component-btnInsideLink-0-1-209"
     href="#"
   >
     badgePrimary
   </a>
   <a
-    className="Component-btnInsideLink-0-1-532"
+    className="Component-btnInsideLink-0-1-210"
     href="#"
   >
     badgeSecondary
   </a>
   <a
-    className="Component-btnInsideLink-0-1-538"
+    className="Component-btnInsideLink-0-1-211"
     href="#"
   >
     badgeSuccess
   </a>
   <a
-    className="Component-btnInsideLink-0-1-544"
+    className="Component-btnInsideLink-0-1-212"
     href="#"
   >
     badgeInfo
   </a>
   <a
-    className="Component-btnInsideLink-0-1-550"
+    className="Component-btnInsideLink-0-1-213"
     href="#"
   >
     badgeWarning
   </a>
   <a
-    className="Component-btnInsideLink-0-1-556"
+    className="Component-btnInsideLink-0-1-214"
     href="#"
   >
     badgeDanger
   </a>
   <a
-    className="Component-btnInsideLink-0-1-562"
+    className="Component-btnInsideLink-0-1-215"
     href="#"
   >
     badgeLight
   </a>
   <a
-    className="Component-btnInsideLink-0-1-568"
+    className="Component-btnInsideLink-0-1-216"
     href="#"
   >
     badgeDark
@@ -908,42 +788,42 @@ exports[`Storyshots Badge Link badges 1`] = `
 exports[`Storyshots Badge Pill badges 1`] = `
 <div>
   <span
-    className="Component-badgePill-0-1-478"
+    className="Component-badgePill-0-1-201"
   >
     badgePrimary
   </span>
   <span
-    className="Component-badgePill-0-1-484"
+    className="Component-badgePill-0-1-202"
   >
     badgeSecondary
   </span>
   <span
-    className="Component-badgePill-0-1-490"
+    className="Component-badgePill-0-1-203"
   >
     badgeSuccess
   </span>
   <span
-    className="Component-badgePill-0-1-496"
+    className="Component-badgePill-0-1-204"
   >
     badgeInfo
   </span>
   <span
-    className="Component-badgePill-0-1-502"
+    className="Component-badgePill-0-1-205"
   >
     badgeWarning
   </span>
   <span
-    className="Component-badgePill-0-1-508"
+    className="Component-badgePill-0-1-206"
   >
     badgeDanger
   </span>
   <span
-    className="Component-badgePill-0-1-514"
+    className="Component-badgePill-0-1-207"
   >
     badgeLight
   </span>
   <span
-    className="Component-badgePill-0-1-520"
+    className="Component-badgePill-0-1-208"
   >
     badgeDark
   </span>
@@ -953,42 +833,42 @@ exports[`Storyshots Badge Pill badges 1`] = `
 exports[`Storyshots Badge Span badges 1`] = `
 <div>
   <span
-    className="Component-badge-0-1-430"
+    className="Component-badge-0-1-193"
   >
     badgePrimary
   </span>
   <span
-    className="Component-badge-0-1-436"
+    className="Component-badge-0-1-194"
   >
     badgeSecondary
   </span>
   <span
-    className="Component-badge-0-1-442"
+    className="Component-badge-0-1-195"
   >
     badgeSuccess
   </span>
   <span
-    className="Component-badge-0-1-448"
+    className="Component-badge-0-1-196"
   >
     badgeInfo
   </span>
   <span
-    className="Component-badge-0-1-454"
+    className="Component-badge-0-1-197"
   >
     badgeWarning
   </span>
   <span
-    className="Component-badge-0-1-460"
+    className="Component-badge-0-1-198"
   >
     badgeDanger
   </span>
   <span
-    className="Component-badge-0-1-466"
+    className="Component-badge-0-1-199"
   >
     badgeLight
   </span>
   <span
-    className="Component-badge-0-1-472"
+    className="Component-badge-0-1-200"
   >
     badgeDark
   </span>
@@ -999,10 +879,10 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
 <div>
   <nav>
     <ol
-      className="Component-breadcrumb-0-1-570"
+      className="Component-breadcrumb-0-1-218"
     >
       <li
-        className="Component-breadcrumbItem-0-1-571"
+        className="Component-breadcrumbItem-0-1-219"
       >
         Home
       </li>
@@ -1010,10 +890,10 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
   </nav>
   <nav>
     <ol
-      className="Component-breadcrumb-0-1-570"
+      className="Component-breadcrumb-0-1-218"
     >
       <li
-        className="Component-breadcrumbItem-0-1-571"
+        className="Component-breadcrumbItem-0-1-219"
       >
         <a
           href="#"
@@ -1022,7 +902,7 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
         </a>
       </li>
       <li
-        className="Component-breadcrumbItem-0-1-571"
+        className="Component-breadcrumbItem-0-1-219"
       >
         Library
       </li>
@@ -1030,10 +910,10 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
   </nav>
   <nav>
     <ol
-      className="Component-breadcrumb-0-1-570"
+      className="Component-breadcrumb-0-1-218"
     >
       <li
-        className="Component-breadcrumbItem-0-1-571"
+        className="Component-breadcrumbItem-0-1-219"
       >
         <a
           href="#"
@@ -1042,7 +922,7 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
         </a>
       </li>
       <li
-        className="Component-breadcrumbItem-0-1-571"
+        className="Component-breadcrumbItem-0-1-219"
       >
         <a
           href="#"
@@ -1051,7 +931,7 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
         </a>
       </li>
       <li
-        className="Component-breadcrumbItem-0-1-571"
+        className="Component-breadcrumbItem-0-1-219"
       >
         Data
       </li>
@@ -1063,10 +943,10 @@ exports[`Storyshots Breadcrumb breadcrumb 1`] = `
 exports[`Storyshots Button groups 1`] = `
 <div>
   <div
-    className="Component-btnContainer-0-1-583 Component-reboot-0-1-577 Component-btnGroup-0-1-573 Component-btnGroupToggle-0-1-574"
+    className="Component-btnContainer-0-1-231 Component-reboot-0-1-225 Component-btnGroup-0-1-221 Component-btnGroupToggle-0-1-222"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-584 Component-btn-0-1-572 Component-themeColor-0-1-578 Component-active-0-1-579"
+      className="Component-btnActivethemeColor-0-1-232 Component-btn-0-1-220 Component-themeColor-0-1-226 Component-active-0-1-227"
     >
       <input
         id="option1"
@@ -1076,7 +956,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-585 Component-btn-0-1-572 Component-themeColor-0-1-578"
+      className="Component-btnThemeColor-0-1-233 Component-btn-0-1-220 Component-themeColor-0-1-226"
     >
       <input
         id="option2"
@@ -1086,7 +966,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-585 Component-btn-0-1-572 Component-themeColor-0-1-578"
+      className="Component-btnThemeColor-0-1-233 Component-btn-0-1-220 Component-themeColor-0-1-226"
     >
       <input
         id="option3"
@@ -1097,10 +977,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-597 Component-reboot-0-1-591 Component-btnGroup-0-1-587 Component-btnGroupToggle-0-1-588"
+    className="Component-btnContainer-0-1-245 Component-reboot-0-1-239 Component-btnGroup-0-1-235 Component-btnGroupToggle-0-1-236"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-598 Component-btn-0-1-586 Component-themeColor-0-1-592 Component-active-0-1-593"
+      className="Component-btnActivethemeColor-0-1-246 Component-btn-0-1-234 Component-themeColor-0-1-240 Component-active-0-1-241"
     >
       <input
         id="option1"
@@ -1110,7 +990,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-599 Component-btn-0-1-586 Component-themeColor-0-1-592"
+      className="Component-btnThemeColor-0-1-247 Component-btn-0-1-234 Component-themeColor-0-1-240"
     >
       <input
         id="option2"
@@ -1120,7 +1000,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-599 Component-btn-0-1-586 Component-themeColor-0-1-592"
+      className="Component-btnThemeColor-0-1-247 Component-btn-0-1-234 Component-themeColor-0-1-240"
     >
       <input
         id="option3"
@@ -1131,10 +1011,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-611 Component-reboot-0-1-605 Component-btnGroup-0-1-601 Component-btnGroupToggle-0-1-602"
+    className="Component-btnContainer-0-1-259 Component-reboot-0-1-253 Component-btnGroup-0-1-249 Component-btnGroupToggle-0-1-250"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-612 Component-btn-0-1-600 Component-themeColor-0-1-606 Component-active-0-1-607"
+      className="Component-btnActivethemeColor-0-1-260 Component-btn-0-1-248 Component-themeColor-0-1-254 Component-active-0-1-255"
     >
       <input
         id="option1"
@@ -1144,7 +1024,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-613 Component-btn-0-1-600 Component-themeColor-0-1-606"
+      className="Component-btnThemeColor-0-1-261 Component-btn-0-1-248 Component-themeColor-0-1-254"
     >
       <input
         id="option2"
@@ -1154,7 +1034,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-613 Component-btn-0-1-600 Component-themeColor-0-1-606"
+      className="Component-btnThemeColor-0-1-261 Component-btn-0-1-248 Component-themeColor-0-1-254"
     >
       <input
         id="option3"
@@ -1165,10 +1045,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-625 Component-reboot-0-1-619 Component-btnGroup-0-1-615 Component-btnGroupToggle-0-1-616"
+    className="Component-btnContainer-0-1-273 Component-reboot-0-1-267 Component-btnGroup-0-1-263 Component-btnGroupToggle-0-1-264"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-626 Component-btn-0-1-614 Component-themeColor-0-1-620 Component-active-0-1-621"
+      className="Component-btnActivethemeColor-0-1-274 Component-btn-0-1-262 Component-themeColor-0-1-268 Component-active-0-1-269"
     >
       <input
         id="option1"
@@ -1178,7 +1058,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-627 Component-btn-0-1-614 Component-themeColor-0-1-620"
+      className="Component-btnThemeColor-0-1-275 Component-btn-0-1-262 Component-themeColor-0-1-268"
     >
       <input
         id="option2"
@@ -1188,7 +1068,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-627 Component-btn-0-1-614 Component-themeColor-0-1-620"
+      className="Component-btnThemeColor-0-1-275 Component-btn-0-1-262 Component-themeColor-0-1-268"
     >
       <input
         id="option3"
@@ -1199,10 +1079,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-639 Component-reboot-0-1-633 Component-btnGroup-0-1-629 Component-btnGroupToggle-0-1-630"
+    className="Component-btnContainer-0-1-287 Component-reboot-0-1-281 Component-btnGroup-0-1-277 Component-btnGroupToggle-0-1-278"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-640 Component-btn-0-1-628 Component-themeColor-0-1-634 Component-active-0-1-635"
+      className="Component-btnActivethemeColor-0-1-288 Component-btn-0-1-276 Component-themeColor-0-1-282 Component-active-0-1-283"
     >
       <input
         id="option1"
@@ -1212,7 +1092,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-641 Component-btn-0-1-628 Component-themeColor-0-1-634"
+      className="Component-btnThemeColor-0-1-289 Component-btn-0-1-276 Component-themeColor-0-1-282"
     >
       <input
         id="option2"
@@ -1222,7 +1102,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-641 Component-btn-0-1-628 Component-themeColor-0-1-634"
+      className="Component-btnThemeColor-0-1-289 Component-btn-0-1-276 Component-themeColor-0-1-282"
     >
       <input
         id="option3"
@@ -1233,10 +1113,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-653 Component-reboot-0-1-647 Component-btnGroup-0-1-643 Component-btnGroupToggle-0-1-644"
+    className="Component-btnContainer-0-1-301 Component-reboot-0-1-295 Component-btnGroup-0-1-291 Component-btnGroupToggle-0-1-292"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-654 Component-btn-0-1-642 Component-themeColor-0-1-648 Component-active-0-1-649"
+      className="Component-btnActivethemeColor-0-1-302 Component-btn-0-1-290 Component-themeColor-0-1-296 Component-active-0-1-297"
     >
       <input
         id="option1"
@@ -1246,7 +1126,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-655 Component-btn-0-1-642 Component-themeColor-0-1-648"
+      className="Component-btnThemeColor-0-1-303 Component-btn-0-1-290 Component-themeColor-0-1-296"
     >
       <input
         id="option2"
@@ -1256,7 +1136,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-655 Component-btn-0-1-642 Component-themeColor-0-1-648"
+      className="Component-btnThemeColor-0-1-303 Component-btn-0-1-290 Component-themeColor-0-1-296"
     >
       <input
         id="option3"
@@ -1267,10 +1147,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-667 Component-reboot-0-1-661 Component-btnGroup-0-1-657 Component-btnGroupToggle-0-1-658"
+    className="Component-btnContainer-0-1-315 Component-reboot-0-1-309 Component-btnGroup-0-1-305 Component-btnGroupToggle-0-1-306"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-668 Component-btn-0-1-656 Component-themeColor-0-1-662 Component-active-0-1-663"
+      className="Component-btnActivethemeColor-0-1-316 Component-btn-0-1-304 Component-themeColor-0-1-310 Component-active-0-1-311"
     >
       <input
         id="option1"
@@ -1280,7 +1160,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-669 Component-btn-0-1-656 Component-themeColor-0-1-662"
+      className="Component-btnThemeColor-0-1-317 Component-btn-0-1-304 Component-themeColor-0-1-310"
     >
       <input
         id="option2"
@@ -1290,7 +1170,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-669 Component-btn-0-1-656 Component-themeColor-0-1-662"
+      className="Component-btnThemeColor-0-1-317 Component-btn-0-1-304 Component-themeColor-0-1-310"
     >
       <input
         id="option3"
@@ -1301,10 +1181,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-681 Component-reboot-0-1-675 Component-btnGroup-0-1-671 Component-btnGroupToggle-0-1-672"
+    className="Component-btnContainer-0-1-329 Component-reboot-0-1-323 Component-btnGroup-0-1-319 Component-btnGroupToggle-0-1-320"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-682 Component-btn-0-1-670 Component-themeColor-0-1-676 Component-active-0-1-677"
+      className="Component-btnActivethemeColor-0-1-330 Component-btn-0-1-318 Component-themeColor-0-1-324 Component-active-0-1-325"
     >
       <input
         id="option1"
@@ -1314,7 +1194,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-683 Component-btn-0-1-670 Component-themeColor-0-1-676"
+      className="Component-btnThemeColor-0-1-331 Component-btn-0-1-318 Component-themeColor-0-1-324"
     >
       <input
         id="option2"
@@ -1324,7 +1204,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-683 Component-btn-0-1-670 Component-themeColor-0-1-676"
+      className="Component-btnThemeColor-0-1-331 Component-btn-0-1-318 Component-themeColor-0-1-324"
     >
       <input
         id="option3"
@@ -1340,37 +1220,37 @@ exports[`Storyshots Button groups 1`] = `
 exports[`Storyshots Button sizes 1`] = `
 <div>
   <button
-    className="Component-btnPrimaryLarge-0-1-697 Component-btnMargin-0-1-696 Component-reboot-0-1-688 Component-btn-0-1-684 Component-btnLg-0-1-686 Component-primaryColor-0-1-689"
+    className="Component-btnPrimaryLarge-0-1-345 Component-btnMargin-0-1-344 Component-reboot-0-1-336 Component-btn-0-1-332 Component-btnLg-0-1-334 Component-primaryColor-0-1-337"
     type="button"
   >
     Primary Large
   </button>
   <button
-    className="Component-btnSecondaryLarge-0-1-698 Component-btnMargin-0-1-696 Component-reboot-0-1-688 Component-btn-0-1-684 Component-btnLg-0-1-686 Component-secondaryColor-0-1-690"
+    className="Component-btnSecondaryLarge-0-1-346 Component-btnMargin-0-1-344 Component-reboot-0-1-336 Component-btn-0-1-332 Component-btnLg-0-1-334 Component-secondaryColor-0-1-338"
     type="button"
   >
     Secondary Large
   </button>
   <button
-    className="Component-btnPrimarySmall-0-1-699 Component-btnMargin-0-1-696 Component-reboot-0-1-688 Component-btn-0-1-684 Component-btnSm-0-1-687 Component-primaryColor-0-1-689"
+    className="Component-btnPrimarySmall-0-1-347 Component-btnMargin-0-1-344 Component-reboot-0-1-336 Component-btn-0-1-332 Component-btnSm-0-1-335 Component-primaryColor-0-1-337"
     type="button"
   >
     Primary Small
   </button>
   <button
-    className="Component-btnSecondarySmall-0-1-700 Component-btnMargin-0-1-696 Component-reboot-0-1-688 Component-btn-0-1-684 Component-btnSm-0-1-687 Component-secondaryColor-0-1-690"
+    className="Component-btnSecondarySmall-0-1-348 Component-btnMargin-0-1-344 Component-reboot-0-1-336 Component-btn-0-1-332 Component-btnSm-0-1-335 Component-secondaryColor-0-1-338"
     type="button"
   >
     Secondary Small
   </button>
   <button
-    className="Component-btnPrimaryBlock-0-1-701 Component-btnMargin-0-1-696 Component-reboot-0-1-688 Component-btn-0-1-684 Component-btnBlock-0-1-685 Component-primaryColor-0-1-689"
+    className="Component-btnPrimaryBlock-0-1-349 Component-btnMargin-0-1-344 Component-reboot-0-1-336 Component-btn-0-1-332 Component-btnBlock-0-1-333 Component-primaryColor-0-1-337"
     type="button"
   >
     Primary Block
   </button>
   <button
-    className="Component-btnSecondaryBlock-0-1-702 Component-btnMargin-0-1-696 Component-reboot-0-1-688 Component-btn-0-1-684 Component-btnBlock-0-1-685 Component-secondaryColor-0-1-690"
+    className="Component-btnSecondaryBlock-0-1-350 Component-btnMargin-0-1-344 Component-reboot-0-1-336 Component-btn-0-1-332 Component-btnBlock-0-1-333 Component-secondaryColor-0-1-338"
     type="button"
   >
     Secondar Block
@@ -1381,27 +1261,27 @@ exports[`Storyshots Button sizes 1`] = `
 exports[`Storyshots Button states 1`] = `
 <div>
   <button
-    className="Component-btnPrimaryLarge-0-1-715 Component-btnMargin-0-1-714 Component-btn-0-1-703 Component-btnLg-0-1-705 Component-primaryColor-0-1-707"
+    className="Component-btnPrimaryLarge-0-1-363 Component-btnMargin-0-1-362 Component-btn-0-1-351 Component-btnLg-0-1-353 Component-primaryColor-0-1-355"
     disabled={true}
     type="button"
   >
     Primary Large
   </button>
   <button
-    className="Component-btnSecondaryLarge-0-1-716 Component-btnMargin-0-1-714 Component-btn-0-1-703 Component-btnLg-0-1-705 Component-secondaryColor-0-1-708"
+    className="Component-btnSecondaryLarge-0-1-364 Component-btnMargin-0-1-362 Component-btn-0-1-351 Component-btnLg-0-1-353 Component-secondaryColor-0-1-356"
     disabled={true}
     type="button"
   >
     Secondary Large
   </button>
   <a
-    className="Component-btnPrimaryLargeDisabled-0-1-717 Component-btnMargin-0-1-714 Component-btn-0-1-703 Component-btnLg-0-1-705 Component-primaryColor-0-1-707 Component-disabled-0-1-710 Component-btnLink-0-1-706"
+    className="Component-btnPrimaryLargeDisabled-0-1-365 Component-btnMargin-0-1-362 Component-btn-0-1-351 Component-btnLg-0-1-353 Component-primaryColor-0-1-355 Component-disabled-0-1-358 Component-btnLink-0-1-354"
     href="#"
   >
     Primary link
   </a>
   <a
-    className="Component-btnSecondaryLargeDisabled-0-1-718 Component-btnMargin-0-1-714 Component-btn-0-1-703 Component-btnLg-0-1-705 Component-secondaryColor-0-1-708 Component-disabled-0-1-710 Component-btnLink-0-1-706"
+    className="Component-btnSecondaryLargeDisabled-0-1-366 Component-btnMargin-0-1-362 Component-btn-0-1-351 Component-btnLg-0-1-353 Component-secondaryColor-0-1-356 Component-disabled-0-1-358 Component-btnLink-0-1-354"
     href="#"
   >
     Link
@@ -1411,63 +1291,63 @@ exports[`Storyshots Button states 1`] = `
 
 exports[`Storyshots Button toolbar 1`] = `
 <div
-  className="Component-btnToolbar-0-1-719"
+  className="Component-btnToolbar-0-1-367"
 >
   <div
-    className="Component-btnGroup-0-1-721"
+    className="Component-btnGroup-0-1-369"
   >
     <button
-      className="Component-btnPrimary-0-1-732 Component-btn-0-1-720 Component-primaryColor-0-1-722"
+      className="Component-btnPrimary-0-1-380 Component-btn-0-1-368 Component-primaryColor-0-1-370"
       type="button"
     >
       1
     </button>
     <button
-      className="Component-btnPrimary-0-1-732 Component-btn-0-1-720 Component-primaryColor-0-1-722"
+      className="Component-btnPrimary-0-1-380 Component-btn-0-1-368 Component-primaryColor-0-1-370"
       type="button"
     >
       2
     </button>
     <button
-      className="Component-btnPrimary-0-1-732 Component-btn-0-1-720 Component-primaryColor-0-1-722"
+      className="Component-btnPrimary-0-1-380 Component-btn-0-1-368 Component-primaryColor-0-1-370"
       type="button"
     >
       3
     </button>
     <button
-      className="Component-btnPrimary-0-1-732 Component-btn-0-1-720 Component-primaryColor-0-1-722"
+      className="Component-btnPrimary-0-1-380 Component-btn-0-1-368 Component-primaryColor-0-1-370"
       type="button"
     >
       4
     </button>
   </div>
   <div
-    className="Component-btnGroup-0-1-721"
+    className="Component-btnGroup-0-1-369"
   >
     <button
-      className="Component-btnSecondary-0-1-733 Component-btn-0-1-720 Component-secondaryColor-0-1-723"
+      className="Component-btnSecondary-0-1-381 Component-btn-0-1-368 Component-secondaryColor-0-1-371"
       type="button"
     >
       5
     </button>
     <button
-      className="Component-btnSecondary-0-1-733 Component-btn-0-1-720 Component-secondaryColor-0-1-723"
+      className="Component-btnSecondary-0-1-381 Component-btn-0-1-368 Component-secondaryColor-0-1-371"
       type="button"
     >
       6
     </button>
     <button
-      className="Component-btnSecondary-0-1-733 Component-btn-0-1-720 Component-secondaryColor-0-1-723"
+      className="Component-btnSecondary-0-1-381 Component-btn-0-1-368 Component-secondaryColor-0-1-371"
       type="button"
     >
       7
     </button>
   </div>
   <div
-    className="Component-btnGroup-0-1-721"
+    className="Component-btnGroup-0-1-369"
   >
     <button
-      className="Component-dangerColor-0-1-724"
+      className="Component-dangerColor-0-1-372"
       type="button"
     >
       8
