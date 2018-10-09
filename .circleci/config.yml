@@ -26,6 +26,7 @@ jobs:
     - run:
         name: Tests with coverage for storybooks
         command: |
+          cd stories
           yarn test
     - run:
         name: Deploy storybooks to github
