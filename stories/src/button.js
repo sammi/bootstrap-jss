@@ -8,7 +8,23 @@ const { btnGroup, btnGroupToggle, btnToolbar } = Classes.ButtonGroup
 
 const themeColors = btnThemeColors()
 
-const styles = theme => ({
+const Button = injectSheet(theme => ({
+  active: {},
+  disabled: {},
+  show: {},
+  focus: {},
+  dropdownToggle: {},
+  btn: {
+    ...Reboot.forms,
+    ...btn,
+    ...themeColors[theme.color],
+    marginRight: '0.25rem'
+  }
+}))(({ classes }) =>
+  <button className={classes.btn}>primary</button>
+)
+
+const ButtonGroups = injectSheet(theme => ({
   btn,
   btnGroup,
   btnGroupToggle,
@@ -36,9 +52,7 @@ const styles = theme => ({
   btnThemeColor: {
     composes: ['$btn', '$themeColor']
   }
-})
-
-const ButtonGroups = injectSheet(styles)(({ classes }) =>
+}))(({ classes }) =>
   <div className={classes.btnContainer} >
     <label className={classes.btnActivethemeColor}>
       <input type="radio" name="options" id="option1" /> checked
@@ -202,6 +216,17 @@ const ButtonToolbar = injectSheet({
 ))
 
 storiesOf('Button', module)
+  .add('button', () => 
+    <div>
+        {
+          Object.keys(themeColors).map(themeColorName => (
+            <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
+              <Button />
+            </ThemeProvider>
+          ))
+        }
+    </div>
+  )
   .add('groups', () =>
     <div>
       {

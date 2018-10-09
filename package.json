@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.12.5",
+  "version": "0.12.6",
   "description": "Build JSS components for Bootstrap by JSS",
   "author": "Sammi Song",
   "license": "MIT",
@@ -59,6 +59,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
+    "jss-preset-default": "^4.5.0",
     "react-scripts": "^1.1.5",
     "rollup": "^0.66.2",
     "rollup-plugin-babel": "^4.0.3",
@@ -66,8 +67,7 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-url": "^1.4.0",
-    "stringify-object": "^3.2.2",
-    "jss-preset-default": "^4.5.0"
+    "stringify-object": "^3.2.2"
   },
   "files": [
     "dist"

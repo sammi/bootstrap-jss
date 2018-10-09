@@ -2109,7 +2109,7 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-bootstrap-jss@^0.12.5:
+"bootstrap-jss@:link":
   version "0.12.5"
   resolved "https://registry.yarnpkg.com/bootstrap-jss/-/bootstrap-jss-0.12.5.tgz#bf4158fa399581ab57141147b7f0c04f34f1766a"
   integrity sha512-309/5c4WjplKZ6N2Qf6q6MlUiUdHm5lWn6Ebpi/nTFlf/rXNKwr7k2TZEElasmf83YdUziXr2a3x3GO8th4nZg==

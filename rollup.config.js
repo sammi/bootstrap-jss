@@ -25,6 +25,15 @@ export default {
       exclude: 'node_modules/**'
     }),
     resolve(),
-    commonjs()
+    commonjs({
+      namedExports: {
+        'node_modules/lodash/lodash.js': [
+          'replace',
+          'isEmpty',
+          'toLower',
+          'upperFirst'
+        ]
+      }
+    })
   ]
 }
