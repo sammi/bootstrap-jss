@@ -25,5 +25,4 @@ jobs:
           yarn
           yarn test
           yarn build-storybook
-          yarn deploy-storybook --host-token-env-variable=$DEPLOY_STORY_BOOK
-
+          yarn deploy-storybook --ci
