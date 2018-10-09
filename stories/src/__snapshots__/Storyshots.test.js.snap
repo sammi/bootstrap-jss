@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Alert Dismissing 1`] = `
+exports[`Storyshots Alert close 1`] = `
 <div>
   <div
     className="Component-alert-0-1-72"
@@ -173,52 +173,52 @@ exports[`Storyshots Alert Dismissing 1`] = `
 </div>
 `;
 
-exports[`Storyshots Alert Theme colors 1`] = `
+exports[`Storyshots Alert theme 1`] = `
 <div>
   <div
     className="Component-alert-0-1-8"
   >
-    alertPrimary
+    Something happened, please check it out!
   </div>
   <div
     className="Component-alert-0-1-16"
   >
-    alertSecondary
+    Something happened, please check it out!
   </div>
   <div
     className="Component-alert-0-1-24"
   >
-    alertSuccess
+    Something happened, please check it out!
   </div>
   <div
     className="Component-alert-0-1-32"
   >
-    alertInfo
+    Something happened, please check it out!
   </div>
   <div
     className="Component-alert-0-1-40"
   >
-    alertWarning
+    Something happened, please check it out!
   </div>
   <div
     className="Component-alert-0-1-48"
   >
-    alertDanger
+    Something happened, please check it out!
   </div>
   <div
     className="Component-alert-0-1-56"
   >
-    alertLight
+    Something happened, please check it out!
   </div>
   <div
     className="Component-alert-0-1-64"
   >
-    alertDark
+    Something happened, please check it out!
   </div>
 </div>
 `;
 
-exports[`Storyshots Badge Badge in button 1`] = `
+exports[`Storyshots Badge button 1`] = `
 <div>
   <button
     className="Component-container-0-1-142"
@@ -311,428 +311,412 @@ exports[`Storyshots Badge Badge in button 1`] = `
 </div>
 `;
 
-exports[`Storyshots Badge Badge in header 1`] = `
+exports[`Storyshots Badge header 1`] = `
 <div>
   <div>
-    <div>
-      <h1>
-        Example heading 
-        <span
-          className="Component-badge-0-1-129"
-        >
-          123
-        </span>
-      </h1>
-      <h2>
-        Example heading 
-        <span
-          className="Component-badge-0-1-129"
-        >
-          123
-        </span>
-      </h2>
-      <h3>
-        Example heading 
-        <span
-          className="Component-badge-0-1-129"
-        >
-          123
-        </span>
-      </h3>
-      <h4>
-        Example heading 
-        <span
-          className="Component-badge-0-1-129"
-        >
-          123
-        </span>
-      </h4>
-      <h5>
-        Example heading 
-        <span
-          className="Component-badge-0-1-129"
-        >
-          123
-        </span>
-      </h5>
-      <h6>
-        Example heading 
-        <span
-          className="Component-badge-0-1-129"
-        >
-          123
-        </span>
-      </h6>
-    </div>
+    <h1>
+      Example heading 
+      <span
+        className="Component-badge-0-1-129"
+      >
+        123
+      </span>
+    </h1>
+    <h2>
+      Example heading 
+      <span
+        className="Component-badge-0-1-129"
+      >
+        123
+      </span>
+    </h2>
+    <h3>
+      Example heading 
+      <span
+        className="Component-badge-0-1-129"
+      >
+        123
+      </span>
+    </h3>
+    <h4>
+      Example heading 
+      <span
+        className="Component-badge-0-1-129"
+      >
+        123
+      </span>
+    </h4>
+    <h5>
+      Example heading 
+      <span
+        className="Component-badge-0-1-129"
+      >
+        123
+      </span>
+    </h5>
+    <h6>
+      Example heading 
+      <span
+        className="Component-badge-0-1-129"
+      >
+        123
+      </span>
+    </h6>
   </div>
   <div>
-    <div>
-      <h1>
-        Example heading 
-        <span
-          className="Component-badge-0-1-130"
-        >
-          123
-        </span>
-      </h1>
-      <h2>
-        Example heading 
-        <span
-          className="Component-badge-0-1-130"
-        >
-          123
-        </span>
-      </h2>
-      <h3>
-        Example heading 
-        <span
-          className="Component-badge-0-1-130"
-        >
-          123
-        </span>
-      </h3>
-      <h4>
-        Example heading 
-        <span
-          className="Component-badge-0-1-130"
-        >
-          123
-        </span>
-      </h4>
-      <h5>
-        Example heading 
-        <span
-          className="Component-badge-0-1-130"
-        >
-          123
-        </span>
-      </h5>
-      <h6>
-        Example heading 
-        <span
-          className="Component-badge-0-1-130"
-        >
-          123
-        </span>
-      </h6>
-    </div>
+    <h1>
+      Example heading 
+      <span
+        className="Component-badge-0-1-130"
+      >
+        123
+      </span>
+    </h1>
+    <h2>
+      Example heading 
+      <span
+        className="Component-badge-0-1-130"
+      >
+        123
+      </span>
+    </h2>
+    <h3>
+      Example heading 
+      <span
+        className="Component-badge-0-1-130"
+      >
+        123
+      </span>
+    </h3>
+    <h4>
+      Example heading 
+      <span
+        className="Component-badge-0-1-130"
+      >
+        123
+      </span>
+    </h4>
+    <h5>
+      Example heading 
+      <span
+        className="Component-badge-0-1-130"
+      >
+        123
+      </span>
+    </h5>
+    <h6>
+      Example heading 
+      <span
+        className="Component-badge-0-1-130"
+      >
+        123
+      </span>
+    </h6>
   </div>
   <div>
-    <div>
-      <h1>
-        Example heading 
-        <span
-          className="Component-badge-0-1-131"
-        >
-          123
-        </span>
-      </h1>
-      <h2>
-        Example heading 
-        <span
-          className="Component-badge-0-1-131"
-        >
-          123
-        </span>
-      </h2>
-      <h3>
-        Example heading 
-        <span
-          className="Component-badge-0-1-131"
-        >
-          123
-        </span>
-      </h3>
-      <h4>
-        Example heading 
-        <span
-          className="Component-badge-0-1-131"
-        >
-          123
-        </span>
-      </h4>
-      <h5>
-        Example heading 
-        <span
-          className="Component-badge-0-1-131"
-        >
-          123
-        </span>
-      </h5>
-      <h6>
-        Example heading 
-        <span
-          className="Component-badge-0-1-131"
-        >
-          123
-        </span>
-      </h6>
-    </div>
+    <h1>
+      Example heading 
+      <span
+        className="Component-badge-0-1-131"
+      >
+        123
+      </span>
+    </h1>
+    <h2>
+      Example heading 
+      <span
+        className="Component-badge-0-1-131"
+      >
+        123
+      </span>
+    </h2>
+    <h3>
+      Example heading 
+      <span
+        className="Component-badge-0-1-131"
+      >
+        123
+      </span>
+    </h3>
+    <h4>
+      Example heading 
+      <span
+        className="Component-badge-0-1-131"
+      >
+        123
+      </span>
+    </h4>
+    <h5>
+      Example heading 
+      <span
+        className="Component-badge-0-1-131"
+      >
+        123
+      </span>
+    </h5>
+    <h6>
+      Example heading 
+      <span
+        className="Component-badge-0-1-131"
+      >
+        123
+      </span>
+    </h6>
   </div>
   <div>
-    <div>
-      <h1>
-        Example heading 
-        <span
-          className="Component-badge-0-1-132"
-        >
-          123
-        </span>
-      </h1>
-      <h2>
-        Example heading 
-        <span
-          className="Component-badge-0-1-132"
-        >
-          123
-        </span>
-      </h2>
-      <h3>
-        Example heading 
-        <span
-          className="Component-badge-0-1-132"
-        >
-          123
-        </span>
-      </h3>
-      <h4>
-        Example heading 
-        <span
-          className="Component-badge-0-1-132"
-        >
-          123
-        </span>
-      </h4>
-      <h5>
-        Example heading 
-        <span
-          className="Component-badge-0-1-132"
-        >
-          123
-        </span>
-      </h5>
-      <h6>
-        Example heading 
-        <span
-          className="Component-badge-0-1-132"
-        >
-          123
-        </span>
-      </h6>
-    </div>
+    <h1>
+      Example heading 
+      <span
+        className="Component-badge-0-1-132"
+      >
+        123
+      </span>
+    </h1>
+    <h2>
+      Example heading 
+      <span
+        className="Component-badge-0-1-132"
+      >
+        123
+      </span>
+    </h2>
+    <h3>
+      Example heading 
+      <span
+        className="Component-badge-0-1-132"
+      >
+        123
+      </span>
+    </h3>
+    <h4>
+      Example heading 
+      <span
+        className="Component-badge-0-1-132"
+      >
+        123
+      </span>
+    </h4>
+    <h5>
+      Example heading 
+      <span
+        className="Component-badge-0-1-132"
+      >
+        123
+      </span>
+    </h5>
+    <h6>
+      Example heading 
+      <span
+        className="Component-badge-0-1-132"
+      >
+        123
+      </span>
+    </h6>
   </div>
   <div>
-    <div>
-      <h1>
-        Example heading 
-        <span
-          className="Component-badge-0-1-133"
-        >
-          123
-        </span>
-      </h1>
-      <h2>
-        Example heading 
-        <span
-          className="Component-badge-0-1-133"
-        >
-          123
-        </span>
-      </h2>
-      <h3>
-        Example heading 
-        <span
-          className="Component-badge-0-1-133"
-        >
-          123
-        </span>
-      </h3>
-      <h4>
-        Example heading 
-        <span
-          className="Component-badge-0-1-133"
-        >
-          123
-        </span>
-      </h4>
-      <h5>
-        Example heading 
-        <span
-          className="Component-badge-0-1-133"
-        >
-          123
-        </span>
-      </h5>
-      <h6>
-        Example heading 
-        <span
-          className="Component-badge-0-1-133"
-        >
-          123
-        </span>
-      </h6>
-    </div>
+    <h1>
+      Example heading 
+      <span
+        className="Component-badge-0-1-133"
+      >
+        123
+      </span>
+    </h1>
+    <h2>
+      Example heading 
+      <span
+        className="Component-badge-0-1-133"
+      >
+        123
+      </span>
+    </h2>
+    <h3>
+      Example heading 
+      <span
+        className="Component-badge-0-1-133"
+      >
+        123
+      </span>
+    </h3>
+    <h4>
+      Example heading 
+      <span
+        className="Component-badge-0-1-133"
+      >
+        123
+      </span>
+    </h4>
+    <h5>
+      Example heading 
+      <span
+        className="Component-badge-0-1-133"
+      >
+        123
+      </span>
+    </h5>
+    <h6>
+      Example heading 
+      <span
+        className="Component-badge-0-1-133"
+      >
+        123
+      </span>
+    </h6>
   </div>
   <div>
-    <div>
-      <h1>
-        Example heading 
-        <span
-          className="Component-badge-0-1-134"
-        >
-          123
-        </span>
-      </h1>
-      <h2>
-        Example heading 
-        <span
-          className="Component-badge-0-1-134"
-        >
-          123
-        </span>
-      </h2>
-      <h3>
-        Example heading 
-        <span
-          className="Component-badge-0-1-134"
-        >
-          123
-        </span>
-      </h3>
-      <h4>
-        Example heading 
-        <span
-          className="Component-badge-0-1-134"
-        >
-          123
-        </span>
-      </h4>
-      <h5>
-        Example heading 
-        <span
-          className="Component-badge-0-1-134"
-        >
-          123
-        </span>
-      </h5>
-      <h6>
-        Example heading 
-        <span
-          className="Component-badge-0-1-134"
-        >
-          123
-        </span>
-      </h6>
-    </div>
+    <h1>
+      Example heading 
+      <span
+        className="Component-badge-0-1-134"
+      >
+        123
+      </span>
+    </h1>
+    <h2>
+      Example heading 
+      <span
+        className="Component-badge-0-1-134"
+      >
+        123
+      </span>
+    </h2>
+    <h3>
+      Example heading 
+      <span
+        className="Component-badge-0-1-134"
+      >
+        123
+      </span>
+    </h3>
+    <h4>
+      Example heading 
+      <span
+        className="Component-badge-0-1-134"
+      >
+        123
+      </span>
+    </h4>
+    <h5>
+      Example heading 
+      <span
+        className="Component-badge-0-1-134"
+      >
+        123
+      </span>
+    </h5>
+    <h6>
+      Example heading 
+      <span
+        className="Component-badge-0-1-134"
+      >
+        123
+      </span>
+    </h6>
   </div>
   <div>
-    <div>
-      <h1>
-        Example heading 
-        <span
-          className="Component-badge-0-1-135"
-        >
-          123
-        </span>
-      </h1>
-      <h2>
-        Example heading 
-        <span
-          className="Component-badge-0-1-135"
-        >
-          123
-        </span>
-      </h2>
-      <h3>
-        Example heading 
-        <span
-          className="Component-badge-0-1-135"
-        >
-          123
-        </span>
-      </h3>
-      <h4>
-        Example heading 
-        <span
-          className="Component-badge-0-1-135"
-        >
-          123
-        </span>
-      </h4>
-      <h5>
-        Example heading 
-        <span
-          className="Component-badge-0-1-135"
-        >
-          123
-        </span>
-      </h5>
-      <h6>
-        Example heading 
-        <span
-          className="Component-badge-0-1-135"
-        >
-          123
-        </span>
-      </h6>
-    </div>
+    <h1>
+      Example heading 
+      <span
+        className="Component-badge-0-1-135"
+      >
+        123
+      </span>
+    </h1>
+    <h2>
+      Example heading 
+      <span
+        className="Component-badge-0-1-135"
+      >
+        123
+      </span>
+    </h2>
+    <h3>
+      Example heading 
+      <span
+        className="Component-badge-0-1-135"
+      >
+        123
+      </span>
+    </h3>
+    <h4>
+      Example heading 
+      <span
+        className="Component-badge-0-1-135"
+      >
+        123
+      </span>
+    </h4>
+    <h5>
+      Example heading 
+      <span
+        className="Component-badge-0-1-135"
+      >
+        123
+      </span>
+    </h5>
+    <h6>
+      Example heading 
+      <span
+        className="Component-badge-0-1-135"
+      >
+        123
+      </span>
+    </h6>
   </div>
   <div>
-    <div>
-      <h1>
-        Example heading 
-        <span
-          className="Component-badge-0-1-136"
-        >
-          123
-        </span>
-      </h1>
-      <h2>
-        Example heading 
-        <span
-          className="Component-badge-0-1-136"
-        >
-          123
-        </span>
-      </h2>
-      <h3>
-        Example heading 
-        <span
-          className="Component-badge-0-1-136"
-        >
-          123
-        </span>
-      </h3>
-      <h4>
-        Example heading 
-        <span
-          className="Component-badge-0-1-136"
-        >
-          123
-        </span>
-      </h4>
-      <h5>
-        Example heading 
-        <span
-          className="Component-badge-0-1-136"
-        >
-          123
-        </span>
-      </h5>
-      <h6>
-        Example heading 
-        <span
-          className="Component-badge-0-1-136"
-        >
-          123
-        </span>
-      </h6>
-    </div>
+    <h1>
+      Example heading 
+      <span
+        className="Component-badge-0-1-136"
+      >
+        123
+      </span>
+    </h1>
+    <h2>
+      Example heading 
+      <span
+        className="Component-badge-0-1-136"
+      >
+        123
+      </span>
+    </h2>
+    <h3>
+      Example heading 
+      <span
+        className="Component-badge-0-1-136"
+      >
+        123
+      </span>
+    </h3>
+    <h4>
+      Example heading 
+      <span
+        className="Component-badge-0-1-136"
+      >
+        123
+      </span>
+    </h4>
+    <h5>
+      Example heading 
+      <span
+        className="Component-badge-0-1-136"
+      >
+        123
+      </span>
+    </h5>
+    <h6>
+      Example heading 
+      <span
+        className="Component-badge-0-1-136"
+      >
+        123
+      </span>
+    </h6>
   </div>
 </div>
 `;
 
-exports[`Storyshots Badge Link badges 1`] = `
+exports[`Storyshots Badge link 1`] = `
 <div>
   <a
     className="Component-btnInsideLink-0-1-209"
@@ -785,7 +769,7 @@ exports[`Storyshots Badge Link badges 1`] = `
 </div>
 `;
 
-exports[`Storyshots Badge Pill badges 1`] = `
+exports[`Storyshots Badge pill 1`] = `
 <div>
   <span
     className="Component-badgePill-0-1-201"
@@ -830,7 +814,7 @@ exports[`Storyshots Badge Pill badges 1`] = `
 </div>
 `;
 
-exports[`Storyshots Badge Span badges 1`] = `
+exports[`Storyshots Badge span 1`] = `
 <div>
   <span
     className="Component-badge-0-1-193"

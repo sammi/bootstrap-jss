@@ -87,20 +87,18 @@ const LinkBadge = injectSheet(theme => ({
 
 
 storiesOf('Badge', module)
-  .add('Badge in header', () =>
+  .add('header', () =>
     <div>
     {
       Object.keys(badgeColors).map(themeColorName => (
         <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-          <div>
             <HeaderBadge>123</HeaderBadge>
-          </div>
         </ThemeProvider>
       ))
     }
     </div>
   )
-  .add('Badge in button', () =>
+  .add('button', () =>
     <div>
     {
       Object.keys(badgeColors).map(themeColorName => (
@@ -111,7 +109,7 @@ storiesOf('Badge', module)
     }
     </div>
   )
-  .add('Span badges', () =>
+  .add('span', () =>
     <div>
       {
         Object.keys(badgeColors).map(themeColorName => (
@@ -122,7 +120,7 @@ storiesOf('Badge', module)
       }
     </div>
   )
-  .add('Pill badges', () =>
+  .add('pill', () =>
     <div>
       {
         Object.keys(badgeColors).map(themeColorName => (
@@ -133,7 +131,7 @@ storiesOf('Badge', module)
       }
     </div>
   )
-  .add('Link badges', () =>
+  .add('link', () =>
     <div>
       {
         Object.keys(badgeColors).map(themeColorName => (

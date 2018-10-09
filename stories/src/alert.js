@@ -22,10 +22,12 @@ const styles = theme => ({
   alertLink: {
     ...alertLink,
     ...themeColors[theme.color],
+    width: '20rem'
   },
   alert: {
     ...alert,
     ...themeColors[theme.color],
+    width: '20rem'
   }
 })
 
@@ -43,18 +45,18 @@ const AlertDismissing = injectSheet(styles)(({ classes }) => (
 ))
 
 storiesOf('Alert', module)
-  .add('Theme colors', () =>
+  .add('theme', () =>
     <div>
       {
         Object.keys(themeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-            <Alert>{themeColorName}</Alert>
+            <Alert>Something happened, please check it out!</Alert>
           </ThemeProvider>
         ))
       }
     </div>
   )
-  .add('Dismissing', () =>
+  .add('close', () =>
     <div>
       {
         Object.keys(themeColors).map(themeColorName => (
