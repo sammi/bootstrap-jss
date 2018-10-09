@@ -115,7 +115,7 @@ export const btnThemeColors = () => {
 export const btnOutlineThemeColors = () => {
   let btnOutlineColors = {}
   for (const [key, value] of Object.entries(themeColors)) {
-    btnOutlineColors['btnOutline' + upperFirst(key)] = buttonOutlineVariant(value, value)
+    btnOutlineColors['btnOutline' + upperFirst(key)] = buttonOutlineVariant(value)
   }
   return btnOutlineColors
 }

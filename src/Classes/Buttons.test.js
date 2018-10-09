@@ -81,7 +81,7 @@ describe('Button classes', () => {
   it('btnOutlineColors', () => {
     const btnOutlineColors = btnOutlineThemeColors()
     for (const [key, value] of Object.entries(themeColors)) {
-      expect(btnOutlineColors['btnOutline' + upperFirst(key)]).toEqual(buttonOutlineVariant(value, value))
+      expect(btnOutlineColors['btnOutline' + upperFirst(key)]).toEqual(buttonOutlineVariant(value))
     }
     expect(jss.createStyleSheet({ btnOutlineColors }).toString()).toBeDefined()
   })
