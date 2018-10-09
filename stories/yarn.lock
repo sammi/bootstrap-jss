@@ -2109,9 +2109,17 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-"bootstrap-jss@link:..":
-  version "0.0.0"
-  uid ""
+bootstrap-jss@^0.11.8:
+  version "0.11.8"
+  resolved "https://registry.yarnpkg.com/bootstrap-jss/-/bootstrap-jss-0.11.8.tgz#732f724ca5b4a1733e2f39b027a45bbedda0002f"
+  integrity sha512-Vtak6eoY7++03+MLbavCtGN4F/WjFc37JhemT7PWAPiJBSnh+hc7vO7MpowTDvCVivFYZomgy4+eNVyOKerl+A==
+  dependencies:
+    color "^3.0.0"
+    color-rgba "^2.0.0"
+    hex-and-rgba "^1.2.0"
+    jss "^9.8.7"
+    lodash "^4.17.11"
+    percent-value "^1.0.7"
 
 bowser@^1.0.0, bowser@^1.7.3:
   version "1.9.3"
