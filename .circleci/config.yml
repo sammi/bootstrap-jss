@@ -22,6 +22,7 @@ jobs:
         name: Deploy storybooks to github
         command: |
           cd stories
+          yarn
           yarn build-storybook
           yarn deploy-storybook
 
