@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-jss",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "description": "Build JSS components for Bootstrap by JSS",
   "author": "Sammi Song",
   "license": "MIT",
@@ -9,6 +9,7 @@
     "url": "git+https://github.com/sammi/bootstrap-jss.git"
   },
   "keywords": [
+    "bootstrap-jss",
     "bootstrap",
     "jss",
     "css",
