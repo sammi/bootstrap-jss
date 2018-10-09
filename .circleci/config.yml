@@ -19,10 +19,15 @@ jobs:
           yarn coverage
           ./cc-test-reporter after-build --id $CC_TEST_REPORTER_ID --exit-code $?
     - run:
-        name: Deploy storybooks to github
+        name: Test storybooks
         command: |
           cd stories
           yarn
+          ../cc-test-reporter before-build
           yarn test
+          ../cc-test-reporter after-build --id $CC_TEST_REPORTER_ID --exit-code $?
+    - run:
+        name: Deploy storybooks to github
+        command: |
           yarn build-storybook
           yarn deploy-storybook --ci
