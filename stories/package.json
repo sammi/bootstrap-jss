@@ -9,6 +9,7 @@
   "scripts": {
     "start": "start-storybook -s ./public -p 9001 -c .storybook",
     "test": "react-scripts test --env=jsdom --coverage",
+    "build-storybook": "build-storybook -s public -o .out",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {

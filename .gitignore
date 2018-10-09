@@ -5,3 +5,5 @@ coverage
 .DS_Store
 mb*.pid
 *.log
+stories/out*
+stories/.out
