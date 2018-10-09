@@ -19,10 +19,13 @@ jobs:
           yarn coverage
           ./cc-test-reporter after-build --id $CC_TEST_REPORTER_ID --exit-code $?
     - run:
-        name: Test storybooks
+        name: yarn install for storybooks
         command: |
           cd stories
           yarn
+    - run:
+        name: Tests with coverage for storybooks
+        command: |
           ../cc-test-reporter before-build
           yarn test
           ../cc-test-reporter after-build --id $CC_TEST_REPORTER_ID --exit-code $?
