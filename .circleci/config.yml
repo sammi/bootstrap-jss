@@ -24,6 +24,7 @@ jobs:
           cd stories
           yarn
           yarn install
+          yarn test
           yarn build-storybook
-          yarn deploy-storybook -- --ci --host-token-env-variable=BOOTSTAP_JSS_DEPLOY_STORYBOOK
+          yarn deploy-storybook -- --ci --host-token-env-variable=$BOOTSTAP_JSS_DEPLOY_STORYBOOK
 
