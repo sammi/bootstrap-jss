@@ -2,7 +2,7 @@ import { borderRadius } from '../Mixins/borderRadius'
 import { size } from '../Functions/size'
 import { closeFontSize } from '../Variables/Close'
 import { themeColors } from '../Variables/Colors'
-import _ from 'lodash'
+import { upperFirst } from 'lodash'
 import { alertVariant } from '../Mixins/alert'
 import { themeColorLevel } from '../Functions/themeColorLevel'
 import { close } from './Close'
@@ -67,7 +67,7 @@ describe('Alert classes', () => {
   it('alert-theme-colors', () => {
     const alertColors = alertThemeColors()
     Object.keys(themeColors).forEach(themeColorName => {
-      expect(alertColors[`alert${_.upperFirst(themeColorName)}`]).toEqual(
+      expect(alertColors[`alert${upperFirst(themeColorName)}`]).toEqual(
         alertVariant(
           themeColorLevel(themeColorName, alertBgLevel),
           themeColorLevel(themeColorName, alertBorderLevel),

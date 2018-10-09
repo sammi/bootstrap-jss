@@ -2109,10 +2109,10 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-bootstrap-jss@^0.11.8:
-  version "0.11.8"
-  resolved "https://registry.yarnpkg.com/bootstrap-jss/-/bootstrap-jss-0.11.8.tgz#732f724ca5b4a1733e2f39b027a45bbedda0002f"
-  integrity sha512-Vtak6eoY7++03+MLbavCtGN4F/WjFc37JhemT7PWAPiJBSnh+hc7vO7MpowTDvCVivFYZomgy4+eNVyOKerl+A==
+bootstrap-jss@*:
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/bootstrap-jss/-/bootstrap-jss-0.12.3.tgz#5ab7d5dcf7bc858786aaae3de773c5a1a1ffaebe"
+  integrity sha512-ieQSJEcgEZ55U0tb9fF2qqj9a+b5Ko5tYBIPn0AtrGRCgISfNaw+RLuflobf8OgbPCqaG5GLmTJisp97p4+qMg==
   dependencies:
     color "^3.0.0"
     color-rgba "^2.0.0"

@@ -1,7 +1,7 @@
 import Color from 'color'
-import _ from 'lodash'
+import { replace } from 'lodash'
 export const fadeIn = (rawColor, amount) => {
-  const rgbColor = _.replace(rawColor, '!default', '').trim()
+  const rgbColor = replace(rawColor, '!default', '').trim()
 
   const fadeColor = Color(rgbColor).fade(amount)
 

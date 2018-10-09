@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import { replace } from 'lodash'
 import { rgba } from '../Functions/rgba'
 import { lighten } from '../Functions/lighten'
 import { size } from '../Functions/size'
@@ -242,18 +242,18 @@ describe('Forms', () => {
 
     expect(customCheckboxIndicatorBorderRadius).toEqual(borderRadius)
 
-    expect(customCheckboxIndicatorIconChecked).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='${_.replace(customControlIndicatorCheckedColor, '', '').trim()}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E`)
+    expect(customCheckboxIndicatorIconChecked).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='${replace(customControlIndicatorCheckedColor, '', '').trim()}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E`)
 
     expect(customCheckboxIndicatorIndeterminateBg).toEqual(componentActiveBg)
 
     expect(customCheckboxIndicatorIndeterminateColor).toEqual(customControlIndicatorCheckedColor)
 
-    expect(customCheckboxIndicatorIconIndeterminate).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='${_.replace(customCheckboxIndicatorIndeterminateColor, '', '').trim()}' d='M0 2h4'/%3E%3C/svg%3E`)
+    expect(customCheckboxIndicatorIconIndeterminate).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='${replace(customCheckboxIndicatorIndeterminateColor, '', '').trim()}' d='M0 2h4'/%3E%3C/svg%3E`)
 
     expect(customCheckboxIndicatorIndeterminateBoxShadow).toEqual('none')
     expect(customRadioIndicatorBorderRadius).toEqual('50%')
 
-    expect(customRadioIndicatorIconChecked).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='${_.replace(customControlIndicatorCheckedColor, '', '').trim()}' /%3E%3C/svg%3E`)
+    expect(customRadioIndicatorIconChecked).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='${replace(customControlIndicatorCheckedColor, '', '').trim()}' /%3E%3C/svg%3E`)
 
     expect(customSelectPaddingY).toEqual('.375rem')
     expect(customSelectPaddingX).toEqual('.75rem')
@@ -268,7 +268,7 @@ describe('Forms', () => {
 
     expect(customSelectIndicatorColor).toEqual(grays._800)
 
-    expect(customSelectIndicator).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='${_.replace(customSelectIndicatorColor, '', '').trim()}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E`)
+    expect(customSelectIndicator).toEqual(`data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='${replace(customSelectIndicatorColor, '', '').trim()}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E`)
 
     expect(customSelectBorderWidth).toEqual(inputBtnBorderWidth)
     expect(customSelectBorderColor).toEqual(inputBorderColor)

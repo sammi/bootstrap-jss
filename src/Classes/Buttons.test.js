@@ -14,7 +14,7 @@ import { hoverFocus, hover } from '../Mixins/hover'
 import { boxShadow } from '../Mixins/boxShadow'
 import { enableShadows } from '../Variables/Options'
 import { themeColors } from '../Variables/Colors'
-import _ from 'lodash'
+import { upperFirst } from 'lodash'
 
 import {
   btn,
@@ -73,7 +73,7 @@ describe('Button classes', () => {
   it('btnColors', () => {
     const btnColors = btnThemeColors()
     for (const [key, value] of Object.entries(themeColors)) {
-      expect(btnColors['btn' + _.upperFirst(key)]).toEqual(buttonVariant(value, value))
+      expect(btnColors['btn' + upperFirst(key)]).toEqual(buttonVariant(value, value))
     }
     expect(jss.createStyleSheet({ btnColors }).toString()).toBeDefined()
   })
@@ -81,7 +81,7 @@ describe('Button classes', () => {
   it('btnOutlineColors', () => {
     const btnOutlineColors = btnOutlineThemeColors()
     for (const [key, value] of Object.entries(themeColors)) {
-      expect(btnOutlineColors['btnOutline' + _.upperFirst(key)]).toEqual(buttonOutlineVariant(value, value))
+      expect(btnOutlineColors['btnOutline' + upperFirst(key)]).toEqual(buttonOutlineVariant(value, value))
     }
     expect(jss.createStyleSheet({ btnOutlineColors }).toString()).toBeDefined()
   })

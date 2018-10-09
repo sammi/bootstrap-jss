@@ -1,5 +1,5 @@
 import Color from 'color'
-import _ from 'lodash'
+import { toLower } from 'lodash'
 import percentValue from 'percent-value'
 
 export const lighten = (rawColor, percent) => {
@@ -7,5 +7,5 @@ export const lighten = (rawColor, percent) => {
   const percentage = percentValue(percent).from(100)
   let hsl = rgbColor.hsl()
   hsl.color[2] += percentage
-  return _.toLower(hsl.hex())
+  return toLower(hsl.hex())
 }

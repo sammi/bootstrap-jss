@@ -8,7 +8,7 @@ import {
   badgePillBorderRadius
 } from '../Variables/Badges'
 
-import _ from 'lodash'
+import { upperFirst } from 'lodash'
 import { borderRadius } from '../Mixins/borderRadius'
 import { themeColors } from '../Variables/Colors'
 import { badgeVariant } from '../Mixins/badge'
@@ -42,7 +42,7 @@ export const badgePill = {
 export const badgeThemeColors = () => {
   let badgeColors = {}
   Object.keys(themeColors).forEach(themeColorName => {
-    badgeColors['badge' + _.upperFirst(themeColorName)] = badgeVariant(themeColors[themeColorName])
+    badgeColors['badge' + upperFirst(themeColorName)] = badgeVariant(themeColors[themeColorName])
   })
   return badgeColors
 }

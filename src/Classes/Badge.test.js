@@ -7,7 +7,7 @@ import {
   badgePillPaddingX,
   badgePillBorderRadius
 } from '../Variables/Badges'
-import _ from 'lodash'
+import { upperFirst } from 'lodash'
 import { themeColors } from '../Variables/Colors'
 import { borderRadius } from '../Mixins/borderRadius'
 import { badgeVariant } from '../Mixins/badge'
@@ -56,7 +56,7 @@ describe('Badge classes', () => {
   it('badgeThemeColors', () => {
     const badgeColors = badgeThemeColors()
     Object.keys(themeColors).forEach(themeColorName => {
-      expect(badgeColors[`badge${_.upperFirst(themeColorName)}`]).toEqual(
+      expect(badgeColors[`badge${upperFirst(themeColorName)}`]).toEqual(
         badgeVariant(themeColors[themeColorName])
       )
     })

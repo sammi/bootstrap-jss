@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import { replace } from 'lodash'
 import { rgba } from '../Functions/rgba'
 import { lighten } from '../Functions/lighten'
 import { size } from '../Functions/size'
@@ -115,16 +115,16 @@ export const customControlIndicatorActiveBoxShadow = 'none'
 
 export const customCheckboxIndicatorBorderRadius = borderRadius
 
-export const customCheckboxIndicatorIconChecked = `data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='${_.replace(customControlIndicatorCheckedColor, '', '').trim()}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E`
+export const customCheckboxIndicatorIconChecked = `data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='${replace(customControlIndicatorCheckedColor, '', '').trim()}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E`
 
 export const customCheckboxIndicatorIndeterminateBg = componentActiveBg
 export const customCheckboxIndicatorIndeterminateColor = customControlIndicatorCheckedColor
-export const customCheckboxIndicatorIconIndeterminate = `data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='${_.replace(customCheckboxIndicatorIndeterminateColor, '', '').trim()}' d='M0 2h4'/%3E%3C/svg%3E`
+export const customCheckboxIndicatorIconIndeterminate = `data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='${replace(customCheckboxIndicatorIndeterminateColor, '', '').trim()}' d='M0 2h4'/%3E%3C/svg%3E`
 
 export const customCheckboxIndicatorIndeterminateBoxShadow = 'none'
 
 export const customRadioIndicatorBorderRadius = '50%'
-export const customRadioIndicatorIconChecked = `data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='${_.replace(customControlIndicatorCheckedColor, '', '').trim()}' /%3E%3C/svg%3E`
+export const customRadioIndicatorIconChecked = `data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='${replace(customControlIndicatorCheckedColor, '', '').trim()}' /%3E%3C/svg%3E`
 
 export const customSelectPaddingY = '.375rem'
 export const customSelectPaddingX = '.75rem'
@@ -138,7 +138,7 @@ export const customSelectDisabledBg = grays._200
 export const customSelectBgSize = '8px 10px' // In pixels because image dimensions
 export const customSelectIndicatorColor = grays._800
 
-export const customSelectIndicator = `data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='${_.replace(customSelectIndicatorColor, '', '').trim()}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E`
+export const customSelectIndicator = `data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='${replace(customSelectIndicatorColor, '', '').trim()}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E`
 
 export const customSelectBorderWidth = inputBtnBorderWidth
 export const customSelectBorderColor = inputBorderColor
@@ -190,7 +190,6 @@ export const customFileButtonBg = inputGroupAddonBg
 
 export const customFileText = { en: 'Browse' }
 
-// Form validation
 export const formFeedbackMarginTop = formTextMarginTop
 export const formFeedbackFontSize = smallFontSize
 export const formFeedbackValidColor = themeColors.success

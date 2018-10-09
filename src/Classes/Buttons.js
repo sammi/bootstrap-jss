@@ -14,7 +14,7 @@ import { hoverFocus, hover } from '../Mixins/hover'
 import { boxShadow } from '../Mixins/boxShadow'
 import { enableShadows } from '../Variables/Options'
 import { themeColors } from '../Variables/Colors'
-import _ from 'lodash'
+import { upperFirst } from 'lodash'
 
 export const btn = {
   display: 'inline-block',
@@ -107,7 +107,7 @@ export const globalInputOverrides = {
 export const btnThemeColors = () => {
   let btnColors = {}
   for (const [key, value] of Object.entries(themeColors)) {
-    btnColors['btn' + _.upperFirst(key)] = buttonVariant(value, value)
+    btnColors['btn' + upperFirst(key)] = buttonVariant(value, value)
   }
   return btnColors
 }
@@ -115,7 +115,7 @@ export const btnThemeColors = () => {
 export const btnOutlineThemeColors = () => {
   let btnOutlineColors = {}
   for (const [key, value] of Object.entries(themeColors)) {
-    btnOutlineColors['btnOutline' + _.upperFirst(key)] = buttonOutlineVariant(value, value)
+    btnOutlineColors['btnOutline' + upperFirst(key)] = buttonOutlineVariant(value, value)
   }
   return btnOutlineColors
 }

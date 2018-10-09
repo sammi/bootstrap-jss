@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import { replace } from 'lodash'
 
 const unitSet = new Set([
   'px',
@@ -30,14 +30,14 @@ const unitSet = new Set([
 ])
 
 export const size = (rawSize) => {
-  const sizeString = _.replace(rawSize, '!default', '').trim()
+  const sizeString = replace(rawSize, '!default', '').trim()
 
   let unit = 'rem'
   let value = 0
   unitSet.forEach(unitName => {
     if (sizeString.indexOf(unitName) !== -1) {
       unit = unitName
-      value = parseFloat(_.replace(sizeString, unitName, ''))
+      value = parseFloat(replace(sizeString, unitName, ''))
     }
   })
   return { value, unit }

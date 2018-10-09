@@ -2,7 +2,6 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Classes } from 'bootstrap-jss'
 import injectSheet, { ThemeProvider } from 'react-jss'
-import _ from 'lodash'
 
 const { alert, alertLink, alertThemeColors } = Classes.Alert
 const { close, buttonClose } = Classes.Close
