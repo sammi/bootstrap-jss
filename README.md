@@ -48,11 +48,3 @@ yarn test:watch
  yarn start
  ```
 Check out http://localhost:9001
-
-## Deploy story book to github
-```bash
-cd stories
-yarn build-storybook
-yarn deploy-storybook
-```
-Check out https://sammi.github.io/bootstrap-jss
