@@ -23,6 +23,7 @@ jobs:
         command: |
           cd stories
           yarn
+          yarn install
           yarn build-storybook
-          yarn deploy-storybook
+          yarn deploy-storybook -- --ci --host-token-env-variable=BOOTSTAP_JSS_DEPLOY_STORYBOOK
 
