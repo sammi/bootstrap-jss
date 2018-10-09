@@ -1355,3 +1355,34 @@ exports[`Storyshots Button toolbar 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Card card 1`] = `
+<div
+  className="Component-card-0-1-394"
+>
+  <img
+    className="Component-cardImgTop-0-1-389"
+    src="img/286_180.svg"
+  />
+  <div
+    className="Component-cardBody-0-1-390"
+  >
+    <h5
+      className="Component-cardTitle-0-1-391"
+    >
+      Card title
+    </h5>
+    <p
+      className="Component-cardText-0-1-392"
+    >
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a
+      className="Component-btnPrimary-0-1-393"
+      href="#"
+    >
+      Go somewhere
+    </a>
+  </div>
+</div>
+`;

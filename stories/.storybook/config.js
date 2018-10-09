@@ -5,6 +5,7 @@ function loadStories() {
   require('../src/badge')
   require('../src/breadcrumb')
   require('../src/button')
+  require('../src/card')
 }
 
 configure(loadStories, module)

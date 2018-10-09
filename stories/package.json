@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook",
+    "start": "start-storybook -s ./public -p 9001 -c .storybook",
     "test": "react-scripts test --env=jsdom --coverage",
     "deploy-storybook": "storybook-to-ghpages"
   },
