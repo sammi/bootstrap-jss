@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Reboot, Classes } from 'bootstrap-jss'
-
+import { replace } from 'lodash'
 import injectSheet, { ThemeProvider } from 'react-jss'
 const { btn, btnLg, btnSm, btnLink, btnThemeColors, btnBlock } = Classes.Buttons
 const { btnGroup, btnGroupToggle, btnToolbar } = Classes.ButtonGroup
@@ -20,8 +20,8 @@ const Button = injectSheet(theme => ({
     ...themeColors[theme.color],
     marginRight: '0.25rem'
   }
-}))(({ classes }) =>
-  <button className={classes.btn}>primary</button>
+}))(({ themeKey, classes }) =>
+  <button className={classes.btn}>{themeKey}</button>
 )
 
 const ButtonGroups = injectSheet(theme => ({
@@ -221,7 +221,7 @@ storiesOf('Button', module)
         {
           Object.keys(themeColors).map(themeColorName => (
             <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-              <Button />
+              <Button themeKey={replace(themeColorName, 'btn', '')}/>
             </ThemeProvider>
           ))
         }
