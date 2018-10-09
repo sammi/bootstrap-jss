@@ -929,42 +929,42 @@ exports[`Storyshots Button button 1`] = `
   <button
     className="Component-btn-0-1-225"
   >
-    primary
+    Primary
   </button>
   <button
     className="Component-btn-0-1-231"
   >
-    primary
+    Secondary
   </button>
   <button
     className="Component-btn-0-1-237"
   >
-    primary
+    Success
   </button>
   <button
     className="Component-btn-0-1-243"
   >
-    primary
+    Info
   </button>
   <button
     className="Component-btn-0-1-249"
   >
-    primary
+    Warning
   </button>
   <button
     className="Component-btn-0-1-255"
   >
-    primary
+    Danger
   </button>
   <button
     className="Component-btn-0-1-261"
   >
-    primary
+    Light
   </button>
   <button
     className="Component-btn-0-1-267"
   >
-    primary
+    Dark
   </button>
 </div>
 `;
@@ -972,10 +972,10 @@ exports[`Storyshots Button button 1`] = `
 exports[`Storyshots Button groups 1`] = `
 <div>
   <div
-    className="Component-btnContainer-0-1-279 Component-reboot-0-1-273 Component-btnGroup-0-1-269 Component-btnGroupToggle-0-1-270"
+    className="Component-btnContainer-0-1-327 Component-reboot-0-1-321 Component-btnGroup-0-1-317 Component-btnGroupToggle-0-1-318"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-280 Component-btn-0-1-268 Component-themeColor-0-1-274 Component-active-0-1-275"
+      className="Component-btnActivethemeColor-0-1-328 Component-btn-0-1-316 Component-themeColor-0-1-322 Component-active-0-1-323"
     >
       <input
         id="option1"
@@ -985,7 +985,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-281 Component-btn-0-1-268 Component-themeColor-0-1-274"
+      className="Component-btnThemeColor-0-1-329 Component-btn-0-1-316 Component-themeColor-0-1-322"
     >
       <input
         id="option2"
@@ -995,7 +995,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-281 Component-btn-0-1-268 Component-themeColor-0-1-274"
+      className="Component-btnThemeColor-0-1-329 Component-btn-0-1-316 Component-themeColor-0-1-322"
     >
       <input
         id="option3"
@@ -1006,10 +1006,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-293 Component-reboot-0-1-287 Component-btnGroup-0-1-283 Component-btnGroupToggle-0-1-284"
+    className="Component-btnContainer-0-1-341 Component-reboot-0-1-335 Component-btnGroup-0-1-331 Component-btnGroupToggle-0-1-332"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-294 Component-btn-0-1-282 Component-themeColor-0-1-288 Component-active-0-1-289"
+      className="Component-btnActivethemeColor-0-1-342 Component-btn-0-1-330 Component-themeColor-0-1-336 Component-active-0-1-337"
     >
       <input
         id="option1"
@@ -1019,7 +1019,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-295 Component-btn-0-1-282 Component-themeColor-0-1-288"
+      className="Component-btnThemeColor-0-1-343 Component-btn-0-1-330 Component-themeColor-0-1-336"
     >
       <input
         id="option2"
@@ -1029,7 +1029,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-295 Component-btn-0-1-282 Component-themeColor-0-1-288"
+      className="Component-btnThemeColor-0-1-343 Component-btn-0-1-330 Component-themeColor-0-1-336"
     >
       <input
         id="option3"
@@ -1040,10 +1040,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-307 Component-reboot-0-1-301 Component-btnGroup-0-1-297 Component-btnGroupToggle-0-1-298"
+    className="Component-btnContainer-0-1-355 Component-reboot-0-1-349 Component-btnGroup-0-1-345 Component-btnGroupToggle-0-1-346"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-308 Component-btn-0-1-296 Component-themeColor-0-1-302 Component-active-0-1-303"
+      className="Component-btnActivethemeColor-0-1-356 Component-btn-0-1-344 Component-themeColor-0-1-350 Component-active-0-1-351"
     >
       <input
         id="option1"
@@ -1053,7 +1053,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-309 Component-btn-0-1-296 Component-themeColor-0-1-302"
+      className="Component-btnThemeColor-0-1-357 Component-btn-0-1-344 Component-themeColor-0-1-350"
     >
       <input
         id="option2"
@@ -1063,7 +1063,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-309 Component-btn-0-1-296 Component-themeColor-0-1-302"
+      className="Component-btnThemeColor-0-1-357 Component-btn-0-1-344 Component-themeColor-0-1-350"
     >
       <input
         id="option3"
@@ -1074,10 +1074,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-321 Component-reboot-0-1-315 Component-btnGroup-0-1-311 Component-btnGroupToggle-0-1-312"
+    className="Component-btnContainer-0-1-369 Component-reboot-0-1-363 Component-btnGroup-0-1-359 Component-btnGroupToggle-0-1-360"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-322 Component-btn-0-1-310 Component-themeColor-0-1-316 Component-active-0-1-317"
+      className="Component-btnActivethemeColor-0-1-370 Component-btn-0-1-358 Component-themeColor-0-1-364 Component-active-0-1-365"
     >
       <input
         id="option1"
@@ -1087,7 +1087,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-323 Component-btn-0-1-310 Component-themeColor-0-1-316"
+      className="Component-btnThemeColor-0-1-371 Component-btn-0-1-358 Component-themeColor-0-1-364"
     >
       <input
         id="option2"
@@ -1097,7 +1097,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-323 Component-btn-0-1-310 Component-themeColor-0-1-316"
+      className="Component-btnThemeColor-0-1-371 Component-btn-0-1-358 Component-themeColor-0-1-364"
     >
       <input
         id="option3"
@@ -1108,10 +1108,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-335 Component-reboot-0-1-329 Component-btnGroup-0-1-325 Component-btnGroupToggle-0-1-326"
+    className="Component-btnContainer-0-1-383 Component-reboot-0-1-377 Component-btnGroup-0-1-373 Component-btnGroupToggle-0-1-374"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-336 Component-btn-0-1-324 Component-themeColor-0-1-330 Component-active-0-1-331"
+      className="Component-btnActivethemeColor-0-1-384 Component-btn-0-1-372 Component-themeColor-0-1-378 Component-active-0-1-379"
     >
       <input
         id="option1"
@@ -1121,7 +1121,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-337 Component-btn-0-1-324 Component-themeColor-0-1-330"
+      className="Component-btnThemeColor-0-1-385 Component-btn-0-1-372 Component-themeColor-0-1-378"
     >
       <input
         id="option2"
@@ -1131,7 +1131,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-337 Component-btn-0-1-324 Component-themeColor-0-1-330"
+      className="Component-btnThemeColor-0-1-385 Component-btn-0-1-372 Component-themeColor-0-1-378"
     >
       <input
         id="option3"
@@ -1142,10 +1142,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-349 Component-reboot-0-1-343 Component-btnGroup-0-1-339 Component-btnGroupToggle-0-1-340"
+    className="Component-btnContainer-0-1-397 Component-reboot-0-1-391 Component-btnGroup-0-1-387 Component-btnGroupToggle-0-1-388"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-350 Component-btn-0-1-338 Component-themeColor-0-1-344 Component-active-0-1-345"
+      className="Component-btnActivethemeColor-0-1-398 Component-btn-0-1-386 Component-themeColor-0-1-392 Component-active-0-1-393"
     >
       <input
         id="option1"
@@ -1155,7 +1155,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-351 Component-btn-0-1-338 Component-themeColor-0-1-344"
+      className="Component-btnThemeColor-0-1-399 Component-btn-0-1-386 Component-themeColor-0-1-392"
     >
       <input
         id="option2"
@@ -1165,7 +1165,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-351 Component-btn-0-1-338 Component-themeColor-0-1-344"
+      className="Component-btnThemeColor-0-1-399 Component-btn-0-1-386 Component-themeColor-0-1-392"
     >
       <input
         id="option3"
@@ -1176,10 +1176,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-363 Component-reboot-0-1-357 Component-btnGroup-0-1-353 Component-btnGroupToggle-0-1-354"
+    className="Component-btnContainer-0-1-411 Component-reboot-0-1-405 Component-btnGroup-0-1-401 Component-btnGroupToggle-0-1-402"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-364 Component-btn-0-1-352 Component-themeColor-0-1-358 Component-active-0-1-359"
+      className="Component-btnActivethemeColor-0-1-412 Component-btn-0-1-400 Component-themeColor-0-1-406 Component-active-0-1-407"
     >
       <input
         id="option1"
@@ -1189,7 +1189,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-365 Component-btn-0-1-352 Component-themeColor-0-1-358"
+      className="Component-btnThemeColor-0-1-413 Component-btn-0-1-400 Component-themeColor-0-1-406"
     >
       <input
         id="option2"
@@ -1199,7 +1199,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-365 Component-btn-0-1-352 Component-themeColor-0-1-358"
+      className="Component-btnThemeColor-0-1-413 Component-btn-0-1-400 Component-themeColor-0-1-406"
     >
       <input
         id="option3"
@@ -1210,10 +1210,10 @@ exports[`Storyshots Button groups 1`] = `
     </label>
   </div>
   <div
-    className="Component-btnContainer-0-1-377 Component-reboot-0-1-371 Component-btnGroup-0-1-367 Component-btnGroupToggle-0-1-368"
+    className="Component-btnContainer-0-1-425 Component-reboot-0-1-419 Component-btnGroup-0-1-415 Component-btnGroupToggle-0-1-416"
   >
     <label
-      className="Component-btnActivethemeColor-0-1-378 Component-btn-0-1-366 Component-themeColor-0-1-372 Component-active-0-1-373"
+      className="Component-btnActivethemeColor-0-1-426 Component-btn-0-1-414 Component-themeColor-0-1-420 Component-active-0-1-421"
     >
       <input
         id="option1"
@@ -1223,7 +1223,7 @@ exports[`Storyshots Button groups 1`] = `
        checked
     </label>
     <label
-      className="Component-btnThemeColor-0-1-379 Component-btn-0-1-366 Component-themeColor-0-1-372"
+      className="Component-btnThemeColor-0-1-427 Component-btn-0-1-414 Component-themeColor-0-1-420"
     >
       <input
         id="option2"
@@ -1233,7 +1233,7 @@ exports[`Storyshots Button groups 1`] = `
        Radio
     </label>
     <label
-      className="Component-btnThemeColor-0-1-379 Component-btn-0-1-366 Component-themeColor-0-1-372"
+      className="Component-btnThemeColor-0-1-427 Component-btn-0-1-414 Component-themeColor-0-1-420"
     >
       <input
         id="option3"
@@ -1246,40 +1246,85 @@ exports[`Storyshots Button groups 1`] = `
 </div>
 `;
 
+exports[`Storyshots Button outline 1`] = `
+<div>
+  <button
+    className="Component-btn-0-1-273"
+  >
+    Primary
+  </button>
+  <button
+    className="Component-btn-0-1-279"
+  >
+    Secondary
+  </button>
+  <button
+    className="Component-btn-0-1-285"
+  >
+    Success
+  </button>
+  <button
+    className="Component-btn-0-1-291"
+  >
+    Info
+  </button>
+  <button
+    className="Component-btn-0-1-297"
+  >
+    Warning
+  </button>
+  <button
+    className="Component-btn-0-1-303"
+  >
+    Danger
+  </button>
+  <button
+    className="Component-btn-0-1-309"
+  >
+    Light
+  </button>
+  <button
+    className="Component-btn-0-1-315"
+  >
+    Dark
+  </button>
+</div>
+`;
+
 exports[`Storyshots Button sizes 1`] = `
 <div>
   <button
-    className="Component-btnPrimaryLarge-0-1-393 Component-btnMargin-0-1-392 Component-reboot-0-1-384 Component-btn-0-1-380 Component-btnLg-0-1-382 Component-primaryColor-0-1-385"
+    className="Component-btnPrimaryLarge-0-1-441 Component-btnMargin-0-1-440 Component-reboot-0-1-432 Component-btn-0-1-428 Component-btnLg-0-1-430 Component-primaryColor-0-1-433"
     type="button"
   >
     Primary Large
   </button>
   <button
-    className="Component-btnSecondaryLarge-0-1-394 Component-btnMargin-0-1-392 Component-reboot-0-1-384 Component-btn-0-1-380 Component-btnLg-0-1-382 Component-secondaryColor-0-1-386"
+    className="Component-btnSecondaryLarge-0-1-442 Component-btnMargin-0-1-440 Component-reboot-0-1-432 Component-btn-0-1-428 Component-btnLg-0-1-430 Component-secondaryColor-0-1-434"
     type="button"
   >
     Secondary Large
   </button>
   <button
-    className="Component-btnPrimarySmall-0-1-395 Component-btnMargin-0-1-392 Component-reboot-0-1-384 Component-btn-0-1-380 Component-btnSm-0-1-383 Component-primaryColor-0-1-385"
+    className="Component-btnPrimarySmall-0-1-443 Component-btnMargin-0-1-440 Component-reboot-0-1-432 Component-btn-0-1-428 Component-btnSm-0-1-431 Component-primaryColor-0-1-433"
     type="button"
   >
     Primary Small
   </button>
   <button
-    className="Component-btnSecondarySmall-0-1-396 Component-btnMargin-0-1-392 Component-reboot-0-1-384 Component-btn-0-1-380 Component-btnSm-0-1-383 Component-secondaryColor-0-1-386"
+    className="Component-btnSecondarySmall-0-1-444 Component-btnMargin-0-1-440 Component-reboot-0-1-432 Component-btn-0-1-428 Component-btnSm-0-1-431 Component-secondaryColor-0-1-434"
     type="button"
   >
     Secondary Small
   </button>
   <button
-    className="Component-btnPrimaryBlock-0-1-397 Component-btnMargin-0-1-392 Component-reboot-0-1-384 Component-btn-0-1-380 Component-btnBlock-0-1-381 Component-primaryColor-0-1-385"
+    className="Component-btnPrimaryBlock-0-1-445 Component-btnMargin-0-1-440 Component-reboot-0-1-432 Component-btn-0-1-428 Component-btnBlock-0-1-429 Component-primaryColor-0-1-433"
     type="button"
   >
     Primary Block
   </button>
   <button
-    className="Component-btnSecondaryBlock-0-1-398 Component-btnMargin-0-1-392 Component-reboot-0-1-384 Component-btn-0-1-380 Component-btnBlock-0-1-381 Component-secondaryColor-0-1-386"
+    className="Component-btnSecondaryBlock-0-1-446 Component-btnMargin-0-1-440 Component-reboot-0-1-432 Component-btn-0-1-428 Component-btnBlock-0-1-429 Component-secondaryColor-0-1-434"
     type="button"
   >
     Secondar Block
@@ -1290,27 +1335,27 @@ exports[`Storyshots Button sizes 1`] = `
 exports[`Storyshots Button states 1`] = `
 <div>
   <button
-    className="Component-btnPrimaryLarge-0-1-411 Component-btnMargin-0-1-410 Component-btn-0-1-399 Component-btnLg-0-1-401 Component-primaryColor-0-1-403"
+    className="Component-btnPrimaryLarge-0-1-459 Component-btnMargin-0-1-458 Component-btn-0-1-447 Component-btnLg-0-1-449 Component-primaryColor-0-1-451"
     disabled={true}
     type="button"
   >
     Primary Large
   </button>
   <button
-    className="Component-btnSecondaryLarge-0-1-412 Component-btnMargin-0-1-410 Component-btn-0-1-399 Component-btnLg-0-1-401 Component-secondaryColor-0-1-404"
+    className="Component-btnSecondaryLarge-0-1-460 Component-btnMargin-0-1-458 Component-btn-0-1-447 Component-btnLg-0-1-449 Component-secondaryColor-0-1-452"
     disabled={true}
     type="button"
   >
     Secondary Large
   </button>
   <a
-    className="Component-btnPrimaryLargeDisabled-0-1-413 Component-btnMargin-0-1-410 Component-btn-0-1-399 Component-btnLg-0-1-401 Component-primaryColor-0-1-403 Component-disabled-0-1-406 Component-btnLink-0-1-402"
+    className="Component-btnPrimaryLargeDisabled-0-1-461 Component-btnMargin-0-1-458 Component-btn-0-1-447 Component-btnLg-0-1-449 Component-primaryColor-0-1-451 Component-disabled-0-1-454 Component-btnLink-0-1-450"
     href="#"
   >
     Primary link
   </a>
   <a
-    className="Component-btnSecondaryLargeDisabled-0-1-414 Component-btnMargin-0-1-410 Component-btn-0-1-399 Component-btnLg-0-1-401 Component-secondaryColor-0-1-404 Component-disabled-0-1-406 Component-btnLink-0-1-402"
+    className="Component-btnSecondaryLargeDisabled-0-1-462 Component-btnMargin-0-1-458 Component-btn-0-1-447 Component-btnLg-0-1-449 Component-secondaryColor-0-1-452 Component-disabled-0-1-454 Component-btnLink-0-1-450"
     href="#"
   >
     Link
@@ -1320,63 +1365,63 @@ exports[`Storyshots Button states 1`] = `
 
 exports[`Storyshots Button toolbar 1`] = `
 <div
-  className="Component-btnToolbar-0-1-415"
+  className="Component-btnToolbar-0-1-463"
 >
   <div
-    className="Component-btnGroup-0-1-417"
+    className="Component-btnGroup-0-1-465"
   >
     <button
-      className="Component-btnPrimary-0-1-428 Component-btn-0-1-416 Component-primaryColor-0-1-418"
+      className="Component-btnPrimary-0-1-476 Component-btn-0-1-464 Component-primaryColor-0-1-466"
       type="button"
     >
       1
     </button>
     <button
-      className="Component-btnPrimary-0-1-428 Component-btn-0-1-416 Component-primaryColor-0-1-418"
+      className="Component-btnPrimary-0-1-476 Component-btn-0-1-464 Component-primaryColor-0-1-466"
       type="button"
     >
       2
     </button>
     <button
-      className="Component-btnPrimary-0-1-428 Component-btn-0-1-416 Component-primaryColor-0-1-418"
+      className="Component-btnPrimary-0-1-476 Component-btn-0-1-464 Component-primaryColor-0-1-466"
       type="button"
     >
       3
     </button>
     <button
-      className="Component-btnPrimary-0-1-428 Component-btn-0-1-416 Component-primaryColor-0-1-418"
+      className="Component-btnPrimary-0-1-476 Component-btn-0-1-464 Component-primaryColor-0-1-466"
       type="button"
     >
       4
     </button>
   </div>
   <div
-    className="Component-btnGroup-0-1-417"
+    className="Component-btnGroup-0-1-465"
   >
     <button
-      className="Component-btnSecondary-0-1-429 Component-btn-0-1-416 Component-secondaryColor-0-1-419"
+      className="Component-btnSecondary-0-1-477 Component-btn-0-1-464 Component-secondaryColor-0-1-467"
       type="button"
     >
       5
     </button>
     <button
-      className="Component-btnSecondary-0-1-429 Component-btn-0-1-416 Component-secondaryColor-0-1-419"
+      className="Component-btnSecondary-0-1-477 Component-btn-0-1-464 Component-secondaryColor-0-1-467"
       type="button"
     >
       6
     </button>
     <button
-      className="Component-btnSecondary-0-1-429 Component-btn-0-1-416 Component-secondaryColor-0-1-419"
+      className="Component-btnSecondary-0-1-477 Component-btn-0-1-464 Component-secondaryColor-0-1-467"
       type="button"
     >
       7
     </button>
   </div>
   <div
-    className="Component-btnGroup-0-1-417"
+    className="Component-btnGroup-0-1-465"
   >
     <button
-      className="Component-dangerColor-0-1-420"
+      className="Component-dangerColor-0-1-468"
       type="button"
     >
       8
@@ -1387,27 +1432,27 @@ exports[`Storyshots Button toolbar 1`] = `
 
 exports[`Storyshots Card card 1`] = `
 <div
-  className="Component-card-0-1-442"
+  className="Component-card-0-1-490"
 >
   <img
-    className="Component-cardImgTop-0-1-437"
+    className="Component-cardImgTop-0-1-485"
     src="img/286_180.svg"
   />
   <div
-    className="Component-cardBody-0-1-438"
+    className="Component-cardBody-0-1-486"
   >
     <h5
-      className="Component-cardTitle-0-1-439"
+      className="Component-cardTitle-0-1-487"
     >
       Card title
     </h5>
     <p
-      className="Component-cardText-0-1-440"
+      className="Component-cardText-0-1-488"
     >
       Some quick example text to build on the card title and make up the bulk of the card's content.
     </p>
     <a
-      className="Component-btnPrimary-0-1-441"
+      className="Component-btnPrimary-0-1-489"
       href="#"
     >
       Go somewhere
