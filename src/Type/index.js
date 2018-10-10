@@ -40,41 +40,41 @@ const checkExported = true
 
 export default {
   headings: {
-    'h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6': {
+    'h1,h2,h3,h4,h5,h6,$h1,$h2,$h3,$h4,$h5,$h6': {
       marginBottom: headingsMarginBottom,
       fontFamily: headingsFontFamily,
       fontWeight: headingsFontWeight,
       lineHeight: headingsLineHeight,
       color: headingsColor
     },
-    'h1,.h1': { fontSize: h1FontSize },
-    'h2,.h2': { fontSize: h2FontSize },
-    'h3,.h3': { fontSize: h3FontSize },
-    'h4,.h4': { fontSize: h4FontSize },
-    'h5,.h5': { fontSize: h5FontSize },
-    'h6,.h6': { fontSize: h6FontSize },
-    '.lead': {
+    'h1,$h1': { fontSize: h1FontSize },
+    'h2,$h2': { fontSize: h2FontSize },
+    'h3,$h3': { fontSize: h3FontSize },
+    'h4,$h4': { fontSize: h4FontSize },
+    'h5,$h5': { fontSize: h5FontSize },
+    'h6,$h6': { fontSize: h6FontSize },
+    '$lead': {
       fontSize: leadFontSize,
       fontWeight: leadFontWeight
     }
   },
   display: {
-    '.display-1': {
+    '$display1': {
       fontSize: display1Size,
       fontWeight: display1Weight,
       lineHeight: displayLineHeight
     },
-    '.display-2': {
+    '$display2': {
       fontSize: display2Size,
       fontWeight: display2Weight,
       lineHeight: displayLineHeight
     },
-    '.display-3': {
+    '$display3': {
       fontSize: display3Size,
       fontWeight: display3Weight,
       lineHeight: displayLineHeight
     },
-    '.display-4': {
+    '$display4': {
       fontSize: display4Size,
       fontWeight: display4Weight,
       lineHeight: displayLineHeight
@@ -89,23 +89,23 @@ export default {
     }
   },
   emphasis: {
-    'small,.small': {
+    'small,$small': {
       fontSize: smallFontSize,
       fontWeight: fontWeightNormal
     },
-    'mark,.mark': {
+    'mark,$mark': {
       padding: markPadding,
       backgroundColor: markBg
     }
   },
   lists: {
-    '.list-unstyled': {
+    '$listUnstyled': {
       ...listUnstyled
     },
-    '.list-inline': {
+    '$listInline': {
       ...listUnstyled
     },
-    '.list-inline-item': {
+    '$listInlineItem': {
       display: 'inline-block',
       '&:not(:last-child)': {
         marginRight: listInlinePadding
@@ -113,15 +113,15 @@ export default {
     }
   },
   'misc': {
-    '.initialism': {
+    '$initialism': {
       fontSize: '90%',
       textTransform: 'uppercase'
     },
-    '.blockquote': {
+    '$blockquote': {
       marginBottom: spacer,
       fontSize: blockquoteFontSize
     },
-    '.blockquote-footer': {
+    '$blockquoteFooter': {
       display: 'block',
       fontSize: '80%',
       color: blockquoteSmallColor,
