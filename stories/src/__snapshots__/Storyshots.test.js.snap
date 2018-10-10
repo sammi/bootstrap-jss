@@ -1503,6 +1503,11 @@ exports[`Storyshots Card list group 1`] = `
 <div
   className="Component-card-0-1-512"
 >
+  <div
+    className="Component-cardHeader-0-1-513"
+  >
+    Featured
+  </div>
   <ul
     className="Component-listGroup-0-1-509"
   >
