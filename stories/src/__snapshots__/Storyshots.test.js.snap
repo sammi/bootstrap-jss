@@ -1460,3 +1460,41 @@ exports[`Storyshots Card card 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Card content type 1`] = `
+<div
+  className="Component-card-0-1-503"
+>
+  <div
+    className="Component-cardBody-0-1-499"
+  >
+    <h5
+      className="Component-cardTitle-0-1-500"
+    >
+      Card title
+    </h5>
+    <h6
+      className="Component-cardSubtitle-0-1-504"
+    >
+      Card subtitle
+    </h6>
+    <p
+      className="Component-cardText-0-1-501"
+    >
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a
+      className="Component-cardLink-0-1-502"
+      href="#"
+    >
+      Card link
+    </a>
+    <a
+      className="Component-cardLink-0-1-502"
+      href="#"
+    >
+      Another link
+    </a>
+  </div>
+</div>
+`;
