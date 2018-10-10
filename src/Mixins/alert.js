@@ -6,10 +6,10 @@ export const alertVariant = (background, border, color, ifEnableGraidents = enab
   color: color,
   ...gradientBg(background, ifEnableGraidents),
   borderColor: border,
-  hr: {
+  '& hr': {
     borderTopColor: darken(border, '5%')
   },
-  '$alertLink': {
+  '&$alertLink': {
     color: darken(color, '10%')
   }
 })
