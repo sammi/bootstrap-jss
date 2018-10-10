@@ -7,3 +7,6 @@ mb*.pid
 *.log
 stories/out*
 stories/.out
+.idea
+*.xml
+*.iml
