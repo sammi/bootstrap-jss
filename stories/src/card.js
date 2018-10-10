@@ -4,8 +4,9 @@ import { Reboot, Classes, Utilities } from 'bootstrap-jss'
 import injectSheet from 'react-jss'
 
 const { btn, btnThemeColors } = Classes.Buttons
-const { card, cardImgTop, cardBody, cardTitle, cardText, cardLink, cardSubtitle } = Classes.Card
+const { card, cardImgTop, cardBody, cardTitle, cardText, cardLink, cardSubtitle, cardHeader } = Classes.Card
 const { textMuted } = Utilities.Text
+const { listGroup, listGroupItem, listGroupFlush } = Classes.ListGroup
 
 const btnColors = btnThemeColors()
 
@@ -79,9 +80,39 @@ const CardContentType = injectSheet({
   </div>
 ))
 
+const CardListGroup = injectSheet({
+  focus: {}, 
+  disabled: {}, 
+  active: {},
+  show: {},
+  listGroup: {},
+  listGroupItem: {},
+  dropdownToggle: {},
+  card: {
+    ...card,
+    width: '18rem'
+  },
+  listGroup: {
+    ...listGroup,
+    ...listGroupFlush
+  },
+  cardHeader,
+  listGroupItem
+})(({classes}) => (
+  <div className={classes.card}>
+    <div className={classes.cardHeader}>
+      Featured
+    </div>
+    <ul className={classes.listGroup}>
+      <li className={classes.listGroupItem}>Cras justo odio</li>
+      <li className={classes.listGroupItem}>Dapibus ac facilisis in</li>
+      <li className={classes.listGroupItem}>Vestibulum at eros</li>
+    </ul>
+  </div>
+))
+
 storiesOf('Card', module)
   .add('card', () => <Card />)
-  .add('content type', () =>
-    <CardContentType/>
-  )
+  .add('content type', () => <CardContentType/>)
+  .add('list group', () => <CardListGroup />)
   

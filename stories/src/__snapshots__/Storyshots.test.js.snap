@@ -1498,3 +1498,29 @@ exports[`Storyshots Card content type 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Card list group 1`] = `
+<div
+  className="Component-card-0-1-512"
+>
+  <ul
+    className="Component-listGroup-0-1-509"
+  >
+    <li
+      className="Component-listGroupItem-0-1-510"
+    >
+      Cras justo odio
+    </li>
+    <li
+      className="Component-listGroupItem-0-1-510"
+    >
+      Dapibus ac facilisis in
+    </li>
+    <li
+      className="Component-listGroupItem-0-1-510"
+    >
+      Vestibulum at eros
+    </li>
+  </ul>
+</div>
+`;
