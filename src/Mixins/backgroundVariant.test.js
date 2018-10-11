@@ -10,8 +10,8 @@ describe('Contextual backgrounds', () => {
 
   it('bgVariant', () => {
     expect(bgVariant(parent, color)).toEqual({
-      'parentClass': { backgroundColor: `${color} !important` },
-      'a.parentClass, button.parentClass': {
+      '$parentClass': { backgroundColor: `${color} !important` },
+      '& a$parentClass, & button$parentClass': {
         ...hoverFocus({
           backgroundColor: `${darken(color, '10%')} !important`
         })
@@ -21,7 +21,7 @@ describe('Contextual backgrounds', () => {
 
   it('bgGradientVariant', () => {
     expect(bgGradientVariant(parent, color)).toEqual({
-      'parentClass': {
+      '&$parentClass': {
         backgroundColor: `${color} ${`linear-gradient(180deg, ${mix(bodyBg, color, '15%')})`} ${color} repeat-x !important`
       }
     })
