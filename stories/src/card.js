@@ -123,7 +123,8 @@ const CardGroup = injectSheet({
     width: '20rem'
   },
   cardGroup: {
-    ...cardGroup()
+    ...cardGroup(),
+    flexDirection: 'row'
   },
   cardImgTop,
   cardBody,
