@@ -4,15 +4,19 @@ import { Reboot, Classes, Utilities } from 'bootstrap-jss'
 import injectSheet from 'react-jss'
 
 const { btn, btnThemeColors } = Classes.Buttons
-const { card, cardImgTop, cardBody, cardTitle, cardText, cardLink, cardSubtitle, cardHeader } = Classes.Card
+const {
+  card, cardImgTop, cardBody, cardTitle,
+  cardText, cardLink, cardSubtitle, cardHeader,
+  cardGroup
+} = Classes.Card
 const { textMuted } = Utilities.Text
 const { listGroup, listGroupItem, listGroupFlush } = Classes.ListGroup
 
 const btnColors = btnThemeColors()
 
 const Card = injectSheet({
-  focus: {}, 
-  disabled: {}, 
+  focus: {},
+  disabled: {},
   active: {},
   show: {},
   listGroup: {},
@@ -31,7 +35,7 @@ const Card = injectSheet({
     ...card,
     width: '18rem'
   }
-})(({classes}) => (
+})(({ classes }) => (
   <div className={classes.card}>
     <img className={classes.cardImgTop} src="img/286_180.svg" />
     <div className={classes.cardBody}>
@@ -43,8 +47,8 @@ const Card = injectSheet({
 ))
 
 const CardContentType = injectSheet({
-  focus: {}, 
-  disabled: {}, 
+  focus: {},
+  disabled: {},
   active: {},
   show: {},
   listGroup: {},
@@ -68,7 +72,7 @@ const CardContentType = injectSheet({
     marginBottom: '0.25rem',
     ...textMuted
   }
-})(({classes}) => (
+})(({ classes }) => (
   <div className={classes.card}>
     <div className={classes.cardBody}>
       <h5 className={classes.cardTitle}>Card title</h5>
@@ -81,8 +85,8 @@ const CardContentType = injectSheet({
 ))
 
 const CardListGroup = injectSheet({
-  focus: {}, 
-  disabled: {}, 
+  focus: {},
+  disabled: {},
   active: {},
   show: {},
   listGroup: {},
@@ -98,7 +102,7 @@ const CardListGroup = injectSheet({
   },
   cardHeader,
   listGroupItem
-})(({classes}) => (
+})(({ classes }) => (
   <div className={classes.card}>
     <div className={classes.cardHeader}>
       Featured
@@ -111,8 +115,53 @@ const CardListGroup = injectSheet({
   </div>
 ))
 
-storiesOf('Card', module)
+const CardGroup = injectSheet({
+  listGroup: {},
+  listGroupItem: {},
+  card: {
+    ...card,
+    width: '20rem'
+  },
+  cardGroup: {
+    ...cardGroup()
+  },
+  cardImgTop,
+  cardBody,
+  cardTitle,
+  cardText,
+  textMuted
+})(({ classes }) => (
+  <div className={classes.cardGroup}>
+    <div className={classes.card}>
+      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap"/>
+        <div className={classes.cardBody}>
+          <h5 className={classes.cardTitle}>Card title</h5>
+          <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p className={classes.cardText}><small className={classes.textMuted}>Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div className={classes.card}>
+      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap"/>
+        <div className={classes.cardBody}>
+          <h5 className={classes.cardTitle}>Card title</h5>
+          <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p className={classes.cardText}><small className={classes.textMuted}>Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div className={classes.card}>
+      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap"/>
+        <div className={classes.cardBody}>
+          <h5 className={classes.cardTitle}>Card title</h5>
+          <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p className={classes.cardText}><small className={classes.textMuted}>Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+  </div>
+))
+        
+        storiesOf('Card', module)
   .add('card', () => <Card />)
-  .add('content type', () => <CardContentType/>)
+  .add('content type', () => <CardContentType />)
   .add('list group', () => <CardListGroup />)
+  .add('card group', () => <CardGroup />)
   

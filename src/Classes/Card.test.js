@@ -14,6 +14,7 @@ import { hover } from '../Mixins/hover'
 import { borderRadius, borderTopRadius, borderBottomRadius, borderRightRadius, borderLeftRadius } from '../Mixins/borderRadius'
 import { mediaBreakpointUp } from '../Mixins/breakpoints'
 import { enableRounded } from '../Variables/Options'
+import { gridBreakpoints } from '../Variables/Grid'
 import { listGroup, listGroupItem } from './ListGroup'
 
 import {
@@ -193,7 +194,7 @@ describe('card', () => {
       '&$card': {
         marginBottom: cardDeckMargin
       },
-      ...mediaBreakpointUp('sm', {
+      ...mediaBreakpointUp('sm', gridBreakpoints, {
         flexFlow: 'row wrap',
         marginRight: `-${cardDeckMargin}`,
         marginLeft: `-${cardDeckMargin}`,
@@ -207,7 +208,6 @@ describe('card', () => {
         }
       })
     })
-    expect(jss.createStyleSheet({ card: {}, cardDeck }).toString()).toBeDefined()
   })
 
   it('cardGroup', () => {
@@ -254,7 +254,7 @@ describe('card', () => {
       '& > $card': {
         marginBottom: cardGroupMargin
       },
-      ...mediaBreakpointUp('sm', {
+      ...mediaBreakpointUp('sm', gridBreakpoints, {
         flexFlow: 'row wrap',
         '& > $card': {
           flex: '1 0 0%',
@@ -270,8 +270,6 @@ describe('card', () => {
 
     expect(cardGroup()).toEqual(cardGroupValue(enableRounded))
     expect(cardGroup(isEnableRounded)).toEqual(cardGroupValue(enableRounded))
-    expect(jss.createStyleSheet({ card: {}, cardGroup: cardGroup() }).toString()).toBeDefined()
-    expect(jss.createStyleSheet({ card: {}, cardGroup: cardGroup(isEnableRounded) }).toString()).toBeDefined()
   })
 
   it('cardColumns', () => {
@@ -279,7 +277,7 @@ describe('card', () => {
       '&$card': {
         marginBottom: cardColumnsMargin
       },
-      ...mediaBreakpointUp('sm', {
+      ...mediaBreakpointUp('sm', gridBreakpoints, {
         columnCount: cardColumnsCount,
         columnGap: cardColumnsGap,
         orphans: 1,
@@ -290,7 +288,6 @@ describe('card', () => {
         }
       })
     })
-    expect(jss.createStyleSheet({ card: {}, cardColumns }).toString()).toBeDefined()
   })
 
   it('accordion', () => {

@@ -13,6 +13,7 @@ import { size } from '../Functions/size'
 import { hover } from '../Mixins/hover'
 import { borderRadius, borderTopRadius, borderBottomRadius, borderRightRadius, borderLeftRadius } from '../Mixins/borderRadius'
 import { mediaBreakpointUp } from '../Mixins/breakpoints'
+import { gridBreakpoints } from '../Variables/Grid'
 import { enableRounded } from '../Variables/Options'
 import { listGroup, listGroupItem } from './ListGroup'
 
@@ -139,7 +140,7 @@ const cardDeck = {
   '&$card': {
     marginBottom: cardDeckMargin
   },
-  ...mediaBreakpointUp('sm', {
+  ...mediaBreakpointUp('sm', gridBreakpoints, {
     flexFlow: 'row wrap',
     marginRight: `-${cardDeckMargin}`,
     marginLeft: `-${cardDeckMargin}`,
@@ -155,7 +156,7 @@ const cardDeck = {
 }
 
 const cardGroup = (isEnableRounded = enableRounded) => {
-  const isEnableRoundedValue = (isEnableRounded) => ({
+  const isEnableRoundedValue = isEnableRounded => ({
     '&:first-child': {
       ...borderRightRadius(0),
       '&$cardImgTop,&$cardHeader': {
@@ -197,7 +198,7 @@ const cardGroup = (isEnableRounded = enableRounded) => {
     '& > $card': {
       marginBottom: cardGroupMargin
     },
-    ...mediaBreakpointUp('sm', {
+    ...mediaBreakpointUp('sm', gridBreakpoints, {
       flexFlow: 'row wrap',
       '& > $card': {
         flex: '1 0 0%',
@@ -218,7 +219,7 @@ const cardColumns = {
   '&$card': {
     marginBottom: cardColumnsMargin
   },
-  ...mediaBreakpointUp('sm', {
+  ...mediaBreakpointUp('sm', gridBreakpoints, {
     columnCount: cardColumnsCount,
     columnGap: cardColumnsGap,
     orphans: 1,

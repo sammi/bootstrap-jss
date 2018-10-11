@@ -1461,6 +1461,109 @@ exports[`Storyshots Card card 1`] = `
 </div>
 `;
 
+exports[`Storyshots Card card group 1`] = `
+<div
+  className="Component-cardGroup-0-1-517"
+>
+  <div
+    className="Component-card-0-1-516"
+  >
+    <img
+      alt="Card image cap"
+      className="Component-cardImgTop-0-1-518"
+      src="img/286_180.svg"
+    />
+    <div
+      className="Component-cardBody-0-1-519"
+    >
+      <h5
+        className="Component-cardTitle-0-1-520"
+      >
+        Card title
+      </h5>
+      <p
+        className="Component-cardText-0-1-521"
+      >
+        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      </p>
+      <p
+        className="Component-cardText-0-1-521"
+      >
+        <small
+          className="Component-textMuted-0-1-522"
+        >
+          Last updated 3 mins ago
+        </small>
+      </p>
+    </div>
+  </div>
+  <div
+    className="Component-card-0-1-516"
+  >
+    <img
+      alt="Card image cap"
+      className="Component-cardImgTop-0-1-518"
+      src="img/286_180.svg"
+    />
+    <div
+      className="Component-cardBody-0-1-519"
+    >
+      <h5
+        className="Component-cardTitle-0-1-520"
+      >
+        Card title
+      </h5>
+      <p
+        className="Component-cardText-0-1-521"
+      >
+        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      </p>
+      <p
+        className="Component-cardText-0-1-521"
+      >
+        <small
+          className="Component-textMuted-0-1-522"
+        >
+          Last updated 3 mins ago
+        </small>
+      </p>
+    </div>
+  </div>
+  <div
+    className="Component-card-0-1-516"
+  >
+    <img
+      alt="Card image cap"
+      className="Component-cardImgTop-0-1-518"
+      src="img/286_180.svg"
+    />
+    <div
+      className="Component-cardBody-0-1-519"
+    >
+      <h5
+        className="Component-cardTitle-0-1-520"
+      >
+        Card title
+      </h5>
+      <p
+        className="Component-cardText-0-1-521"
+      >
+        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      </p>
+      <p
+        className="Component-cardText-0-1-521"
+      >
+        <small
+          className="Component-textMuted-0-1-522"
+        >
+          Last updated 3 mins ago
+        </small>
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Card content type 1`] = `
 <div
   className="Component-card-0-1-503"
