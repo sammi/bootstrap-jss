@@ -295,7 +295,19 @@ describe('Textual form controls', () => {
       ...formValidationState('valid', formFeedbackValidColor),
       ...formValidationState('invalid', formFeedbackInvalidColor)
     })
-    expect(jss.createStyleSheet({ formCheckInput: {}, formValidation }).toString()).toBeDefined()
+    expect(jss.createStyleSheet({
+      cutomFileInput: {},
+      customFileLabel: {},
+      customControlInput: {},
+      formCheckLabel: {},
+      formControlFile: {},
+      customSelect: {},
+      isinvalid: {},
+      wasValidated: {},
+      formControl: {},
+      formCheckInput: {},
+      formValidation
+    }).toString()).toBeDefined()
   })
 
   it('inline forms', () => {
