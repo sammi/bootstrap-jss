@@ -2094,9 +2094,9 @@ boolbase@~1.0.0:
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
 "bootstrap-jss@:link":
-  version "0.12.10"
-  resolved "https://registry.yarnpkg.com/bootstrap-jss/-/bootstrap-jss-0.12.10.tgz#8ec7b980dfd07c05f6bd0e5ba0cd0f9320100ea3"
-  integrity sha512-aoSikWtsmflgYPahUaTtbuqFmibSMdZ1I+ELq0sViv5nNMq5HFa9xW7gQfNARzCAaewAC+GHkarYoXmDs4uZeg==
+  version "0.12.11"
+  resolved "https://registry.yarnpkg.com/bootstrap-jss/-/bootstrap-jss-0.12.11.tgz#00f08d265f45bae3f70dab75ed201a95d7ffc0f4"
+  integrity sha512-Hrk0trfYjG8lI44QEW0cuKnxa3nrcK6y8CCQakz/q9OvdSh7yXSoTxC7CggcwPHODfEzyyVgu1wW2np3AQjDzQ==
   dependencies:
     color "^3.0.0"
     color-rgba "^2.0.0"
