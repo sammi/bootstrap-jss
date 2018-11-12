@@ -134,35 +134,34 @@ const CardGroup = injectSheet({
 })(({ classes }) => (
   <div className={classes.cardGroup}>
     <div className={classes.card}>
-      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap"/>
-        <div className={classes.cardBody}>
-          <h5 className={classes.cardTitle}>Card title</h5>
-          <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p className={classes.cardText}><small className={classes.textMuted}>Last updated 3 mins ago</small></p>
-        </div>
+      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap" />
+      <div className={classes.cardBody}>
+        <h5 className={classes.cardTitle}>Card title</h5>
+        <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p className={classes.cardText}><small className={classes.textMuted}>Last updated 3 mins ago</small></p>
+      </div>
     </div>
     <div className={classes.card}>
-      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap"/>
-        <div className={classes.cardBody}>
-          <h5 className={classes.cardTitle}>Card title</h5>
-          <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p className={classes.cardText}><small className={classes.textMuted}>Last updated 3 mins ago</small></p>
-        </div>
+      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap" />
+      <div className={classes.cardBody}>
+        <h5 className={classes.cardTitle}>Card title</h5>
+        <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p className={classes.cardText}><small className={classes.textMuted}>Last updated 3 mins ago</small></p>
+      </div>
     </div>
     <div className={classes.card}>
-      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap"/>
-        <div className={classes.cardBody}>
-          <h5 className={classes.cardTitle}>Card title</h5>
-          <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p className={classes.cardText}><small className={classes.textMuted}>Last updated 3 mins ago</small></p>
-        </div>
+      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap" />
+      <div className={classes.cardBody}>
+        <h5 className={classes.cardTitle}>Card title</h5>
+        <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p className={classes.cardText}><small className={classes.textMuted}>Last updated 3 mins ago</small></p>
+      </div>
     </div>
   </div>
 ))
-        
-        storiesOf('Card', module)
+
+storiesOf('Card', module)
   .add('card', () => <Card />)
   .add('content type', () => <CardContentType />)
   .add('list group', () => <CardListGroup />)
   .add('card group', () => <CardGroup />)
-  

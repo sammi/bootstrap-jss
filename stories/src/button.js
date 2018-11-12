@@ -72,15 +72,15 @@ const ButtonGroups = injectSheet(theme => ({
 }))(({ classes }) =>
   <div className={classes.btnContainer} >
     <label className={classes.btnActivethemeColor}>
-      <input type="radio" name="options" id="option1" /> checked
+      <input type='radio' name='options' id='option1' /> checked
     </label>
 
     <label className={classes.btnThemeColor}>
-      <input type="radio" name="options" id="option2" /> Radio
+      <input type='radio' name='options' id='option2' /> Radio
     </label>
 
     <label className={classes.btnThemeColor}>
-      <input type="radio" name="options" id="option3" /> Radio
+      <input type='radio' name='options' id='option3' /> Radio
     </label>
   </div>
 )
@@ -126,14 +126,14 @@ const ButtonSizes = injectSheet({
   btnSecondaryBlock: {
     composes: ['$btnMargin', '$reboot', '$btn', '$btnBlock', '$secondaryColor'],
   },
-})( ({ classes }) => (
+})(({ classes }) => (
   <div>
-    <button type="button" className={classes.btnPrimaryLarge}>Primary Large</button>
-    <button type="button" className={classes.btnSecondaryLarge}>Secondary Large</button>
-    <button type="button" className={classes.btnPrimarySmall}>Primary Small</button>
-    <button type="button" className={classes.btnSecondarySmall}>Secondary Small</button>
-    <button type="button" className={classes.btnPrimaryBlock}>Primary Block</button>
-    <button type="button" className={classes.btnSecondaryBlock}>Secondar Block</button>
+    <button type='button' className={classes.btnPrimaryLarge}>Primary Large</button>
+    <button type='button' className={classes.btnSecondaryLarge}>Secondary Large</button>
+    <button type='button' className={classes.btnPrimarySmall}>Primary Small</button>
+    <button type='button' className={classes.btnSecondarySmall}>Secondary Small</button>
+    <button type='button' className={classes.btnPrimaryBlock}>Primary Block</button>
+    <button type='button' className={classes.btnSecondaryBlock}>Secondar Block</button>
   </div>
 ))
 
@@ -172,12 +172,12 @@ const ButtonStates = injectSheet({
   btnSecondaryLargeDisabled: {
     composes: ['$btnMargin', '$btn', '$btnLg', '$secondaryColor', '$disabled', '$btnLink'],
   }
-})( ({ classes }) => (
+})(({ classes }) => (
   <div>
-    <button type="button" className={classes.btnPrimaryLarge} disabled>Primary Large</button>
-    <button type="button" className={classes.btnSecondaryLarge} disabled>Secondary Large</button>
-    <a href="#" className={classes.btnPrimaryLargeDisabled}>Primary link</a>
-    <a href="#" className={classes.btnSecondaryLargeDisabled}>Link</a>
+    <button type='button' className={classes.btnPrimaryLarge} disabled>Primary Large</button>
+    <button type='button' className={classes.btnSecondaryLarge} disabled>Secondary Large</button>
+    <a href='#' className={classes.btnPrimaryLargeDisabled}>Primary link</a>
+    <a href='#' className={classes.btnSecondaryLargeDisabled}>Link</a>
   </div>
 ))
 
@@ -213,46 +213,46 @@ const ButtonToolbar = injectSheet({
   btnSecondary: {
     composes: ['$btn', '$secondaryColor']
   }
-})( ({ classes }) => (
+})(({ classes }) => (
   <div className={classes.btnToolbar}>
     <div className={classes.btnGroup}>
-      <button type="button" className={classes.btnPrimary}>1</button>
-      <button type="button" className={classes.btnPrimary}>2</button>
-      <button type="button" className={classes.btnPrimary}>3</button>
-      <button type="button" className={classes.btnPrimary}>4</button>
+      <button type='button' className={classes.btnPrimary}>1</button>
+      <button type='button' className={classes.btnPrimary}>2</button>
+      <button type='button' className={classes.btnPrimary}>3</button>
+      <button type='button' className={classes.btnPrimary}>4</button>
     </div>
     <div className={classes.btnGroup}>
-      <button type="button" className={classes.btnSecondary}>5</button>
-      <button type="button" className={classes.btnSecondary}>6</button>
-      <button type="button" className={classes.btnSecondary}>7</button>
+      <button type='button' className={classes.btnSecondary}>5</button>
+      <button type='button' className={classes.btnSecondary}>6</button>
+      <button type='button' className={classes.btnSecondary}>7</button>
     </div>
     <div className={classes.btnGroup}>
-      <button type="button" className={classes.dangerColor}>8</button>
+      <button type='button' className={classes.dangerColor}>8</button>
     </div>
-</div>
+  </div>
 ))
 
 storiesOf('Button', module)
-  .add('button', () => 
+  .add('button', () =>
     <div>
-        {
-          Object.keys(themeColors).map(themeColorName => (
-            <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-              <Button themeKey={replace(themeColorName, 'btn', '')}/>
-            </ThemeProvider>
-          ))
-        }
+      {
+        Object.keys(themeColors).map(themeColorName => (
+          <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
+            <Button themeKey={replace(themeColorName, 'btn', '')} />
+          </ThemeProvider>
+        ))
+      }
     </div>
   )
-  .add('outline', () => 
+  .add('outline', () =>
     <div>
-        {
-          Object.keys(themeOutlineColors).map(themeColorName => (
-            <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-              <OutlineButton themeKey={replace(themeColorName, 'btnOutline', '')}/>
-            </ThemeProvider>
-          ))
-        }
+      {
+        Object.keys(themeOutlineColors).map(themeColorName => (
+          <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
+            <OutlineButton themeKey={replace(themeColorName, 'btnOutline', '')} />
+          </ThemeProvider>
+        ))
+      }
     </div>
   )
   .add('groups', () =>
@@ -266,6 +266,6 @@ storiesOf('Button', module)
       }
     </div>
   )
-  .add('sizes', () => <ButtonSizes/>)
-  .add('states', () => <ButtonStates/>)
-  .add('toolbar', () => <ButtonToolbar/>)
+  .add('sizes', () => <ButtonSizes />)
+  .add('states', () => <ButtonStates />)
+  .add('toolbar', () => <ButtonToolbar />)

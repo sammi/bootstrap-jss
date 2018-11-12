@@ -16,7 +16,7 @@ const styles = theme => ({
   close: {
     ...close,
     ...buttonClose,
-    ...themeColors[theme.color],
+    ...themeColors[theme.color]
   },
   alertLink: {
     ...alertLink,
@@ -36,9 +36,9 @@ const Alert = injectSheet(styles)(({ children, classes }) => (
 
 const AlertDismissing = injectSheet(styles)(({ classes }) => (
   <div className={classes.alert}>
-    A simple primary alert with a example <a href="#" className={classes.alertLink}>link</a>
-    <button type="button" className={classes.close}>
-      <span aria-hidden="true">&times;</span>
+    A simple primary alert with a example <a href='#' className={classes.alertLink}>link</a>
+    <button type='button' className={classes.close}>
+      <span aria-hidden='true'>&times;</span>
     </button>
   </div>
 ))

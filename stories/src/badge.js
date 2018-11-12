@@ -14,20 +14,20 @@ const HeaderBadge = injectSheet(theme => ({
   badge: {
     ...badge,
     ...badgeColors[theme.color]
-  },
-})) (
-  ({classes, children}) =>
-  <div>
-    <h1>Example heading <span className={classes.badge}>{children}</span></h1>
-    <h2>Example heading <span className={classes.badge}>{children}</span></h2>
-    <h3>Example heading <span className={classes.badge}>{children}</span></h3>
-    <h4>Example heading <span className={classes.badge}>{children}</span></h4>
-    <h5>Example heading <span className={classes.badge}>{children}</span></h5>
-    <h6>Example heading <span className={classes.badge}>{children}</span></h6>
-  </div>
+  }
+}))(
+  ({ classes, children }) =>
+    <div>
+      <h1>Example heading <span className={classes.badge}>{children}</span></h1>
+      <h2>Example heading <span className={classes.badge}>{children}</span></h2>
+      <h3>Example heading <span className={classes.badge}>{children}</span></h3>
+      <h4>Example heading <span className={classes.badge}>{children}</span></h4>
+      <h5>Example heading <span className={classes.badge}>{children}</span></h5>
+      <h6>Example heading <span className={classes.badge}>{children}</span></h6>
+    </div>
 )
 
-const ButtonBadge = injectSheet( theme => ({
+const ButtonBadge = injectSheet(theme => ({
   active: {},
   disabled: {},
   show: {},
@@ -43,22 +43,22 @@ const ButtonBadge = injectSheet( theme => ({
     ...badgeColors[theme.color],
     ...btnOutlineColors[theme.color]
   }
-})) (
-  ({classes, children}) =>
-  <button type="button" className={classes.container}>
-    Notifications <span className={classes.badge}>{children}</span>
-  </button>
+}))(
+  ({ classes, children }) =>
+    <button type='button' className={classes.container}>
+      Notifications <span className={classes.badge}>{children}</span>
+    </button>
 )
 
-const SpanBadge = injectSheet( theme => ({
+const SpanBadge = injectSheet(theme => ({
   badge: {
     ...badge,
     ...badgeColors[theme.color],
     marginRight: '0.25rem'
-  },
-})) (
-  ({classes, children}) =>
-  <span className={classes.badge}>{children}</span>
+  }
+}))(
+  ({ classes, children }) =>
+    <span className={classes.badge}>{children}</span>
 )
 
 const PillBadge = injectSheet(theme => ({
@@ -67,10 +67,10 @@ const PillBadge = injectSheet(theme => ({
     ...badgePill,
     ...badgeColors[theme.color],
     marginRight: '0.25rem'
-  },
-})) (
-  ({classes, children}) =>
-  <span className={classes.badgePill}>{children}</span>
+  }
+}))(
+  ({ classes, children }) =>
+    <span className={classes.badgePill}>{children}</span>
 )
 
 const LinkBadge = injectSheet(theme => ({
@@ -80,33 +80,32 @@ const LinkBadge = injectSheet(theme => ({
     ...badgeColors[theme.color],
     marginRight: '0.25rem'
   }
-})) (
-  ({classes, children}) =>
-  <a href="#" className={classes.btnInsideLink}>{children}</a>
+}))(
+  ({ classes, children }) =>
+    <a href='#' className={classes.btnInsideLink}>{children}</a>
 )
-
 
 storiesOf('Badge', module)
   .add('header', () =>
     <div>
-    {
-      Object.keys(badgeColors).map(themeColorName => (
-        <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
+      {
+        Object.keys(badgeColors).map(themeColorName => (
+          <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
             <HeaderBadge>123</HeaderBadge>
-        </ThemeProvider>
-      ))
-    }
+          </ThemeProvider>
+        ))
+      }
     </div>
   )
   .add('button', () =>
     <div>
-    {
-      Object.keys(badgeColors).map(themeColorName => (
-        <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-          <ButtonBadge>4</ButtonBadge>
-        </ThemeProvider>
-      ))
-    }
+      {
+        Object.keys(badgeColors).map(themeColorName => (
+          <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
+            <ButtonBadge>4</ButtonBadge>
+          </ThemeProvider>
+        ))
+      }
     </div>
   )
   .add('span', () =>
@@ -114,7 +113,7 @@ storiesOf('Badge', module)
       {
         Object.keys(badgeColors).map(themeColorName => (
           <ThemeProvider key={themeColorName} theme={{ color: themeColorName }}>
-              <SpanBadge>{themeColorName}</SpanBadge>
+            <SpanBadge>{themeColorName}</SpanBadge>
           </ThemeProvider>
         ))
       }
