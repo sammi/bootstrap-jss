@@ -59,7 +59,7 @@ describe('Breakpoint viewport sizes and media queries.', () => {
   })
 
   it('mediaBreakpointUp', () => {
-    const breakpoints = { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
+    const breakpoints = { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
     const contentStyles = { color: 'red' }
     expect(mediaBreakpointUp('xs', breakpoints, contentStyles)).toEqual(contentStyles)
 
@@ -70,7 +70,7 @@ describe('Breakpoint viewport sizes and media queries.', () => {
   })
 
   it('mediaBreakpointDown', () => {
-    const breakpoints = { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
+    const breakpoints = { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
     const contentStyles = { color: 'red' }
     expect(mediaBreakpointDown('xl', breakpoints, contentStyles)).toEqual(contentStyles)
 
@@ -80,7 +80,7 @@ describe('Breakpoint viewport sizes and media queries.', () => {
   })
 
   it('mediaBreakpointsBetween', () => {
-    const breakpoints = { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
+    const breakpoints = { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
     const contentStyles = { color: 'red' }
 
     let mediaQuery = {}
