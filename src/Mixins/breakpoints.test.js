@@ -16,10 +16,6 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     )).toEqual('md')
 
     expect(breakpointNext('sm',
-      { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
-    )).toEqual('md')
-
-    expect(breakpointNext('sm',
       { xs: 0, sm: '576px', xl: '1200px' }
     )).toEqual('xl')
 
@@ -40,10 +36,6 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     expect(breakpointMin('sm',
       { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
     )).toEqual('576px')
-
-    expect(breakpointMin('xs',
-      { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
-    )).toEqual(null)
   })
 
   it('breakpointMax', () => {
@@ -52,18 +44,18 @@ describe('Breakpoint viewport sizes and media queries.', () => {
     )).toEqual('768px')
 
     expect(breakpointMax('xs',
-      { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
+      { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
     )).toEqual('576px')
 
     expect(breakpointMax('xl',
-      { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' }
+      { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' }
     )).toEqual(null)
   })
 
   it('breakpointInfix', () => {
-    expect(breakpointInfix('xs', { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' })).toEqual('')
-    expect(breakpointInfix('sm', { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' })).toEqual('-sm')
-    expect(breakpointInfix('xl', { xs: 0, sm: '576px', lg: '992px', xl: '1200px', md: '768px' })).toEqual('-xl')
+    expect(breakpointInfix('xs', { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' })).toEqual('')
+    expect(breakpointInfix('sm', { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' })).toEqual('-sm')
+    expect(breakpointInfix('xl', { xs: 0, sm: '576px', md: '768px', lg: '992px', xl: '1200px' })).toEqual('-xl')
   })
 
   it('mediaBreakpointUp', () => {
