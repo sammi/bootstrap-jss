@@ -37,11 +37,11 @@ const Card = injectSheet({
   }
 })(({ classes }) => (
   <div className={classes.card}>
-    <img className={classes.cardImgTop} src="img/286_180.svg" />
+    <img className={classes.cardImgTop} src='img/286_180.svg' />
     <div className={classes.cardBody}>
       <h5 className={classes.cardTitle}>Card title</h5>
       <p className={classes.cardText}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" className={classes.btnPrimary}>Go somewhere</a>
+      <a href='#' className={classes.btnPrimary}>Go somewhere</a>
     </div>
   </div>
 ))
@@ -78,8 +78,8 @@ const CardContentType = injectSheet({
       <h5 className={classes.cardTitle}>Card title</h5>
       <h6 className={classes.cardSubtitle}>Card subtitle</h6>
       <p className={classes.cardText}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" className={classes.cardLink}>Card link</a>
-      <a href="#" className={classes.cardLink}>Another link</a>
+      <a href='#' className={classes.cardLink}>Card link</a>
+      <a href='#' className={classes.cardLink}>Another link</a>
     </div>
   </div>
 ))
@@ -89,8 +89,6 @@ const CardListGroup = injectSheet({
   disabled: {},
   active: {},
   show: {},
-  listGroup: {},
-  listGroupItem: {},
   dropdownToggle: {},
   card: {
     ...card,
@@ -134,7 +132,7 @@ const CardGroup = injectSheet({
 })(({ classes }) => (
   <div className={classes.cardGroup}>
     <div className={classes.card}>
-      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap" />
+      <img className={classes.cardImgTop} src='img/286_180.svg' alt='Card image cap' />
       <div className={classes.cardBody}>
         <h5 className={classes.cardTitle}>Card title</h5>
         <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -142,7 +140,7 @@ const CardGroup = injectSheet({
       </div>
     </div>
     <div className={classes.card}>
-      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap" />
+      <img className={classes.cardImgTop} src='img/286_180.svg' alt='Card image cap' />
       <div className={classes.cardBody}>
         <h5 className={classes.cardTitle}>Card title</h5>
         <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -150,7 +148,7 @@ const CardGroup = injectSheet({
       </div>
     </div>
     <div className={classes.card}>
-      <img className={classes.cardImgTop} src="img/286_180.svg" alt="Card image cap" />
+      <img className={classes.cardImgTop} src='img/286_180.svg' alt='Card image cap' />
       <div className={classes.cardBody}>
         <h5 className={classes.cardTitle}>Card title</h5>
         <p className={classes.cardText}>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
