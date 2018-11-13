@@ -5,10 +5,14 @@ const breakpointNext = (name, breakpoints) => {
   Object.keys(breakpoints).forEach(name => { breakPointList.push({ name, value: breakpoints[name] }) })
   const sortBreakPointList = breakPointList.sort((a, b) => size(a.value).value > size(b.value).value).map(d => d.value === 0 ? { name: d.name, value: '0px' } : d)
 
-  let namePosition = -1
-  sortBreakPointList.forEach((b, i) => { namePosition = (b.name === name && i < sortBreakPointList.length) ? i + 1 : namePosition })
+  const length = sortBreakPointList.length
+  for (let i = 0; i < length; i++) {
+    if (sortBreakPointList[i].name === name && i < length - 1) {
+      return sortBreakPointList[i + 1].name
+    }
+  }
 
-  return sortBreakPointList[namePosition] ? sortBreakPointList[namePosition].name : false
+  return false
 }
 
 const breakpointMin = (name, breakpoints) => {
