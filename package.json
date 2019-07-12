@@ -59,7 +59,7 @@
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-standard": "^4.0.0",
     "jss-preset-default": "^4.5.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^2.0.4",
     "rollup": "^1.16.7",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
