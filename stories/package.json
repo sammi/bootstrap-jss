@@ -13,7 +13,7 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
-    "bootstrap-jss": ":link",
+    "bootstrap-jss": "0.12.13",
     "classnames": "^2.2.6",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
