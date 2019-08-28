@@ -47,7 +47,7 @@ yarn test:watch
  ```
 Check out http://localhost:9001
 
-4. Publish npm module
+## Publish npm module
 ```bash
  npm login
  npm pack
