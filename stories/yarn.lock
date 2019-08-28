@@ -3319,10 +3319,10 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap-jss@0.12.20:
-  version "0.12.20"
-  resolved "https://registry.yarnpkg.com/bootstrap-jss/-/bootstrap-jss-0.12.20.tgz#bfe16a152d867dcccb4e21aae32f1d7fdcfd42f9"
-  integrity sha512-VZJCiUeXkavxdcIND9zz5lcYCo4dVUYwpqkAxnX8MGavLH63XVzOxvFlx3BRqvQO7hk08z20uMvGQAzW6/xTKw==
+bootstrap-jss@0.12.23:
+  version "0.12.23"
+  resolved "https://registry.yarnpkg.com/bootstrap-jss/-/bootstrap-jss-0.12.23.tgz#909a9dac9419040aa78a8a15e601c880377f7813"
+  integrity sha512-eedYlORm9zymGAvJkPzz22NgmJbOZB8k7CV0kUtx+wolsX3z6HJtQ0gjdSrhX3vjL7CNLxrxlWO0giHhNO8Kvg==
   dependencies:
     color "3.1.2"
     color-rgba "2.1.1"

@@ -41,9 +41,15 @@ yarn test:watch
 
 ## Setup the localhost StoryBook
  ```bash
- yarn build
  cd stories
  yarn
  yarn start
  ```
 Check out http://localhost:9001
+
+4. Publish npm module
+```bash
+ npm login
+ npm pack
+ npm publish bootstrap-jss-x.x.x.tgz
+```
