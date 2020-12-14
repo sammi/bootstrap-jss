@@ -49,6 +49,7 @@ Check out http://localhost:9001
 
 ## Publish npm module
 ```bash
+ yarn build
  npm login
  npm pack
  npm publish bootstrap-jss-x.x.x.tgz
