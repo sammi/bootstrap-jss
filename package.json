@@ -37,7 +37,7 @@
     "color-rgba": "2.1.1",
     "hex-and-rgba": "1.3.5",
     "jss": "9.8.7",
-    "lodash": "4.17.19",
+    "lodash": "4.17.21",
     "percent-value": "1.0.8"
   },
   "devDependencies": {
