@@ -1,6 +1,6 @@
 {
   "name": "stories",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "bootstrap-jss stoires",
   "main": "index.js",
   "author": "Sammi Song",
@@ -13,19 +13,20 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
-    "bootstrap-jss": "0.12.29",
-    "classnames": "2.2.6",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
-    "react-jss": "8.6.1"
+    "bootstrap-jss": "0.12.31",
+    "classnames": "2.3.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-jss": "10.6.0"
   },
   "devDependencies": {
     "@babel/core": "7.14.0",
     "@storybook/addon-storyshots": "6.2.9",
     "@storybook/react": "6.2.9",
     "@storybook/storybook-deployer": "2.8.7",
-    "react-scripts": "3.1.1",
-    "react-test-renderer": "16.9.0",
-    "stringify-object": "3.3.0"
+    "react-scripts": "4.0.3",
+    "react-test-renderer": "17.0.2",
+    "stringify-object": "3.3.0",
+    "babel-loader": "8.1.0"
   }
 }
