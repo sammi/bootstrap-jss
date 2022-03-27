@@ -13,20 +13,20 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
-    "bootstrap-jss": "0.12.31",
+    "bootstrap-jss": "0.12.33",
     "classnames": "2.3.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-jss": "10.6.0"
+    "react-jss": "10.9.0"
   },
   "devDependencies": {
-    "@babel/core": "7.14.0",
-    "@storybook/addon-storyshots": "6.2.9",
-    "@storybook/react": "6.2.9",
-    "@storybook/storybook-deployer": "2.8.7",
-    "react-scripts": "4.0.3",
+    "@babel/core": "7.17.8",
+    "@storybook/addon-storyshots": "6.4.19",
+    "@storybook/react": "6.4.19",
+    "@storybook/storybook-deployer": "2.8.11",
+    "react-scripts": "5.0.0",
     "react-test-renderer": "17.0.2",
-    "stringify-object": "3.3.0",
-    "babel-loader": "8.1.0"
+    "stringify-object": "4.0.1",
+    "babel-loader": "8.2.4"
   }
 }
