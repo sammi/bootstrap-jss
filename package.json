@@ -58,7 +58,7 @@
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-react": "7.29.4",
     "jss-preset-default": "10.9.0",
-    "react-scripts": "5.0.0",
+    "react-scripts": "5.0.1",
     "rollup": "2.70.1",
     "@rollup/plugin-babel": "5.3.1",
     "@rollup/plugin-commonjs": "21.0.2",
